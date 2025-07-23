@@ -1,0 +1,110 @@
+@import 'tailwindcss';
+@config "../tailwind.config.ts";
+
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light theme variables */
+@theme {
+	/* Primary teal colors - Light theme */
+	--color-primary-50: oklch(0.97 0.03 180);
+	--color-primary-100: oklch(0.93 0.05 180);
+	--color-primary-200: oklch(0.88 0.07 180);
+	--color-primary-300: oklch(0.8 0.1 180);
+	--color-primary-400: oklch(0.73 0.13 180);
+	--color-primary-500: oklch(0.65 0.16 180);
+	--color-primary-600: oklch(0.58 0.14 180);
+	--color-primary-700: oklch(0.5 0.12 180);
+	--color-primary-800: oklch(0.4 0.09 180);
+	--color-primary-900: oklch(0.25 0.06 180);
+
+	/* Neutral colors - Light theme */
+	--color-neutral-50: oklch(0.98 0.01 180);
+	--color-neutral-100: oklch(0.93 0.02 180);
+	--color-neutral-200: oklch(0.86 0.02 180);
+	--color-neutral-300: oklch(0.78 0.02 180);
+	--color-neutral-400: oklch(0.68 0.02 180);
+	--color-neutral-500: oklch(0.58 0.02 180);
+	--color-neutral-600: oklch(0.48 0.02 180);
+	--color-neutral-700: oklch(0.38 0.02 180);
+	--color-neutral-800: oklch(0.26 0.01 180);
+	--color-neutral-900: oklch(0.16 0.01 180);
+
+	/* Semantic color variables - Light theme */
+	--color-background: var(--color-neutral-50);
+	--color-surface: white;
+	--color-surface-hover: var(--color-primary-50);
+	--color-border: var(--color-neutral-200);
+	--color-text: var(--color-neutral-900);
+	--color-text-secondary: var(--color-neutral-700);
+	--color-text-tertiary: var(--color-neutral-500);
+	--color-accent: var(--color-primary-500);
+	--color-accent-hover: var(--color-primary-600);
+	--color-accent-pressed: var(--color-primary-700);
+
+	/* Typography */
+	--font-sans:
+		'Inter', 'Roboto', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI',
+		'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji',
+		'Segoe UI Symbol', 'Noto Color Emoji';
+	--font-body: var(--font-sans);
+	--font-mono:
+		'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono',
+		'Courier New', 'monospace';
+}
+
+/* Dark theme variables */
+@theme dark {
+	/* Primary colors - Dark theme */
+	--color-primary-50: oklch(0.15 0.05 180);
+	--color-primary-100: oklch(0.2 0.07 180);
+	--color-primary-200: oklch(0.25 0.09 180);
+	--color-primary-300: oklch(0.3 0.11 180);
+	--color-primary-400: oklch(0.37 0.13 180);
+	--color-primary-500: oklch(0.45 0.16 180);
+	--color-primary-600: oklch(0.53 0.14 180);
+	--color-primary-700: oklch(0.6 0.12 180);
+	--color-primary-800: oklch(0.68 0.09 180);
+	--color-primary-900: oklch(0.75 0.06 180);
+
+	/* Neutral colors - Dark theme */
+	--color-neutral-50: oklch(0.1 0.01 180);
+	--color-neutral-100: oklch(0.15 0.02 180);
+	--color-neutral-200: oklch(0.23 0.02 180);
+	--color-neutral-300: oklch(0.33 0.02 180);
+	--color-neutral-400: oklch(0.43 0.02 180);
+	--color-neutral-500: oklch(0.53 0.02 180);
+	--color-neutral-600: oklch(0.63 0.02 180);
+	--color-neutral-700: oklch(0.73 0.02 180);
+	--color-neutral-800: oklch(0.83 0.01 180);
+	--color-neutral-900: oklch(0.93 0.01 180);
+
+	/* Semantic colors - Dark theme */
+	--color-background: var(--color-neutral-900);
+	--color-surface: var(--color-neutral-800);
+	--color-surface-hover: var(--color-neutral-700);
+	--color-border: var(--color-neutral-600);
+	--color-text: var(--color-neutral-50);
+	--color-text-secondary: var(--color-neutral-300);
+	--color-text-tertiary: var(--color-neutral-500);
+	--color-accent: var(--color-primary-500);
+	--color-accent-hover: var(--color-primary-400);
+	--color-accent-pressed: var(--color-primary-300);
+}
+
+/* Configure Flowbite components to use our theme */
+:root {
+	/* Configure Flowbite's button component */
+	--btn-color: var(--color-accent);
+	--btn-hover-color: var(--color-accent-hover);
+	--btn-active-color: var(--color-accent-pressed);
+	--btn-primary-bg: var(--color-accent);
+	--btn-primary-hover-bg: var(--color-accent-hover);
+	--btn-primary-active-bg: var(--color-accent-pressed);
+
+	/* Configure Card component */
+	--card-border-color: var(--color-border);
+	--card-bg-color: var(--color-surface);
+}

@@ -1,0 +1,24 @@
+name = "ielts-queue-consumer"
+compatibility_date = "2025-02-25"
+compatibility_flags = ["nodejs_compat_v2"]
+main="consumer.ts"
+
+[observability.logs]
+enabled = true
+
+[[r2_buckets]]
+binding = "STORAGE"
+bucket_name = "quiktest-dev"
+preview_bucket_name = "quicktest-dev" 
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ielts-qt"
+database_id = "f898d31f-d954-41e0-b61b-c3ced4e27260"
+
+[[queues.consumers]]
+queue = "ielts-analysis"
+max_batch_size = 1
