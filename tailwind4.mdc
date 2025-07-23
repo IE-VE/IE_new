@@ -1,0 +1,120 @@
+---
+description: Doing styling of Svelte components, pages, themes, etc.
+globs: *.svelte, *.css
+alwaysApply: false
+---
+lob: *.svelte, *.css
+
+Below is the instruction for the LLM rewritten in Markdown format, incorporating all the detailed changes for Tailwind CSS 4.0. This format is clean, structured, and easy to read, making it ideal for guiding you, the LLM acting as a programmer, in handling Tailwind CSS-related tasks.
+Instruction for LLM: Tailwind CSS 4.0 Updates
+This instruction provides comprehensive guidance on using Tailwind CSS 4.0, released on January 22, 2025, for all Tailwind CSS-related programming tasks. Unless the user explicitly specifies an earlier version, assume Tailwind CSS 4.0 is the default version for all responses.
+Performance Boosts
+Tailwind CSS 4.0 introduces a new high-performance engine called Oxide, built with Rust and Lightning CSS. This engine significantly enhances build performance and efficiency:
+Full Builds: Up to 5x faster than previous versions.
+Incremental Builds: Over 100x faster, with build times measured in microseconds.
+Package Size: Reduced by more than 35%, optimizing resource usage.
+These improvements make Tailwind 4.0 ideal for both small and large-scale projects, streamlining the development process.
+Simplified Setup
+The setup process in Tailwind 4.0 is now zero-configuration, eliminating the need for complex build toolchains. To get started, simply add this single line to your CSS file:
+css
+@import "tailwindcss";
+This import automatically includes essential features, such as:
+@import
+ Handling: Resolves CSS imports natively.
+Vendor Prefixing: Adds necessary prefixes without additional tools.
+Nesting: Supports nested CSS syntax out of the box.
+Syntax Transforms: Transpiles modern CSS features (e.g., oklch() colors) for broader compatibility.
+No separate PostCSS or Autoprefixer setup is required, simplifying the integration process significantly compared to earlier versions.
+CSS-First Configuration
+Tailwind 4.0 replaces the JavaScript-based tailwind.config.js file with a CSS-first configuration approach using the @theme directive. You can now define your custom theme directly in your CSS file, leveraging CSS variables for greater integration. Example:
+css
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --color-primary: oklch(0.7 0.28 145);
+  --breakpoint-xl: 1280px;
+}
+This method centralizes customization within your stylesheets, making it easier to manage and more aligned with modern CSS workflows.
+Automatic Content Detection
+Tailwind 4.0 eliminates the need to manually specify content paths (previously required in the content array of the config file). It now automatically detects template files (e.g., HTML, JSX, Vue) using intelligent heuristics:
+Ignores files listed in .gitignore.
+Excludes binary file extensions.
+If you need to manually specify additional sources, use the @source directive:
+css
+@import "tailwindcss";
+@source "../components";
+This feature simplifies project setup and reduces configuration overhead.
+Modern CSS Features
+Tailwind 4.0 fully embraces modern CSS capabilities, enhancing flexibility and performance:
+Cascade Layers: Utilizes native @layer rules to manage specificity, minimizing style conflicts.
+Registered Custom Properties: Uses @property to define typed custom properties, enabling smooth transitions (e.g., animating gradients).
+Color-Mix for Opacity: Opacity modifiers (e.g., bg-primary/50) integrate seamlessly with CSS variables via color-mix().
+Container Queries: Supports @container, @min-*, and @max-* variants for styling based on container size rather than viewport size.
+@starting
+-style: Enables transitions for properties when elements first appear on the page.
+3D Transforms: Adds utilities like rotate-x-45 and translate-z-10 for 3D effects.
+Enhanced Gradients: Expands gradient utilities for more creative control.
+These features position Tailwind 4.0 at the forefront of modern web design.
+New Utilities and Variants
+Tailwind 4.0 introduces a range of new utilities and variants to enhance styling flexibility:
+Dynamic Values: Many utilities now accept arbitrary values without predefined scales (e.g., z-43, col-start-71).
+Not- Variant*: Targets elements when they don’t match a condition (e.g., not-hover:bg-gray-500).
+Descendant Variant (**): Styles all descendants of an element (e.g., **:text-red-500).
+Field-Sizing Utilities: Includes field-sizing-content for auto-resizing textareas based on content.
+Color-Scheme Utilities: Offers scheme-light and scheme-dark for theming.
+Inert Support: Applies styles to elements with the inert attribute.
+These additions provide developers with more granular control over their designs.
+Modernized Color Palette
+The color system in Tailwind 4.0 has been upgraded to use P3 colors with the oklch() color space, delivering more vibrant and accurate colors on modern displays. Key points:
+Colors are defined as CSS variables (e.g., --color-primary: oklch(0.7 0.28 145)).
+Opacity modifiers (e.g., text-primary/50) work natively with these variables, ensuring seamless integration.
+This update enhances visual quality while maintaining compatibility with older displays.
+First-Party Vite Plugin
+For developers using Vite, Tailwind 4.0 provides a dedicated plugin, @tailwindcss/vite, which:
+Integrates tightly with Vite’s ecosystem.
+Enhances performance during development and builds.
+Simplifies setup with minimal configuration.
+This plugin is particularly valuable for Vite-based projects seeking optimal performance.
+Breaking Changes and Upgrade Support
+Tailwind 4.0 introduces several breaking changes from version 3.x:
+Removed Deprecated Utilities: Utilities like text-opacity-*, bg-opacity-*, etc., are removed. Use the / opacity syntax instead (e.g., text-primary/50).
+Renamed Utilities: Scales for shadows, radii, and blurs have been updated (e.g., shadow is now shadow-sm).
+To ease the transition, Tailwind offers an automated upgrade tool that:
+Updates dependencies.
+Converts version 3 configurations to version 4 syntax.
+Adjusts utility usage where necessary.
+Run the tool to migrate existing projects efficiently.
+Examples
+Here are practical examples showcasing Tailwind 4.0’s new features:
+Custom Theme Configuration:
+css
+@import "tailwindcss";
+
+@theme {
+  --cursor-pointer: pointer;
+  --cursor-not-allowed: not-allowed;
+}
+Container Queries:
+html
+<div class="@container">
+  <div class="grid grid-cols-1 @sm:grid-cols-3 @lg:grid-cols-4">
+    <!-- Responsive grid content -->
+  </div>
+</div>
+3D Transforms:
+html
+<div class="transform rotate-x-45 translate-z-10">3D Element</div>
+Arbitrary Values:
+html
+<div class="z-43 col-start-71">Custom Position</div>
+Not- Variant*:
+html
+<button class="not-hover:bg-gray-500">Hover me!</button>
+These snippets illustrate how to apply Tailwind 4.0’s capabilities in real-world scenarios.
+Version Clarification
+If a user’s query does not specify a Tailwind CSS version, assume they are using Tailwind CSS 4.0. If there’s any ambiguity regarding the version, prompt the user with:
+"Are you using Tailwind CSS 4.0 or an earlier version?"
+Adjust your response based on their clarification to ensure accuracy.
+This instruction equips you with all the necessary knowledge to handle Tailwind CSS 4.0 tasks effectively. Use it to generate accurate code, explanations, and recommendations, leveraging the latest features and best practices introduced in this major update.
+
