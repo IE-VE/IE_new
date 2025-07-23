@@ -1,0 +1,11 @@
+Fall back on the prd.md for feaeture development.
+Never run migrations manually, alway through "wrangler migrations apply ..."
+We use SvelteKit in "runes" mode, that means use $state() and $effect().
+Try to make components and not too long +page files
+Make sure to re-use components that we created earlier.
+Migrations are applied in sequence, so, don't change earlier migrations but choose to add new ones instead
+Use british english here, so "Personalised" instead of "Personalized"
+DO not, and i strongly repeat, do not use on:click and on:change etc. use onclick, onchange etc. in linve with Svelte 5
+
+- Do not create readme's when making components.
+- Do not create example pages etc for new components

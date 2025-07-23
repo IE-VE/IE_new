@@ -1,0 +1,27 @@
+name = "quicktest"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat_v2"]
+
+# Note: Redirects are configured in Cloudflare dashboard, not here
+
+[observability.logs]
+enabled = true
+
+[[r2_buckets]]
+binding = "STORAGE"
+bucket_name = "quicktest"
+preview_bucket_name = "quicktest-dev" 
+
+[[kv_namespaces]]
+binding = "SESSIONS"
+id = "quicktest"
+preview_id = "quicktest-dev"
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ielts-qt"
+database_id = "f898d31f-d954-41e0-b61b-c3ced4e27260"
+
