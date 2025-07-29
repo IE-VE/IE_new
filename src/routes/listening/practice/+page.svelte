@@ -391,10 +391,10 @@
 		<div class="mt-12 text-center">
 			<Card variant="teal">
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-					Ready for Personalized Feedback?
+					Ready for Personalised Feedback?
 				</h2>
 				<p class="text-gray-600 dark:text-gray-300 mb-6">
-					Take our free speaking test to get detailed AI analysis and personalized improvement recommendations.
+					Take our free speaking test to get detailed AI analysis and personalised improvement recommendations.
 				</p>
 				<a 
 					href="/freetest"
