@@ -1,3 +1,4 @@
+
 <script>
 	import { onMount } from 'svelte';
 	import Card from '$lib/components/Card.svelte';
@@ -10,33 +11,52 @@
 
 	const questions = {
 		section1: [
-			{ id: 1, type: 'fill', text: "Example: The woman wants to join the _______ club." },
-			{ id: 2, type: 'fill', text: "1. The woman's name is _______." },
-			{ id: 3, type: 'fill', text: "2. Her phone number is _______." },
-			{ id: 4, type: 'fill', text: "3. She lives in _______ Street." },
-			{ id: 5, type: 'fill', text: "4. Her postcode is _______." },
-			{ id: 6, type: 'fill', text: "5. She heard about the club from _______." }
+			{ id: 1, type: 'fill', text: "1. Visit places which have good _______." },
+			{ id: 2, type: 'fill', text: "2. Visit places which have _______." },
+			{ id: 3, type: 'fill', text: "3. Note: special trips organised for groups of _______ people." },
+			{ id: 4, type: 'fill', text: "4. To reserve a seat: sign name on the _______ 3 days in advance." },
+			{ id: 5, type: 'fill', text: "5. The woman's name is _______." },
+			{ id: 6, type: 'fill', text: "6. Her phone number is _______." },
+			{ id: 7, type: 'fill', text: "7. She lives in _______ Street." },
+			{ id: 8, type: 'fill', text: "8. Her postcode is _______." },
+			{ id: 9, type: 'fill', text: "9. She heard about the club from _______." },
+			{ id: 10, type: 'fill', text: "10. Additional information: _______." }
 		],
 		section2: [
-			{ id: 11, type: 'multiple', text: "11. The Riverside Village Museum is located", options: ['A) by the river', 'B) in the town center', 'C) near the old mill'] },
-			{ id: 12, type: 'multiple', text: "12. The museum was originally", options: ['A) a flour mill', 'B) a textile factory', 'C) a grain store'] },
-			{ id: 13, type: 'multiple', text: "13. The museum is open", options: ['A) every day', 'B) Tuesday to Sunday', 'C) weekends only'] },
-			{ id: 14, type: 'fill', text: "14. The museum shop sells _______." },
-			{ id: 15, type: 'fill', text: "15. Visitors can see the original _______ wheel." }
+			{ id: 11, type: 'fill', text: "11. Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer." },
+			{ id: 12, type: 'fill', text: "12. The museum was originally _______." },
+			{ id: 13, type: 'fill', text: "13. The museum is open _______." },
+			{ id: 14, type: 'fill', text: "14. _______ Road" },
+			{ id: 15, type: 'fill', text: "15. The _______" },
+			{ id: 16, type: 'fill', text: "16. The _______" },
+			{ id: 17, type: 'fill', text: "17. The _______" },
+			{ id: 18, type: 'fill', text: "18. The _______" },
+			{ id: 19, type: 'fill', text: "19. The _______" },
+			{ id: 20, type: 'fill', text: "20. The _______ for the workers" }
 		],
 		section3: [
-			{ id: 21, type: 'multiple', text: "21. According to the chart, reason C represents", options: ['A) Better facilities', 'B) Closer to university', 'C) Lower cost'] },
-			{ id: 22, type: 'multiple', text: "22. The most common reason for changing accommodation is", options: ['A) Reason C', 'B) Reason E', 'C) Reason G'] },
+			{ id: 21, type: 'multiple', text: "21. Complete the chart below. Choose your answers from the box and write the letters A–H next to the numbers.", options: ['A. uncooperative landlord', 'B. environment', 'C. space', 'D. noisy neighbours', 'E. near city', 'F. work location', 'G. transport', 'H. rent'] },
+			{ id: 22, type: 'multiple', text: "22. What is the most common reason for changing accommodation?", options: ['A. Reason C', 'B. Reason E', 'C. Reason G'] },
 			{ id: 23, type: 'fill', text: "23. _______ students chose reason E." },
 			{ id: 24, type: 'fill', text: "24. The percentage for reason G is _______." },
-			{ id: 25, type: 'fill', text: "25. The survey included _______ students in total." }
+			{ id: 25, type: 'fill', text: "25. The survey included _______ students in total." },
+			{ id: 26, type: 'fill', text: "26. Complete the notes below. Write NO MORE THAN THREE WORDS for each answer." },
+			{ id: 27, type: 'fill', text: "27. Additional data shows _______." },
+			{ id: 28, type: 'fill', text: "28. _______" },
+			{ id: 29, type: 'fill', text: "29. _______" },
+			{ id: 30, type: 'fill', text: "30. _______" }
 		],
 		section4: [
 			{ id: 31, type: 'fill', text: "31. The lecture topic is about _______." },
 			{ id: 32, type: 'fill', text: "32. The main problem discussed is _______." },
 			{ id: 33, type: 'fill', text: "33. The first solution mentioned is _______." },
 			{ id: 34, type: 'fill', text: "34. The second approach involves _______." },
-			{ id: 35, type: 'fill', text: "35. The speaker concludes that _______ is essential." }
+			{ id: 35, type: 'fill', text: "35. The speaker concludes that _______ is essential." },
+			{ id: 36, type: 'fill', text: "36. The research was conducted over a period of _______." },
+			{ id: 37, type: 'fill', text: "37. The most significant finding was _______." },
+			{ id: 38, type: 'fill', text: "38. Future studies should focus on _______." },
+			{ id: 39, type: 'fill', text: "39. The practical applications include _______." },
+			{ id: 40, type: 'fill', text: "40. The speaker recommends further investigation into _______." }
 		]
 	};
 
@@ -85,7 +105,7 @@
 				IELTS Listening Practice Test
 			</h1>
 			<p class="text-gray-600 dark:text-gray-300">
-				Complete listening test with audio and questions
+				Complete listening test with audio and questions - 40 questions in 4 sections
 			</p>
 		</header>
 
@@ -122,7 +142,7 @@
 		<section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
 			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Section 1</h2>
 			<p class="text-gray-600 dark:text-gray-300 mb-6">
-				Questions 1-6: Complete the form below. Write NO MORE THAN TWO WORDS for each answer.
+				Questions 1-10: Complete the notes below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.
 			</p>
 
 			{#each questions.section1 as question}
@@ -142,6 +162,9 @@
 		<!-- Section 2 -->
 		<section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
 			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Section 2</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				Questions 11-20: Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer.
+			</p>
 
 			<div class="mb-6">
 				<h3 class="text-lg font-medium mb-3 text-gray-900 dark:text-white">Plan Diagram</h3>
@@ -161,29 +184,11 @@
 					<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 						{question.text}
 					</label>
-
-					{#if question.type === 'multiple'}
-						{#each question.options as option}
-							<div class="mb-2">
-								<label class="flex items-center">
-									<input 
-										type="radio" 
-										name="question_{question.id}"
-										value={option}
-										class="mr-2"
-										on:change={(e) => handleAnswerChange(question.id, e.target.value)}
-									/>
-									<span class="text-gray-700 dark:text-gray-300">{option}</span>
-								</label>
-							</div>
-						{/each}
-					{:else}
-						<input 
-							type="text" 
-							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
-						/>
-					{/if}
+					<input 
+						type="text" 
+						class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+						on:input={(e) => handleAnswerChange(question.id, e.target.value)}
+					/>
 				</div>
 			{/each}
 		</section>
@@ -212,6 +217,10 @@
 				</p>
 			</div>
 
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				Questions 21-30: Complete the chart below and answer the questions.
+			</p>
+
 			<div class="mb-6">
 				<h3 class="text-lg font-medium mb-3 text-gray-900 dark:text-white">Population Studies Chart</h3>
 				<div class="flex justify-center mb-4">
@@ -231,7 +240,7 @@
 						{question.text}
 					</label>
 
-					{#if question.type === 'multiple'}
+					{#if question.type === 'multiple' && question.options}
 						{#each question.options as option}
 							<div class="mb-2">
 								<label class="flex items-center">
@@ -261,7 +270,7 @@
 		<section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
 			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Section 4</h2>
 			<p class="text-gray-600 dark:text-gray-300 mb-6">
-				Questions 31-35: Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.
+				Questions 31-40: Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.
 			</p>
 
 			{#each questions.section4 as question}
