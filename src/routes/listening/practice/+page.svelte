@@ -22,10 +22,12 @@
 			{ id: 9, type: 'fill', text: "9. She heard about the club from _______." },
 			{ id: 10, type: 'fill', text: "10. Additional information: _______." }
 		],
-		section2: [
-			{ id: 11, type: 'fill', text: "11. Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer." },
-			{ id: 12, type: 'fill', text: "12. The museum was originally _______." },
-			{ id: 13, type: 'fill', text: "13. The museum is open _______." },
+		section2_part1: [
+			{ id: 11, type: 'fill', text: "11. The museum was originally _______." },
+			{ id: 12, type: 'fill', text: "12. The museum is open _______." },
+			{ id: 13, type: 'fill', text: "13. _______ Road" }
+		],
+		section2_part2: [
 			{ id: 14, type: 'fill', text: "14. _______ Road" },
 			{ id: 15, type: 'fill', text: "15. The _______" },
 			{ id: 16, type: 'fill', text: "16. The _______" },
@@ -34,29 +36,35 @@
 			{ id: 19, type: 'fill', text: "19. The _______" },
 			{ id: 20, type: 'fill', text: "20. The _______ for the workers" }
 		],
-		section3: [
+		section3_part1: [
 			{ id: 21, type: 'fill', text: "21. Complete the chart below. Choose your answers from the box and write the letters A–H next to the numbers." },
-			{ id: 22, type: 'fill', text: "22. What is Anderson and Hawker's first concern about their accommodation?" },
+			{ id: 22, type: 'fill', text: "22. What is Anderson and Hawker's first concern about their accommodation?" }
+		],
+		section3_part2: [
 			{ id: 23, type: 'fill', text: "23. _______ students chose reason E." },
 			{ id: 24, type: 'fill', text: "24. The percentage for reason G is _______." },
 			{ id: 25, type: 'fill', text: "25. The survey included _______ students in total." },
-			{ id: 26, type: 'fill', text: "26. Complete the notes below. Write NO MORE THAN THREE WORDS for each answer." },
-			{ id: 27, type: 'fill', text: "27. Additional data shows _______." },
+			{ id: 26, type: 'fill', text: "26. Additional data shows _______." },
+			{ id: 27, type: 'fill', text: "27. _______" }
+		],
+		section3_part3: [
 			{ id: 28, type: 'fill', text: "28. _______" },
 			{ id: 29, type: 'fill', text: "29. _______" },
 			{ id: 30, type: 'fill', text: "30. _______" }
 		],
-		section4: [
-			{ id: 31, type: 'fill', text: "31. Complete the notes below. Write NO MORE THAN TWO WORDS for each answer." },
-			{ id: 32, type: 'fill', text: "32. In order to set up an archaeological project, it is important to have _______." },
-			{ id: 33, type: 'fill', text: "33. The number of field schools is _______." },
-			{ id: 34, type: 'fill', text: "34. People are interested in archaeology because they want to work _______." },
-			{ id: 35, type: 'fill', text: "35. The application process takes _______." },
-			{ id: 36, type: 'fill', text: "36. Differences in _______ affect the price of field schools." },
-			{ id: 37, type: 'fill', text: "37. How to reduce costs: _______." },
-			{ id: 38, type: 'fill', text: "38. Students must arrange their own _______." },
-			{ id: 39, type: 'fill', text: "39. Equipment is provided for _______." },
-			{ id: 40, type: 'fill', text: "40. An extra _______ is charged for some courses." }
+		section4_part1: [
+			{ id: 31, type: 'fill', text: "31. In order to set up an archaeological project, it is important to have _______." },
+			{ id: 32, type: 'fill', text: "32. The number of field schools is _______." },
+			{ id: 33, type: 'fill', text: "33. People are interested in archaeology because they want to work _______." },
+			{ id: 34, type: 'fill', text: "34. The application process takes _______." }
+		],
+		section4_part2: [
+			{ id: 35, type: 'fill', text: "35. Differences in _______ affect the price of field schools." },
+			{ id: 36, type: 'fill', text: "36. How to reduce costs: _______." },
+			{ id: 37, type: 'fill', text: "37. Students must arrange their own _______." },
+			{ id: 38, type: 'fill', text: "38. Equipment is provided for _______." },
+			{ id: 39, type: 'fill', text: "39. An extra _______ is charged for some courses." },
+			{ id: 40, type: 'fill', text: "40. _______" }
 		]
 	};
 
@@ -151,13 +159,34 @@
 		<!-- Section 2 -->
 		<section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
 			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Section 2</h2>
-			<p class="text-gray-600 dark:text-gray-300 mb-6">
-				Questions 11-20: Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer.
-			</p>
 
+			<!-- Questions 11-13 -->
+			<div class="mb-8">
+				<p class="text-gray-600 dark:text-gray-300 mb-6">
+					Questions 11-13: Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer.
+				</p>
+
+				{#each questions.section2_part1 as question}
+					<div class="mb-4">
+						<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+							{question.text}
+						</label>
+						<input 
+							type="text" 
+							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
+						/>
+					</div>
+				{/each}
+			</div>
+
+			<!-- Questions 14-20 with Plan -->
 			<div class="mb-6">
-				<h3 class="text-lg font-medium mb-3 text-gray-900 dark:text-white">Riverside Village Plan</h3>
-				<div class="flex justify-center mb-4">
+				<p class="text-gray-600 dark:text-gray-300 mb-6">
+					Questions 14-20: Complete the plan. Choose NO MORE THAN TWO WORDS from the passage for each answer.
+				</p>
+
+				<div class="flex justify-center mb-6">
 					<img 
 						src="/listening-images/ielts_section2_plan.png"
 						alt="Riverside Village Plan showing River, Engine Room, Grinding Shop, and other numbered locations" 
@@ -166,20 +195,20 @@
 						on:error={(e) => console.error('Failed to load image:', e.target.src)}
 					/>
 				</div>
-			</div>
 
-			{#each questions.section2 as question}
-				<div class="mb-4">
-					<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-						{question.text}
-					</label>
-					<input 
-						type="text" 
-						class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-						on:input={(e) => handleAnswerChange(question.id, e.target.value)}
-					/>
-				</div>
-			{/each}
+				{#each questions.section2_part2 as question}
+					<div class="mb-4">
+						<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+							{question.text}
+						</label>
+						<input 
+							type="text" 
+							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
+						/>
+					</div>
+				{/each}
+			</div>
 		</section>
 
 		<!-- Section 3 -->
@@ -206,12 +235,12 @@
 				</p>
 			</div>
 
-			<p class="text-gray-600 dark:text-gray-300 mb-6">
-				Questions 21-30: Complete the chart below and answer the questions.
-			</p>
+			<!-- Questions 21-22 -->
+			<div class="mb-8">
+				<p class="text-gray-600 dark:text-gray-300 mb-6">
+					Questions 21-22: Complete the chart below. Choose your answers from the box and write the letters A–H next to the numbers.
+				</p>
 
-			<div class="mb-6">
-				<h3 class="text-lg font-medium mb-3 text-gray-900 dark:text-white">Reasons for changing accommodation</h3>
 				<div class="mb-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
 					<p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Choose your answers from the box:</p>
 					<div class="grid grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
@@ -225,7 +254,8 @@
 						<div>H. rent</div>
 					</div>
 				</div>
-				<div class="flex justify-center mb-4">
+
+				<div class="flex justify-center mb-6">
 					<img 
 						src="/listening-images/ielts_section3_chart.png"
 						alt="Chart showing reasons for changing accommodation with bars labeled C, E, G and numbers 28, 29, 30" 
@@ -234,41 +264,105 @@
 						on:error={(e) => console.error('Failed to load image:', e.target.src)}
 					/>
 				</div>
+
+				{#each questions.section3_part1 as question}
+					<div class="mb-4">
+						<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+							{question.text}
+						</label>
+						<input 
+							type="text" 
+							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
+						/>
+					</div>
+				{/each}
 			</div>
 
-			{#each questions.section3 as question}
-				<div class="mb-4">
-					<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-						{question.text}
-					</label>
-					<input 
-						type="text" 
-						class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-						on:input={(e) => handleAnswerChange(question.id, e.target.value)}
-					/>
-				</div>
-			{/each}
+			<!-- Questions 23-27 -->
+			<div class="mb-8">
+				<p class="text-gray-600 dark:text-gray-300 mb-6">
+					Questions 23-27: Complete the sentences below. Write NO MORE THAN THREE WORDS for each answer.
+				</p>
+
+				{#each questions.section3_part2 as question}
+					<div class="mb-4">
+						<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+							{question.text}
+						</label>
+						<input 
+							type="text" 
+							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
+						/>
+					</div>
+				{/each}
+			</div>
+
+			<!-- Questions 28-30 -->
+			<div class="mb-6">
+				<p class="text-gray-600 dark:text-gray-300 mb-6">
+					Questions 28-30: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.
+				</p>
+
+				{#each questions.section3_part3 as question}
+					<div class="mb-4">
+						<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+							{question.text}
+						</label>
+						<input 
+							type="text" 
+							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
+						/>
+					</div>
+				{/each}
+			</div>
 		</section>
 
 		<!-- Section 4 -->
 		<section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
 			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Section 4</h2>
-			<p class="text-gray-600 dark:text-gray-300 mb-6">
-				Questions 31-40: Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.
-			</p>
 
-			{#each questions.section4 as question}
-				<div class="mb-4">
-					<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-						{question.text}
-					</label>
-					<input 
-						type="text" 
-						class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-						on:input={(e) => handleAnswerChange(question.id, e.target.value)}
-					/>
-				</div>
-			{/each}
+			<!-- Questions 31-34 -->
+			<div class="mb-8">
+				<p class="text-gray-600 dark:text-gray-300 mb-6">
+					Questions 31-34: Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.
+				</p>
+
+				{#each questions.section4_part1 as question}
+					<div class="mb-4">
+						<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+							{question.text}
+						</label>
+						<input 
+							type="text" 
+							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
+						/>
+					</div>
+				{/each}
+			</div>
+
+			<!-- Questions 35-40 -->
+			<div class="mb-6">
+				<p class="text-gray-600 dark:text-gray-300 mb-6">
+					Questions 35-40: Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.
+				</p>
+
+				{#each questions.section4_part2 as question}
+					<div class="mb-4">
+						<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+							{question.text}
+						</label>
+						<input 
+							type="text" 
+							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
+						/>
+					</div>
+				{/each}
+			</div>
 		</section>
 
 		<!-- Transfer Instructions -->
