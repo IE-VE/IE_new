@@ -49,7 +49,7 @@
 		}
 	];
 
-	const testSections = [
+	const testOverview = [
 		{
 			section: 'Section 1',
 			description: 'Conversation in everyday social context',
@@ -84,78 +84,14 @@
 				{
 					id: 1,
 					type: 'form-completion',
-					instruction: 'Complete the form below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.',
-					content: `
-						<div class="bg-white dark:bg-gray-800 p-6 rounded-lg border">
-							<h4 class="font-semibold mb-4">STUDENT ACCOMMODATION FORM</h4>
-							<div class="space-y-3">
-								<div class="flex items-center space-x-2">
-									<span class="w-32">Name:</span>
-									<span class="font-medium">Sarah</span>
-									<input type="text" class="border rounded px-2 py-1 w-32" placeholder="1. ________" />
-								</div>
-								<div class="flex items-center space-x-2">
-									<span class="w-32">Phone number:</span>
-									<input type="text" class="border rounded px-2 py-1 w-32" placeholder="2. ________" />
-								</div>
-								<div class="flex items-center space-x-2">
-									<span class="w-32">Nationality:</span>
-									<input type="text" class="border rounded px-2 py-1 w-32" placeholder="3. ________" />
-								</div>
-								<div class="flex items-center space-x-2">
-									<span class="w-32">Course:</span>
-									<input type="text" class="border rounded px-2 py-1 w-32" placeholder="4. ________" />
-								</div>
-								<div class="flex items-center space-x-2">
-									<span class="w-32">Accommodation type:</span>
-									<input type="text" class="border rounded px-2 py-1 w-32" placeholder="5. ________" />
-								</div>
-							</div>
-						</div>
-					`
+					questionRange: '1-5',
+					instruction: 'Complete the form below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.'
 				},
 				{
 					id: 6,
 					type: 'multiple-choice',
-					instruction: 'Choose the correct letter, A, B or C.',
-					content: `
-						<div class="space-y-4">
-							<div class="bg-white dark:bg-gray-800 p-4 rounded-lg border">
-								<p class="font-medium mb-3">6. The weekly rent is</p>
-								<div class="space-y-2">
-									<label class="flex items-center space-x-2">
-										<input type="radio" name="q6" value="A" />
-										<span>A. £85</span>
-									</label>
-									<label class="flex items-center space-x-2">
-										<input type="radio" name="q6" value="B" />
-										<span>B. £95</span>
-									</label>
-									<label class="flex items-center space-x-2">
-										<input type="radio" name="q6" value="C" />
-										<span>C. £105</span>
-									</label>
-								</div>
-							</div>
-							<div class="bg-white dark:bg-gray-800 p-4 rounded-lg border">
-								<p class="font-medium mb-3">7. The deposit required is</p>
-								<div class="space-y-2">
-									<label class="flex items-center space-x-2">
-										<input type="radio" name="q7" value="A" />
-										<span>A. one week's rent</span>
-									</label>
-									<label class="flex items-center space-x-2">
-										<input type="radio" name="q7" value="B" />
-										<span>B. two weeks' rent</span>
-									</label>
-									<label class="flex items-center space-x-2">
-										<input type="radio" name="q7" value="C" />
-										<span>C. three weeks' rent</span>
-									</label>
-								</div>
-							</div>
-						</div>
-					`
+					questionRange: '6-7',
+					instruction: 'Choose the correct letter, A, B or C.'
 				}
 			]
 		},
@@ -166,60 +102,8 @@
 				{
 					id: 11,
 					type: 'map-labelling',
-					instruction: 'Label the map below. Write the correct letter, A-H, next to questions 11-15.',
-					content: `
-						<div class="bg-white dark:bg-gray-800 p-6 rounded-lg border">
-							<div class="relative">
-								<svg viewBox="0 0 400 300" class="w-full h-64 border rounded">
-									<rect x="50" y="50" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
-									<text x="80" y="75" text-anchor="middle" class="text-xs">Library</text>
-									<text x="80" y="45" text-anchor="middle" class="text-xs font-bold">A</text>
-									
-									<rect x="150" y="50" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
-									<text x="180" y="75" text-anchor="middle" class="text-xs">Cafeteria</text>
-									<text x="180" y="45" text-anchor="middle" class="text-xs font-bold">B</text>
-									
-									<rect x="250" y="50" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
-									<text x="280" y="75" text-anchor="middle" class="text-xs">Gym</text>
-									<text x="280" y="45" text-anchor="middle" class="text-xs font-bold">C</text>
-									
-									<rect x="50" y="150" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
-									<text x="80" y="175" text-anchor="middle" class="text-xs">Bookshop</text>
-									<text x="80" y="145" text-anchor="middle" class="text-xs font-bold">D</text>
-									
-									<rect x="150" y="150" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
-									<text x="180" y="175" text-anchor="middle" class="text-xs">Pool</text>
-									<text x="180" y="145" text-anchor="middle" class="text-xs font-bold">E</text>
-									
-									<rect x="250" y="150" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
-									<text x="280" y="175" text-anchor="middle" class="text-xs">Theatre</text>
-									<text x="280" y="145" text-anchor="middle" class="text-xs font-bold">F</text>
-								</svg>
-							</div>
-							<div class="mt-4 space-y-2">
-								<div class="flex items-center space-x-4">
-									<span>11. Student Services:</span>
-									<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
-								</div>
-								<div class="flex items-center space-x-4">
-									<span>12. Computer Lab:</span>
-									<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
-								</div>
-								<div class="flex items-center space-x-4">
-									<span>13. Medical Centre:</span>
-									<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
-								</div>
-								<div class="flex items-center space-x-4">
-									<span>14. Art Gallery:</span>
-									<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
-								</div>
-								<div class="flex items-center space-x-4">
-									<span>15. Language Centre:</span>
-									<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
-								</div>
-							</div>
-						</div>
-					`
+					questionRange: '11-15',
+					instruction: 'Label the map below. Write the correct letter, A-H, next to questions 11-15.'
 				}
 			]
 		},
@@ -230,31 +114,8 @@
 				{
 					id: 21,
 					type: 'sentence-completion',
-					instruction: 'Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer.',
-					content: `
-						<div class="bg-white dark:bg-gray-800 p-6 rounded-lg border space-y-4">
-							<div>
-								<p>21. The assignment is about the impact of __________ on local communities.</p>
-								<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
-							</div>
-							<div>
-								<p>22. They need to interview at least __________ people.</p>
-								<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
-							</div>
-							<div>
-								<p>23. The final report should be __________ words long.</p>
-								<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
-							</div>
-							<div>
-								<p>24. The deadline for submission is __________ March.</p>
-								<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
-							</div>
-							<div>
-								<p>25. They will meet next __________ to discuss their findings.</p>
-								<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
-							</div>
-						</div>
-					`
+					questionRange: '21-25',
+					instruction: 'Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer.'
 				}
 			]
 		},
@@ -265,47 +126,8 @@
 				{
 					id: 31,
 					type: 'note-completion',
-					instruction: 'Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.',
-					content: `
-						<div class="bg-white dark:bg-gray-800 p-6 rounded-lg border">
-							<h4 class="font-semibold mb-4">RENEWABLE ENERGY SOURCES</h4>
-							<div class="space-y-4">
-								<div>
-									<p class="font-medium">Solar Energy</p>
-									<ul class="ml-4 space-y-2 mt-2">
-										<li>• Uses 31. __________ to generate electricity</li>
-										<li>• Most effective in 32. __________ climates</li>
-										<li>• Installation costs are 33. __________</li>
-									</ul>
-								</div>
-								<div>
-									<p class="font-medium">Wind Energy</p>
-									<ul class="ml-4 space-y-2 mt-2">
-										<li>• Requires consistent 34. __________ patterns</li>
-										<li>• Turbines can be installed 35. __________ or on land</li>
-										<li>• Noise pollution is a 36. __________</li>
-									</ul>
-								</div>
-								<div>
-									<p class="font-medium">Hydroelectric Power</p>
-									<ul class="ml-4 space-y-2 mt-2">
-										<li>• Uses flowing 37. __________ to generate power</li>
-										<li>• Requires construction of 38. __________</li>
-										<li>• Can affect local 39. __________</li>
-										<li>• Provides approximately 40. __________ of global electricity</li>
-									</ul>
-								</div>
-							</div>
-							<div class="grid grid-cols-2 gap-4 mt-6">
-								{#each [31, 32, 33, 34, 35, 36, 37, 38, 39, 40] as qNum}
-									<div class="flex items-center space-x-2">
-										<span class="w-8">{qNum}.</span>
-										<input type="text" class="border rounded px-2 py-1 flex-1" placeholder="Your answer" />
-									</div>
-								{/each}
-							</div>
-						</div>
-					`
+					questionRange: '31-40',
+					instruction: 'Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.'
 				}
 			]
 		}
@@ -431,7 +253,7 @@
 				Test Structure
 			</h2>
 			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-				{#each testSections as section}
+				{#each testOverview as section}
 					<Card variant="greyscale">
 						<div class="text-center">
 							<h3 class="font-semibold text-gray-900 dark:text-white mb-2">{section.section}</h3>
@@ -597,19 +419,193 @@
 							
 							<div class="mb-4">
 								<h4 class="font-semibold text-gray-900 dark:text-white mb-2">
-									Question {currentQuestion.id}{currentQuestion.type === 'form-completion' ? '-5' : 
-									currentQuestion.type === 'multiple-choice' ? '-7' : 
-									currentQuestion.type === 'sentence-completion' ? '-25' : 
-									'-40'}
+									Questions {currentQuestion.questionRange}
 								</h4>
 								<p class="text-sm text-gray-600 dark:text-gray-400 italic mb-4">
 									{currentQuestion.instruction}
 								</p>
 							</div>
 							
-							<div class="question-content">
-								{@html currentQuestion.content}
-							</div>
+							<!-- Question Content Based on Type -->
+							{#if currentQuestion.type === 'form-completion'}
+								<div class="bg-white dark:bg-gray-800 p-6 rounded-lg border">
+									<h4 class="font-semibold mb-4">STUDENT ACCOMMODATION FORM</h4>
+									<div class="space-y-3">
+										<div class="flex items-center space-x-2">
+											<span class="w-32">Name:</span>
+											<span class="font-medium">Sarah</span>
+											<input type="text" class="border rounded px-2 py-1 w-32" placeholder="1. ________" />
+										</div>
+										<div class="flex items-center space-x-2">
+											<span class="w-32">Phone number:</span>
+											<input type="text" class="border rounded px-2 py-1 w-32" placeholder="2. ________" />
+										</div>
+										<div class="flex items-center space-x-2">
+											<span class="w-32">Nationality:</span>
+											<input type="text" class="border rounded px-2 py-1 w-32" placeholder="3. ________" />
+										</div>
+										<div class="flex items-center space-x-2">
+											<span class="w-32">Course:</span>
+											<input type="text" class="border rounded px-2 py-1 w-32" placeholder="4. ________" />
+										</div>
+										<div class="flex items-center space-x-2">
+											<span class="w-32">Accommodation type:</span>
+											<input type="text" class="border rounded px-2 py-1 w-32" placeholder="5. ________" />
+										</div>
+									</div>
+								</div>
+							{:else if currentQuestion.type === 'multiple-choice'}
+								<div class="space-y-4">
+									<div class="bg-white dark:bg-gray-800 p-4 rounded-lg border">
+										<p class="font-medium mb-3">6. The weekly rent is</p>
+										<div class="space-y-2">
+											<label class="flex items-center space-x-2">
+												<input type="radio" name="q6" value="A" />
+												<span>A. £85</span>
+											</label>
+											<label class="flex items-center space-x-2">
+												<input type="radio" name="q6" value="B" />
+												<span>B. £95</span>
+											</label>
+											<label class="flex items-center space-x-2">
+												<input type="radio" name="q6" value="C" />
+												<span>C. £105</span>
+											</label>
+										</div>
+									</div>
+									<div class="bg-white dark:bg-gray-800 p-4 rounded-lg border">
+										<p class="font-medium mb-3">7. The deposit required is</p>
+										<div class="space-y-2">
+											<label class="flex items-center space-x-2">
+												<input type="radio" name="q7" value="A" />
+												<span>A. one week's rent</span>
+											</label>
+											<label class="flex items-center space-x-2">
+												<input type="radio" name="q7" value="B" />
+												<span>B. two weeks' rent</span>
+											</label>
+											<label class="flex items-center space-x-2">
+												<input type="radio" name="q7" value="C" />
+												<span>C. three weeks' rent</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							{:else if currentQuestion.type === 'map-labelling'}
+								<div class="bg-white dark:bg-gray-800 p-6 rounded-lg border">
+									<div class="relative">
+										<svg viewBox="0 0 400 300" class="w-full h-64 border rounded">
+											<rect x="50" y="50" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
+											<text x="80" y="75" text-anchor="middle" class="text-xs">Library</text>
+											<text x="80" y="45" text-anchor="middle" class="text-xs font-bold">A</text>
+											
+											<rect x="150" y="50" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
+											<text x="180" y="75" text-anchor="middle" class="text-xs">Cafeteria</text>
+											<text x="180" y="45" text-anchor="middle" class="text-xs font-bold">B</text>
+											
+											<rect x="250" y="50" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
+											<text x="280" y="75" text-anchor="middle" class="text-xs">Gym</text>
+											<text x="280" y="45" text-anchor="middle" class="text-xs font-bold">C</text>
+											
+											<rect x="50" y="150" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
+											<text x="80" y="175" text-anchor="middle" class="text-xs">Bookshop</text>
+											<text x="80" y="145" text-anchor="middle" class="text-xs font-bold">D</text>
+											
+											<rect x="150" y="150" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
+											<text x="180" y="175" text-anchor="middle" class="text-xs">Pool</text>
+											<text x="180" y="145" text-anchor="middle" class="text-xs font-bold">E</text>
+											
+											<rect x="250" y="150" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
+											<text x="280" y="175" text-anchor="middle" class="text-xs">Theatre</text>
+											<text x="280" y="145" text-anchor="middle" class="text-xs font-bold">F</text>
+										</svg>
+									</div>
+									<div class="mt-4 space-y-2">
+										<div class="flex items-center space-x-4">
+											<span>11. Student Services:</span>
+											<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
+										</div>
+										<div class="flex items-center space-x-4">
+											<span>12. Computer Lab:</span>
+											<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
+										</div>
+										<div class="flex items-center space-x-4">
+											<span>13. Medical Centre:</span>
+											<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
+										</div>
+										<div class="flex items-center space-x-4">
+											<span>14. Art Gallery:</span>
+											<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
+										</div>
+										<div class="flex items-center space-x-4">
+											<span>15. Language Centre:</span>
+											<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
+										</div>
+									</div>
+								</div>
+							{:else if currentQuestion.type === 'sentence-completion'}
+								<div class="bg-white dark:bg-gray-800 p-6 rounded-lg border space-y-4">
+									<div>
+										<p>21. The assignment is about the impact of __________ on local communities.</p>
+										<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
+									</div>
+									<div>
+										<p>22. They need to interview at least __________ people.</p>
+										<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
+									</div>
+									<div>
+										<p>23. The final report should be __________ words long.</p>
+										<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
+									</div>
+									<div>
+										<p>24. The deadline for submission is __________ March.</p>
+										<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
+									</div>
+									<div>
+										<p>25. They will meet next __________ to discuss their findings.</p>
+										<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
+									</div>
+								</div>
+							{:else if currentQuestion.type === 'note-completion'}
+								<div class="bg-white dark:bg-gray-800 p-6 rounded-lg border">
+									<h4 class="font-semibold mb-4">RENEWABLE ENERGY SOURCES</h4>
+									<div class="space-y-4">
+										<div>
+											<p class="font-medium">Solar Energy</p>
+											<ul class="ml-4 space-y-2 mt-2">
+												<li>• Uses 31. __________ to generate electricity</li>
+												<li>• Most effective in 32. __________ climates</li>
+												<li>• Installation costs are 33. __________</li>
+											</ul>
+										</div>
+										<div>
+											<p class="font-medium">Wind Energy</p>
+											<ul class="ml-4 space-y-2 mt-2">
+												<li>• Requires consistent 34. __________ patterns</li>
+												<li>• Turbines can be installed 35. __________ or on land</li>
+												<li>• Noise pollution is a 36. __________</li>
+											</ul>
+										</div>
+										<div>
+											<p class="font-medium">Hydroelectric Power</p>
+											<ul class="ml-4 space-y-2 mt-2">
+												<li>• Uses flowing 37. __________ to generate power</li>
+												<li>• Requires construction of 38. __________</li>
+												<li>• Can affect local 39. __________</li>
+												<li>• Provides approximately 40. __________ of global electricity</li>
+											</ul>
+										</div>
+									</div>
+									<div class="grid grid-cols-2 gap-4 mt-6">
+										{#each [31, 32, 33, 34, 35, 36, 37, 38, 39, 40] as qNum}
+											<div class="flex items-center space-x-2">
+												<span class="w-8">{qNum}.</span>
+												<input type="text" class="border rounded px-2 py-1 flex-1" placeholder="Your answer" />
+											</div>
+										{/each}
+									</div>
+								</div>
+							{/if}
 						</div>
 						
 						<!-- Navigation Controls -->
