@@ -76,16 +76,243 @@
 		}
 	];
 
-	const sampleQuestions = [
-		'/listening-images/LT1 (1).png',
-		'/listening-images/LT1 (2).png',
-		'/listening-images/LT1 (3).png',
-		'/listening-images/LT1 (4).png',
-		'/listening-images/LT1 (5).png',
-		'/listening-images/LT1 (6).png',
-		'/listening-images/LT1 (7).png',
-		'/listening-images/LT1 (8).png'
+	const testSections = [
+		{
+			title: 'Section 1: Questions 1-10',
+			description: 'Conversation between two people in everyday social context',
+			questions: [
+				{
+					id: 1,
+					type: 'form-completion',
+					instruction: 'Complete the form below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.',
+					content: `
+						<div class="bg-white dark:bg-gray-800 p-6 rounded-lg border">
+							<h4 class="font-semibold mb-4">STUDENT ACCOMMODATION FORM</h4>
+							<div class="space-y-3">
+								<div class="flex items-center space-x-2">
+									<span class="w-32">Name:</span>
+									<span class="font-medium">Sarah</span>
+									<input type="text" class="border rounded px-2 py-1 w-32" placeholder="1. ________" />
+								</div>
+								<div class="flex items-center space-x-2">
+									<span class="w-32">Phone number:</span>
+									<input type="text" class="border rounded px-2 py-1 w-32" placeholder="2. ________" />
+								</div>
+								<div class="flex items-center space-x-2">
+									<span class="w-32">Nationality:</span>
+									<input type="text" class="border rounded px-2 py-1 w-32" placeholder="3. ________" />
+								</div>
+								<div class="flex items-center space-x-2">
+									<span class="w-32">Course:</span>
+									<input type="text" class="border rounded px-2 py-1 w-32" placeholder="4. ________" />
+								</div>
+								<div class="flex items-center space-x-2">
+									<span class="w-32">Accommodation type:</span>
+									<input type="text" class="border rounded px-2 py-1 w-32" placeholder="5. ________" />
+								</div>
+							</div>
+						</div>
+					`
+				},
+				{
+					id: 6,
+					type: 'multiple-choice',
+					instruction: 'Choose the correct letter, A, B or C.',
+					content: `
+						<div class="space-y-4">
+							<div class="bg-white dark:bg-gray-800 p-4 rounded-lg border">
+								<p class="font-medium mb-3">6. The weekly rent is</p>
+								<div class="space-y-2">
+									<label class="flex items-center space-x-2">
+										<input type="radio" name="q6" value="A" />
+										<span>A. £85</span>
+									</label>
+									<label class="flex items-center space-x-2">
+										<input type="radio" name="q6" value="B" />
+										<span>B. £95</span>
+									</label>
+									<label class="flex items-center space-x-2">
+										<input type="radio" name="q6" value="C" />
+										<span>C. £105</span>
+									</label>
+								</div>
+							</div>
+							<div class="bg-white dark:bg-gray-800 p-4 rounded-lg border">
+								<p class="font-medium mb-3">7. The deposit required is</p>
+								<div class="space-y-2">
+									<label class="flex items-center space-x-2">
+										<input type="radio" name="q7" value="A" />
+										<span>A. one week's rent</span>
+									</label>
+									<label class="flex items-center space-x-2">
+										<input type="radio" name="q7" value="B" />
+										<span>B. two weeks' rent</span>
+									</label>
+									<label class="flex items-center space-x-2">
+										<input type="radio" name="q7" value="C" />
+										<span>C. three weeks' rent</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					`
+				}
+			]
+		},
+		{
+			title: 'Section 2: Questions 11-20',
+			description: 'Monologue about local facilities',
+			questions: [
+				{
+					id: 11,
+					type: 'map-labelling',
+					instruction: 'Label the map below. Write the correct letter, A-H, next to questions 11-15.',
+					content: `
+						<div class="bg-white dark:bg-gray-800 p-6 rounded-lg border">
+							<div class="relative">
+								<svg viewBox="0 0 400 300" class="w-full h-64 border rounded">
+									<rect x="50" y="50" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
+									<text x="80" y="75" text-anchor="middle" class="text-xs">Library</text>
+									<text x="80" y="45" text-anchor="middle" class="text-xs font-bold">A</text>
+									
+									<rect x="150" y="50" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
+									<text x="180" y="75" text-anchor="middle" class="text-xs">Cafeteria</text>
+									<text x="180" y="45" text-anchor="middle" class="text-xs font-bold">B</text>
+									
+									<rect x="250" y="50" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
+									<text x="280" y="75" text-anchor="middle" class="text-xs">Gym</text>
+									<text x="280" y="45" text-anchor="middle" class="text-xs font-bold">C</text>
+									
+									<rect x="50" y="150" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
+									<text x="80" y="175" text-anchor="middle" class="text-xs">Bookshop</text>
+									<text x="80" y="145" text-anchor="middle" class="text-xs font-bold">D</text>
+									
+									<rect x="150" y="150" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
+									<text x="180" y="175" text-anchor="middle" class="text-xs">Pool</text>
+									<text x="180" y="145" text-anchor="middle" class="text-xs font-bold">E</text>
+									
+									<rect x="250" y="150" width="60" height="40" fill="#e5e7eb" stroke="#374151" />
+									<text x="280" y="175" text-anchor="middle" class="text-xs">Theatre</text>
+									<text x="280" y="145" text-anchor="middle" class="text-xs font-bold">F</text>
+								</svg>
+							</div>
+							<div class="mt-4 space-y-2">
+								<div class="flex items-center space-x-4">
+									<span>11. Student Services:</span>
+									<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
+								</div>
+								<div class="flex items-center space-x-4">
+									<span>12. Computer Lab:</span>
+									<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
+								</div>
+								<div class="flex items-center space-x-4">
+									<span>13. Medical Centre:</span>
+									<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
+								</div>
+								<div class="flex items-center space-x-4">
+									<span>14. Art Gallery:</span>
+									<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
+								</div>
+								<div class="flex items-center space-x-4">
+									<span>15. Language Centre:</span>
+									<input type="text" class="border rounded px-2 py-1 w-16" placeholder="___" maxlength="1" />
+								</div>
+							</div>
+						</div>
+					`
+				}
+			]
+		},
+		{
+			title: 'Section 3: Questions 21-30',
+			description: 'Conversation between students about assignment',
+			questions: [
+				{
+					id: 21,
+					type: 'sentence-completion',
+					instruction: 'Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer.',
+					content: `
+						<div class="bg-white dark:bg-gray-800 p-6 rounded-lg border space-y-4">
+							<div>
+								<p>21. The assignment is about the impact of __________ on local communities.</p>
+								<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
+							</div>
+							<div>
+								<p>22. They need to interview at least __________ people.</p>
+								<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
+							</div>
+							<div>
+								<p>23. The final report should be __________ words long.</p>
+								<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
+							</div>
+							<div>
+								<p>24. The deadline for submission is __________ March.</p>
+								<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
+							</div>
+							<div>
+								<p>25. They will meet next __________ to discuss their findings.</p>
+								<input type="text" class="border rounded px-2 py-1 mt-2 w-48" placeholder="Your answer" />
+							</div>
+						</div>
+					`
+				}
+			]
+		},
+		{
+			title: 'Section 4: Questions 31-40',
+			description: 'Lecture about renewable energy',
+			questions: [
+				{
+					id: 31,
+					type: 'note-completion',
+					instruction: 'Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.',
+					content: `
+						<div class="bg-white dark:bg-gray-800 p-6 rounded-lg border">
+							<h4 class="font-semibold mb-4">RENEWABLE ENERGY SOURCES</h4>
+							<div class="space-y-4">
+								<div>
+									<p class="font-medium">Solar Energy</p>
+									<ul class="ml-4 space-y-2 mt-2">
+										<li>• Uses 31. __________ to generate electricity</li>
+										<li>• Most effective in 32. __________ climates</li>
+										<li>• Installation costs are 33. __________</li>
+									</ul>
+								</div>
+								<div>
+									<p class="font-medium">Wind Energy</p>
+									<ul class="ml-4 space-y-2 mt-2">
+										<li>• Requires consistent 34. __________ patterns</li>
+										<li>• Turbines can be installed 35. __________ or on land</li>
+										<li>• Noise pollution is a 36. __________</li>
+									</ul>
+								</div>
+								<div>
+									<p class="font-medium">Hydroelectric Power</p>
+									<ul class="ml-4 space-y-2 mt-2">
+										<li>• Uses flowing 37. __________ to generate power</li>
+										<li>• Requires construction of 38. __________</li>
+										<li>• Can affect local 39. __________</li>
+										<li>• Provides approximately 40. __________ of global electricity</li>
+									</ul>
+								</div>
+							</div>
+							<div class="grid grid-cols-2 gap-4 mt-6">
+								{#each [31, 32, 33, 34, 35, 36, 37, 38, 39, 40] as qNum}
+									<div class="flex items-center space-x-2">
+										<span class="w-8">{qNum}.</span>
+										<input type="text" class="border rounded px-2 py-1 flex-1" placeholder="Your answer" />
+									</div>
+								{/each}
+							</div>
+						</div>
+					`
+				}
+			]
+		}
 	];
+
+	let currentSectionIndex = $state(0);
+	let currentQuestionIndex = $state(0);
 
 	function togglePlayPause() {
 		if (!audioElement) return;
@@ -111,16 +338,40 @@
 		return `${mins}:${secs.toString().padStart(2, '0')}`;
 	}
 
+	function nextSection() {
+		if (currentSectionIndex < testSections.length - 1) {
+			currentSectionIndex++;
+			currentQuestionIndex = 0;
+		}
+	}
+
+	function prevSection() {
+		if (currentSectionIndex > 0) {
+			currentSectionIndex--;
+			currentQuestionIndex = 0;
+		}
+	}
+
 	function nextQuestion() {
-		if (currentQuestionIndex < sampleQuestions.length - 1) {
+		const currentSection = testSections[currentSectionIndex];
+		if (currentQuestionIndex < currentSection.questions.length - 1) {
 			currentQuestionIndex++;
+		} else if (currentSectionIndex < testSections.length - 1) {
+			nextSection();
 		}
 	}
 
 	function prevQuestion() {
 		if (currentQuestionIndex > 0) {
 			currentQuestionIndex--;
+		} else if (currentSectionIndex > 0) {
+			currentSectionIndex--;
+			currentQuestionIndex = testSections[currentSectionIndex].questions.length - 1;
 		}
+	}
+
+	function submitTest() {
+		alert('Test submitted! In a real test, your answers would be processed here.');
 	}
 
 	onMount(() => {
@@ -306,40 +557,108 @@
 						</div>
 					</div>
 
-					<!-- Question Images Carousel -->
+					<!-- Interactive HTML Test -->
 					<div>
-						<h3 class="font-semibold text-gray-900 dark:text-white mb-4 text-center">Sample Questions</h3>
-						<div class="relative">
-							<div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-inner">
-								<img 
-									src={sampleQuestions[currentQuestionIndex]} 
-									alt="Listening test question {currentQuestionIndex + 1}"
-									class="w-full h-auto max-h-96 object-contain mx-auto"
-									loading="lazy"
-								/>
+						<h3 class="font-semibold text-gray-900 dark:text-white mb-6 text-center">Interactive Listening Test</h3>
+						
+						<!-- Section Navigation -->
+						<div class="mb-6">
+							<div class="flex justify-center mb-4">
+								<div class="flex space-x-2">
+									{#each testSections as section, index}
+										<button
+											onclick={() => { currentSectionIndex = index; currentQuestionIndex = 0; }}
+											class="px-3 py-2 rounded-lg text-sm transition-colors {currentSectionIndex === index 
+												? 'bg-teal-600 text-white' 
+												: 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'}"
+										>
+											Sec {index + 1}
+										</button>
+									{/each}
+								</div>
 							</div>
 							
-							<div class="flex justify-between items-center mt-4">
-								<button
-									onclick={prevQuestion}
-									disabled={currentQuestionIndex === 0}
-									class="bg-gray-200 hover:bg-gray-300 disabled:opacity-50 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors"
-								>
-									← Previous
-								</button>
-								
+							<div class="text-center">
+								<div class="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-4">
+									<h4 class="font-semibold text-teal-900 dark:text-teal-100 mb-2">
+										{testSections[currentSectionIndex].title}
+									</h4>
+									<p class="text-sm text-teal-700 dark:text-teal-300">
+										{testSections[currentSectionIndex].description}
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Current Question -->
+						<div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-inner min-h-96">
+							{@const currentSection = testSections[currentSectionIndex]}
+							{@const currentQuestion = currentSection.questions[currentQuestionIndex]}
+							
+							<div class="mb-4">
+								<h4 class="font-semibold text-gray-900 dark:text-white mb-2">
+									Question {currentQuestion.id}{currentQuestion.type === 'form-completion' ? '-5' : 
+									currentQuestion.type === 'multiple-choice' ? '-7' : 
+									currentQuestion.type === 'sentence-completion' ? '-25' : 
+									'-40'}
+								</h4>
+								<p class="text-sm text-gray-600 dark:text-gray-400 italic mb-4">
+									{currentQuestion.instruction}
+								</p>
+							</div>
+							
+							<div class="question-content">
+								{@html currentQuestion.content}
+							</div>
+						</div>
+						
+						<!-- Navigation Controls -->
+						<div class="flex justify-between items-center mt-6">
+							<button
+								onclick={prevQuestion}
+								disabled={currentSectionIndex === 0 && currentQuestionIndex === 0}
+								class="bg-gray-200 hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-6 py-2 rounded-lg transition-colors"
+							>
+								← Previous
+							</button>
+							
+							<div class="text-center">
 								<span class="text-sm text-gray-600 dark:text-gray-400">
-									{currentQuestionIndex + 1} of {sampleQuestions.length}
+									Section {currentSectionIndex + 1} of {testSections.length} | 
+									Question {currentQuestionIndex + 1} of {testSections[currentSectionIndex].questions.length}
 								</span>
-								
+							</div>
+							
+							{#if currentSectionIndex === testSections.length - 1 && currentQuestionIndex === testSections[currentSectionIndex].questions.length - 1}
+								<button
+									onclick={submitTest}
+									class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition-colors font-medium"
+								>
+									Submit Test
+								</button>
+							{:else}
 								<button
 									onclick={nextQuestion}
-									disabled={currentQuestionIndex === sampleQuestions.length - 1}
-									class="bg-gray-200 hover:bg-gray-300 disabled:opacity-50 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors"
+									class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-lg transition-colors"
 								>
 									Next →
 								</button>
+							{/if}
+						</div>
+
+						<!-- Progress Indicator -->
+						<div class="mt-4">
+							{@const totalQuestions = testSections.reduce((sum, section) => sum + section.questions.length, 0)}
+							{@const completedQuestions = testSections.slice(0, currentSectionIndex).reduce((sum, section) => sum + section.questions.length, 0) + currentQuestionIndex}
+							<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+								<div 
+									class="bg-teal-600 h-2 rounded-full transition-all duration-300"
+									style="width: {(completedQuestions / totalQuestions) * 100}%"
+								></div>
 							</div>
+							<p class="text-xs text-gray-500 dark:text-gray-400 text-center mt-1">
+								Progress: {Math.round((completedQuestions / totalQuestions) * 100)}%
+							</p>
 						</div>
 					</div>
 
