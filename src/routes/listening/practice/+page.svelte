@@ -96,14 +96,14 @@
 							<li>Visit places which have:
 								<ul class="ml-6 mt-2 space-y-1">
 									<li>• historical interest</li>
-									<li>• good <input type="text" name="q1" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"> 1</li>
-									<li>• <input type="text" name="q2" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"> 2</li>
+									<li>• good <strong>1</strong> <input type="text" name="q1" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"></li>
+									<li>• <strong>2</strong> <input type="text" name="q2" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"></li>
 								</ul>
 							</li>
 							<li class="mt-4">Cost: between £5.00 and £15.00 per person</li>
-							<li>Note: special trips organised for groups of <input type="text" name="q3" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"> 3 people</li>
+							<li>Note: special trips organised for groups of <strong>3</strong> <input type="text" name="q3" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"> people</li>
 							<li>Time: departure – 8.30 a.m., return – 6.00 p.m.</li>
-							<li>To reserve a seat: sign name on the <input type="text" name="q4" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"> 4 3 days in advance</li>
+							<li>To reserve a seat: sign name on the <strong>4</strong> <input type="text" name="q4" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"> 3 days in advance</li>
 						</ul>
 					</div>
 
@@ -127,7 +127,7 @@
 								<tbody>
 									<tr>
 										<td class="border border-gray-300 px-4 py-3">St Ives</td>
-										<td class="border border-gray-300 px-4 py-3">5 <input type="text" name="q5" class="border-b border-gray-400 px-2 py-1 w-24 focus:border-blue-500 focus:outline-none"> 5</td>
+										<td class="border border-gray-300 px-4 py-3">5 <strong>5</strong> <input type="text" name="q5" class="border-b border-gray-400 px-2 py-1 w-24 focus:border-blue-500 focus:outline-none"></td>
 										<td class="border border-gray-300 px-4 py-3">16</td>
 										<td class="border border-gray-300 px-4 py-3">Hepworth Museum</td>
 									</tr>
@@ -135,10 +135,10 @@
 										<td class="border border-gray-300 px-4 py-3">London</td>
 										<td class="border border-gray-300 px-4 py-3">16th February</td>
 										<td class="border border-gray-300 px-4 py-3">45</td>
-										<td class="border border-gray-300 px-4 py-3"><input type="text" name="q6" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> 6</td>
+										<td class="border border-gray-300 px-4 py-3"><strong>6</strong> <input type="text" name="q6" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></td>
 									</tr>
 									<tr>
-										<td class="border border-gray-300 px-4 py-3"><input type="text" name="q7" class="border-b border-gray-400 px-2 py-1 w-24 focus:border-blue-500 focus:outline-none"> 7</td>
+										<td class="border border-gray-300 px-4 py-3"><strong>7</strong> <input type="text" name="q7" class="border-b border-gray-400 px-2 py-1 w-24 focus:border-blue-500 focus:outline-none"></td>
 										<td class="border border-gray-300 px-4 py-3">3rd March</td>
 										<td class="border border-gray-300 px-4 py-3">18</td>
 										<td class="border border-gray-300 px-4 py-3">S.S. Great Britain</td>
@@ -153,14 +153,14 @@
 										<td class="border border-gray-300 px-4 py-3">Bath</td>
 										<td class="border border-gray-300 px-4 py-3">23rd March</td>
 										<td class="border border-gray-300 px-4 py-3">16</td>
-										<td class="border border-gray-300 px-4 py-3"><input type="text" name="q8" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> 8</td>
+										<td class="border border-gray-300 px-4 py-3"><strong>8</strong> <input type="text" name="q8" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
 
 						<p class="mt-6">For further information:<br>
-						Read the <input type="text" name="q9" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> 9 or see Social Assistant: Jane <input type="text" name="q10" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> 10</p>
+						Read the <strong>9</strong> <input type="text" name="q9" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> or see Social Assistant: Jane <strong>10</strong> <input type="text" name="q10" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></p>
 					</div>
 				</section>
 
