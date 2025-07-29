@@ -14,32 +14,38 @@
 		{
 			title: 'Missing Information',
 			description: 'Fill in the gaps with the correct information you hear',
-			icon: '📝'
+			icon: '📝',
+			image: '/listening-images/ielts-listening-missing-information.png'
 		},
 		{
 			title: 'Diagram Labeling',
 			description: 'Label parts of a diagram based on the audio',
-			icon: '🗺️'
+			icon: '🗺️',
+			image: '/listening-images/ielts-listening-diagram-labeling.png'
 		},
 		{
 			title: 'Matching Information',
 			description: 'Match speakers to statements or opinions',
-			icon: '🔗'
+			icon: '🔗',
+			image: '/listening-images/ielts-listening-matching-information.png'
 		},
 		{
 			title: 'Multiple Choice',
 			description: 'Choose the correct answer from multiple options',
-			icon: '✅'
+			icon: '✅',
+			image: '/listening-images/ielts-listening-multiple-choice.png'
 		},
 		{
 			title: 'Sentence Completion',
 			description: 'Complete sentences with words from the audio',
-			icon: '📋'
+			icon: '📋',
+			image: '/listening-images/ielts-listening-sentence-completion.png'
 		},
 		{
 			title: 'Short Answer Questions',
 			description: 'Answer questions with a few words or numbers',
-			icon: '❓'
+			icon: '❓',
+			image: '/listening-images/ielts-listening-short-answer.png'
 		}
 	];
 
@@ -200,7 +206,15 @@
 						<div class="text-center">
 							<div class="text-2xl mb-3">{type.icon}</div>
 							<h3 class="font-semibold text-gray-900 dark:text-white mb-2">{type.title}</h3>
-							<p class="text-sm text-gray-600 dark:text-gray-300">{type.description}</p>
+							<p class="text-sm text-gray-600 dark:text-gray-300 mb-3">{type.description}</p>
+							<div class="mt-4">
+								<img 
+									src={type.image} 
+									alt="{type.title} example"
+									class="w-full h-auto max-h-48 object-contain mx-auto rounded-lg border border-gray-200 dark:border-gray-700"
+									loading="lazy"
+								/>
+							</div>
 						</div>
 					</Card>
 				{/each}
