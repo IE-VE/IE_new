@@ -26,31 +26,30 @@
 	<meta name="description" content="Complete IELTS Listening practice test with all 4 sections and 40 questions. Free practice material for IELTS preparation." />
 </svelte:head>
 
-<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8">
+<div class="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50 py-8 dark:from-gray-900 dark:to-gray-800">
 	<div class="max-w-4xl mx-auto px-4">
 		<!-- Header -->
 		<div class="text-center mb-8">
-			<h1 class="text-4xl font-bold mb-4" style="color: var(--color-text)">IELTS Listening Practice Test</h1>
-			<p class="text-lg mb-6" style="color: var(--color-text-secondary)">Complete practice test with all 4 sections - 40 questions total</p>
+			<h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">IELTS Listening Practice Test</h1>
+			<p class="text-lg mb-6 text-gray-700 dark:text-gray-300">Complete practice test with all 4 sections - 40 questions total</p>
 
 			<!-- Audio Player -->
-			<div class="p-6 rounded-lg shadow-md mb-6" style="background-color: var(--color-surface)">
-				<p class="text-sm mb-4" style="color: var(--color-text-secondary)">Click to listen and answer the questions below.</p>
+			<div class="p-6 rounded-lg shadow-md mb-6 bg-white dark:bg-gray-800">
+				<p class="text-sm mb-4 text-gray-600 dark:text-gray-400">Click to listen and answer the questions below.</p>
 				<audio controls class="w-full max-w-md mx-auto">
 					<source src="/audio/ielts-listening_test1.mp3" type="audio/mpeg">
 					Your browser does not support the audio element.
 				</audio>
-				<p class="text-sm mt-2" style="color: var(--color-text-tertiary)">Allow yourself <strong>33 minutes</strong> to complete this test.</p>
+				<p class="text-sm mt-2 text-gray-500 dark:text-gray-400">Allow yourself <strong>33 minutes</strong> to complete this test.</p>
 			</div>
 		</div>
 
 		<!-- Navigation -->
-		<div class="rounded-lg shadow-md p-4 mb-6" style="background-color: var(--color-surface)">
+		<div class="rounded-lg shadow-md p-4 mb-6 bg-white dark:bg-gray-800">
 			<div class="flex flex-wrap justify-center gap-2 mb-4">
 				{#each Array(4) as _, i}
 					<button 
-						class="px-4 py-2 rounded-md font-medium transition-colors {currentSection === i + 1 ? 'text-white' : 'hover:opacity-80'}"
-						style={currentSection === i + 1 ? 'background-color: var(--color-accent); color: white;' : 'background-color: var(--color-surface-hover); color: var(--color-text);'}
+						class="px-4 py-2 rounded-md font-medium transition-colors {currentSection === i + 1 ? 'bg-teal-600 text-white' : 'bg-teal-50 text-gray-700 hover:bg-teal-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'}"
 						on:click={() => goToSection(i + 1)}
 					>
 						Section {i + 1}
@@ -59,19 +58,17 @@
 			</div>
 			<div class="flex justify-between">
 				<button 
-					class="px-4 py-2 rounded-md hover:opacity-80 disabled:opacity-50 disabled:cursor-not-allowed text-white"
-					style="background-color: var(--color-neutral-500)"
+					class="px-4 py-2 rounded-md bg-gray-500 text-white hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed"
 					on:click={prevSection}
 					disabled={currentSection === 1}
 				>
 					Previous
 				</button>
-				<span class="px-4 py-2" style="color: var(--color-text-secondary)">
+				<span class="px-4 py-2 text-gray-600 dark:text-gray-400">
 					Section {currentSection} of {totalSections}
 				</span>
 				<button 
-					class="px-4 py-2 rounded-md hover:opacity-80 disabled:opacity-50 disabled:cursor-not-allowed text-white"
-					style="background-color: var(--color-accent)"
+					class="px-4 py-2 rounded-md bg-teal-600 text-white hover:bg-teal-700 disabled:opacity-50 disabled:cursor-not-allowed"
 					on:click={nextSection}
 					disabled={currentSection === totalSections}
 				>
@@ -81,11 +78,11 @@
 		</div>
 
 		<!-- Test Content -->
-		<div class="rounded-lg shadow-md p-8" style="background-color: var(--color-surface)">
+		<div class="rounded-lg shadow-md p-8 bg-white dark:bg-gray-800">
 			{#if currentSection === 1}
 				<!-- Section 1: Questions 1-10 -->
 				<section class="ielts-section">
-					<h2 class="text-2xl font-bold mb-6" style="color: var(--color-accent)">SECTION 1: Questions 1–10</h2>
+					<h2 class="text-2xl font-bold mb-6 text-teal-600 dark:text-teal-400">SECTION 1: Questions 1–10</h2>
 
 					<div class="mb-8">
 						<p class="font-semibold mb-2">Questions 1–4</p>
@@ -96,8 +93,8 @@
 							<li>Visit places which have:
 								<ul class="ml-6 mt-2 space-y-1">
 									<li>• historical interest</li>
-									<li>• good <strong>1</strong> <input type="text" name="q1" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"></li>
-									<li>• <strong>2</strong> <input type="text" name="q2" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"></li>
+									<li>• good <strong>1</strong> <input type="text" name="q1" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-teal-500 focus:outline-none"></li>
+									<li>• <strong>2</strong> <input type="text" name="q2" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-teal-500 focus:outline-none"></li>
 								</ul>
 							</li>
 							<li class="mt-4">Cost: between £5.00 and £15.00 per person</li>
@@ -117,11 +114,11 @@
 						<div class="overflow-x-auto">
 							<table class="w-full border-collapse border border-gray-300 mt-4">
 								<thead>
-									<tr class="bg-gray-50">
-										<th class="border border-gray-300 px-4 py-3 text-left font-semibold">Place</th>
-										<th class="border border-gray-300 px-4 py-3 text-left font-semibold">Date</th>
-										<th class="border border-gray-300 px-4 py-3 text-left font-semibold">Number of Seats</th>
-										<th class="border border-gray-300 px-4 py-3 text-left font-semibold">Optional Extra</th>
+									<tr class="bg-teal-50 dark:bg-teal-900/20">
+										<th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">Place</th>
+										<th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">Date</th>
+										<th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">Number of Seats</th>
+										<th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">Optional Extra</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -167,7 +164,7 @@
 			{:else if currentSection === 2}
 				<!-- Section 2: Questions 11-20 -->
 				<section class="section">
-					<h2 class="text-2xl font-bold mb-6" style="color: var(--color-accent)">SECTION 2: Questions 11–20</h2>
+					<h2 class="text-2xl font-bold mb-6 text-teal-600 dark:text-teal-400">SECTION 2: Questions 11–20</h2>
 
 					<div class="mb-8">
 						<p class="font-semibold mb-2">Questions 11–13</p>
@@ -205,7 +202,7 @@
 			{:else if currentSection === 3}
 				<!-- Section 3: Questions 21-30 -->
 				<section class="section">
-					<h2 class="text-2xl font-bold mb-6" style="color: var(--color-accent)">SECTION 3: Questions 21–30</h2>
+					<h2 class="text-2xl font-bold mb-6 text-teal-600 dark:text-teal-400">SECTION 3: Questions 21–30</h2>
 
 					<div class="mb-8 p-4 bg-blue-50 rounded-lg">
 						<p class="font-semibold text-blue-800 mb-2">Example</p>
@@ -323,7 +320,7 @@
 			{:else if currentSection === 4}
 				<!-- Section 4: Questions 31-40 -->
 				<section class="section">
-					<h2 class="text-2xl font-bold mb-6" style="color: var(--color-accent)">SECTION 4: Questions 31–40</h2>
+					<h2 class="text-2xl font-bold mb-6 text-teal-600 dark:text-teal-400">SECTION 4: Questions 31–40</h2>
 
 					<div>
 						<p class="mb-4">Complete the notes below.<br>
@@ -347,8 +344,8 @@
 		</div>
 
 		<!-- Instructions -->
-		<div class="mt-8 border-l-4 p-4 rounded-r-lg" style="background-color: var(--color-primary-50); border-color: var(--color-primary-400)">
-			<p class="text-sm" style="color: var(--color-text)">
+		<div class="mt-8 border-l-4 border-teal-400 bg-teal-50 p-4 rounded-r-lg dark:bg-teal-900/20 dark:border-teal-500">
+			<p class="text-sm text-gray-900 dark:text-gray-100">
 				<strong>Instructions:</strong> Follow the word limits exactly as specified for each question type. 
 				Transfer your answers to an official IELTS answer sheet when taking the real test.
 			</p>
@@ -358,20 +355,19 @@
 
 <style>
 	input[type="text"], input[type="radio"] {
-		accent-color: var(--color-accent);
+		accent-color: rgb(13 148 136); /* teal-600 */
 	}
 
-	.ielts-section h2 {
-		color: var(--color-accent);
+	input[type="text"]:focus {
+		border-color: rgb(13 148 136); /* teal-600 */
+		outline: none;
 	}
 
 	table {
 		font-family: Arial, sans-serif;
-		color: var(--color-text);
 	}
 
 	ol li, ul li, p {
-		color: var(--color-text);
 		margin-bottom: 0.75rem;
 	}
 
@@ -379,22 +375,30 @@
 		margin-bottom: 0.5rem;
 	}
 
-	/* Ensure all text elements use theme colors */
-	* {
-		color: var(--color-text);
-	}
-
 	/* Table styling to match theme */
 	table th, table td {
-		border-color: var(--color-border);
-		background-color: var(--color-surface);
+		border-color: rgb(209 213 219); /* gray-300 */
+		background-color: white;
 	}
 
 	table th {
-		background-color: var(--color-surface-hover);
+		background-color: rgb(240 253 250); /* teal-50 */
 	}
 
 	table tr:nth-child(even) td {
-		background-color: var(--color-surface-hover);
+		background-color: rgb(249 250 251); /* gray-50 */
+	}
+
+	:global(.dark) table th, :global(.dark) table td {
+		border-color: rgb(75 85 99); /* gray-600 */
+		background-color: rgb(31 41 55); /* gray-800 */
+	}
+
+	:global(.dark) table th {
+		background-color: rgb(13 148 136 / 0.2); /* teal-600/20 */
+	}
+
+	:global(.dark) table tr:nth-child(even) td {
+		background-color: rgb(55 65 81); /* gray-700 */
 	}
 </style>
