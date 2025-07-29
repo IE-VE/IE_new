@@ -175,9 +175,9 @@
 						Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.</p>
 
 						<ol start="11" class="space-y-4 ml-4">
-							<li>11. Riverside Village was a good place to start an industry because it had water, raw materials and fuels such as <input type="text" name="q11a" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> and <input type="text" name="q11b" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none">.</li>
-							<li>12. The metal industry was established at Riverside Village by <input type="text" name="q12" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> who lived in the area.</li>
-							<li>13. There were over <input type="text" name="q13" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> water-powered mills in the area in the eighteenth century.</li>
+							<li><strong>11.</strong> Riverside Village was a good place to start an industry because it had water, raw materials and fuels such as <input type="text" name="q11a" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> and <input type="text" name="q11b" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none">.</li>
+							<li><strong>12.</strong> The metal industry was established at Riverside Village by <input type="text" name="q12" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> who lived in the area.</li>
+							<li><strong>13.</strong> There were over <input type="text" name="q13" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> water-powered mills in the area in the eighteenth century.</li>
 						</ol>
 					</div>
 
@@ -191,13 +191,13 @@
 						</div>
 
 						<ol start="14" class="space-y-2 ml-4">
-							<li>14. <input type="text" name="q14" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> Road</li>
-							<li>15. The <input type="text" name="q15" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li>16. The <input type="text" name="q16" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li>17. The <input type="text" name="q17" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li>18. The <input type="text" name="q18" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li>19. The <input type="text" name="q19" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li>20. The <input type="text" name="q20" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> for the workers</li>
+							<li><strong>14.</strong> <input type="text" name="q14" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> Road</li>
+							<li><strong>15.</strong> The <input type="text" name="q15" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>16.</strong> The <input type="text" name="q16" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>17.</strong> The <input type="text" name="q17" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>18.</strong> The <input type="text" name="q18" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>19.</strong> The <input type="text" name="q19" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>20.</strong> The <input type="text" name="q20" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> for the workers</li>
 						</ol>
 					</div>
 				</section>
@@ -221,7 +221,7 @@
 
 						<ol start="21" class="space-y-6 ml-4">
 							<li>
-								<p class="mb-3">21. Melanie says she has not started the assignment because</p>
+								<p class="mb-3"><strong>21.</strong> Melanie says she has not started the assignment because</p>
 								<div class="ml-4 space-y-2">
 									<label class="flex items-center space-x-2">
 										<input type="radio" name="q21" value="A" class="text-blue-600">
@@ -238,7 +238,7 @@
 								</div>
 							</li>
 							<li>
-								<p class="mb-3">22. The lecturer says that reasonable excuses for extensions are</p>
+								<p class="mb-3"><strong>22.</strong> The lecturer says that reasonable excuses for extensions are</p>
 								<div class="ml-4 space-y-2">
 									<label class="flex items-center space-x-2">
 										<input type="radio" name="q22" value="A" class="text-blue-600">
@@ -281,11 +281,11 @@
 						</div>
 
 						<ul class="space-y-3 ml-4">
-							<li>23. Jackson: <input type="text" name="q23" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
-							<li>24. Roberts: <input type="text" name="q24" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
-							<li>25. Morris: <input type="text" name="q25" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
-							<li>26. Cooper: <input type="text" name="q26" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
-							<li>27. Forster: <input type="text" name="q27" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>23.</strong> Jackson: <input type="text" name="q23" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>24.</strong> Roberts: <input type="text" name="q24" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>25.</strong> Morris: <input type="text" name="q25" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>26.</strong> Cooper: <input type="text" name="q26" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>27.</strong> Forster: <input type="text" name="q27" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
 						</ul>
 					</div>
 
@@ -313,9 +313,9 @@
 						</div>
 
 						<ul class="space-y-3 ml-4">
-							<li>28: <input type="text" name="q28" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
-							<li>29: <input type="text" name="q29" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
-							<li>30: <input type="text" name="q30" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>28:</strong> <input type="text" name="q28" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>29:</strong> <input type="text" name="q29" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>30:</strong> <input type="text" name="q30" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
 						</ul>
 					</div>
 				</section>
@@ -330,16 +330,16 @@
 						Write NO MORE THAN TWO WORDS for each answer.</p>
 
 						<ol start="31" class="space-y-3 ml-4">
-							<li>31. Ways of planning our <input type="text" name="q31" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> better</li>
-							<li>32. They can make cities more or less <input type="text" name="q32" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li>33. They can make inland cities more <input type="text" name="q33" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li>34. Trees make local areas more <input type="text" name="q34" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li>35. ... less <input type="text" name="q35" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li>36. Trees evaporate water through their <input type="text" name="q36" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li>37. Tall buildings cause more wind at <input type="text" name="q37" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> level</li>
-							<li>38. Trees <input type="text" name="q38" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> the wind force</li>
-							<li>39. <input type="text" name="q39" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> frequency noise passes through trees</li>
-							<li>40. Trees require a lot of sunlight, water and <input type="text" name="q40" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> to grow</li>
+							<li><strong>31.</strong> Ways of planning our <input type="text" name="q31" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> better</li>
+							<li><strong>32.</strong> They can make cities more or less <input type="text" name="q32" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>33.</strong> They can make inland cities more <input type="text" name="q33" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>34.</strong> Trees make local areas more <input type="text" name="q34" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>35.</strong> ... less <input type="text" name="q35" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>36.</strong> Trees evaporate water through their <input type="text" name="q36" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>37.</strong> Tall buildings cause more wind at <input type="text" name="q37" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> level</li>
+							<li><strong>38.</strong> Trees <input type="text" name="q38" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> the wind force</li>
+							<li><strong>39.</strong> <input type="text" name="q39" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> frequency noise passes through trees</li>
+							<li><strong>40.</strong> Trees require a lot of sunlight, water and <input type="text" name="q40" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> to grow</li>
 						</ol>
 					</div>
 				</section>
