@@ -333,9 +333,13 @@
 					<div class="grid md:grid-cols-2 gap-6">
 						<div class="text-center">
 							<h4 class="font-medium text-gray-900 dark:text-white mb-3">Practice Answer Sheet</h4>
-							<button class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg transition-colors">
+							<a 
+								href="/listening-images/ielts-listening-answer-sheet.jpg"
+								download="ielts-listening-answer-sheet.jpg"
+								class="inline-block bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg transition-colors"
+							>
 								Download Answer Sheet
-							</button>
+							</a>
 						</div>
 						
 						<div class="text-center">
@@ -351,10 +355,17 @@
 
 					{#if showAnswers}
 						<div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
-							<h4 class="font-medium text-amber-900 dark:text-amber-100 mb-2">Answer Key</h4>
+							<h4 class="font-medium text-amber-900 dark:text-amber-100 mb-4">Answer Key</h4>
+							<div class="text-center mb-4">
+								<img 
+									src="/listening-images/ielts-listening-test-1-answers.png" 
+									alt="IELTS Listening Test 1 Answer Key"
+									class="w-full h-auto max-h-96 object-contain mx-auto rounded-lg"
+									loading="lazy"
+								/>
+							</div>
 							<p class="text-sm text-amber-800 dark:text-amber-200">
-								Complete the full practice test and check your answers using our detailed answer explanations. 
-								Each answer includes reasoning and tips for similar questions.
+								Review your answers carefully and identify areas for improvement. Each section tests different listening skills and question types.
 							</p>
 						</div>
 					{/if}
