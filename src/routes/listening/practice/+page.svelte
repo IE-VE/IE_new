@@ -31,26 +31,27 @@
 	<div class="max-w-4xl mx-auto px-4">
 		<!-- Header -->
 		<div class="text-center mb-8">
-			<h1 class="text-4xl font-bold text-gray-800 mb-4">IELTS Listening Practice Test</h1>
-			<p class="text-lg text-gray-600 mb-6">Complete practice test with all 4 sections - 40 questions total</p>
+			<h1 class="text-4xl font-bold mb-4" style="color: var(--color-text)">IELTS Listening Practice Test</h1>
+			<p class="text-lg mb-6" style="color: var(--color-text-secondary)">Complete practice test with all 4 sections - 40 questions total</p>
 			
 			<!-- Audio Player -->
-			<div class="bg-white p-6 rounded-lg shadow-md mb-6">
-				<p class="text-sm text-gray-600 mb-4">Click to listen and answer the questions below.</p>
+			<div class="p-6 rounded-lg shadow-md mb-6" style="background-color: var(--color-surface)">
+				<p class="text-sm mb-4" style="color: var(--color-text-secondary)">Click to listen and answer the questions below.</p>
 				<audio controls class="w-full max-w-md mx-auto">
 					<source src="/audio/ielts-listening_test1.mp3" type="audio/mpeg">
 					Your browser does not support the audio element.
 				</audio>
-				<p class="text-sm text-gray-500 mt-2">Allow yourself <strong>33 minutes</strong> to complete this test.</p>
+				<p class="text-sm mt-2" style="color: var(--color-text-tertiary)">Allow yourself <strong>33 minutes</strong> to complete this test.</p>
 			</div>
 		</div>
 
 		<!-- Navigation -->
-		<div class="bg-white rounded-lg shadow-md p-4 mb-6">
+		<div class="rounded-lg shadow-md p-4 mb-6" style="background-color: var(--color-surface)">
 			<div class="flex flex-wrap justify-center gap-2 mb-4">
 				{#each Array(4) as _, i}
 					<button 
-						class="px-4 py-2 rounded-md font-medium transition-colors {currentSection === i + 1 ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}"
+						class="px-4 py-2 rounded-md font-medium transition-colors {currentSection === i + 1 ? 'text-white' : 'hover:opacity-80'}"
+						style={currentSection === i + 1 ? 'background-color: var(--color-accent); color: white;' : 'background-color: var(--color-surface-hover); color: var(--color-text);'}
 						on:click={() => goToSection(i + 1)}
 					>
 						Section {i + 1}
@@ -59,17 +60,19 @@
 			</div>
 			<div class="flex justify-between">
 				<button 
-					class="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed"
+					class="px-4 py-2 rounded-md hover:opacity-80 disabled:opacity-50 disabled:cursor-not-allowed text-white"
+					style="background-color: var(--color-neutral-500)"
 					on:click={prevSection}
 					disabled={currentSection === 1}
 				>
 					Previous
 				</button>
-				<span class="px-4 py-2 text-gray-600">
+				<span class="px-4 py-2" style="color: var(--color-text-secondary)">
 					Section {currentSection} of {totalSections}
 				</span>
 				<button 
-					class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+					class="px-4 py-2 rounded-md hover:opacity-80 disabled:opacity-50 disabled:cursor-not-allowed text-white"
+					style="background-color: var(--color-accent)"
 					on:click={nextSection}
 					disabled={currentSection === totalSections}
 				>
@@ -79,11 +82,11 @@
 		</div>
 
 		<!-- Test Content -->
-		<div class="bg-white rounded-lg shadow-md p-8">
+		<div class="rounded-lg shadow-md p-8" style="background-color: var(--color-surface)">
 			{#if currentSection === 1}
 				<!-- Section 1: Questions 1-10 -->
 				<section class="ielts-section">
-					<h2 class="text-2xl font-bold text-blue-800 mb-6">SECTION 1: Questions 1–10</h2>
+					<h2 class="text-2xl font-bold mb-6" style="color: var(--color-accent)">SECTION 1: Questions 1–10</h2>
 
 					<div class="mb-8">
 						<p class="font-semibold mb-2">Questions 1–4</p>
@@ -165,7 +168,7 @@
 			{:else if currentSection === 2}
 				<!-- Section 2: Questions 11-20 -->
 				<section class="section">
-					<h2 class="text-2xl font-bold text-blue-800 mb-6">SECTION 2: Questions 11–20</h2>
+					<h2 class="text-2xl font-bold mb-6" style="color: var(--color-accent)">SECTION 2: Questions 11–20</h2>
 
 					<div class="mb-8">
 						<p class="font-semibold mb-2">Questions 11–13</p>
@@ -203,7 +206,7 @@
 			{:else if currentSection === 3}
 				<!-- Section 3: Questions 21-30 -->
 				<section class="section">
-					<h2 class="text-2xl font-bold text-blue-800 mb-6">SECTION 3: Questions 21–30</h2>
+					<h2 class="text-2xl font-bold mb-6" style="color: var(--color-accent)">SECTION 3: Questions 21–30</h2>
 
 					<div class="mb-8 p-4 bg-blue-50 rounded-lg">
 						<p class="font-semibold text-blue-800 mb-2">Example</p>
@@ -321,7 +324,7 @@
 			{:else if currentSection === 4}
 				<!-- Section 4: Questions 31-40 -->
 				<section class="section">
-					<h2 class="text-2xl font-bold text-blue-800 mb-6">SECTION 4: Questions 31–40</h2>
+					<h2 class="text-2xl font-bold mb-6" style="color: var(--color-accent)">SECTION 4: Questions 31–40</h2>
 
 					<div>
 						<p class="mb-4">Complete the notes below.<br>
@@ -345,8 +348,8 @@
 		</div>
 
 		<!-- Instructions -->
-		<div class="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
-			<p class="text-sm text-yellow-800">
+		<div class="mt-8 border-l-4 p-4 rounded-r-lg" style="background-color: var(--color-primary-50); border-color: var(--color-primary-400)">
+			<p class="text-sm" style="color: var(--color-text)">
 				<strong>Instructions:</strong> Follow the word limits exactly as specified for each question type. 
 				Transfer your answers to an official IELTS answer sheet when taking the real test.
 			</p>
@@ -356,22 +359,43 @@
 
 <style>
 	input[type="text"], input[type="radio"] {
-		accent-color: #2563eb;
+		accent-color: var(--color-accent);
 	}
 	
 	.ielts-section h2 {
-		color: #2a4d69;
+		color: var(--color-accent);
 	}
 	
 	table {
 		font-family: Arial, sans-serif;
+		color: var(--color-text);
 	}
 	
-	ol li {
+	ol li, ul li, p {
+		color: var(--color-text);
 		margin-bottom: 0.75rem;
 	}
 	
 	ul li {
 		margin-bottom: 0.5rem;
+	}
+	
+	/* Ensure all text elements use theme colors */
+	* {
+		color: var(--color-text);
+	}
+	
+	/* Table styling to match theme */
+	table th, table td {
+		border-color: var(--color-border);
+		background-color: var(--color-surface);
+	}
+	
+	table th {
+		background-color: var(--color-surface-hover);
+	}
+	
+	table tr:nth-child(even) td {
+		background-color: var(--color-surface-hover);
 	}
 </style>
