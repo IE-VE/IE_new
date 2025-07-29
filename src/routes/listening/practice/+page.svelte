@@ -173,9 +173,9 @@
 						Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.</p>
 
 						<ol start="11" class="space-y-4 ml-4">
-							<li>Riverside Village was a good place to start an industry because it had water, raw materials and fuels such as <input type="text" name="q11a" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> and <input type="text" name="q11b" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none">.</li>
-							<li>The metal industry was established at Riverside Village by <input type="text" name="q12" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> who lived in the area.</li>
-							<li>There were over <input type="text" name="q13" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> water-powered mills in the area in the eighteenth century.</li>
+							<li>11. Riverside Village was a good place to start an industry because it had water, raw materials and fuels such as <input type="text" name="q11a" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> and <input type="text" name="q11b" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none">.</li>
+							<li>12. The metal industry was established at Riverside Village by <input type="text" name="q12" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> who lived in the area.</li>
+							<li>13. There were over <input type="text" name="q13" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> water-powered mills in the area in the eighteenth century.</li>
 						</ol>
 					</div>
 
