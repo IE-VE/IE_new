@@ -9,65 +9,6 @@
 	let isPlaying = false;
 	let answers = {};
 
-	const questions = {
-		section1: [
-			{ id: 1, type: 'fill', text: "1. Visit places which have good _______." },
-			{ id: 2, type: 'fill', text: "2. Visit places which have _______." },
-			{ id: 3, type: 'fill', text: "3. Note: special trips organised for groups of _______ people." },
-			{ id: 4, type: 'fill', text: "4. To reserve a seat: sign name on the _______ 3 days in advance." },
-			{ id: 5, type: 'fill', text: "5. The woman's name is _______." },
-			{ id: 6, type: 'fill', text: "6. Her phone number is _______." },
-			{ id: 7, type: 'fill', text: "7. She lives in _______ Street." },
-			{ id: 8, type: 'fill', text: "8. Her postcode is _______." },
-			{ id: 9, type: 'fill', text: "9. She heard about the club from _______." },
-			{ id: 10, type: 'fill', text: "10. Additional information: _______." }
-		],
-		section2_part1: [
-			{ id: 11, type: 'fill', text: "11. The museum was originally _______." },
-			{ id: 12, type: 'fill', text: "12. The museum is open _______." },
-			{ id: 13, type: 'fill', text: "13. _______ Road" }
-		],
-		section2_part2: [
-			{ id: 14, type: 'fill', text: "14. _______ Road" },
-			{ id: 15, type: 'fill', text: "15. The _______" },
-			{ id: 16, type: 'fill', text: "16. The _______" },
-			{ id: 17, type: 'fill', text: "17. The _______" },
-			{ id: 18, type: 'fill', text: "18. The _______" },
-			{ id: 19, type: 'fill', text: "19. The _______" },
-			{ id: 20, type: 'fill', text: "20. The _______ for the workers" }
-		],
-		section3_part1: [
-			{ id: 21, type: 'fill', text: "21. Complete the chart below. Choose your answers from the box and write the letters A–H next to the numbers." },
-			{ id: 22, type: 'fill', text: "22. What is Anderson and Hawker's first concern about their accommodation?" }
-		],
-		section3_part2: [
-			{ id: 23, type: 'fill', text: "23. _______ students chose reason E." },
-			{ id: 24, type: 'fill', text: "24. The percentage for reason G is _______." },
-			{ id: 25, type: 'fill', text: "25. The survey included _______ students in total." },
-			{ id: 26, type: 'fill', text: "26. Additional data shows _______." },
-			{ id: 27, type: 'fill', text: "27. _______" }
-		],
-		section3_part3: [
-			{ id: 28, type: 'fill', text: "28. _______" },
-			{ id: 29, type: 'fill', text: "29. _______" },
-			{ id: 30, type: 'fill', text: "30. _______" }
-		],
-		section4_part1: [
-			{ id: 31, type: 'fill', text: "31. In order to set up an archaeological project, it is important to have _______." },
-			{ id: 32, type: 'fill', text: "32. The number of field schools is _______." },
-			{ id: 33, type: 'fill', text: "33. People are interested in archaeology because they want to work _______." },
-			{ id: 34, type: 'fill', text: "34. The application process takes _______." }
-		],
-		section4_part2: [
-			{ id: 35, type: 'fill', text: "35. Differences in _______ affect the price of field schools." },
-			{ id: 36, type: 'fill', text: "36. How to reduce costs: _______." },
-			{ id: 37, type: 'fill', text: "37. Students must arrange their own _______." },
-			{ id: 38, type: 'fill', text: "38. Equipment is provided for _______." },
-			{ id: 39, type: 'fill', text: "39. An extra _______ is charged for some courses." },
-			{ id: 40, type: 'fill', text: "40. _______" }
-		]
-	};
-
 	onMount(() => {
 		if (audioElement) {
 			audioElement.addEventListener('loadedmetadata', () => {
@@ -137,113 +78,232 @@
 
 		<!-- Section 1 -->
 		<section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
-			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Section 1</h2>
-			<p class="text-gray-600 dark:text-gray-300 mb-6">
-				Questions 1-10: Complete the notes below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.
-			</p>
+			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">SECTION 1: Questions 1–10</h2>
 
-			{#each questions.section1 as question}
-				<div class="mb-4">
-					<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-						{question.text}
-					</label>
-					<input 
-						type="text" 
-						class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-						on:input={(e) => handleAnswerChange(question.id, e.target.value)}
-					/>
+			<div class="mb-8">
+				<p class="text-gray-600 dark:text-gray-300 mb-4">
+					<strong>Questions 1–4</strong><br>
+					Complete the notes below.<br>
+					Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.
+				</p>
+
+				<ul class="list-disc ml-6 text-gray-700 dark:text-gray-300 space-y-2">
+					<li>Visit places which have:
+						<ul class="list-disc ml-6 mt-2 space-y-1">
+							<li>• historical interest</li>
+							<li>• good <input type="text" class="inline-block w-32 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q1', e.target.value)}></li>
+							<li>• <input type="text" class="inline-block w-32 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q2', e.target.value)}></li>
+						</ul>
+					</li>
+					<li>Cost: between £5.00 and £15.00 per person</li>
+					<li>Note: special trips organised for groups of <input type="text" class="inline-block w-16 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q3', e.target.value)}> people</li>
+					<li>Time: departure – 8.30 a.m., return – 6.00 p.m.</li>
+					<li>To reserve a seat: sign name on the <input type="text" class="inline-block w-32 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q4', e.target.value)}> 3 days in advance</li>
+				</ul>
+			</div>
+
+			<hr class="my-6 border-gray-300 dark:border-gray-600">
+
+			<div class="mb-6">
+				<p class="text-gray-600 dark:text-gray-300 mb-4">
+					<strong>Questions 5–10</strong><br>
+					Complete the table below.<br>
+					Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.
+				</p>
+
+				<div class="overflow-x-auto">
+					<table class="w-full border-collapse border border-gray-300 dark:border-gray-600">
+						<thead>
+							<tr class="bg-gray-100 dark:bg-gray-700">
+								<th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left text-gray-900 dark:text-white">Place</th>
+								<th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left text-gray-900 dark:text-white">Date</th>
+								<th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left text-gray-900 dark:text-white">Number of Seats</th>
+								<th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left text-gray-900 dark:text-white">Optional Extra</th>
+							</tr>
+						</thead>
+						<tbody class="text-gray-700 dark:text-gray-300">
+							<tr>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">St Ives</td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">5 <input type="text" class="inline-block w-20 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q5', e.target.value)}></td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">16</td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Hepworth Museum</td>
+							</tr>
+							<tr>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">London</td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">16th February</td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">45</td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2"><input type="text" class="inline-block w-24 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q6', e.target.value)}></td>
+							</tr>
+							<tr>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2"><input type="text" class="inline-block w-20 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q7', e.target.value)}></td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">3rd March</td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">18</td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">S.S. Great Britain</td>
+							</tr>
+							<tr>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Salisbury</td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">18th March</td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">50</td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Stonehenge</td>
+							</tr>
+							<tr>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Bath</td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">23rd March</td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">16</td>
+								<td class="border border-gray-300 dark:border-gray-600 px-4 py-2"><input type="text" class="inline-block w-24 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q8', e.target.value)}></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-			{/each}
+
+				<p class="text-gray-700 dark:text-gray-300 mt-4">
+					For further information:<br>
+					Read the <input type="text" class="inline-block w-24 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q9', e.target.value)}> or see Social Assistant: Jane <input type="text" class="inline-block w-24 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q10', e.target.value)}>
+				</p>
+			</div>
 		</section>
 
 		<!-- Section 2 -->
 		<section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
-			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Section 2</h2>
+			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">SECTION 2: Questions 11–20</h2>
 
-			<!-- Questions 11-13 -->
 			<div class="mb-8">
-				<p class="text-gray-600 dark:text-gray-300 mb-6">
-					Questions 11-13: Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer.
+				<p class="text-gray-600 dark:text-gray-300 mb-4">
+					<strong>Questions 11–13</strong><br>
+					Complete the sentences below.<br>
+					Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.
 				</p>
 
-				{#each questions.section2_part1 as question}
-					<div class="mb-4">
-						<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-							{question.text}
-						</label>
-						<input 
-							type="text" 
-							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
-						/>
-					</div>
-				{/each}
+				<ol start="11" class="space-y-4 text-gray-700 dark:text-gray-300">
+					<li>Riverside Village was a good place to start an industry because it had water, raw materials and fuels such as <input type="text" class="inline-block w-20 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q11a', e.target.value)}> and <input type="text" class="inline-block w-20 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q11b', e.target.value)}>.</li>
+					<li>The metal industry was established at Riverside Village by <input type="text" class="inline-block w-32 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q12', e.target.value)}> who lived in the area.</li>
+					<li>There were over <input type="text" class="inline-block w-20 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q13', e.target.value)}> water-powered mills in the area in the eighteenth century.</li>
+				</ol>
 			</div>
 
-			<!-- Questions 14-20 with Plan -->
 			<div class="mb-6">
-				<p class="text-gray-600 dark:text-gray-300 mb-6">
-					Questions 14-20: Complete the plan. Choose NO MORE THAN TWO WORDS from the passage for each answer.
+				<p class="text-gray-600 dark:text-gray-300 mb-4">
+					<strong>Questions 14–20</strong><br>
+					Label the plan below.<br>
+					Write NO MORE THAN TWO WORDS for each answer.
 				</p>
 
 				<div class="flex justify-center mb-6">
 					<img 
 						src="/listening-images/ielts_section2_plan.png"
-						alt="Riverside Village Plan showing River, Engine Room, Grinding Shop, and other numbered locations" 
+						alt="Plan Diagram" 
 						class="w-full h-auto max-h-96 object-contain mx-auto rounded-lg border border-gray-200 dark:border-gray-700"
 						loading="lazy"
-						on:error={(e) => console.error('Failed to load image:', e.target.src)}
 					/>
 				</div>
 
-				{#each questions.section2_part2 as question}
-					<div class="mb-4">
-						<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-							{question.text}
-						</label>
-						<input 
-							type="text" 
-							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
-						/>
-					</div>
-				{/each}
+				<ol start="14" class="space-y-2 text-gray-700 dark:text-gray-300">
+					<li><input type="text" class="inline-block w-32 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q14', e.target.value)}> Road</li>
+					<li>The <input type="text" class="inline-block w-32 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q15', e.target.value)}></li>
+					<li>The <input type="text" class="inline-block w-32 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q16', e.target.value)}></li>
+					<li>The <input type="text" class="inline-block w-32 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q17', e.target.value)}></li>
+					<li>The <input type="text" class="inline-block w-32 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q18', e.target.value)}></li>
+					<li>The <input type="text" class="inline-block w-32 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q19', e.target.value)}></li>
+					<li>The <input type="text" class="inline-block w-32 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q20', e.target.value)}> for the workers</li>
+				</ol>
 			</div>
 		</section>
 
 		<!-- Section 3 -->
 		<section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
-			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Section 3</h2>
+			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">SECTION 3: Questions 21–30</h2>
 
-			<!-- Example Questions -->
+			<!-- Example -->
 			<div class="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
-				<h3 class="text-sm font-semibold text-blue-800 dark:text-blue-200 mb-3">Example</h3>
-				<p class="text-gray-700 dark:text-gray-300 mb-2">
-					Melanie could not borrow any books from the library because
-				</p>
-				<div class="ml-4 text-gray-700 dark:text-gray-300">
-					<div>A. the librarian was out</div>
-					<div>B. she didn't have time to look</div>
-					<div class="font-semibold text-blue-800 dark:text-blue-200">C. the books had already been borrowed</div>
-				</div>
-			</div>
-
-			<div class="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
-				<h3 class="text-sm font-semibold text-blue-800 dark:text-blue-200 mb-3">Example Answer</h3>
-				<p class="text-gray-700 dark:text-gray-300">
-					Anderson and Hawker: <span class="font-semibold text-blue-800 dark:text-blue-200">A</span>
+				<p class="text-blue-800 dark:text-blue-200">
+					<strong>Example</strong><br>
+					Melanie could not borrow any books from the library because<br>
+					A. the librarian was out<br>
+					B. she didn't have time to look<br>
+					<strong>C. the books had already been borrowed</strong>
 				</p>
 			</div>
 
 			<!-- Questions 21-22 -->
 			<div class="mb-8">
-				<p class="text-gray-600 dark:text-gray-300 mb-6">
-					Questions 21-22: Complete the chart below. Choose your answers from the box and write the letters A–H next to the numbers.
+				<p class="text-gray-600 dark:text-gray-300 mb-4">
+					<strong>Questions 21 and 22</strong><br>
+					Choose the correct letter, A, B or C.
 				</p>
 
+				<ol start="21" class="space-y-4 text-gray-700 dark:text-gray-300">
+					<li>
+						Melanie says she has not started the assignment because<br>
+						<label class="block mt-2"><input type="radio" name="q21" value="A" class="mr-2"> A. she was doing work for another course.</label>
+						<label class="block"><input type="radio" name="q21" value="B" class="mr-2"> B. it was a really big assignment.</label>
+						<label class="block"><input type="radio" name="q21" value="C" class="mr-2"> C. she hasn't spent time in the library.</label>
+					</li>
+					<li>
+						The lecturer says that reasonable excuses for extensions are<br>
+						<label class="block mt-2"><input type="radio" name="q22" value="A" class="mr-2"> A. planning problems.</label>
+						<label class="block"><input type="radio" name="q22" value="B" class="mr-2"> B. problems with assignment deadlines.</label>
+						<label class="block"><input type="radio" name="q22" value="C" class="mr-2"> C. personal illness or accident.</label>
+					</li>
+				</ol>
+			</div>
+
+			<!-- Questions 23-27 -->
+			<div class="mb-8">
+				<p class="text-gray-600 dark:text-gray-300 mb-4">
+					<strong>Questions 23–27</strong><br>
+					What recommendations does Dr Johnson make about the journal articles?<br>
+					Choose your answers from the box and write the letters A–G next to the names.
+				</p>
+
+				<div class="mb-4 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
+					<p class="text-blue-800 dark:text-blue-200">
+						<strong>Example Answer</strong><br>
+						Anderson and Hawker: <strong>A</strong>
+					</p>
+				</div>
+
 				<div class="mb-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-					<p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Choose your answers from the box:</p>
-					<div class="grid grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
+					<p class="text-sm text-gray-600 dark:text-gray-300 mb-2"><strong>Options:</strong></p>
+					<div class="grid grid-cols-1 gap-1 text-sm text-gray-700 dark:text-gray-300">
+						<div>A. must read</div>
+						<div>B. useful</div>
+						<div>C. limited value</div>
+						<div>D. read first section</div>
+						<div>E. read research methods</div>
+						<div>F. read conclusion</div>
+						<div>G. don't read</div>
+					</div>
+				</div>
+
+				<ul class="space-y-2 text-gray-700 dark:text-gray-300">
+					<li>Jackson: <input type="text" class="inline-block w-16 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q23', e.target.value)}></li>
+					<li>Roberts: <input type="text" class="inline-block w-16 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q24', e.target.value)}></li>
+					<li>Morris: <input type="text" class="inline-block w-16 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q25', e.target.value)}></li>
+					<li>Cooper: <input type="text" class="inline-block w-16 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q26', e.target.value)}></li>
+					<li>Forster: <input type="text" class="inline-block w-16 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q27', e.target.value)}></li>
+				</ul>
+			</div>
+
+			<!-- Questions 28-30 -->
+			<div class="mb-6">
+				<p class="text-gray-600 dark:text-gray-300 mb-4">
+					<strong>Questions 28–30</strong><br>
+					Label the chart below.<br>
+					Choose your answers from the box below the chart and write the letters A–H next to the numbers.
+				</p>
+
+				<div class="flex justify-center mb-4">
+					<img 
+						src="/listening-images/ielts_section3_chart.png"
+						alt="Chart Diagram" 
+						class="w-full h-auto max-h-96 object-contain mx-auto rounded-lg border border-gray-200 dark:border-gray-700"
+						loading="lazy"
+					/>
+				</div>
+
+				<div class="mb-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+					<p class="text-sm text-gray-600 dark:text-gray-300 mb-2"><strong>Options:</strong></p>
+					<div class="grid grid-cols-2 gap-1 text-sm text-gray-700 dark:text-gray-300">
 						<div>A. uncooperative landlord</div>
 						<div>B. environment</div>
 						<div>C. space</div>
@@ -255,113 +315,36 @@
 					</div>
 				</div>
 
-				<div class="flex justify-center mb-6">
-					<img 
-						src="/listening-images/ielts_section3_chart.png"
-						alt="Chart showing reasons for changing accommodation with bars labeled C, E, G and numbers 28, 29, 30" 
-						class="w-full h-auto max-h-96 object-contain mx-auto rounded-lg border border-gray-200 dark:border-gray-700"
-						loading="lazy"
-						on:error={(e) => console.error('Failed to load image:', e.target.src)}
-					/>
-				</div>
-
-				{#each questions.section3_part1 as question}
-					<div class="mb-4">
-						<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-							{question.text}
-						</label>
-						<input 
-							type="text" 
-							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
-						/>
-					</div>
-				{/each}
-			</div>
-
-			<!-- Questions 23-27 -->
-			<div class="mb-8">
-				<p class="text-gray-600 dark:text-gray-300 mb-6">
-					Questions 23-27: Complete the sentences below. Write NO MORE THAN THREE WORDS for each answer.
-				</p>
-
-				{#each questions.section3_part2 as question}
-					<div class="mb-4">
-						<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-							{question.text}
-						</label>
-						<input 
-							type="text" 
-							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
-						/>
-					</div>
-				{/each}
-			</div>
-
-			<!-- Questions 28-30 -->
-			<div class="mb-6">
-				<p class="text-gray-600 dark:text-gray-300 mb-6">
-					Questions 28-30: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.
-				</p>
-
-				{#each questions.section3_part3 as question}
-					<div class="mb-4">
-						<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-							{question.text}
-						</label>
-						<input 
-							type="text" 
-							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
-						/>
-					</div>
-				{/each}
+				<ul class="space-y-2 text-gray-700 dark:text-gray-300">
+					<li>28: <input type="text" class="inline-block w-16 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q28', e.target.value)}></li>
+					<li>29: <input type="text" class="inline-block w-16 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q29', e.target.value)}></li>
+					<li>30: <input type="text" class="inline-block w-16 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q30', e.target.value)}></li>
+				</ul>
 			</div>
 		</section>
 
 		<!-- Section 4 -->
 		<section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
-			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Section 4</h2>
+			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">SECTION 4: Questions 31–40</h2>
 
-			<!-- Questions 31-34 -->
-			<div class="mb-8">
-				<p class="text-gray-600 dark:text-gray-300 mb-6">
-					Questions 31-34: Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.
-				</p>
-
-				{#each questions.section4_part1 as question}
-					<div class="mb-4">
-						<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-							{question.text}
-						</label>
-						<input 
-							type="text" 
-							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
-						/>
-					</div>
-				{/each}
-			</div>
-
-			<!-- Questions 35-40 -->
 			<div class="mb-6">
-				<p class="text-gray-600 dark:text-gray-300 mb-6">
-					Questions 35-40: Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.
+				<p class="text-gray-600 dark:text-gray-300 mb-4">
+					Complete the notes below.<br>
+					Write NO MORE THAN TWO WORDS for each answer.
 				</p>
 
-				{#each questions.section4_part2 as question}
-					<div class="mb-4">
-						<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-							{question.text}
-						</label>
-						<input 
-							type="text" 
-							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
-						/>
-					</div>
-				{/each}
+				<ol start="31" class="space-y-2 text-gray-700 dark:text-gray-300">
+					<li>Ways of planning our <input type="text" class="inline-block w-24 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q31', e.target.value)}> better</li>
+					<li>They can make cities more or less <input type="text" class="inline-block w-24 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q32', e.target.value)}></li>
+					<li>They can make inland cities more <input type="text" class="inline-block w-24 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q33', e.target.value)}></li>
+					<li>Trees make local areas more <input type="text" class="inline-block w-24 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q34', e.target.value)}></li>
+					<li>... less <input type="text" class="inline-block w-24 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q35', e.target.value)}></li>
+					<li>Trees evaporate water through their <input type="text" class="inline-block w-24 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q36', e.target.value)}></li>
+					<li>Tall buildings cause more wind at <input type="text" class="inline-block w-24 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q37', e.target.value)}> level</li>
+					<li>Trees <input type="text" class="inline-block w-24 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q38', e.target.value)}> the wind force</li>
+					<li><input type="text" class="inline-block w-24 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q39', e.target.value)}> frequency noise passes through trees</li>
+					<li>Trees require a lot of sunlight, water and <input type="text" class="inline-block w-24 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white" on:input={(e) => handleAnswerChange('q40', e.target.value)}> to grow</li>
+				</ol>
 			</div>
 		</section>
 
