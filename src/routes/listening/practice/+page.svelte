@@ -147,7 +147,7 @@
 				IELTS Listening Practice
 			</h1>
 			<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-				Master the IELTS Listening test with our comprehensive practice materials and realistic test conditions.
+				Master the IELTS Listening test with our comprehensive practice materials and accurate test format.
 			</p>
 		</div>
 
@@ -225,7 +225,7 @@
 		<div class="mt-12">
 			<Card variant="teal">
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
-					🎯 Scoring Guide
+					Scoring Guide
 				</h2>
 				<div class="grid md:grid-cols-2 gap-8">
 					<div>
@@ -251,7 +251,7 @@
 							<li>• Understanding main ideas and details</li>
 							<li>• Following conversations and monologues</li>
 							<li>• Identifying specific information</li>
-							<li>• Recognizing speaker attitudes and opinions</li>
+							<li>• Recognising speaker attitudes and opinions</li>
 						</ul>
 					</div>
 				</div>
