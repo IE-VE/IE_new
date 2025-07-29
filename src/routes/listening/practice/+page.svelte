@@ -1,4 +1,3 @@
-
 <script>
 	import { onMount } from 'svelte';
 
@@ -33,7 +32,7 @@
 		<div class="text-center mb-8">
 			<h1 class="text-4xl font-bold mb-4" style="color: var(--color-text)">IELTS Listening Practice Test</h1>
 			<p class="text-lg mb-6" style="color: var(--color-text-secondary)">Complete practice test with all 4 sections - 40 questions total</p>
-			
+
 			<!-- Audio Player -->
 			<div class="p-6 rounded-lg shadow-md mb-6" style="background-color: var(--color-surface)">
 				<p class="text-sm mb-4" style="color: var(--color-text-secondary)">Click to listen and answer the questions below.</p>
@@ -156,14 +155,12 @@
 										<td class="border border-gray-300 px-4 py-3">16</td>
 										<td class="border border-gray-300 px-4 py-3"><input type="text" name="q8" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> 8</td>
 									</tr>
-</old_str>
 								</tbody>
 							</table>
 						</div>
 
 						<p class="mt-6">For further information:<br>
 						Read the <input type="text" name="q9" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> 9 or see Social Assistant: Jane <input type="text" name="q10" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> 10</p>
-</old_str>
 					</div>
 				</section>
 
@@ -188,11 +185,11 @@
 						<p class="font-semibold mb-2">Questions 14–20</p>
 						<p class="mb-4">Label the plan below.<br>
 						Write NO MORE THAN TWO WORDS for each answer.</p>
-						
+
 						<div class="text-center my-6">
 							<img src="/listening-images/ielts_section2_plan.png" alt="Plan Diagram showing Riverside Village layout with River, Engine Room, Grinding Shop, and other numbered locations" class="max-w-full h-auto border border-gray-300 mx-auto">
 						</div>
-						
+
 						<ol start="14" class="space-y-2 ml-4">
 							<li>14. <input type="text" name="q14" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> Road</li>
 							<li>15. The <input type="text" name="q15" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
@@ -221,7 +218,7 @@
 					<div class="mb-8">
 						<p class="font-semibold mb-2">Questions 21 and 22</p>
 						<p class="mb-4">Choose the correct letter, A, B or C.</p>
-						
+
 						<ol start="21" class="space-y-6 ml-4">
 							<li>
 								<p class="mb-3">21. Melanie says she has not started the assignment because</p>
@@ -296,7 +293,7 @@
 						<p class="font-semibold mb-2">Questions 28–30</p>
 						<p class="mb-4">Label the chart below.<br>
 						Choose your answers from the box below the chart and write the letters A–H next to the numbers.</p>
-						
+
 						<div class="text-center my-6">
 							<img src="/listening-images/ielts_section3_chart.png" alt="Population studies chart showing reasons for changing accommodation with bars labeled C, E, G and numbers 28, 29, 30" class="max-w-full h-auto border border-gray-300 mx-auto">
 						</div>
@@ -363,40 +360,40 @@
 	input[type="text"], input[type="radio"] {
 		accent-color: var(--color-accent);
 	}
-	
+
 	.ielts-section h2 {
 		color: var(--color-accent);
 	}
-	
+
 	table {
 		font-family: Arial, sans-serif;
 		color: var(--color-text);
 	}
-	
+
 	ol li, ul li, p {
 		color: var(--color-text);
 		margin-bottom: 0.75rem;
 	}
-	
+
 	ul li {
 		margin-bottom: 0.5rem;
 	}
-	
+
 	/* Ensure all text elements use theme colors */
 	* {
 		color: var(--color-text);
 	}
-	
+
 	/* Table styling to match theme */
 	table th, table td {
 		border-color: var(--color-border);
 		background-color: var(--color-surface);
 	}
-	
+
 	table th {
 		background-color: var(--color-surface-hover);
 	}
-	
+
 	table tr:nth-child(even) td {
 		background-color: var(--color-surface-hover);
 	}
