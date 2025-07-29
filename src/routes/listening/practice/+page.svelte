@@ -204,12 +204,12 @@
 				<section class="section">
 					<h2 class="text-2xl font-bold mb-6 text-teal-600 dark:text-teal-400">SECTION 3: Questions 21–30</h2>
 
-					<div class="mb-8 p-4 bg-blue-50 rounded-lg">
-						<p class="font-semibold text-blue-800 mb-2">Example</p>
-						<p class="mb-2">Melanie could not borrow any books from the library because</p>
-						<p class="ml-4">A. the librarian was out</p>
-						<p class="ml-4">B. she didn't have time to look</p>
-						<p class="ml-4 font-semibold text-blue-800">C. the books had already been borrowed</p>
+					<div class="mb-8 p-4 bg-gray-100 rounded-lg dark:bg-gray-700">
+						<p class="font-semibold text-blue-600 mb-2 dark:text-blue-400">Example</p>
+						<p class="mb-2 text-blue-600 dark:text-blue-400">Melanie could not borrow any books from the library because</p>
+						<p class="ml-4 text-blue-600 dark:text-blue-400">A. the librarian was out</p>
+						<p class="ml-4 text-blue-600 dark:text-blue-400">B. she didn't have time to look</p>
+						<p class="ml-4 font-semibold text-blue-600 dark:text-blue-400">C. the books had already been borrowed</p>
 					</div>
 
 					<div class="mb-8">
@@ -259,9 +259,9 @@
 						<p class="mb-4">What recommendations does Dr Johnson make about the journal articles?<br>
 						Choose your answers from the box and write the letters A–G next to the names.</p>
 
-						<div class="mb-4 p-4 bg-blue-50 rounded-lg">
-							<p class="font-semibold text-blue-800 mb-2">Example Answer</p>
-							<p>Anderson and Hawker: <strong>A</strong></p>
+						<div class="mb-4 p-4 bg-gray-100 rounded-lg dark:bg-gray-700">
+							<p class="font-semibold text-blue-600 mb-2 dark:text-blue-400">Example Answer</p>
+							<p class="text-blue-600 dark:text-blue-400">Anderson and Hawker: <strong>A</strong></p>
 						</div>
 
 						<div class="mb-4 p-4 bg-gray-50 rounded-lg">
