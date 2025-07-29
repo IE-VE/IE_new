@@ -414,6 +414,15 @@
 									<p class="font-medium mb-2"><strong>Questions 14–20</strong></p>
 									<p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Label the plan below.<br>Write NO MORE THAN TWO WORDS for each answer.</p>
 
+									<div class="text-center mb-4">
+										<img 
+											src="/listening-images/ielts_section2_plan.png" 
+											alt="Plan Diagram showing Riverside Village layout with River, Engine Room, Grinding Shop, and other numbered locations" 
+											class="w-full h-auto max-h-96 object-contain mx-auto rounded-lg border border-gray-200 dark:border-gray-700"
+											loading="lazy"
+										/>
+									</div>
+
 									<ol start="14" class="space-y-2">
 										<li><input type="text" name="q14" class="border border-gray-300 dark:border-gray-600 rounded px-2 py-1 w-32 dark:bg-gray-700 dark:text-white"> Road</li>
 										<li>The <input type="text" name="q15" class="border border-gray-300 dark:border-gray-600 rounded px-2 py-1 w-32 dark:bg-gray-700 dark:text-white"></li>
@@ -430,12 +439,22 @@
 							<section class="mb-12">
 								<h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 text-teal-600">SECTION 3: Questions 21–30</h2>
 
+								<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
+									<p class="font-medium text-blue-900 dark:text-blue-100"><strong>Example</strong></p>
+									<p class="text-sm text-blue-800 dark:text-blue-200">Melanie could not borrow any books from the library because</p>
+									<div class="ml-4 space-y-1 text-sm">
+										<div>A. the librarian was out</div>
+										<div>B. she didn't have time to look</div>
+										<div class="font-semibold">C. the books had already been borrowed</div>
+									</div>
+								</div>
+
 								<div class="mb-6">
-									<p class="font-medium mb-2"><strong>Questions 21–22</strong></p>
+									<p class="font-medium mb-2"><strong>Questions 21 and 22</strong></p>
 									<p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Choose the correct letter, A, B or C.</p>
 									<ol start="21" class="space-y-4">
 										<li class="space-y-2">
-											<div>21. Why hasn't Sarah done the homework for today?</div>
+											<div>21. Melanie says she has not started the assignment because</div>
 											<div class="ml-4 space-y-1">
 												<label class="flex items-center space-x-2">
 													<input type="radio" name="q21" value="A" class="text-teal-600">
@@ -452,7 +471,7 @@
 											</div>
 										</li>
 										<li class="space-y-2">
-											<div>22. What does Sarah say about extensions?</div>
+											<div>22. The lecturer says that reasonable excuses for extensions are</div>
 											<div class="ml-4 space-y-1">
 												<label class="flex items-center space-x-2">
 													<input type="radio" name="q22" value="A" class="text-teal-600">
@@ -473,7 +492,26 @@
 
 								<div class="mb-6">
 									<p class="font-medium mb-2"><strong>Questions 23–27</strong></p>
-									<p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Write the correct letter A–G next to the name.</p>
+									<p class="text-sm text-gray-600 dark:text-gray-400 mb-4">What recommendations does Dr Johnson make about the journal articles?<br>Choose your answers from the box and write the letters A–G next to the names.</p>
+									
+									<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-4">
+										<p class="font-medium text-blue-900 dark:text-blue-100 mb-2"><strong>Example Answer</strong></p>
+										<p class="text-sm text-blue-800 dark:text-blue-200">Anderson and Hawker: <strong>A</strong></p>
+									</div>
+
+									<div class="mb-4">
+										<p class="font-medium mb-2"><strong>Options:</strong></p>
+										<div class="grid grid-cols-2 gap-2 text-sm">
+											<div>A. must read</div>
+											<div>B. useful</div>
+											<div>C. limited value</div>
+											<div>D. read first section</div>
+											<div>E. read research methods</div>
+											<div>F. read conclusion</div>
+											<div>G. don't read</div>
+										</div>
+									</div>
+
 									<ul class="space-y-2">
 										<li>Jackson: <input type="text" name="q23" class="border border-gray-300 dark:border-gray-600 rounded px-2 py-1 w-16 dark:bg-gray-700 dark:text-white"></li>
 										<li>Roberts: <input type="text" name="q24" class="border border-gray-300 dark:border-gray-600 rounded px-2 py-1 w-16 dark:bg-gray-700 dark:text-white"></li>
@@ -485,7 +523,31 @@
 
 								<div>
 									<p class="font-medium mb-2"><strong>Questions 28–30</strong></p>
-									<p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Label the chart. Write the correct letter A–H next to the number.</p>
+									<p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Label the chart below.<br>Choose your answers from the box below the chart and write the letters A–H next to the numbers.</p>
+									
+									<div class="text-center mb-4">
+										<img 
+											src="/listening-images/ielts_section3_chart.png" 
+											alt="Population studies chart showing reasons for changing accommodation with bars labeled C, E, G and numbers 28, 29, 30" 
+											class="w-full h-auto max-h-96 object-contain mx-auto rounded-lg border border-gray-200 dark:border-gray-700"
+											loading="lazy"
+										/>
+									</div>
+
+									<div class="mb-4">
+										<p class="font-medium mb-2"><strong>Options:</strong></p>
+										<div class="grid grid-cols-2 gap-2 text-sm">
+											<div>A. uncooperative landlord</div>
+											<div>B. environment</div>
+											<div>C. space</div>
+											<div>D. noisy neighbours</div>
+											<div>E. near city</div>
+											<div>F. work location</div>
+											<div>G. transport</div>
+											<div>H. rent</div>
+										</div>
+									</div>
+
 									<ul class="space-y-2">
 										<li>28: <input type="text" name="q28" class="border border-gray-300 dark:border-gray-600 rounded px-2 py-1 w-16 dark:bg-gray-700 dark:text-white"></li>
 										<li>29: <input type="text" name="q29" class="border border-gray-300 dark:border-gray-600 rounded px-2 py-1 w-16 dark:bg-gray-700 dark:text-white"></li>
