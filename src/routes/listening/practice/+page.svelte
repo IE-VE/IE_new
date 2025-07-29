@@ -420,7 +420,6 @@
 											alt="Plan Diagram showing Riverside Village layout with River, Engine Room, Grinding Shop, and other numbered locations" 
 											class="w-full h-auto max-h-96 object-contain mx-auto rounded-lg border border-gray-200 dark:border-gray-700"
 											loading="lazy"
-											on:error={(e) => console.error('Failed to load image:', e.target.src)}
 										/>
 									</div>
 
@@ -532,7 +531,6 @@
 											alt="Population studies chart showing reasons for changing accommodation with bars labeled C, E, G and numbers 28, 29, 30" 
 											class="w-full h-auto max-h-96 object-contain mx-auto rounded-lg border border-gray-200 dark:border-gray-700"
 											loading="lazy"
-											on:error={(e) => console.error('Failed to load image:', e.target.src)}
 										/>
 									</div>
 
