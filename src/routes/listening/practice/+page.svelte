@@ -211,8 +211,6 @@
 						<p class="ml-4 text-blue-600 dark:text-blue-400">B. she didn't have time to look</p>
 						<p class="ml-4 font-semibold text-blue-600 dark:text-blue-400">C. the books had already been borrowed</p>
 					</div>
-
-					<div class="mb-8">
 						<p class="font-semibold mb-2">Questions 21 and 22</p>
 						<p class="mb-4">Choose the correct letter, A, B or C.</p>
 
