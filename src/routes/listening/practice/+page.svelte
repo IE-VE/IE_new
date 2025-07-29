@@ -134,7 +134,6 @@
 	];
 
 	let currentSectionIndex = $state(0);
-	let currentQuestionIndex = $state(0);
 
 	function togglePlayPause() {
 		if (!audioElement) return;
