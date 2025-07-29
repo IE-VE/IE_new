@@ -213,7 +213,7 @@
 			</div>
 
 			<div class="mb-6">
-				<h3 class="text-lg font-medium mb-3 text-gray-900 dark:text-white">Population Studies Chart</h3></div>
+				<h3 class="text-lg font-medium mb-3 text-gray-900 dark:text-white">Population Studies Chart</h3>
 				<div class="flex justify-center mb-4">
 					<img 
 						src="/listening-images/ielts_section3_chart.png"
