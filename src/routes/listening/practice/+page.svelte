@@ -35,8 +35,8 @@
 			{ id: 20, type: 'fill', text: "20. The _______ for the workers" }
 		],
 		section3: [
-			{ id: 21, type: 'multiple', text: "21. Complete the chart below. Choose your answers from the box and write the letters A–H next to the numbers.", options: ['A. uncooperative landlord', 'B. environment', 'C. space', 'D. noisy neighbours', 'E. near city', 'F. work location', 'G. transport', 'H. rent'] },
-			{ id: 22, type: 'multiple', text: "22. What is the most common reason for changing accommodation?", options: ['A. Reason C', 'B. Reason E', 'C. Reason G'] },
+			{ id: 21, type: 'fill', text: "21. Complete the chart below. Choose your answers from the box and write the letters A–H next to the numbers." },
+			{ id: 22, type: 'fill', text: "22. What is Anderson and Hawker's first concern about their accommodation?" },
 			{ id: 23, type: 'fill', text: "23. _______ students chose reason E." },
 			{ id: 24, type: 'fill', text: "24. The percentage for reason G is _______." },
 			{ id: 25, type: 'fill', text: "25. The survey included _______ students in total." },
@@ -47,16 +47,16 @@
 			{ id: 30, type: 'fill', text: "30. _______" }
 		],
 		section4: [
-			{ id: 31, type: 'fill', text: "31. The lecture topic is about _______." },
-			{ id: 32, type: 'fill', text: "32. The main problem discussed is _______." },
-			{ id: 33, type: 'fill', text: "33. The first solution mentioned is _______." },
-			{ id: 34, type: 'fill', text: "34. The second approach involves _______." },
-			{ id: 35, type: 'fill', text: "35. The speaker concludes that _______ is essential." },
-			{ id: 36, type: 'fill', text: "36. The research was conducted over a period of _______." },
-			{ id: 37, type: 'fill', text: "37. The most significant finding was _______." },
-			{ id: 38, type: 'fill', text: "38. Future studies should focus on _______." },
-			{ id: 39, type: 'fill', text: "39. The practical applications include _______." },
-			{ id: 40, type: 'fill', text: "40. The speaker recommends further investigation into _______." }
+			{ id: 31, type: 'fill', text: "31. Complete the notes below. Write NO MORE THAN TWO WORDS for each answer." },
+			{ id: 32, type: 'fill', text: "32. In order to set up an archaeological project, it is important to have _______." },
+			{ id: 33, type: 'fill', text: "33. The number of field schools is _______." },
+			{ id: 34, type: 'fill', text: "34. People are interested in archaeology because they want to work _______." },
+			{ id: 35, type: 'fill', text: "35. The application process takes _______." },
+			{ id: 36, type: 'fill', text: "36. Differences in _______ affect the price of field schools." },
+			{ id: 37, type: 'fill', text: "37. How to reduce costs: _______." },
+			{ id: 38, type: 'fill', text: "38. Students must arrange their own _______." },
+			{ id: 39, type: 'fill', text: "39. Equipment is provided for _______." },
+			{ id: 40, type: 'fill', text: "40. An extra _______ is charged for some courses." }
 		]
 	};
 
@@ -107,34 +107,23 @@
 			<p class="text-gray-600 dark:text-gray-300">
 				Complete listening test with audio and questions - 40 questions in 4 sections
 			</p>
+			<p class="text-gray-600 dark:text-gray-300 mt-2">
+				Allow yourself <strong>33 minutes</strong> to complete this test.
+			</p>
 		</header>
 
 		<!-- Audio Player -->
 		<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
 			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Audio Player</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-4">
+				<strong>Click to listen and answer the questions below.</strong>
+			</p>
 
-			<audio bind:this={audioElement} class="w-full mb-4">
-				<source src="/audio/ielts-listening_test1.mp3" type="audio/mpeg">
-				Your browser does not support the audio element.
-			</audio>
-
-			<div class="flex items-center justify-between mb-2">
-				<button 
-					on:click={togglePlay}
-					class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
-				>
-					{isPlaying ? 'Pause' : 'Play'}
-				</button>
-				<span class="text-sm text-gray-600 dark:text-gray-300">
-					{formatTime(currentTime)} / {formatTime(duration)}
-				</span>
-			</div>
-
-			<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-				<div 
-					class="bg-blue-600 h-2 rounded-full transition-all duration-300"
-					style="width: {duration ? (currentTime / duration) * 100 : 0}%"
-				></div>
+			<div class="flex justify-center mb-4">
+				<audio bind:this={audioElement} controls class="w-full max-w-md">
+					<source src="/audio/ielts-listening_test1.mp3" type="audio/mpeg">
+					Your browser does not support the audio element.
+				</audio>
 			</div>
 		</div>
 
@@ -167,11 +156,11 @@
 			</p>
 
 			<div class="mb-6">
-				<h3 class="text-lg font-medium mb-3 text-gray-900 dark:text-white">Plan Diagram</h3>
+				<h3 class="text-lg font-medium mb-3 text-gray-900 dark:text-white">Riverside Village Plan</h3>
 				<div class="flex justify-center mb-4">
 					<img 
 						src="/listening-images/ielts_section2_plan.png"
-						alt="Plan Diagram showing Riverside Village layout with River, Engine Room, Grinding Shop, and other numbered locations" 
+						alt="Riverside Village Plan showing River, Engine Room, Grinding Shop, and other numbered locations" 
 						class="w-full h-auto max-h-96 object-contain mx-auto rounded-lg border border-gray-200 dark:border-gray-700"
 						loading="lazy"
 						on:error={(e) => console.error('Failed to load image:', e.target.src)}
@@ -222,11 +211,24 @@
 			</p>
 
 			<div class="mb-6">
-				<h3 class="text-lg font-medium mb-3 text-gray-900 dark:text-white">Population Studies Chart</h3>
+				<h3 class="text-lg font-medium mb-3 text-gray-900 dark:text-white">Reasons for changing accommodation</h3>
+				<div class="mb-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+					<p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Choose your answers from the box:</p>
+					<div class="grid grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
+						<div>A. uncooperative landlord</div>
+						<div>B. environment</div>
+						<div>C. space</div>
+						<div>D. noisy neighbours</div>
+						<div>E. near city</div>
+						<div>F. work location</div>
+						<div>G. transport</div>
+						<div>H. rent</div>
+					</div>
+				</div>
 				<div class="flex justify-center mb-4">
 					<img 
 						src="/listening-images/ielts_section3_chart.png"
-						alt="Population studies chart showing reasons for changing accommodation with bars labeled C, E, G and numbers 28, 29, 30" 
+						alt="Chart showing reasons for changing accommodation with bars labeled C, E, G and numbers 28, 29, 30" 
 						class="w-full h-auto max-h-96 object-contain mx-auto rounded-lg border border-gray-200 dark:border-gray-700"
 						loading="lazy"
 						on:error={(e) => console.error('Failed to load image:', e.target.src)}
@@ -239,29 +241,11 @@
 					<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 						{question.text}
 					</label>
-
-					{#if question.type === 'multiple' && question.options}
-						{#each question.options as option}
-							<div class="mb-2">
-								<label class="flex items-center">
-									<input 
-										type="radio" 
-										name="question_{question.id}"
-										value={option}
-										class="mr-2"
-										on:change={(e) => handleAnswerChange(question.id, e.target.value)}
-									/>
-									<span class="text-gray-700 dark:text-gray-300">{option}</span>
-								</label>
-							</div>
-						{/each}
-					{:else}
-						<input 
-							type="text" 
-							class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-							on:input={(e) => handleAnswerChange(question.id, e.target.value)}
-						/>
-					{/if}
+					<input 
+						type="text" 
+						class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+						on:input={(e) => handleAnswerChange(question.id, e.target.value)}
+					/>
 				</div>
 			{/each}
 		</section>
@@ -287,8 +271,16 @@
 			{/each}
 		</section>
 
+		<!-- Transfer Instructions -->
+		<div class="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-6 mb-8">
+			<h3 class="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mb-2">Transfer Time</h3>
+			<p class="text-yellow-700 dark:text-yellow-300">
+				<strong>Now take 10 minutes to transfer your answers to the answer sheet, double-check for spelling errors, and make absolutely sure you've followed all instructions correctly.</strong>
+			</p>
+		</div>
+
 		<!-- Submit Button -->
-		<div class="text-center">
+		<div class="text-center mb-8">
 			<button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium text-lg transition-colors">
 				Submit Answers
 			</button>
