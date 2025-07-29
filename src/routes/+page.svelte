@@ -46,7 +46,7 @@
 			id: 3,
 			title: 'What if I need more help after the free test?',
 			content:
-				'The free test gives you a baseline assessment. For those who want to improve faster, we offer premium plans with detailed feedback, personalised study plans, and access to practice materials designed by IELTS experts.'
+				'The freetest is designed to give you a good idea of your starting point for improvement. For personal guidance on your IELTS journey you can sign up for our unique 6-day InsideIELTS Test Preparation Program: it\'s quick, efficient and focused on your personal needs. (We can\'t be beaten on value either - check the price - you\'ll be pleasantly surprised!) And if you are not 100% satisfied with our service we will refund your payment in full at any time - no questions asked.'
 		}
 	];
 
