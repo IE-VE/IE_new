@@ -192,8 +192,28 @@
 		<section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
 			<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Section 3</h2>
 
+			<!-- Example Questions -->
+			<div class="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
+				<h3 class="text-sm font-semibold text-blue-800 dark:text-blue-200 mb-3">Example</h3>
+				<p class="text-gray-700 dark:text-gray-300 mb-2">
+					Melanie could not borrow any books from the library because
+				</p>
+				<div class="ml-4 text-gray-700 dark:text-gray-300">
+					<div>A. the librarian was out</div>
+					<div>B. she didn't have time to look</div>
+					<div class="font-semibold text-blue-800 dark:text-blue-200">C. the books had already been borrowed</div>
+				</div>
+			</div>
+
+			<div class="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
+				<h3 class="text-sm font-semibold text-blue-800 dark:text-blue-200 mb-3">Example Answer</h3>
+				<p class="text-gray-700 dark:text-gray-300">
+					Anderson and Hawker: <span class="font-semibold text-blue-800 dark:text-blue-200">A</span>
+				</p>
+			</div>
+
 			<div class="mb-6">
-				<h3 class="text-lg font-medium mb-3 text-gray-900 dark:text-white">Population Studies Chart</h3>
+				<h3 class="text-lg font-medium mb-3 text-gray-900 dark:text-white">Population Studies Chart</h3></div>
 				<div class="flex justify-center mb-4">
 					<img 
 						src="/listening-images/ielts_section3_chart.png"
