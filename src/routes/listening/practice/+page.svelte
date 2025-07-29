@@ -93,8 +93,8 @@
 							<li>Visit places which have:
 								<ul class="ml-6 mt-2 space-y-1">
 									<li>• historical interest</li>
-									<li>• good <strong>1</strong> <input type="text" name="q1" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-teal-500 focus:outline-none"></li>
-									<li>• <strong>2</strong> <input type="text" name="q2" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-teal-500 focus:outline-none"></li>
+									<li>• good <strong>1</strong> <input type="text" name="q1" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"></li>
+									<li>• <strong>2</strong> <input type="text" name="q2" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"></li>
 								</ul>
 							</li>
 							<li class="mt-4">Cost: between £5.00 and £15.00 per person</li>
