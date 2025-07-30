@@ -26,7 +26,7 @@
 	<meta name="description" content="Complete IELTS Listening practice test with all 4 sections and 40 questions. Free practice material for IELTS preparation." />
 </svelte:head>
 
-<div class="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50 py-8 dark:from-gray-900 dark:to-gray-800"></div>
+<div class="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50 py-8 dark:from-gray-900 dark:to-gray-800">
 	<div class="max-w-4xl mx-auto px-4">
 		<!-- Header -->
 		<div class="text-center mb-8">
@@ -35,7 +35,7 @@
 		</div>
 
 		<!-- Test Overview Section -->
-		<div class="rounded-lg shadow-md p-6 mb-6 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-400">
+		<div class="rounded-lg shadow-md p-6 mb-6 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-400">
 			<div class="flex justify-center mb-4">
 				<div class="flex items-center gap-2 text-blue-700 dark:text-blue-400">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,7 +64,7 @@
 		</div>
 
 		<!-- Assessment Section -->
-		<div class="rounded-lg shadow-md p-6 mb-6 bg-teal-50 dark:bg-teal-900/20 border-l-4 border-teal-400">
+		<div class="rounded-lg shadow-md p-6 mb-6 bg-teal-50 dark:bg-teal-900/20 border-2 border-teal-400">
 			<div class="flex justify-center mb-4">
 				<div class="flex items-center gap-2 text-teal-600 dark:text-teal-400">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -87,7 +87,7 @@
 		</div>
 
 		<!-- Instructions Section -->
-		<div class="rounded-lg shadow-md p-6 mb-6 bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400">
+		<div class="rounded-lg shadow-md p-6 mb-6 bg-yellow-50 dark:bg-yellow-900/20 border-2 border-yellow-400">
 			<div class="flex justify-center mb-4">
 				<div class="flex items-center gap-2 text-yellow-700 dark:text-yellow-400">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -109,7 +109,7 @@
 		</div>
 
 		<!-- Materials Section -->
-		<div class="rounded-lg shadow-md p-6 mb-6 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-400">
+		<div class="rounded-lg shadow-md p-6 mb-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400">
 			<div class="flex justify-center mb-4">
 				<div class="flex items-center gap-2 text-green-700 dark:text-green-400">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -409,13 +409,14 @@
 		</div>
 
 		<!-- Instructions -->
-		<div class="mt-8 border-l-4 border-teal-400 bg-teal-50 p-4 rounded-r-lg dark:bg-teal-900/20 dark:border-teal-500">
+		<div class="mt-8 border-2 border-teal-400 bg-teal-50 p-4 rounded-lg dark:bg-teal-900/20 dark:border-teal-500">
 			<p class="text-sm text-gray-900 dark:text-gray-100">
 				<strong>Instructions:</strong> Follow the word limits exactly as specified for each question type. 
 				Transfer your answers to an official IELTS answer sheet when taking the real test.
 			</p>
 		</div>
 	</div>
+</div>
 
 <style>
 	input[type="text"], input[type="radio"] {
