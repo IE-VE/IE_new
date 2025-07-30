@@ -30,7 +30,7 @@
 	<div class="max-w-4xl mx-auto px-4">
 		<!-- Header -->
 		<div class="text-center mb-8">
-			<h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">IELTS Listening Practice Test 1</h1>
+			<h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">IELTS Listening Test</h1>
 			<p class="text-lg mb-6 text-gray-700 dark:text-gray-300">Complete practice test with all 4 sections - 40 questions total</p>
 		</div>
 
@@ -410,7 +410,6 @@
 			</p>
 		</div>
 	</div>
-</div>
 
 <style>
 	input[type="text"], input[type="radio"] {
