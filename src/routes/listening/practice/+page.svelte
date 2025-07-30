@@ -309,6 +309,24 @@
 							<li><strong>40.</strong> Trees require a lot of sunlight, water and <input type="text" name="q40" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> to grow</li>
 						</ol>
 					</div>
+
+					<!-- Action Buttons for Section 4 -->
+					<div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+						<a 
+							href="/listening-images/ielts-listening-answer-sheet.jpg"
+							download="IELTS-Listening-Answer-Sheet.jpg"
+							class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+						>
+							📄 Download Answer Sheet
+						</a>
+						<button
+							type="button"
+							onclick="window.open('/listening-images/ielts-listening-test-1-answers.png', '_blank')"
+							class="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors"
+						>
+							✅ View Answers
+						</button>
+					</div>
 				</section>
 			{/if}
 		</div>
