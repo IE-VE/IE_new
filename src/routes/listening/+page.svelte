@@ -178,7 +178,7 @@
 
 		<!-- Assessment Criteria -->
 		<div class="mb-12">
-			<Card variant="teal">
+			<div class="bg-red-100 rounded-lg shadow-md p-6 dark:bg-red-900">
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
 
 					Assessment Criteria
@@ -215,7 +215,7 @@
 						</ul>
 					</div>
 				</div>
-			</Card>
+			</div>
 		</div>
 
 		<!-- Question Examples Carousel -->
@@ -244,7 +244,7 @@
 				</div>
 			</Card>
 		</div>
-	
+
 			<!-- Call to Action -->
 		<div class="text-center">
 			<Card variant="teal">
