@@ -74,6 +74,7 @@
 
 	function markAnswers() {
 		const answers = collectUserAnswers();
+		console.log('Collected answers:', answers); // Debug log
 		userAnswers = answers;
 		const results = {};
 		let totalCorrect = 0;
@@ -332,6 +333,7 @@
 
 						<ol start="11" class="space-y-4 ml-4">
 							<li><strong>11.</strong> Riverside Village was a good place to start an industry because it had water, raw materials and fuels such as <input type="text" name="q11a" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> and <input type="text" name="q11b" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none">.</li>
+</ol_str>
 							<li><strong>12.</strong> The metal industry was established at Riverside Village by <input type="text" name="q12" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> who lived in the area.</li>
 							<li><strong>13.</strong> There were over <input type="text" name="q13" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> water-powered mills in the area in the eighteenth century.</li>
 						</ol>
