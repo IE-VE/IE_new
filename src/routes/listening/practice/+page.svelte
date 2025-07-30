@@ -32,16 +32,101 @@
 		<div class="text-center mb-8">
 			<h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">IELTS Listening Practice Test 1</h1>
 			<p class="text-lg mb-6 text-gray-700 dark:text-gray-300">Complete practice test with all 4 sections - 40 questions total</p>
+		</div>
 
-			<!-- Audio Player -->
-			<div class="p-6 rounded-lg shadow-md mb-6 bg-white dark:bg-gray-800">
-				<p class="text-sm mb-4 text-gray-600 dark:text-gray-400">Click to listen and answer the questions below.</p>
-				<audio controls class="w-full max-w-md mx-auto">
+		<!-- Test Overview Section -->
+		<div class="rounded-lg shadow-md p-6 mb-6 bg-white dark:bg-gray-800">
+			<div class="flex justify-center mb-4">
+				<div class="flex items-center gap-2 text-teal-600 dark:text-teal-400">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.464-9.536a9 9 0 010 12.728M9 12h6m-6 0a3 3 0 106 0" />
+					</svg>
+					<h2 class="text-xl font-bold">THE LISTENING TEST</h2>
+				</div>
+			</div>
+			
+			<div class="text-gray-700 dark:text-gray-300 space-y-4">
+				<p>
+					The <strong>IELTS</strong> Listening Test is the first test that you will complete on test day. The test lasts for <strong>40 minutes</strong>. 
+					You have 30 minutes to listen to the recording and write your answers directly on the test booklet, and then a further 10 minutes at the end 
+					of the test to transfer your answers onto the answer sheet provided.
+				</p>
+				
+				<p>The listening test is made up of <strong>40 questions</strong> in <strong>four sections</strong>:</p>
+				
+				<ul class="ml-6 space-y-2 list-disc">
+					<li>Section 1 takes the form of a conversation between two people;</li>
+					<li>Section 2 is a monologue based on social topics and situations;</li>
+					<li>Section 3 of the listening test is a conversation between up to four people;</li>
+					<li>Section 4 will be a monologue set in an educational context.</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Assessment Section -->
+		<div class="rounded-lg shadow-md p-6 mb-6 bg-teal-50 dark:bg-teal-900/20">
+			<div class="flex justify-center mb-4">
+				<div class="flex items-center gap-2 text-teal-600 dark:text-teal-400">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+					</svg>
+					<h2 class="text-xl font-bold">Assessment</h2>
+				</div>
+			</div>
+			
+			<div class="text-gray-700 dark:text-gray-300 space-y-4">
+				<p>
+					The <strong>Listening Test</strong> is graded using a scoring system that varies to a small degree with each <strong>IELTS</strong> test. 
+					The exact cut-off score for each band is calculated after analysis of worldwide results on any given test week.
+				</p>
+				
+				<p>
+					Broadly speaking, you need to score at least <strong>23/40</strong> for a <strong>Band 6</strong> and at least <strong>30/40</strong> for a <strong>Band 7</strong> award in the Listening Test.
+				</p>
+			</div>
+		</div>
+
+		<!-- Instructions Section -->
+		<div class="rounded-lg shadow-md p-6 mb-6 bg-yellow-50 dark:bg-yellow-900/20">
+			<div class="text-gray-700 dark:text-gray-300 space-y-4">
+				<p>
+					It's <u>very important</u> that you accurately follow the instructions for each set of questions.
+				</p>
+				
+				<p>
+					If the format of your answer differs from instructed, even if the correct information is included, your answer will be marked WRONG.
+				</p>
+			</div>
+		</div>
+
+		<!-- Materials Section -->
+
+			<!-- Materials Section -->
+		<div class="rounded-lg shadow-md p-6 mb-6 bg-white dark:bg-gray-800">
+			<div class="flex justify-center mb-4">
+				<div class="flex items-center gap-2 text-teal-600 dark:text-teal-400">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.464-9.536a9 9 0 010 12.728M9 12h6m-6 0a3 3 0 106 0" />
+					</svg>
+					<h2 class="text-xl font-bold">Materials</h2>
+				</div>
+			</div>
+			
+			<p class="text-sm mb-4 text-gray-600 dark:text-gray-400 text-center"><strong>Click to listen and answer the questions below.</strong></p>
+			
+			<div class="flex justify-center mb-4">
+				<audio controls class="w-full max-w-md">
 					<source src="/audio/ielts-listening_test1.mp3" type="audio/mpeg">
 					Your browser does not support the audio element.
 				</audio>
-				<p class="text-sm mt-2 text-gray-500 dark:text-gray-400">Allow yourself <strong>33 minutes</strong> to complete this test.</p>
 			</div>
+			
+			<div class="text-center text-sm text-gray-600 dark:text-gray-400 space-y-2">
+				<p>Allow yourself <strong>33 minutes</strong> to complete this test.</p>
+				<p>The test has <strong>4 sections</strong> and <strong>40 questions</strong>. Each question is worth <strong>1 mark</strong>.</p>
+				<p>There's a sample <strong>IELTS Listening Test</strong> answer sheet at the end of the test questions.</p>
+			</div>
+		</div>
 		</div>
 
 		<!-- Navigation -->
