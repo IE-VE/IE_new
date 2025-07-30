@@ -30,7 +30,7 @@
 	<div class="max-w-4xl mx-auto px-4">
 		<!-- Header -->
 		<div class="text-center mb-8">
-			<h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">IELTS Listening Practice Test</h1>
+			<h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">IELTS Listening Practice Test 1</h1>
 			<p class="text-lg mb-6 text-gray-700 dark:text-gray-300">Complete practice test with all 4 sections - 40 questions total</p>
 
 			<!-- Audio Player -->
@@ -251,18 +251,6 @@
 						<p class="mb-4">What recommendations does Dr Johnson make about the journal articles?<br>
 						Choose your answers from the box and write the letters A–G next to the names.</p>
 
-						<div class="mb-4 p-4 bg-gray-50 rounded-lg">
-							<p class="font-semibold mb-2">Options:</p>
-							<div class="grid grid-cols-2 gap-2 text-sm">
-								<p>A. must read</p>
-								<p>B. useful</p>
-								<p>C. limited value</p>
-								<p>D. read first section</p>
-								<p>E. read research methods</p>
-								<p>F. read conclusion</p>
-								<p>G. don't read</p>
-							</div>
-						</div>
 
 						<ul class="space-y-3 ml-4">
 							<li><strong>23.</strong> Jackson: <input type="text" name="q23" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
@@ -280,20 +268,6 @@
 
 						<div class="text-center my-6">
 							<img src="/listening-images/ielts_section3_chart.png" alt="Population studies chart showing reasons for changing accommodation with bars labeled C, E, G and numbers 28, 29, 30" class="max-w-full h-auto border border-gray-300 mx-auto">
-						</div>
-
-						<div class="mb-4 p-4 bg-gray-50 rounded-lg">
-							<p class="font-semibold mb-2">Options:</p>
-							<div class="grid grid-cols-2 gap-2 text-sm">
-								<p>A. uncooperative landlord</p>
-								<p>B. environment</p>
-								<p>C. space</p>
-								<p>D. noisy neighbours</p>
-								<p>E. near city</p>
-								<p>F. work location</p>
-								<p>G. transport</p>
-								<p>H. rent</p>
-							</div>
 						</div>
 
 						<ul class="space-y-3 ml-4">
@@ -332,9 +306,11 @@
 
 		<!-- Instructions -->
 		<div class="mt-8 border-l-4 border-teal-400 bg-teal-50 p-4 rounded-r-lg dark:bg-teal-900/20 dark:border-teal-500">
+		<center><p class="text-sm text-gray-900 dark:text-gray-100">
+			<strong>END OF TEST</strong> 
+		</p></center>	
 			<p class="text-sm text-gray-900 dark:text-gray-100">
-				<strong>Instructions:</strong> Follow the word limits exactly as specified for each question type. 
-				Transfer your answers to an official IELTS answer sheet when taking the real test.
+			 In the real IELTS Listening Test you would now have 10 minutes to transfer your answers to the official answer sheet.
 			</p>
 		</div>
 	</div>
