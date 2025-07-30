@@ -180,7 +180,7 @@
 		<div class="mb-12">
 			<Card variant="teal">
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
-			
+
 					Assessment Criteria
 				</h2>
 				<div class="grid md:grid-cols-2 gap-8">
@@ -242,7 +242,7 @@
 						</div>
 					{/each}
 				</div>
-			</Card>
+			</div>
 		</div>
 
 			<!-- Call to Action -->
