@@ -108,6 +108,108 @@
 			</div>
 		</div>
 
+		<!-- Question Types Section -->
+		<div class="rounded-lg shadow-md p-6 mb-6 bg-purple-50 dark:bg-purple-900/20 border-2 border-purple-400">
+			<div class="flex justify-center mb-4">
+				<div class="flex items-center gap-2 text-purple-700 dark:text-purple-400">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+					</svg>
+					<h2 class="text-xl font-bold">Question Types</h2>
+				</div>
+			</div>
+			
+			<div class="text-gray-700 dark:text-gray-300 space-y-4">
+				<p>
+					There are <strong>6</strong> main types of question and the questions increase
+					in difficulty as the test progresses. All questions are worth
+					<strong>1 mark</strong>.
+				</p>
+				
+				<p>The questions will usually be formatted in one of the following ways:</p>
+				
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+					<div class="space-y-2">
+						<div class="flex items-center gap-2 font-semibold">
+							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">1</span>
+							<span>Missing information</span>
+						</div>
+						<div class="flex items-center gap-2 font-semibold">
+							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">2</span>
+							<span>Diagram labeling</span>
+						</div>
+						<div class="flex items-center gap-2 font-semibold">
+							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">3</span>
+							<span>Matching information</span>
+						</div>
+					</div>
+					<div class="space-y-2">
+						<div class="flex items-center gap-2 font-semibold">
+							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">4</span>
+							<span>Multiple choice</span>
+						</div>
+						<div class="flex items-center gap-2 font-semibold">
+							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">5</span>
+							<span>Sentence completion</span>
+						</div>
+						<div class="flex items-center gap-2 font-semibold">
+							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">6</span>
+							<span>Short answer question</span>
+						</div>
+					</div>
+				</div>
+				
+				<p class="mt-4">
+					Below you can see examples of the different styles of question you
+					will encounter in the Listening Test.
+				</p>
+			</div>
+		</div>
+
+		<!-- Question Examples Carousel -->
+		<div class="rounded-lg shadow-md p-6 mb-6 bg-indigo-50 dark:bg-indigo-900/20 border-2 border-indigo-400">
+			<div class="flex justify-center mb-4">
+				<div class="flex items-center gap-2 text-indigo-700 dark:text-indigo-400">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+					</svg>
+					<h2 class="text-xl font-bold">Question Examples</h2>
+				</div>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+				<div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+					<h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Missing Information</h3>
+					<img src="/listening-images/ielts-listening-missing-information.png" alt="Missing Information Example" class="w-full h-auto rounded border">
+				</div>
+				
+				<div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+					<h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Diagram Labeling</h3>
+					<img src="/listening-images/ielts-listening-diagram-labeling.png" alt="Diagram Labeling Example" class="w-full h-auto rounded border">
+				</div>
+				
+				<div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+					<h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Matching Information</h3>
+					<img src="/listening-images/ielts-listening-matching-information.png" alt="Matching Information Example" class="w-full h-auto rounded border">
+				</div>
+				
+				<div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+					<h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Multiple Choice</h3>
+					<img src="/listening-images/ielts-listening-multiple-choice.png" alt="Multiple Choice Example" class="w-full h-auto rounded border">
+				</div>
+				
+				<div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+					<h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Sentence Completion</h3>
+					<img src="/listening-images/ielts-listening-sentence-completion.png" alt="Sentence Completion Example" class="w-full h-auto rounded border">
+				</div>
+				
+				<div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+					<h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Short Answer</h3>
+					<img src="/listening-images/ielts-listening-short-answer.png" alt="Short Answer Example" class="w-full h-auto rounded border">
+				</div>
+			</div>
+		</div>
+
 		<!-- Materials Section -->
 		<div class="rounded-lg shadow-md p-6 mb-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400">
 			<div class="flex justify-center mb-4">
