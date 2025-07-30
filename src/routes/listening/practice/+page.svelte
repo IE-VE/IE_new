@@ -343,10 +343,10 @@
 			{:else}
 				<center><p class="text-sm text-gray-900 dark:text-gray-100">
 					<strong>End of Section {currentSection}</strong> 
-				</p></center>	
+				</p>
 				<p class="text-sm text-gray-900 dark:text-gray-100">
 					Use any remaining time to check your answers and then move to the next section.
-				</p>
+				</p></center>	
 			{/if}
 		</div>
 	</div>
