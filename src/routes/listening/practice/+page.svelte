@@ -35,9 +35,9 @@
 		</div>
 
 		<!-- Test Overview Section -->
-		<div class="rounded-lg shadow-md p-6 mb-6 bg-white dark:bg-gray-800">
+		<div class="rounded-lg shadow-md p-6 mb-6 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-400">
 			<div class="flex justify-center mb-4">
-				<div class="flex items-center gap-2 text-teal-600 dark:text-teal-400">
+				<div class="flex items-center gap-2 text-blue-700 dark:text-blue-400">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.464-9.536a9 9 0 010 12.728M9 12h6m-6 0a3 3 0 106 0" />
 					</svg>
@@ -64,7 +64,7 @@
 		</div>
 
 		<!-- Assessment Section -->
-		<div class="rounded-lg shadow-md p-6 mb-6 bg-teal-50 dark:bg-teal-900/20">
+		<div class="rounded-lg shadow-md p-6 mb-6 bg-teal-50 dark:bg-teal-900/20 border-l-4 border-teal-400">
 			<div class="flex justify-center mb-4">
 				<div class="flex items-center gap-2 text-teal-600 dark:text-teal-400">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -87,7 +87,16 @@
 		</div>
 
 		<!-- Instructions Section -->
-		<div class="rounded-lg shadow-md p-6 mb-6 bg-yellow-50 dark:bg-yellow-900/20">
+		<div class="rounded-lg shadow-md p-6 mb-6 bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400">
+			<div class="flex justify-center mb-4">
+				<div class="flex items-center gap-2 text-yellow-700 dark:text-yellow-400">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+					</svg>
+					<h2 class="text-xl font-bold">Important Instructions</h2>
+				</div>
+			</div>
+			
 			<div class="text-gray-700 dark:text-gray-300 space-y-4">
 				<p>
 					It's <u>very important</u> that you accurately follow the instructions for each set of questions.
@@ -100,13 +109,11 @@
 		</div>
 
 		<!-- Materials Section -->
-
-			<!-- Materials Section -->
-		<div class="rounded-lg shadow-md p-6 mb-6 bg-white dark:bg-gray-800">
+		<div class="rounded-lg shadow-md p-6 mb-6 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-400">
 			<div class="flex justify-center mb-4">
-				<div class="flex items-center gap-2 text-teal-600 dark:text-teal-400">
+				<div class="flex items-center gap-2 text-green-700 dark:text-green-400">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.464-9.536a9 9 0 010 12.728M9 12h6m-6 0a3 3 0 106 0" />
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
 					</svg>
 					<h2 class="text-xl font-bold">Materials</h2>
 				</div>
@@ -126,7 +133,6 @@
 				<p>The test has <strong>4 sections</strong> and <strong>40 questions</strong>. Each question is worth <strong>1 mark</strong>.</p>
 				<p>There's a sample <strong>IELTS Listening Test</strong> answer sheet at the end of the test questions.</p>
 			</div>
-		</div>
 		</div>
 
 		<!-- Navigation -->
