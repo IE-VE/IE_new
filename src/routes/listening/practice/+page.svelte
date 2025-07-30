@@ -59,25 +59,31 @@
 		const answers = {};
 		
 		inputs.forEach(input => {
+			const inputName = input.name;
+			
 			if (input.type === 'radio') {
 				if (input.checked) {
-					answers[input.name] = input.value;
+					answers[inputName] = input.value;
 				}
-			} else {
+			} else if (input.type === 'text') {
 				const value = input.value.trim();
-				if (input.name === 'q11') {
-					// Handle multiple inputs for question 11
-					if (!answers[input.name]) {
-						answers[input.name] = [];
+				if (value) { // Only collect non-empty values
+					if (inputName === 'q11') {
+						// Handle multiple inputs for question 11
+						if (!answers[inputName]) {
+							answers[inputName] = [];
+						}
+						answers[inputName].push(value);
+					} else {
+						answers[inputName] = value;
 					}
-					if (value) {
-						answers[input.name].push(value);
-					}
-				} else {
-					answers[input.name] = value;
 				}
 			}
 		});
+		
+		// Debug log to see what's being collected
+		console.log('All inputs found:', inputs.length);
+		console.log('Collected answers:', answers);
 		
 		return answers;
 	}
