@@ -5,6 +5,130 @@
 	let currentSection = $state(1);
 	let totalSections = 4;
 	let showAnswersModal = $state(false);
+	let showMarkingModal = $state(false);
+	let userAnswers = $state({});
+	let markingResults = $state({});
+
+	// Correct answers for the test
+	const correctAnswers = {
+		q1: ['shopping', 'variety of shopping'],
+		q2: ['guided tours'],
+		q3: ['more than 12', 'over 12'],
+		q4: ['notice board'],
+		q5: ['13th February'],
+		q6: ['Tower of London'],
+		q7: ['Bristol'],
+		q8: ['American Museum'],
+		q9: ['student newspaper'],
+		q10: ['Yentob'],
+		q11a: ['coal'],
+		q11b: ['firewood'],
+		q12: ['local craftsmen'],
+		q13: ['160'],
+		q14: ['Woodside'],
+		q15: ['Ticket Office'],
+		q16: ['Gift Shop'],
+		q17: ['(main) Workshop', 'main Workshop', 'Workshop'],
+		q18: ['Showroom'],
+		q19: ['Cafe'],
+		q20: ['cottages'],
+		q21: ['A'],
+		q22: ['C'],
+		q23: ['E'],
+		q24: ['B'],
+		q25: ['G'],
+		q26: ['F'],
+		q27: ['C'],
+		q28: ['D'],
+		q29: ['A'],
+		q30: ['B'],
+		q31: ['cities', 'environment'],
+		q32: ['windy'],
+		q33: ['humid'],
+		q34: ['shady', 'shaded'],
+		q35: ['dangerous'],
+		q36: ['leaves'],
+		q37: ['ground'],
+		q38: ['considerably reduce', 'decrease', 'filter'],
+		q39: ['low'],
+		q40: ['space', 'room']
+	};
+
+	function collectUserAnswers() {
+		const form = document.querySelector('form') || document;
+		const inputs = form.querySelectorAll('input[name^="q"]');
+		const answers = {};
+		
+		inputs.forEach(input => {
+			if (input.type === 'radio') {
+				if (input.checked) {
+					answers[input.name] = input.value;
+				}
+			} else {
+				answers[input.name] = input.value.trim();
+			}
+		});
+		
+		return answers;
+	}
+
+	function markAnswers() {
+		const answers = collectUserAnswers();
+		userAnswers = answers;
+		const results = {};
+		let totalCorrect = 0;
+
+		Object.keys(correctAnswers).forEach(key => {
+			const userAnswer = answers[key] || '';
+			const correctOptions = correctAnswers[key];
+			
+			// Check if user answer matches any of the correct options (case insensitive)
+			const isCorrect = correctOptions.some(correct => 
+				userAnswer.toLowerCase() === correct.toLowerCase()
+			);
+			
+			results[key] = {
+				userAnswer,
+				correctAnswers: correctOptions,
+				isCorrect
+			};
+			
+			if (isCorrect) totalCorrect++;
+		});
+
+		markingResults = { ...results, totalCorrect, totalQuestions: Object.keys(correctAnswers).length };
+		showMarkingModal = true;
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeMarkingModal() {
+		showMarkingModal = false;
+		document.body.style.overflow = 'auto';
+	}
+
+	function handleMarkingKeydown(event) {
+		if (event.key === 'Escape' && showMarkingModal) {
+			closeMarkingModal();
+		}
+	}
+
+	function handleMarkingBackdropClick(event) {
+		if (event.target === event.currentTarget) {
+			closeMarkingModal();
+		}
+	}
+
+	function getBandScore(score) {
+		if (score >= 39) return 9;
+		if (score >= 36) return 8;
+		if (score >= 30) return 7;
+		if (score >= 23) return 6;
+		if (score >= 16) return 5;
+		if (score >= 11) return 4;
+		if (score >= 6) return 3;
+		if (score >= 3) return 2;
+		return 1;
+	}
 
 	function nextSection() {
 		if (currentSection < totalSections) {
@@ -35,6 +159,9 @@
 	function handleKeydown(event) {
 		if (event.key === 'Escape' && showAnswersModal) {
 			closeAnswersModal();
+		}
+		if (event.key === 'Escape' && showMarkingModal) {
+			closeMarkingModal();
 		}
 	}
 
@@ -110,7 +237,7 @@
 		</div>
 
 		<!-- Test Content -->
-		<div class="rounded-lg shadow-md p-8 bg-white dark:bg-gray-800">
+		<form class="rounded-lg shadow-md p-8 bg-white dark:bg-gray-800">
 			{#if currentSection === 1}
 				<!-- Section 1: Questions 1-10 -->
 				<section class="ielts-section">
@@ -344,7 +471,7 @@
 					
 				</section>
 			{/if}
-		</div>
+		</form>
 
 		<!-- Instructions -->
 		<div class="mt-8 border-l-4 border-teal-400 bg-teal-50 p-4 rounded-r-lg dark:bg-teal-900/20 dark:border-teal-500">
@@ -377,6 +504,7 @@
 				</button>
 				<button
 					type="button"
+					onclick={markAnswers}
 					class="inline-flex items-center justify-center px-8 py-4 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition-colors text-lg"
 				>
 					📝 MARK my TEST
@@ -472,6 +600,125 @@
 				<button 
 					class="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
 					onclick={closeAnswersModal}
+				>
+					Close
+				</button>
+			</div>
+		</div>
+	</div>
+{/if}
+
+<!-- Marking Results Modal -->
+{#if showMarkingModal}
+	<div 
+		class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+		onclick={handleMarkingBackdropClick}
+		onkeydown={handleMarkingKeydown}
+		role="dialog"
+		aria-modal="true"
+		aria-labelledby="marking-modal-title"
+	>
+		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-hidden">
+			<!-- Modal Header -->
+			<div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+				<div>
+					<h2 id="marking-modal-title" class="text-2xl font-bold text-gray-900 dark:text-white">
+						Your Test Results
+					</h2>
+					<p class="text-lg mt-2">
+						Score: <span class="font-bold text-green-600">{markingResults.totalCorrect || 0}</span>/<span class="font-bold">{markingResults.totalQuestions || 40}</span> 
+						| Band Score: <span class="font-bold text-blue-600">{getBandScore(markingResults.totalCorrect || 0)}</span>
+					</p>
+				</div>
+				<button 
+					class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-2xl font-bold"
+					onclick={closeMarkingModal}
+					aria-label="Close marking results modal"
+				>
+					×
+				</button>
+			</div>
+			
+			<!-- Modal Content -->
+			<div class="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
+				<div class="grid md:grid-cols-2 gap-4 text-sm">
+					{#each Object.entries(markingResults).filter(([key]) => key.startsWith('q')) as [questionKey, result]}
+						<div class="flex items-center justify-between p-3 rounded-lg border {result.isCorrect ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' : 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800'}">
+							<div class="flex-1">
+								<div class="font-medium">
+									{questionKey.replace('q', 'Q').replace('a', 'A').replace('b', 'B')}: 
+									<span class="text-gray-600 dark:text-gray-300">"{result.userAnswer || '(blank)'}"</span>
+								</div>
+								<div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+									Correct: {result.correctAnswers.join(' / ')}
+								</div>
+							</div>
+							<div class="ml-4">
+								{#if result.isCorrect}
+									<span class="text-green-600 text-xl">✓</span>
+								{:else}
+									<span class="text-red-600 text-xl">✗</span>
+								{/if}
+							</div>
+						</div>
+					{/each}
+				</div>
+				
+				<!-- Band Score Information -->
+				<div class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+					<h3 class="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">IELTS Band Score Guide</h3>
+					<div class="grid md:grid-cols-2 gap-4 text-sm">
+						<div class="space-y-2">
+							<div class="flex justify-between">
+								<span>Band 9:</span>
+								<span class="font-medium">39-40 correct</span>
+							</div>
+							<div class="flex justify-between">
+								<span>Band 8:</span>
+								<span class="font-medium">36-38 correct</span>
+							</div>
+							<div class="flex justify-between">
+								<span>Band 7:</span>
+								<span class="font-medium">30-35 correct</span>
+							</div>
+							<div class="flex justify-between">
+								<span>Band 6:</span>
+								<span class="font-medium">23-29 correct</span>
+							</div>
+						</div>
+						<div class="space-y-2">
+							<div class="flex justify-between">
+								<span>Band 5:</span>
+								<span class="font-medium">16-22 correct</span>
+							</div>
+							<div class="flex justify-between">
+								<span>Band 4:</span>
+								<span class="font-medium">11-15 correct</span>
+							</div>
+							<div class="flex justify-between">
+								<span>Band 3:</span>
+								<span class="font-medium">6-10 correct</span>
+							</div>
+							<div class="flex justify-between">
+								<span>Band 2:</span>
+								<span class="font-medium">3-5 correct</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Modal Footer -->
+			<div class="flex justify-between p-6 border-t border-gray-200 dark:border-gray-700">
+				<button 
+					class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+					onclick={openAnswersModal}
+				>
+					View Answer Key
+				</button>
+				<button 
+					class="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+					onclick={closeMarkingModal}
 				>
 					Close
 				</button>
