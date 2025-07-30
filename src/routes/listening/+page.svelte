@@ -178,7 +178,7 @@
 
 		<!-- Assessment Criteria -->
 		<div class="mb-12">
-			<Card variant="red">
+			<Card variant="xxx">
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
 
 					Assessment Criteria
