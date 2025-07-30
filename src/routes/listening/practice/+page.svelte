@@ -21,8 +21,7 @@
 		q8: ['American Museum'],
 		q9: ['student newspaper'],
 		q10: ['Yentob'],
-		q11a: ['coal'],
-		q11b: ['firewood'],
+		q11: ['coal', 'firewood'], // Both answers required for 1 mark
 		q12: ['local craftsmen'],
 		q13: ['160'],
 		q14: ['Woodside'],
@@ -65,7 +64,18 @@
 					answers[input.name] = input.value;
 				}
 			} else {
-				answers[input.name] = input.value.trim();
+				const value = input.value.trim();
+				if (input.name === 'q11') {
+					// Handle multiple inputs for question 11
+					if (!answers[input.name]) {
+						answers[input.name] = [];
+					}
+					if (value) {
+						answers[input.name].push(value);
+					}
+				} else {
+					answers[input.name] = value;
+				}
 			}
 		});
 		
@@ -83,13 +93,26 @@
 			const userAnswer = answers[key] || '';
 			const correctOptions = correctAnswers[key];
 			
-			// Check if user answer matches any of the correct options (case insensitive)
-			const isCorrect = correctOptions.some(correct => 
-				userAnswer.toLowerCase() === correct.toLowerCase()
-			);
+			let isCorrect = false;
+			
+			if (key === 'q11') {
+				// Special handling for question 11 - both answers required
+				const userAnswers11 = Array.isArray(userAnswer) ? userAnswer : [userAnswer];
+				const userAnswersLower = userAnswers11.map(ans => ans.toLowerCase()).filter(ans => ans);
+				
+				// Check if both required answers are present (in any order)
+				isCorrect = correctOptions.every(correct => 
+					userAnswersLower.includes(correct.toLowerCase())
+				) && userAnswersLower.length === correctOptions.length;
+			} else {
+				// Regular checking for other questions
+				isCorrect = correctOptions.some(correct => 
+					userAnswer.toLowerCase() === correct.toLowerCase()
+				);
+			}
 			
 			results[key] = {
-				userAnswer,
+				userAnswer: key === 'q11' && Array.isArray(userAnswer) ? userAnswer.join(', ') : userAnswer,
 				correctAnswers: correctOptions,
 				isCorrect
 			};
@@ -332,7 +355,7 @@
 						Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.</p>
 
 						<ol start="11" class="space-y-4 ml-4">
-							<li><strong>11.</strong> Riverside Village was a good place to start an industry because it had water, raw materials and fuels such as <input type="text" name="q11a" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> and <input type="text" name="q11b" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none">.</li>
+							<li><strong>11.</strong> Riverside Village was a good place to start an industry because it had water, raw materials and fuels such as <input type="text" name="q11" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> and <input type="text" name="q11" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none">.</li>
 
 							<li><strong>12.</strong> The metal industry was established at Riverside Village by <input type="text" name="q12" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> who lived in the area.</li>
 							<li><strong>13.</strong> There were over <input type="text" name="q13" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> water-powered mills in the area in the eighteenth century.</li>
@@ -561,7 +584,7 @@
 						<p><strong>8.</strong> American Museum</p>
 						<p><strong>9.</strong> student newspaper</p>
 						<p><strong>10.</strong> Yentob</p>
-						<p><strong>11.</strong> coal / firewood</p>
+						<p><strong>11.</strong> coal and firewood</p>
 						<p><strong>12.</strong> local craftsmen</p>
 						<p><strong>13.</strong> 160</p>
 						<p><strong>14.</strong> Woodside</p>
