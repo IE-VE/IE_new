@@ -315,12 +315,21 @@
 
 		<!-- Instructions -->
 		<div class="mt-8 border-l-4 border-teal-400 bg-teal-50 p-4 rounded-r-lg dark:bg-teal-900/20 dark:border-teal-500">
-		<center><p class="text-sm text-gray-900 dark:text-gray-100">
-			<strong>END OF TEST</strong> 
-		</p></center>	
-			<p class="text-sm text-gray-900 dark:text-gray-100">
-			 In the real IELTS Listening Test you would now have 10 minutes to transfer your answers to the official answer sheet.
-			</p>
+			{#if currentSection === 4}
+				<center><p class="text-sm text-gray-900 dark:text-gray-100">
+					<strong>END OF TEST</strong> 
+				</p></center>	
+				<p class="text-sm text-gray-900 dark:text-gray-100">
+					In the real IELTS Listening Test you would now have 10 minutes to transfer your answers to the official answer sheet.
+				</p>
+			{:else}
+				<center><p class="text-sm text-gray-900 dark:text-gray-100">
+					<strong>End of Section {currentSection}</strong> 
+				</p></center>	
+				<p class="text-sm text-gray-900 dark:text-gray-100">
+					Use any remaining time to check your answers and then move to the next section.
+				</p>
+			{/if}
 		</div>
 	</div>
 </div>
