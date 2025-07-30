@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import Lightbox from '$lib/components/Lightbox.svelte';
 
-	let currentSection = 1;
+	let currentSection = $state(1);
 	let totalSections = 4;
 	let showAnswersModal = $state(false);
 
@@ -82,7 +82,7 @@
 				{#each Array(4) as _, i}
 					<button 
 						class="px-4 py-2 rounded-md font-medium transition-colors {currentSection === i + 1 ? 'bg-teal-600 text-white' : 'bg-teal-50 text-gray-700 hover:bg-teal-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'}"
-						on:click={() => goToSection(i + 1)}
+						onclick={() => goToSection(i + 1)}
 					>
 						Section {i + 1}
 					</button>
@@ -91,7 +91,7 @@
 			<div class="flex justify-between">
 				<button 
 					class="px-4 py-2 rounded-md bg-gray-500 text-white hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed"
-					on:click={prevSection}
+					onclick={prevSection}
 					disabled={currentSection === 1}
 				>
 					Previous
@@ -101,7 +101,7 @@
 				</span>
 				<button 
 					class="px-4 py-2 rounded-md bg-teal-600 text-white hover:bg-teal-700 disabled:opacity-50 disabled:cursor-not-allowed"
-					on:click={nextSection}
+					onclick={nextSection}
 					disabled={currentSection === totalSections}
 				>
 					Next
@@ -352,7 +352,7 @@
 						</a>
 						<button
 							type="button"
-							on:click={openAnswersModal}
+							onclick={openAnswersModal}
 							class="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors"
 						>
 							✅ View Answers
@@ -387,7 +387,7 @@
 {#if showAnswersModal}
 	<div 
 		class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
-		on:click={handleBackdropClick}
+		onclick={handleBackdropClick}
 		role="dialog"
 		aria-modal="true"
 		aria-labelledby="answers-modal-title"
@@ -400,7 +400,7 @@
 				</h2>
 				<button 
 					class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-2xl font-bold"
-					on:click={closeAnswersModal}
+					onclick={closeAnswersModal}
 					aria-label="Close answers modal"
 				>
 					×
@@ -461,7 +461,7 @@
 			<div class="flex justify-end p-6 border-t border-gray-200 dark:border-gray-700">
 				<button 
 					class="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
-					on:click={closeAnswersModal}
+					onclick={closeAnswersModal}
 				>
 					Close
 				</button>
