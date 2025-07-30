@@ -57,10 +57,10 @@
 		const form = document.querySelector('form') || document;
 		const inputs = form.querySelectorAll('input[name^="q"]');
 		const answers = {};
-		
+
 		inputs.forEach(input => {
 			const inputName = input.name;
-			
+
 			if (input.type === 'radio') {
 				if (input.checked) {
 					answers[inputName] = input.value;
@@ -68,23 +68,23 @@
 			} else if (input.type === 'text') {
 				const value = input.value.trim();
 				if (value) { // Only collect non-empty values
-					if (inputName === 'q11') {
+					if (inputName === 'q11a' || inputName === 'q11b') {
 						// Handle multiple inputs for question 11
-						if (!answers[inputName]) {
-							answers[inputName] = [];
+						if (!answers['q11']) {
+							answers['q11'] = [];
 						}
-						answers[inputName].push(value);
+						answers['q11'].push(value);
 					} else {
 						answers[inputName] = value;
 					}
 				}
 			}
 		});
-		
+
 		// Debug log to see what's being collected
 		console.log('All inputs found:', inputs.length);
 		console.log('Collected answers:', answers);
-		
+
 		return answers;
 	}
 
@@ -98,14 +98,14 @@
 		Object.keys(correctAnswers).forEach(key => {
 			const userAnswer = answers[key] || '';
 			const correctOptions = correctAnswers[key];
-			
+
 			let isCorrect = false;
-			
+
 			if (key === 'q11') {
 				// Special handling for question 11 - both answers required
 				const userAnswers11 = Array.isArray(userAnswer) ? userAnswer : [userAnswer];
 				const userAnswersLower = userAnswers11.map(ans => ans.toLowerCase()).filter(ans => ans);
-				
+
 				// Check if both required answers are present (in any order)
 				isCorrect = correctOptions.every(correct => 
 					userAnswersLower.includes(correct.toLowerCase())
@@ -116,13 +116,13 @@
 					userAnswer.toLowerCase() === correct.toLowerCase()
 				);
 			}
-			
+
 			results[key] = {
 				userAnswer: key === 'q11' && Array.isArray(userAnswer) ? userAnswer.join(', ') : userAnswer,
 				correctAnswers: correctOptions,
 				isCorrect
 			};
-			
+
 			if (isCorrect) totalCorrect++;
 		});
 
@@ -361,7 +361,7 @@
 						Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.</p>
 
 						<ol start="11" class="space-y-4 ml-4">
-							<li><strong>11.</strong> Riverside Village was a good place to start an industry because it had water, raw materials and fuels such as <input type="text" name="q11" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> and <input type="text" name="q11" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none">.</li>
+							<li><strong>11.</strong> Riverside Village was a good place to start an industry because it had water, raw materials and fuels such as <input type="text" name="q11a" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> and <input type="text" name="q11b" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none">.</li>
 
 							<li><strong>12.</strong> The metal industry was established at Riverside Village by <input type="text" name="q12" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> who lived in the area.</li>
 							<li><strong>13.</strong> There were over <input type="text" name="q13" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> water-powered mills in the area in the eighteenth century.</li>
@@ -499,7 +499,7 @@
 						</ol>
 					</div>
 
-					
+
 				</section>
 			{/if}
 		</form>
@@ -575,7 +575,7 @@
 					×
 				</button>
 			</div>
-			
+
 			<!-- Modal Content -->
 			<div class="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
 				<div class="grid md:grid-cols-2 gap-4 text-sm">
@@ -625,7 +625,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!-- Modal Footer -->
 			<div class="flex justify-end p-6 border-t border-gray-200 dark:border-gray-700">
 				<button 
@@ -669,7 +669,7 @@
 					×
 				</button>
 			</div>
-			
+
 			<!-- Modal Content -->
 			<div class="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
 				<div class="grid md:grid-cols-2 gap-6 text-sm">
@@ -787,7 +787,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<!-- Band Score Information -->
 				<div class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
 					<h3 class="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">IELTS Band Score Guide</h3>
@@ -831,7 +831,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!-- Modal Footer -->
 			<div class="flex justify-between p-6 border-t border-gray-200 dark:border-gray-700">
 				<button 
