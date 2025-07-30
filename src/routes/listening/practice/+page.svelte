@@ -321,7 +321,7 @@
 						</a>
 						<button
 							type="button"
-							on:click={() => window.open('/listening-images/ielts-listening-test-1-answers.png', '_blank')}
+							on:click={() => window.open('/listening-images/ielts-listening-test-1-answers.html', '_blank')}
 							class="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors"
 						>
 							✅ View Answers
