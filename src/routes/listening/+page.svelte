@@ -76,14 +76,14 @@
 	];
 
 	const sampleQuestions = [
-		'/listening-images/LT1 (1).png',
-		'/listening-images/LT1 (2).png',
-		'/listening-images/LT1 (3).png',
-		'/listening-images/LT1 (4).png',
-		'/listening-images/LT1 (5).png',
-		'/listening-images/LT1 (6).png',
-		'/listening-images/LT1 (7).png',
-		'/listening-images/LT1 (8).png'
+		'/static/listening-images/LT1 (1).png',
+		'/static/listening-images/LT1 (2).png',
+		'/static/listening-images/LT1 (3).png',
+		'/static/listening-images/LT1 (4).png',
+		'/static/listening-images/LT1 (5).png',
+		'/static/listening-images/LT1 (6).png',
+		'/static/listening-images/LT1 (7).png',
+		'/static/listening-images/LT1 (8).png'
 	];
 
 	function togglePlayPause() {
@@ -138,7 +138,7 @@
 	<meta name="description" content="Practice IELTS Listening with our comprehensive test materials. Improve your listening skills with authentic test questions and detailed feedback." />
 </svelte:head>
 
-<div class="min-h-screen bg-gray-50 dark:bg-gray-900">
+<div class="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50 py-8 dark:from-gray-900 dark:to-gray-800">
 	<div class="container mx-auto px-6 py-8">
 		<!-- Header Section -->
 		<div class="text-center mb-12">
@@ -151,57 +151,143 @@
 		</div>
 
 		<!-- Test Overview -->
-		<Card variant="teal">
-			<div class="text-center">
-				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-					📻 IELTS Listening Test Overview
-				</h2>
-				<div class="grid md:grid-cols-3 gap-6 text-center">
-					<div>
-						<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">40 min</div>
-						<div class="text-sm text-gray-600 dark:text-gray-300">Total Duration</div>
-					</div>
-					<div>
-						<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">4</div>
-						<div class="text-sm text-gray-600 dark:text-gray-300">Sections</div>
-					</div>
-					<div>
-						<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">40</div>
-						<div class="text-sm text-gray-600 dark:text-gray-300">Questions</div>
+		<div class="mb-12">
+			<Card variant="blue">
+				<div class="text-center">
+					<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-center">
+						<span class="mr-3 text-3xl">📻</span>
+						IELTS Listening Test Overview
+					</h2>
+					<div class="grid md:grid-cols-3 gap-6 text-center">
+						<div>
+							<div class="text-3xl font-bold text-blue-600 dark:text-blue-400">40 min</div>
+							<div class="text-sm text-gray-600 dark:text-gray-300">Total Duration</div>
+						</div>
+						<div>
+							<div class="text-3xl font-bold text-blue-600 dark:text-blue-400">4</div>
+							<div class="text-sm text-gray-600 dark:text-gray-300">Sections</div>
+						</div>
+						<div>
+							<div class="text-3xl font-bold text-blue-600 dark:text-blue-400">40</div>
+							<div class="text-sm text-gray-600 dark:text-gray-300">Questions</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</Card>
-
-		<!-- Test Sections -->
-		<div class="mt-12">
-			<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
-				Test Structure
-			</h2>
-			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-				{#each testSections as section}
-					<Card variant="greyscale">
-						<div class="text-center">
-							<h3 class="font-semibold text-gray-900 dark:text-white mb-2">{section.section}</h3>
-							<p class="text-sm text-gray-600 dark:text-gray-300 mb-3">{section.description}</p>
-							<div class="space-y-1 text-xs text-gray-500 dark:text-gray-400">
-								<div>Questions: {section.questions}</div>
-								<div>Speakers: {section.speakers}</div>
-							</div>
-						</div>
-					</Card>
-				{/each}
-			</div>
+			</Card>
 		</div>
 
-		<!-- Question Types -->
-		<div class="mt-12">
-			<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
-				Question Types You'll Encounter
-			</h2>
-			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-				{#each questionTypes as type}
-					<Card variant="notebook">
+		<!-- Assessment Criteria -->
+		<div class="mb-12">
+			<Card variant="teal">
+				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
+					<span class="mr-3 text-3xl">🎯</span>
+					Assessment Criteria
+				</h2>
+				<div class="grid md:grid-cols-2 gap-8">
+					<div>
+						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Band Score Targets</h3>
+						<div class="space-y-2 text-sm">
+							<div class="flex justify-between">
+								<span class="text-gray-600 dark:text-gray-300">Band 9:</span>
+								<span class="font-medium text-gray-900 dark:text-white">39-40 correct</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-gray-600 dark:text-gray-300">Band 8:</span>
+								<span class="font-medium text-gray-900 dark:text-white">37-38 correct</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-gray-600 dark:text-gray-300">Band 7:</span>
+								<span class="font-medium text-gray-900 dark:text-white">30-36 correct</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-gray-600 dark:text-gray-300">Band 6:</span>
+								<span class="font-medium text-gray-900 dark:text-white">23-29 correct</span>
+							</div>
+						</div>
+					</div>
+					<div>
+						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Key Skills Tested</h3>
+						<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+							<li>• Understanding main ideas and specific details</li>
+							<li>• Following conversations and monologues</li>
+							<li>• Identifying speaker attitudes and opinions</li>
+							<li>• Recognizing factual information</li>
+						</ul>
+					</div>
+				</div>
+			</Card>
+		</div>
+
+		<!-- Test Instructions -->
+		<div class="mb-12">
+			<Card variant="yellow">
+				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
+					<span class="mr-3 text-3xl">📋</span>
+					Important Test Instructions
+				</h2>
+				<div class="space-y-4 text-gray-700 dark:text-gray-300">
+					<div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
+						<p class="font-semibold mb-2">Word Limits & Spelling:</p>
+						<ul class="text-sm space-y-1">
+							<li>• Follow word limits exactly (e.g., "NO MORE THAN THREE WORDS")</li>
+							<li>• Spelling must be correct</li>
+							<li>• Contractions count as two words (don't = do not)</li>
+							<li>• Hyphenated words count as one word</li>
+						</ul>
+					</div>
+					<div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
+						<p class="font-semibold mb-2">Answer Format:</p>
+						<ul class="text-sm space-y-1">
+							<li>• Write exactly what you hear (don't change word forms)</li>
+							<li>• Use capital letters appropriately</li>
+							<li>• Numbers can be written as words or figures</li>
+						</ul>
+					</div>
+				</div>
+			</Card>
+		</div>
+
+		<!-- Question Types Overview -->
+		<div class="mb-12">
+			<Card variant="purple">
+				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
+					<span class="mr-3 text-3xl">❓</span>
+					Question Types Overview
+				</h2>
+				<div class="grid md:grid-cols-2 gap-8">
+					<div>
+						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Sections 1 & 2 (Social Survival)</h3>
+						<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+							<li>• Form completion</li>
+							<li>• Note completion</li>
+							<li>• Table completion</li>
+							<li>• Multiple choice</li>
+							<li>• Plan/map labeling</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Sections 3 & 4 (Academic)</h3>
+						<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+							<li>• Sentence completion</li>
+							<li>• Summary completion</li>
+							<li>• Classification</li>
+							<li>• Matching</li>
+							<li>• Short answer questions</li>
+						</ul>
+					</div>
+				</div>
+			</Card>
+		</div>
+
+		<!-- Question Examples Carousel -->
+		<div class="mb-12">
+			<Card variant="indigo">
+				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
+					<span class="mr-3 text-3xl">🎧</span>
+					Question Examples
+				</h2>
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{#each questionTypes as type}
 						<div class="text-center">
 							<div class="text-2xl mb-3">{type.icon}</div>
 							<h3 class="font-semibold text-gray-900 dark:text-white mb-2">{type.title}</h3>
@@ -215,191 +301,55 @@
 								/>
 							</div>
 						</div>
-					</Card>
-				{/each}
-			</div>
+					{/each}
+				</div>
+			</Card>
 		</div>
 
-		<!-- Assessment Guide -->
-		<div class="mt-12">
-			<Card variant="teal">
-				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
-					🎯 Scoring Guide
+		<!-- Study Materials -->
+		<div class="mb-12">
+			<Card variant="green">
+				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
+					<span class="mr-3 text-3xl">📚</span>
+					Study Materials & Resources
 				</h2>
 				<div class="grid md:grid-cols-2 gap-8">
 					<div>
-						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Band Score Targets</h3>
-						<div class="space-y-2 text-sm">
-							<div class="flex justify-between">
-								<span class="text-gray-600 dark:text-gray-300">Band 6.0:</span>
-								<span class="font-medium text-gray-900 dark:text-white">23/40 correct</span>
-							</div>
-							<div class="flex justify-between">
-								<span class="text-gray-600 dark:text-gray-300">Band 7.0:</span>
-								<span class="font-medium text-gray-900 dark:text-white">30/40 correct</span>
-							</div>
-							<div class="flex justify-between">
-								<span class="text-gray-600 dark:text-gray-300">Band 8.0:</span>
-								<span class="font-medium text-gray-900 dark:text-white">35/40 correct</span>
-							</div>
-						</div>
+						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Practice Resources</h3>
+						<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+							<li>• Complete practice tests with audio</li>
+							<li>• Sample answer sheets</li>
+							<li>• Detailed answer keys</li>
+							<li>• Question type examples</li>
+						</ul>
 					</div>
 					<div>
-						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Key Skills</h3>
-						<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-							<li>• Understanding main ideas and details</li>
-							<li>• Following conversations and monologues</li>
-							<li>• Identifying specific information</li>
-							<li>• Recognizing speaker attitudes and opinions</li>
+						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Study Tips</h3>
+						<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+							<li>• Practice active listening daily</li>
+							<li>• Familiarize yourself with different accents</li>
+							<li>• Learn to predict content from context</li>
+							<li>• Time yourself during practice</li>
 						</ul>
 					</div>
 				</div>
 			</Card>
 		</div>
 
-		<!-- Practice Materials -->
-		<div class="mt-12">
-			<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
-				🎧 Practice Materials
-			</h2>
-
-			<Card variant="default">
-				<div class="space-y-6">
-					<!-- Audio Player -->
-					<div class="text-center">
-						<h3 class="font-semibold text-gray-900 dark:text-white mb-4">Listening Test Audio</h3>
-						<audio 
-							bind:this={audioElement}
-							src="/audio/ielts-listening_test1.mp3"
-							class="hidden"
-						></audio>
-
-						<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6">
-							<div class="flex items-center justify-center space-x-4 mb-4">
-								<button
-									onclick={togglePlayPause}
-									class="bg-teal-600 hover:bg-teal-700 text-white rounded-full p-3 transition-colors"
-								>
-									{#if isPlaying}
-										<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-											<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
-										</svg>
-									{:else}
-										<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-											<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-										</svg>
-									{/if}
-								</button>
-							</div>
-
-							<div class="text-sm text-gray-600 dark:text-gray-400">
-								{formatTime(currentTime)} / {formatTime(duration)}
-							</div>
-
-							<div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2 mt-2">
-								<div 
-									class="bg-teal-600 h-2 rounded-full transition-all"
-									style="width: {duration > 0 ? (currentTime / duration) * 100 : 0}%"
-								></div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Question Images Carousel -->
-					<div>
-						<h3 class="font-semibold text-gray-900 dark:text-white mb-4 text-center">Sample Questions</h3>
-						<div class="relative">
-							<div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-inner">
-								<img 
-									src={sampleQuestions[currentQuestionIndex]} 
-									alt="Listening test question {currentQuestionIndex + 1}"
-									class="w-full h-auto max-h-96 object-contain mx-auto"
-									loading="lazy"
-								/>
-							</div>
-
-							<div class="flex justify-between items-center mt-4">
-								<button
-									onclick={prevQuestion}
-									disabled={currentQuestionIndex === 0}
-									class="bg-gray-200 hover:bg-gray-300 disabled:opacity-50 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors"
-								>
-									← Previous
-								</button>
-
-								<span class="text-sm text-gray-600 dark:text-gray-400">
-									{currentQuestionIndex + 1} of {sampleQuestions.length}
-								</span>
-
-								<button
-									onclick={nextQuestion}
-									disabled={currentQuestionIndex === sampleQuestions.length - 1}
-									class="bg-gray-200 hover:bg-gray-300 disabled:opacity-50 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors"
-								>
-									Next →
-								</button>
-							</div>
-						</div>
-					</div>
-
-					<!-- Sample Answer Sheet and Actions -->
-					<div class="grid md:grid-cols-2 gap-6">
-						<div class="text-center">
-							<h4 class="font-medium text-gray-900 dark:text-white mb-3">Practice Answer Sheet</h4>
-							<a 
-								href="/listening-images/ielts-listening-answer-sheet.jpg"
-								download="ielts-listening-answer-sheet.jpg"
-								class="inline-block bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg transition-colors"
-							>
-								Download Answer Sheet
-							</a>
-						</div>
-
-						<div class="text-center">
-							<h4 class="font-medium text-gray-900 dark:text-white mb-3">Check Your Answers</h4>
-							<button 
-								onclick={() => showAnswers = !showAnswers}
-								class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg transition-colors"
-							>
-								{showAnswers ? 'Hide' : 'Show'} Answers
-							</button>
-						</div>
-					</div>
-
-					{#if showAnswers}
-						<div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
-							<h4 class="font-medium text-amber-900 dark:text-amber-100 mb-4">Answer Key</h4>
-							<div class="text-center mb-4">
-								<img 
-									src="/listening-images/ielts-listening-test-1-answers.png" 
-									alt="IELTS Listening Test 1 Answer Key"
-									class="w-full h-auto max-h-96 object-contain mx-auto rounded-lg"
-									loading="lazy"
-								/>
-							</div>
-							<p class="text-sm text-amber-800 dark:text-amber-200">
-								Review your answers carefully and identify areas for improvement. Each section tests different listening skills and question types.
-							</p>
-						</div>
-					{/if}
-				</div>
-			</Card>
-		</div>
-
 		<!-- Call to Action -->
-		<div class="mt-12 text-center">
+		<div class="text-center">
 			<Card variant="teal">
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-					Ready for Personalized Feedback?
+					Ready to Start Practicing?
 				</h2>
 				<p class="text-gray-600 dark:text-gray-300 mb-6">
-					Take our free speaking test to get detailed AI analysis and personalized improvement recommendations.
+					Take our complete IELTS Listening practice test with authentic questions and audio.
 				</p>
 				<a 
-					href="/freetest"
+					href="/listening/practice"
 					class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-medium px-8 py-3 rounded-lg transition-colors"
 				>
-					Try Free Speaking Test
+					Start Practice Test Now
 				</a>
 			</Card>
 		</div>
