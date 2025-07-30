@@ -730,11 +730,15 @@
 <style>
 	input[type="text"], input[type="radio"] {
 		accent-color: rgb(13 148 136); /* teal-600 */
+		color: rgb(17 24 39); /* gray-900 - dark text */
+		background-color: white;
 	}
 
 	input[type="text"]:focus {
 		border-color: rgb(13 148 136); /* teal-600 */
 		outline: none;
+		color: rgb(17 24 39); /* gray-900 - dark text */
+		background-color: white;
 	}
 
 	table {
