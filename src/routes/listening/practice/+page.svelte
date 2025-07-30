@@ -4,6 +4,7 @@
 
 	let currentSection = 1;
 	let totalSections = 4;
+	let showAnswersModal = $state(false);
 
 	function nextSection() {
 		if (currentSection < totalSections) {
@@ -20,12 +21,42 @@
 	function goToSection(section) {
 		currentSection = section;
 	}
+
+	function openAnswersModal() {
+		showAnswersModal = true;
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeAnswersModal() {
+		showAnswersModal = false;
+		document.body.style.overflow = 'auto';
+	}
+
+	function handleKeydown(event) {
+		if (event.key === 'Escape' && showAnswersModal) {
+			closeAnswersModal();
+		}
+	}
+
+	function handleBackdropClick(event) {
+		if (event.target === event.currentTarget) {
+			closeAnswersModal();
+		}
+	}
+
+	onMount(() => {
+		return () => {
+			document.body.style.overflow = 'auto';
+		};
+	});
 </script>
 
 <svelte:head>
 	<title>IELTS Listening Practice Test - InsideIELTS</title>
 	<meta name="description" content="Complete IELTS Listening practice test with all 4 sections and 40 questions. Free practice material for IELTS preparation." />
 </svelte:head>
+
+<svelte:window on:keydown={handleKeydown} />
 
 <div class="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50 py-8 dark:from-gray-900 dark:to-gray-800">
 	<div class="max-w-4xl mx-auto px-4">
@@ -321,7 +352,7 @@
 						</a>
 						<button
 							type="button"
-							on:click={() => window.open('/listening-images/ielts-listening-test-1-answers.html', '_blank')}
+							on:click={openAnswersModal}
 							class="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors"
 						>
 							✅ View Answers
@@ -351,6 +382,93 @@
 		</div>
 	</div>
 </div>
+
+<!-- Answers Modal -->
+{#if showAnswersModal}
+	<div 
+		class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+		on:click={handleBackdropClick}
+		role="dialog"
+		aria-modal="true"
+		aria-labelledby="answers-modal-title"
+	>
+		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+			<!-- Modal Header -->
+			<div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+				<h2 id="answers-modal-title" class="text-2xl font-bold text-gray-900 dark:text-white">
+					IELTS Listening Test 1 – Answer Key
+				</h2>
+				<button 
+					class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-2xl font-bold"
+					on:click={closeAnswersModal}
+					aria-label="Close answers modal"
+				>
+					×
+				</button>
+			</div>
+			
+			<!-- Modal Content -->
+			<div class="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
+				<div class="grid md:grid-cols-2 gap-4 text-sm">
+					<div class="space-y-2">
+						<p><strong>1.</strong> shopping / variety of shopping</p>
+						<p><strong>2.</strong> guided tours</p>
+						<p><strong>3.</strong> more than 12 / over 12</p>
+						<p><strong>4.</strong> notice board</p>
+						<p><strong>5.</strong> 13th February</p>
+						<p><strong>6.</strong> Tower of London</p>
+						<p><strong>7.</strong> Bristol</p>
+						<p><strong>8.</strong> American Museum</p>
+						<p><strong>9.</strong> student newspaper</p>
+						<p><strong>10.</strong> Yentob</p>
+						<p><strong>11.</strong> coal / firewood</p>
+						<p><strong>12.</strong> local craftsmen</p>
+						<p><strong>13.</strong> 160</p>
+						<p><strong>14.</strong> Woodside</p>
+						<p><strong>15.</strong> Ticket Office</p>
+						<p><strong>16.</strong> Gift Shop</p>
+						<p><strong>17.</strong> (main) Workshop</p>
+						<p><strong>18.</strong> Showroom</p>
+						<p><strong>19.</strong> Cafe</p>
+						<p><strong>20.</strong> cottages</p>
+					</div>
+					<div class="space-y-2">
+						<p><strong>21.</strong> A</p>
+						<p><strong>22.</strong> C</p>
+						<p><strong>23.</strong> E</p>
+						<p><strong>24.</strong> B</p>
+						<p><strong>25.</strong> G</p>
+						<p><strong>26.</strong> F</p>
+						<p><strong>27.</strong> C</p>
+						<p><strong>28.</strong> D</p>
+						<p><strong>29.</strong> A</p>
+						<p><strong>30.</strong> B</p>
+						<p><strong>31.</strong> cities / environment</p>
+						<p><strong>32.</strong> windy</p>
+						<p><strong>33.</strong> humid</p>
+						<p><strong>34.</strong> shady / shaded</p>
+						<p><strong>35.</strong> dangerous</p>
+						<p><strong>36.</strong> leaves</p>
+						<p><strong>37.</strong> ground</p>
+						<p><strong>38.</strong> considerably reduce / decrease / filter</p>
+						<p><strong>39.</strong> low</p>
+						<p><strong>40.</strong> space / room</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Modal Footer -->
+			<div class="flex justify-end p-6 border-t border-gray-200 dark:border-gray-700">
+				<button 
+					class="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+					on:click={closeAnswersModal}
+				>
+					Close
+				</button>
+			</div>
+		</div>
+	</div>
+{/if}
 
 <style>
 	input[type="text"], input[type="radio"] {
