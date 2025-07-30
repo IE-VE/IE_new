@@ -124,7 +124,7 @@
 								<tbody>
 									<tr>
 										<td class="border border-gray-300 px-4 py-3">St Ives</td>
-										<td class="border border-gray-300 px-4 py-3">5 <strong>5</strong> <input type="text" name="q5" class="border-b border-gray-400 px-2 py-1 w-24 focus:border-blue-500 focus:outline-none"></td>
+										<td class="border border-gray-300 px-4 py-3"><strong>5</strong> <input type="text" name="q5" class="border-b border-gray-400 px-2 py-1 w-24 focus:border-blue-500 focus:outline-none"></td>
 										<td class="border border-gray-300 px-4 py-3">16</td>
 										<td class="border border-gray-300 px-4 py-3">Hepworth Museum</td>
 									</tr>
