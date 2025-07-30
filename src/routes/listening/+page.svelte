@@ -243,7 +243,7 @@
 					{/each}
 				</div>
 			</div>
-		</div>
+		
 
 			<!-- Call to Action -->
 		<div class="text-center">
