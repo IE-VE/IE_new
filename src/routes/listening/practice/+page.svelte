@@ -30,7 +30,7 @@
 	<div class="max-w-4xl mx-auto px-4">
 		<!-- Header -->
 		<div class="text-center mb-8">
-			<h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">IELTS Listening Practice Test</h1>
+			<h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">IELTS Listening Practice Test 1</h1>
 			<p class="text-lg mb-6 text-gray-700 dark:text-gray-300">Complete practice test with all 4 sections - 40 questions total</p>
 
 			<!-- Audio Player -->
@@ -264,19 +264,7 @@
 							<p class="text-blue-600 dark:text-blue-400">Anderson and Hawker: <strong>A</strong></p>
 						</div>
 
-						<div class="mb-4 p-4 bg-gray-50 rounded-lg">
-							<p class="font-semibold mb-2">Options:</p>
-							<div class="grid grid-cols-2 gap-2 text-sm">
-								<p>A. must read</p>
-								<p>B. useful</p>
-								<p>C. limited value</p>
-								<p>D. read first section</p>
-								<p>E. read research methods</p>
-								<p>F. read conclusion</p>
-								<p>G. don't read</p>
-							</div>
-						</div>
-
+				
 						<ul class="space-y-3 ml-4">
 							<li><strong>23.</strong> Jackson: <input type="text" name="q23" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
 							<li><strong>24.</strong> Roberts: <input type="text" name="q24" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
@@ -295,21 +283,7 @@
 							<img src="/listening-images/ielts_section3_chart.png" alt="Population studies chart showing reasons for changing accommodation with bars labeled C, E, G and numbers 28, 29, 30" class="max-w-full h-auto border border-gray-300 mx-auto">
 						</div>
 
-						<div class="mb-4 p-4 bg-gray-50 rounded-lg">
-							<p class="font-semibold mb-2">Options:</p>
-							<div class="grid grid-cols-2 gap-2 text-sm">
-								<p>A. uncooperative landlord</p>
-								<p>B. environment</p>
-								<p>C. space</p>
-								<p>D. noisy neighbours</p>
-								<p>E. near city</p>
-								<p>F. work location</p>
-								<p>G. transport</p>
-								<p>H. rent</p>
-							</div>
-						</div>
-
-						<ul class="space-y-3 ml-4">
+									<ul class="space-y-3 ml-4">
 							<li><strong>28:</strong> <input type="text" name="q28" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
 							<li><strong>29:</strong> <input type="text" name="q29" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
 							<li><strong>30:</strong> <input type="text" name="q30" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
