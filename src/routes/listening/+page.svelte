@@ -242,9 +242,9 @@
 						</div>
 					{/each}
 				</div>
-			</div>
-
-
+			</Card>
+		</div>
+	
 			<!-- Call to Action -->
 		<div class="text-center">
 			<Card variant="teal">
@@ -264,4 +264,3 @@
 		</div>
 	</div>
 </div>
-</script>
