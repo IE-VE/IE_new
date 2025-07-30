@@ -56,4 +56,3 @@
 	<!-- Content using new render syntax for Svelte 5 runes mode -->
 	{@render children()}
 </div>
-</script>
