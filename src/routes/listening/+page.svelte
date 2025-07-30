@@ -143,10 +143,10 @@
 		<!-- Header Section -->
 		<div class="text-center mb-12">
 			<h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-				IELTS Listening Practice
+				IELTS LISTENING
 			</h1>
 			<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-				Master the IELTS Listening test with our comprehensive practice materials and realistic test conditions.
+				Master the IELTS Listening Test with our comprehensive practice materials and accurate test format.
 			</p>
 		</div>
 
@@ -156,7 +156,7 @@
 				<div class="text-center">
 					<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-center">
 						<span class="mr-3 text-3xl">📻</span>
-						IELTS Listening Test Overview
+						Listening Test Overview
 					</h2>
 					<div class="grid md:grid-cols-3 gap-6 text-center">
 						<div>
@@ -180,7 +180,7 @@
 		<div class="mb-12">
 			<Card variant="teal">
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
-					<span class="mr-3 text-3xl">🎯</span>
+			
 					Assessment Criteria
 				</h2>
 				<div class="grid md:grid-cols-2 gap-8">
@@ -211,68 +211,7 @@
 							<li>• Understanding main ideas and specific details</li>
 							<li>• Following conversations and monologues</li>
 							<li>• Identifying speaker attitudes and opinions</li>
-							<li>• Recognizing factual information</li>
-						</ul>
-					</div>
-				</div>
-			</Card>
-		</div>
-
-		<!-- Test Instructions -->
-		<div class="mb-12">
-			<Card variant="yellow">
-				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
-					<span class="mr-3 text-3xl">📋</span>
-					Important Test Instructions
-				</h2>
-				<div class="space-y-4 text-gray-700 dark:text-gray-300">
-					<div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
-						<p class="font-semibold mb-2">Word Limits & Spelling:</p>
-						<ul class="text-sm space-y-1">
-							<li>• Follow word limits exactly (e.g., "NO MORE THAN THREE WORDS")</li>
-							<li>• Spelling must be correct</li>
-							<li>• Contractions count as two words (don't = do not)</li>
-							<li>• Hyphenated words count as one word</li>
-						</ul>
-					</div>
-					<div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
-						<p class="font-semibold mb-2">Answer Format:</p>
-						<ul class="text-sm space-y-1">
-							<li>• Write exactly what you hear (don't change word forms)</li>
-							<li>• Use capital letters appropriately</li>
-							<li>• Numbers can be written as words or figures</li>
-						</ul>
-					</div>
-				</div>
-			</Card>
-		</div>
-
-		<!-- Question Types Overview -->
-		<div class="mb-12">
-			<Card variant="purple">
-				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
-					<span class="mr-3 text-3xl">❓</span>
-					Question Types Overview
-				</h2>
-				<div class="grid md:grid-cols-2 gap-8">
-					<div>
-						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Sections 1 & 2 (Social Survival)</h3>
-						<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-							<li>• Form completion</li>
-							<li>• Note completion</li>
-							<li>• Table completion</li>
-							<li>• Multiple choice</li>
-							<li>• Plan/map labeling</li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Sections 3 & 4 (Academic)</h3>
-						<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-							<li>• Sentence completion</li>
-							<li>• Summary completion</li>
-							<li>• Classification</li>
-							<li>• Matching</li>
-							<li>• Short answer questions</li>
+							<li>• Recognising factual information</li>
 						</ul>
 					</div>
 				</div>
@@ -306,37 +245,7 @@
 			</Card>
 		</div>
 
-		<!-- Study Materials -->
-		<div class="mb-12">
-			<Card variant="green">
-				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
-					<span class="mr-3 text-3xl">📚</span>
-					Study Materials & Resources
-				</h2>
-				<div class="grid md:grid-cols-2 gap-8">
-					<div>
-						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Practice Resources</h3>
-						<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
-							<li>• Complete practice tests with audio</li>
-							<li>• Sample answer sheets</li>
-							<li>• Detailed answer keys</li>
-							<li>• Question type examples</li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Study Tips</h3>
-						<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
-							<li>• Practice active listening daily</li>
-							<li>• Familiarize yourself with different accents</li>
-							<li>• Learn to predict content from context</li>
-							<li>• Time yourself during practice</li>
-						</ul>
-					</div>
-				</div>
-			</Card>
-		</div>
-
-		<!-- Call to Action -->
+			<!-- Call to Action -->
 		<div class="text-center">
 			<Card variant="teal">
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
