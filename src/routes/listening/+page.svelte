@@ -220,7 +220,7 @@
 
 		<!-- Question Examples Carousel -->
 		<div class="mb-12">
-			<Card variant="indigo">
+			<Card variant="yellow">
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
 					<span class="mr-3 text-3xl">🎧</span>
 					Question Examples
