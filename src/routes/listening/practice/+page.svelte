@@ -1,4 +1,3 @@
-
 <script>
 	import { onMount } from 'svelte';
 
@@ -31,210 +30,17 @@
 	<div class="max-w-4xl mx-auto px-4">
 		<!-- Header -->
 		<div class="text-center mb-8">
-			<h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">IELTS Listening Test</h1>
+			<h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">IELTS Listening Practice Test</h1>
 			<p class="text-lg mb-6 text-gray-700 dark:text-gray-300">Complete practice test with all 4 sections - 40 questions total</p>
-		</div>
 
-		<!-- Test Overview Section -->
-		<div class="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6 rounded shadow-md dark:bg-blue-900/20">
-			<div class="flex justify-center mb-4">
-				<div class="flex items-center gap-2 text-blue-700 dark:text-blue-400">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.464-9.536a9 9 0 010 12.728M9 12h6m-6 0a3 3 0 106 0" />
-					</svg>
-					<h2 class="text-xl font-bold">THE LISTENING TEST</h2>
-				</div>
-			</div>
-			
-			<div class="text-gray-700 dark:text-gray-300 space-y-4">
-				<p>
-					The <strong>IELTS</strong> Listening Test is the first test that you will complete on test day. The test lasts for <strong>40 minutes</strong>. 
-					You have 30 minutes to listen to the recording and write your answers directly on the test booklet, and then a further 10 minutes at the end 
-					of the test to transfer your answers onto the answer sheet provided.
-				</p>
-				
-				<p>The listening test is made up of <strong>40 questions</strong> in <strong>four sections</strong>:</p>
-				
-				<ul class="ml-6 space-y-2 list-disc">
-					<li>Section 1 takes the form of a conversation between two people;</li>
-					<li>Section 2 is a monologue based on social topics and situations;</li>
-					<li>Section 3 of the listening test is a conversation between up to four people;</li>
-					<li>Section 4 will be a monologue set in an educational context.</li>
-				</ul>
-			</div>
-		</div>
-
-		<!-- Assessment Section -->
-		<div class="bg-teal-50 border-l-4 border-teal-400 p-6 mb-6 rounded shadow-md dark:bg-teal-900/20">
-			<div class="flex justify-center mb-4">
-				<div class="flex items-center gap-2 text-teal-600 dark:text-teal-400">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-					</svg>
-					<h2 class="text-xl font-bold">Assessment</h2>
-				</div>
-			</div>
-			
-			<div class="text-gray-700 dark:text-gray-300 space-y-4">
-				<p>
-					The <strong>Listening Test</strong> is graded using a scoring system that varies to a small degree with each <strong>IELTS</strong> test. 
-					The exact cut-off score for each band is calculated after analysis of worldwide results on any given test week.
-				</p>
-				
-				<p>
-					Broadly speaking, you need to score at least <strong>23/40</strong> for a <strong>Band 6</strong> and at least <strong>30/40</strong> for a <strong>Band 7</strong> award in the Listening Test.
-				</p>
-			</div>
-		</div>
-
-		<!-- Instructions Section -->
-		<div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-6 rounded shadow-md dark:bg-yellow-900/20">
-			<div class="flex justify-center mb-4">
-				<div class="flex items-center gap-2 text-yellow-700 dark:text-yellow-400">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-					</svg>
-					<h2 class="text-xl font-bold">Important Instructions</h2>
-				</div>
-			</div>
-			
-			<div class="text-gray-700 dark:text-gray-300 space-y-4">
-				<p>
-					It's <u>very important</u> that you accurately follow the instructions for each set of questions.
-				</p>
-				
-				<p>
-					If the format of your answer differs from instructed, even if the correct information is included, your answer will be marked WRONG.
-				</p>
-			</div>
-		</div>
-
-		<!-- Question Types Section -->
-		<div class="bg-purple-50 border-l-4 border-purple-400 p-6 mb-6 rounded shadow-md dark:bg-purple-900/20">
-			<div class="flex justify-center mb-4">
-				<div class="flex items-center gap-2 text-purple-700 dark:text-purple-400">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-					</svg>
-					<h2 class="text-xl font-bold">Question Types</h2>
-				</div>
-			</div>
-			
-			<div class="text-gray-700 dark:text-gray-300 space-y-4">
-				<p>
-					There are <strong>6</strong> main types of question and the questions increase
-					in difficulty as the test progresses. All questions are worth
-					<strong>1 mark</strong>.
-				</p>
-				
-				<p>The questions will usually be formatted in one of the following ways:</p>
-				
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-					<div class="space-y-2">
-						<div class="flex items-center gap-2 font-semibold">
-							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">1</span>
-							<span>Missing information</span>
-						</div>
-						<div class="flex items-center gap-2 font-semibold">
-							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">2</span>
-							<span>Diagram labeling</span>
-						</div>
-						<div class="flex items-center gap-2 font-semibold">
-							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">3</span>
-							<span>Matching information</span>
-						</div>
-					</div>
-					<div class="space-y-2">
-						<div class="flex items-center gap-2 font-semibold">
-							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">4</span>
-							<span>Multiple choice</span>
-						</div>
-						<div class="flex items-center gap-2 font-semibold">
-							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">5</span>
-							<span>Sentence completion</span>
-						</div>
-						<div class="flex items-center gap-2 font-semibold">
-							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm">6</span>
-							<span>Short answer question</span>
-						</div>
-					</div>
-				</div>
-				
-				<p class="mt-4">
-					Below you can see examples of the different styles of question you
-					will encounter in the Listening Test.
-				</p>
-			</div>
-		</div>
-
-		<!-- Question Examples Carousel -->
-		<div class="bg-indigo-50 border-l-4 border-indigo-400 p-6 mb-6 rounded shadow-md dark:bg-indigo-900/20">
-			<div class="flex justify-center mb-4">
-				<div class="flex items-center gap-2 text-indigo-700 dark:text-indigo-400">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-					</svg>
-					<h2 class="text-xl font-bold">Question Examples</h2>
-				</div>
-			</div>
-			
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-				<div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-					<h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Missing Information</h3>
-					<img src="/listening-images/ielts-listening-missing-information.png" alt="Missing Information Example" class="w-full h-auto rounded border">
-				</div>
-				
-				<div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-					<h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Diagram Labeling</h3>
-					<img src="/listening-images/ielts-listening-diagram-labeling.png" alt="Diagram Labeling Example" class="w-full h-auto rounded border">
-				</div>
-				
-				<div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-					<h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Matching Information</h3>
-					<img src="/listening-images/ielts-listening-matching-information.png" alt="Matching Information Example" class="w-full h-auto rounded border">
-				</div>
-				
-				<div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-					<h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Multiple Choice</h3>
-					<img src="/listening-images/ielts-listening-multiple-choice.png" alt="Multiple Choice Example" class="w-full h-auto rounded border">
-				</div>
-				
-				<div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-					<h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Sentence Completion</h3>
-					<img src="/listening-images/ielts-listening-sentence-completion.png" alt="Sentence Completion Example" class="w-full h-auto rounded border">
-				</div>
-				
-				<div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-					<h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Short Answer</h3>
-					<img src="/listening-images/ielts-listening-short-answer.png" alt="Short Answer Example" class="w-full h-auto rounded border">
-				</div>
-			</div>
-		</div>
-
-		<!-- Materials Section -->
-		<div class="bg-green-50 border-l-4 border-green-400 p-6 mb-6 rounded shadow-md dark:bg-green-900/20">
-			<div class="flex justify-center mb-4">
-				<div class="flex items-center gap-2 text-green-700 dark:text-green-400">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-					</svg>
-					<h2 class="text-xl font-bold">Materials</h2>
-				</div>
-			</div>
-			
-			<p class="text-sm mb-4 text-gray-600 dark:text-gray-400 text-center"><strong>Click to listen and answer the questions below.</strong></p>
-			
-			<div class="flex justify-center mb-4">
-				<audio controls class="w-full max-w-md">
+			<!-- Audio Player -->
+			<div class="p-6 rounded-lg shadow-md mb-6 bg-white dark:bg-gray-800">
+				<p class="text-sm mb-4 text-gray-600 dark:text-gray-400">Click to listen and answer the questions below.</p>
+				<audio controls class="w-full max-w-md mx-auto">
 					<source src="/audio/ielts-listening_test1.mp3" type="audio/mpeg">
 					Your browser does not support the audio element.
 				</audio>
-			</div>
-			
-			<div class="text-center text-sm text-gray-600 dark:text-gray-400 space-y-2">
-				<p>Allow yourself <strong>33 minutes</strong> to complete this test.</p>
-				<p>The test has <strong>4 sections</strong> and <strong>40 questions</strong>. Each question is worth <strong>1 mark</strong>.</p>
-				<p>There's a sample <strong>IELTS Listening Test</strong> answer sheet at the end of the test questions.</p>
+				<p class="text-sm mt-2 text-gray-500 dark:text-gray-400">Allow yourself <strong>33 minutes</strong> to complete this test.</p>
 			</div>
 		</div>
 
@@ -398,14 +204,6 @@
 				<section class="section">
 					<h2 class="text-2xl font-bold mb-6 text-teal-600 dark:text-teal-400">SECTION 3: Questions 21–30</h2>
 
-					<div class="mb-8 p-4 bg-gray-100 rounded-lg dark:bg-gray-700">
-						<p class="font-semibold text-blue-600 mb-2 dark:text-blue-400">Example</p>
-						<p class="mb-2 text-blue-600 dark:text-blue-400">Melanie could not borrow any books from the library because</p>
-						<p class="ml-4 text-blue-600 dark:text-blue-400">A. the librarian was out</p>
-						<p class="ml-4 text-blue-600 dark:text-blue-400">B. she didn't have time to look</p>
-						<p class="ml-4 font-semibold text-blue-600 dark:text-blue-400">C. the books had already been borrowed</p>
-					</div>
-
 					<div class="mb-8">
 						<p class="font-semibold mb-2">Questions 21 and 22</p>
 						<p class="mb-4">Choose the correct letter, A, B or C.</p>
@@ -453,12 +251,19 @@
 						<p class="mb-4">What recommendations does Dr Johnson make about the journal articles?<br>
 						Choose your answers from the box and write the letters A–G next to the names.</p>
 
-						<div class="mb-4 p-4 bg-gray-100 rounded-lg dark:bg-gray-700">
-							<p class="font-semibold text-blue-600 mb-2 dark:text-blue-400">Example Answer</p>
-							<p class="text-blue-600 dark:text-blue-400">Anderson and Hawker: <strong>A</strong></p>
+						<div class="mb-4 p-4 bg-gray-50 rounded-lg">
+							<p class="font-semibold mb-2">Options:</p>
+							<div class="grid grid-cols-2 gap-2 text-sm">
+								<p>A. must read</p>
+								<p>B. useful</p>
+								<p>C. limited value</p>
+								<p>D. read first section</p>
+								<p>E. read research methods</p>
+								<p>F. read conclusion</p>
+								<p>G. don't read</p>
+							</div>
 						</div>
 
-				
 						<ul class="space-y-3 ml-4">
 							<li><strong>23.</strong> Jackson: <input type="text" name="q23" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
 							<li><strong>24.</strong> Roberts: <input type="text" name="q24" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
@@ -477,7 +282,21 @@
 							<img src="/listening-images/ielts_section3_chart.png" alt="Population studies chart showing reasons for changing accommodation with bars labeled C, E, G and numbers 28, 29, 30" class="max-w-full h-auto border border-gray-300 mx-auto">
 						</div>
 
-									<ul class="space-y-3 ml-4">
+						<div class="mb-4 p-4 bg-gray-50 rounded-lg">
+							<p class="font-semibold mb-2">Options:</p>
+							<div class="grid grid-cols-2 gap-2 text-sm">
+								<p>A. uncooperative landlord</p>
+								<p>B. environment</p>
+								<p>C. space</p>
+								<p>D. noisy neighbours</p>
+								<p>E. near city</p>
+								<p>F. work location</p>
+								<p>G. transport</p>
+								<p>H. rent</p>
+							</div>
+						</div>
+
+						<ul class="space-y-3 ml-4">
 							<li><strong>28:</strong> <input type="text" name="q28" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
 							<li><strong>29:</strong> <input type="text" name="q29" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
 							<li><strong>30:</strong> <input type="text" name="q30" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
@@ -512,7 +331,7 @@
 		</div>
 
 		<!-- Instructions -->
-		<div class="mt-8 border-l-4 border-teal-400 bg-teal-50 p-4 rounded shadow-md dark:bg-teal-900/20 dark:border-teal-500">
+		<div class="mt-8 border-l-4 border-teal-400 bg-teal-50 p-4 rounded-r-lg dark:bg-teal-900/20 dark:border-teal-500">
 			<p class="text-sm text-gray-900 dark:text-gray-100">
 				<strong>Instructions:</strong> Follow the word limits exactly as specified for each question type. 
 				Transfer your answers to an official IELTS answer sheet when taking the real test.
