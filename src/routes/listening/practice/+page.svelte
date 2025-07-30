@@ -643,27 +643,120 @@
 			
 			<!-- Modal Content -->
 			<div class="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
-				<div class="grid md:grid-cols-2 gap-4 text-sm">
-					{#each Object.entries(markingResults).filter(([key]) => key.startsWith('q')) as [questionKey, result]}
-						<div class="flex items-center justify-between p-3 rounded-lg border {result.isCorrect ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' : 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800'}">
-							<div class="flex-1">
-								<div class="font-medium">
-									{questionKey.replace('q', 'Q').replace('a', 'A').replace('b', 'B')}: 
-									<span class="text-gray-600 dark:text-gray-300">"{result.userAnswer || '(blank)'}"</span>
-								</div>
-								<div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
-									Correct: {result.correctAnswers.join(' / ')}
-								</div>
-							</div>
-							<div class="ml-4">
-								{#if result.isCorrect}
-									<span class="text-green-600 text-xl">✓</span>
-								{:else}
-									<span class="text-red-600 text-xl">✗</span>
-								{/if}
+				<div class="grid md:grid-cols-2 gap-6 text-sm">
+					<!-- Left Column: Sections 1 & 2 -->
+					<div class="space-y-6">
+						<!-- Section 1 -->
+						<div>
+							<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 border-b border-gray-200 dark:border-gray-700 pb-2">Section 1 (Questions 1-10)</h3>
+							<div class="space-y-2">
+								{#each Object.entries(markingResults).filter(([key]) => key.startsWith('q') && parseInt(key.substring(1).replace(/[ab]$/, '')) <= 10) as [questionKey, result]}
+									<div class="flex items-center justify-between p-3 rounded-lg border {result.isCorrect ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' : 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800'}">
+										<div class="flex-1">
+											<div class="font-medium">
+												{questionKey.replace('q', 'Q').replace('a', 'A').replace('b', 'B')}: 
+												<span class="text-gray-600 dark:text-gray-300">"{result.userAnswer || '(blank)'}"</span>
+											</div>
+											<div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+												Correct: {result.correctAnswers.join(' / ')}
+											</div>
+										</div>
+										<div class="ml-4">
+											{#if result.isCorrect}
+												<span class="text-green-600 text-xl">✓</span>
+											{:else}
+												<span class="text-red-600 text-xl">✗</span>
+											{/if}
+										</div>
+									</div>
+								{/each}
 							</div>
 						</div>
-					{/each}
+
+						<!-- Section 2 -->
+						<div>
+							<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 border-b border-gray-200 dark:border-gray-700 pb-2">Section 2 (Questions 11-20)</h3>
+							<div class="space-y-2">
+								{#each Object.entries(markingResults).filter(([key]) => key.startsWith('q') && parseInt(key.substring(1).replace(/[ab]$/, '')) >= 11 && parseInt(key.substring(1).replace(/[ab]$/, '')) <= 20) as [questionKey, result]}
+									<div class="flex items-center justify-between p-3 rounded-lg border {result.isCorrect ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' : 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800'}">
+										<div class="flex-1">
+											<div class="font-medium">
+												{questionKey.replace('q', 'Q').replace('a', 'A').replace('b', 'B')}: 
+												<span class="text-gray-600 dark:text-gray-300">"{result.userAnswer || '(blank)'}"</span>
+											</div>
+											<div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+												Correct: {result.correctAnswers.join(' / ')}
+											</div>
+										</div>
+										<div class="ml-4">
+											{#if result.isCorrect}
+												<span class="text-green-600 text-xl">✓</span>
+											{:else}
+												<span class="text-red-600 text-xl">✗</span>
+											{/if}
+										</div>
+									</div>
+								{/each}
+							</div>
+						</div>
+					</div>
+
+					<!-- Right Column: Sections 3 & 4 -->
+					<div class="space-y-6">
+						<!-- Section 3 -->
+						<div>
+							<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 border-b border-gray-200 dark:border-gray-700 pb-2">Section 3 (Questions 21-30)</h3>
+							<div class="space-y-2">
+								{#each Object.entries(markingResults).filter(([key]) => key.startsWith('q') && parseInt(key.substring(1).replace(/[ab]$/, '')) >= 21 && parseInt(key.substring(1).replace(/[ab]$/, '')) <= 30) as [questionKey, result]}
+									<div class="flex items-center justify-between p-3 rounded-lg border {result.isCorrect ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' : 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800'}">
+										<div class="flex-1">
+											<div class="font-medium">
+												{questionKey.replace('q', 'Q').replace('a', 'A').replace('b', 'B')}: 
+												<span class="text-gray-600 dark:text-gray-300">"{result.userAnswer || '(blank)'}"</span>
+											</div>
+											<div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+												Correct: {result.correctAnswers.join(' / ')}
+											</div>
+										</div>
+										<div class="ml-4">
+											{#if result.isCorrect}
+												<span class="text-green-600 text-xl">✓</span>
+											{:else}
+												<span class="text-red-600 text-xl">✗</span>
+											{/if}
+										</div>
+									</div>
+								{/each}
+							</div>
+						</div>
+
+						<!-- Section 4 -->
+						<div>
+							<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 border-b border-gray-200 dark:border-gray-700 pb-2">Section 4 (Questions 31-40)</h3>
+							<div class="space-y-2">
+								{#each Object.entries(markingResults).filter(([key]) => key.startsWith('q') && parseInt(key.substring(1).replace(/[ab]$/, '')) >= 31 && parseInt(key.substring(1).replace(/[ab]$/, '')) <= 40) as [questionKey, result]}
+									<div class="flex items-center justify-between p-3 rounded-lg border {result.isCorrect ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' : 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800'}">
+										<div class="flex-1">
+											<div class="font-medium">
+												{questionKey.replace('q', 'Q').replace('a', 'A').replace('b', 'B')}: 
+												<span class="text-gray-600 dark:text-gray-300">"{result.userAnswer || '(blank)'}"</span>
+											</div>
+											<div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+												Correct: {result.correctAnswers.join(' / ')}
+											</div>
+										</div>
+										<div class="ml-4">
+											{#if result.isCorrect}
+												<span class="text-green-600 text-xl">✓</span>
+											{:else}
+												<span class="text-red-600 text-xl">✗</span>
+											{/if}
+										</div>
+									</div>
+								{/each}
+							</div>
+						</div>
+					</div>
 				</div>
 				
 				<!-- Band Score Information -->
