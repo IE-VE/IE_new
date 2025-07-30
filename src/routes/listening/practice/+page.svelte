@@ -1,3 +1,4 @@
+svelte
 <script>
 	import { onMount } from 'svelte';
 	import Lightbox from '$lib/components/Lightbox.svelte';
@@ -201,6 +202,12 @@
 		}
 	}
 
+  function handleInputChange(event) {
+    const { name, value } = event.target;
+    userAnswers = { ...userAnswers, [name]: value };
+    console.log('Current user answers:', userAnswers);
+  }
+
 	onMount(() => {
 		return () => {
 			document.body.style.overflow = 'auto';
@@ -282,14 +289,14 @@
 							<li>Visit places which have:
 								<ul class="ml-6 mt-2 space-y-1">
 									<li>• historical interest</li>
-									<li>• good <strong>1</strong> <input type="text" name="q1" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"></li>
-									<li>• <strong>2</strong> <input type="text" name="q2" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"></li>
+									<li>• good <strong>1</strong> <input type="text" name="q1" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+									<li>• <strong>2</strong> <input type="text" name="q2" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
 								</ul>
 							</li>
 							<li class="mt-4">Cost: between £5.00 and £15.00 per person</li>
-							<li>Note: special trips organised for groups of <strong>3</strong> <input type="text" name="q3" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"> people</li>
+							<li>Note: special trips organised for groups of <strong>3</strong> <input type="text" name="q3" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> people</li>
 							<li>Time: departure – 8.30 a.m., return – 6.00 p.m.</li>
-							<li>To reserve a seat: sign name on the <strong>4</strong> <input type="text" name="q4" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none"> 3 days in advance</li>
+							<li>To reserve a seat: sign name on the <strong>4</strong> <input type="text" name="q4" class="border-b border-gray-400 px-2 py-1 w-48 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> 3 days in advance</li>
 						</ul>
 					</div>
 
@@ -313,7 +320,7 @@
 								<tbody>
 									<tr>
 										<td class="border border-gray-300 px-4 py-3">St Ives</td>
-										<td class="border border-gray-300 px-4 py-3"><strong>5</strong> <input type="text" name="q5" class="border-b border-gray-400 px-2 py-1 w-24 focus:border-blue-500 focus:outline-none"></td>
+										<td class="border border-gray-300 px-4 py-3"><strong>5</strong> <input type="text" name="q5" class="border-b border-gray-400 px-2 py-1 w-24 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></td>
 										<td class="border border-gray-300 px-4 py-3">16</td>
 										<td class="border border-gray-300 px-4 py-3">Hepworth Museum</td>
 									</tr>
@@ -321,10 +328,10 @@
 										<td class="border border-gray-300 px-4 py-3">London</td>
 										<td class="border border-gray-300 px-4 py-3">16th February</td>
 										<td class="border border-gray-300 px-4 py-3">45</td>
-										<td class="border border-gray-300 px-4 py-3"><strong>6</strong> <input type="text" name="q6" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></td>
+										<td class="border border-gray-300 px-4 py-3"><strong>6</strong> <input type="text" name="q6" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></td>
 									</tr>
 									<tr>
-										<td class="border border-gray-300 px-4 py-3"><strong>7</strong> <input type="text" name="q7" class="border-b border-gray-400 px-2 py-1 w-24 focus:border-blue-500 focus:outline-none"></td>
+										<td class="border border-gray-300 px-4 py-3"><strong>7</strong> <input type="text" name="q7" class="border-b border-gray-400 px-2 py-1 w-24 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></td>
 										<td class="border border-gray-300 px-4 py-3">3rd March</td>
 										<td class="border border-gray-300 px-4 py-3">18</td>
 										<td class="border border-gray-300 px-4 py-3">S.S. Great Britain</td>
@@ -339,14 +346,14 @@
 										<td class="border border-gray-300 px-4 py-3">Bath</td>
 										<td class="border border-gray-300 px-4 py-3">23rd March</td>
 										<td class="border border-gray-300 px-4 py-3">16</td>
-										<td class="border border-gray-300 px-4 py-3"><strong>8</strong> <input type="text" name="q8" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></td>
+										<td class="border border-gray-300 px-4 py-3"><strong>8</strong> <input type="text" name="q8" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
 
 						<p class="mt-6">For further information:<br>
-						Read the <strong>9</strong> <input type="text" name="q9" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> or see Social Assistant: Jane <strong>10</strong> <input type="text" name="q10" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></p>
+						Read the <strong>9</strong> <input type="text" name="q9" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> or see Social Assistant: Jane <strong>10</strong> <input type="text" name="q10" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></p>
 					</div>
 				</section>
 
@@ -361,10 +368,10 @@
 						Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.</p>
 
 						<ol start="11" class="space-y-4 ml-4">
-							<li><strong>11.</strong> Riverside Village was a good place to start an industry because it had water, raw materials and fuels such as <input type="text" name="q11a" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> and <input type="text" name="q11b" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none">.</li>
+							<li><strong>11.</strong> Riverside Village was a good place to start an industry because it had water, raw materials and fuels such as <input type="text" name="q11a" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> and <input type="text" name="q11b" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}>.</li>
 
-							<li><strong>12.</strong> The metal industry was established at Riverside Village by <input type="text" name="q12" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> who lived in the area.</li>
-							<li><strong>13.</strong> There were over <input type="text" name="q13" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> water-powered mills in the area in the eighteenth century.</li>
+							<li><strong>12.</strong> The metal industry was established at Riverside Village by <input type="text" name="q12" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> who lived in the area.</li>
+							<li><strong>13.</strong> There were over <input type="text" name="q13" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> water-powered mills in the area in the eighteenth century.</li>
 						</ol>
 					</div>
 
@@ -382,13 +389,13 @@
 						</div>
 
 						<ol start="14" class="space-y-2 ml-4">
-							<li><strong>14.</strong> <input type="text" name="q14" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> Road</li>
-							<li><strong>15.</strong> The <input type="text" name="q15" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>16.</strong> The <input type="text" name="q16" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>17.</strong> The <input type="text" name="q17" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>18.</strong> The <input type="text" name="q18" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>19.</strong> The <input type="text" name="q19" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>20.</strong> The <input type="text" name="q20" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> for the workers</li>
+							<li><strong>14.</strong> <input type="text" name="q14" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> Road</li>
+							<li><strong>15.</strong> The <input type="text" name="q15" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>16.</strong> The <input type="text" name="q16" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>17.</strong> The <input type="text" name="q17" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>18.</strong> The <input type="text" name="q18" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>19.</strong> The <input type="text" name="q19" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>20.</strong> The <input type="text" name="q20" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> for the workers</li>
 						</ol>
 					</div>
 				</section>
@@ -407,15 +414,15 @@
 								<p class="mb-3"><strong>21.</strong> Melanie says she has not started the assignment because</p>
 								<div class="ml-4 space-y-2">
 									<label class="flex items-center space-x-2">
-										<input type="radio" name="q21" value="A" class="text-blue-600">
+										<input type="radio" name="q21" value="A" class="text-blue-600"  on:change={handleInputChange}>
 										<span>A. she was doing work for another course.</span>
 									</label>
 									<label class="flex items-center space-x-2">
-										<input type="radio" name="q21" value="B" class="text-blue-600">
+										<input type="radio" name="q21" value="B" class="text-blue-600"  on:change={handleInputChange}>
 										<span>B. it was a really big assignment.</span>
 									</label>
 									<label class="flex items-center space-x-2">
-										<input type="radio" name="q21" value="C" class="text-blue-600">
+										<input type="radio" name="q21" value="C" class="text-blue-600"  on:change={handleInputChange}>
 										<span>C. she hasn't spent time in the library.</span>
 									</label>
 								</div>
@@ -424,15 +431,15 @@
 								<p class="mb-3"><strong>22.</strong> The lecturer says that reasonable excuses for extensions are</p>
 								<div class="ml-4 space-y-2">
 									<label class="flex items-center space-x-2">
-										<input type="radio" name="q22" value="A" class="text-blue-600">
+										<input type="radio" name="q22" value="A" class="text-blue-600"  on:change={handleInputChange}>
 										<span>A. planning problems.</span>
 									</label>
 									<label class="flex items-center space-x-2">
-										<input type="radio" name="q22" value="B" class="text-blue-600">
+										<input type="radio" name="q22" value="B" class="text-blue-600"  on:change={handleInputChange}>
 										<span>B. problems with assignment deadlines.</span>
 									</label>
 									<label class="flex items-center space-x-2">
-										<input type="radio" name="q22" value="C" class="text-blue-600">
+										<input type="radio" name="q22" value="C" class="text-blue-600"  on:change={handleInputChange}>
 										<span>C. personal illness or accident.</span>
 									</label>
 								</div>
@@ -447,11 +454,11 @@
 
 
 						<ul class="space-y-3 ml-4">
-							<li><strong>23.</strong> Jackson: <input type="text" name="q23" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>24.</strong> Roberts: <input type="text" name="q24" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>25.</strong> Morris: <input type="text" name="q25" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>26.</strong> Cooper: <input type="text" name="q26" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>27.</strong> Forster: <input type="text" name="q27" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>23.</strong> Jackson: <input type="text" name="q23" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>24.</strong> Roberts: <input type="text" name="q24" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>25.</strong> Morris: <input type="text" name="q25" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>26.</strong> Cooper: <input type="text" name="q26" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>27.</strong> Forster: <input type="text" name="q27" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
 						</ul>
 					</div>
 
@@ -469,9 +476,9 @@
 						</div>
 
 						<ul class="space-y-3 ml-4">
-							<li><strong>28:</strong> <input type="text" name="q28" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>29:</strong> <input type="text" name="q29" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>30:</strong> <input type="text" name="q30" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none"></li>
+							<li><strong>28:</strong> <input type="text" name="q28" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>29:</strong> <input type="text" name="q29" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>30:</strong> <input type="text" name="q30" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
 						</ul>
 					</div>
 				</section>
@@ -486,16 +493,16 @@
 						Write NO MORE THAN TWO WORDS for each answer.</p>
 
 						<ol start="31" class="space-y-3 ml-4">
-							<li><strong>31.</strong> Ways of planning our <input type="text" name="q31" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> better</li>
-							<li><strong>32.</strong> They can make cities more or less <input type="text" name="q32" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>33.</strong> They can make inland cities more <input type="text" name="q33" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>34.</strong> Trees make local areas more <input type="text" name="q34" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>35.</strong> ... less <input type="text" name="q35" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>36.</strong> Trees evaporate water through their <input type="text" name="q36" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"></li>
-							<li><strong>37.</strong> Tall buildings cause more wind at <input type="text" name="q37" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> level</li>
-							<li><strong>38.</strong> Trees <input type="text" name="q38" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> the wind force</li>
-							<li><strong>39.</strong> <input type="text" name="q39" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> frequency noise passes through trees</li>
-							<li><strong>40.</strong> Trees require a lot of sunlight, water and <input type="text" name="q40" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none"> to grow</li>
+							<li><strong>31.</strong> Ways of planning our <input type="text" name="q31" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> better</li>
+							<li><strong>32.</strong> They can make cities more or less <input type="text" name="q32" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>33.</strong> They can make inland cities more <input type="text" name="q33" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>34.</strong> Trees make local areas more <input type="text" name="q34" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>35.</strong> ... less <input type="text" name="q35" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>36.</strong> Trees evaporate water through their <input type="text" name="q36" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
+							<li><strong>37.</strong> Tall buildings cause more wind at <input type="text" name="q37" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> level</li>
+							<li><strong>38.</strong> Trees <input type="text" name="q38" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> the wind force</li>
+							<li><strong>39.</strong> <input type="text" name="q39" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> frequency noise passes through trees</li>
+							<li><strong>40.</strong> Trees require a lot of sunlight, water and <input type="text" name="q40" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> to grow</li>
 						</ol>
 					</div>
 
