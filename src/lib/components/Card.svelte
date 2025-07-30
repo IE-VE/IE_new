@@ -10,7 +10,7 @@
 		accent2: string;
 	};
 
-	type VariantType = 'default' | 'teal' | 'greyscale' | 'notebook';
+	type VariantType = 'default' | 'teal' | 'greyscale' | 'notebook' | 'red';
 
 	// Color scheme presets with classes for each variant
 	const colorVariants = {
@@ -29,6 +29,10 @@
 		notebook: {
 			card: 'border-amber-200 from-[#fff5e9] to-[#fffdf7] dark:border-amber-800 dark:from-amber-950/30 dark:to-amber-900/20',
 			accent: 'from-amber-300 to-yellow-200 dark:from-amber-500 dark:to-yellow-400'
+		},
+		red: {
+			card: 'border-red-200 from-red-50 to-pink-50 dark:border-red-800 dark:from-red-950/50 dark:to-pink-950/50',
+			accent: 'from-red-400 to-pink-400 dark:from-red-400 dark:to-pink-400'
 		}
 	};
 
@@ -52,3 +56,4 @@
 	<!-- Content using new render syntax for Svelte 5 runes mode -->
 	{@render children()}
 </div>
+</script>
