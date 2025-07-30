@@ -146,7 +146,14 @@
 				IELTS LISTENING
 			</h1>
 			<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-				Master the IELTS Listening Test with our comprehensive practice materials and accurate test format.
+				The <b>IELTS</b> Listening Test is the first test that you will complete on test
+				day. </p>
+			<br>
+			<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+				You have 30 minutes to
+				listen to the recording and write your answers directly on the test
+				booklet; then a further 10 minutes at the end of the test to
+				transfer your answers onto the answer sheet provided.
 			</p>
 		</div>
 
@@ -155,8 +162,8 @@
 			<Card variant="blue">
 				<div class="text-center">
 					<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-center">
-						<span class="mr-3 text-3xl">📻</span>
-						Listening Test Overview
+						<!-- <span class="mr-3 text-3xl">📻</span> -->
+						Format
 					</h2>
 					<div class="grid md:grid-cols-3 gap-6 text-center">
 						<div>
@@ -193,11 +200,11 @@
 							</div>
 							<div class="flex justify-between">
 								<span class="text-gray-600 dark:text-gray-300">Band 8:</span>
-								<span class="font-medium text-gray-900 dark:text-white">37-38 correct</span>
+								<span class="font-medium text-gray-900 dark:text-white">36-38 correct</span>
 							</div>
 							<div class="flex justify-between">
 								<span class="text-gray-600 dark:text-gray-300">Band 7:</span>
-								<span class="font-medium text-gray-900 dark:text-white">30-36 correct</span>
+								<span class="font-medium text-gray-900 dark:text-white">30-35 correct</span>
 							</div>
 							<div class="flex justify-between">
 								<span class="text-gray-600 dark:text-gray-300">Band 6:</span>
@@ -222,8 +229,8 @@
 		<div class="mb-12">
 			<Card variant="notebook">
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
-					<span class="mr-3 text-3xl">🎧</span>
-					Question Examples
+					<!-- <span class="mr-3 text-3xl">🎧</span> -->
+					Question Types
 				</h2>
 				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 					{#each questionTypes as type}
