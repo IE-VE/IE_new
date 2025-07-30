@@ -1,4 +1,3 @@
-svelte
 <script>
 	import { onMount } from 'svelte';
 	import Lightbox from '$lib/components/Lightbox.svelte';
@@ -499,16 +498,16 @@ svelte
 						Write NO MORE THAN TWO WORDS for each answer.</p>
 
 						<ol start="31" class="space-y-3 ml-4">
-							<li><strong>31.</strong> Ways of planning our <input type="text" name="q31" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> better</li>
-							<li><strong>32.</strong> They can make cities more or less <input type="text" name="q32" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
-							<li><strong>33.</strong> They can make inland cities more <input type="text" name="q33" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
-							<li><strong>34.</strong> Trees make local areas more <input type="text" name="q34" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
-							<li><strong>35.</strong> ... less <input type="text" name="q35" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
-							<li><strong>36.</strong> Trees evaporate water through their <input type="text" name="q36" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}></li>
-							<li><strong>37.</strong> Tall buildings cause more wind at <input type="text" name="q37" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> level</li>
-							<li><strong>38.</strong> Trees <input type="text" name="q38" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> the wind force</li>
-							<li><strong>39.</strong> <input type="text" name="q39" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> frequency noise passes through trees</li>
-							<li><strong>40.</strong> Trees require a lot of sunlight, water and <input type="text" name="q40" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" on:input={handleInputChange}> to grow</li>
+							<li><strong>31.</strong> Ways of planning our <input type="text" name="q31" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}> better</li>
+							<li><strong>32.</strong> They can make cities more or less <input type="text" name="q32" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}></li>
+							<li><strong>33.</strong> They can make inland cities more <input type="text" name="q33" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}></li>
+							<li><strong>34.</strong> Trees make local areas more <input type="text" name="q34" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}></li>
+							<li><strong>35.</strong> ... less <input type="text" name="q35" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}></li>
+							<li><strong>36.</strong> Trees evaporate water through their <input type="text" name="q36" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}></li>
+							<li><strong>37.</strong> Tall buildings cause more wind at <input type="text" name="q37" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}> level</li>
+							<li><strong>38.</strong> Trees <input type="text" name="q38" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}> the wind force</li>
+							<li><strong>39.</strong> <input type="text" name="q39" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}> frequency noise passes through trees</li>
+							<li><strong>40.</strong> Trees require a lot of sunlight, water and <input type="text" name="q40" class="border-b border-gray-400 px-2 py-1 w-32 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}> to grow</li>
 						</ol>
 					</div>
 
