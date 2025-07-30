@@ -1,307 +1,407 @@
-
-<script>
+<script lang="ts">
+	import Card from '$lib/components/Card.svelte';
 	import { onMount } from 'svelte';
 
-	let currentExample = 0;
-	const examples = [
+	let currentQuestionIndex = $state(0);
+	let isPlaying = $state(false);
+	let currentTime = $state(0);
+	let duration = $state(0);
+	let audioElement: HTMLAudioElement;
+	let showAnswers = $state(false);
+
+	const questionTypes = [
 		{
-			title: 'Multiple Choice Questions',
-			image: '/listening-images/ielts-listening-multiple-choice.png',
-			description: 'Choose the correct answer from three options A, B, or C.'
-		},
-		{
-			title: 'Gap Filling / Form Completion',
-			image: '/listening-images/ielts-listening-missing-information.png',
-			description: 'Complete forms, notes, or sentences with missing information.'
-		},
-		{
-			title: 'Matching Information',
-			image: '/listening-images/ielts-listening-matching-information.png',
-			description: 'Match items from a list to corresponding categories or descriptions.'
+			title: 'Missing Information',
+			description: 'Fill in the gaps with the correct information you hear',
+			icon: '📝',
+			image: '/listening-images/ielts-listening-missing-information.png'
 		},
 		{
 			title: 'Diagram Labeling',
-			image: '/listening-images/ielts-listening-diagram-labeling.png',
-			description: 'Label parts of a diagram, map, or plan based on the audio.'
+			description: 'Label parts of a diagram based on the audio',
+			icon: '🗺️',
+			image: '/listening-images/ielts-listening-diagram-labeling.png'
+		},
+		{
+			title: 'Matching Information',
+			description: 'Match speakers to statements or opinions',
+			icon: '🔗',
+			image: '/listening-images/ielts-listening-matching-information.png'
+		},
+		{
+			title: 'Multiple Choice',
+			description: 'Choose the correct answer from multiple options',
+			icon: '✅',
+			image: '/listening-images/ielts-listening-multiple-choice.png'
 		},
 		{
 			title: 'Sentence Completion',
-			image: '/listening-images/ielts-listening-sentence-completion.png',
-			description: 'Complete sentences with words from the listening passage.'
+			description: 'Complete sentences with words from the audio',
+			icon: '📋',
+			image: '/listening-images/ielts-listening-sentence-completion.png'
 		},
 		{
 			title: 'Short Answer Questions',
-			image: '/listening-images/ielts-listening-short-answer.png',
-			description: 'Answer questions with a few words or numbers from the audio.'
+			description: 'Answer questions with a few words or numbers',
+			icon: '❓',
+			image: '/listening-images/ielts-listening-short-answer.png'
 		}
 	];
 
-	function nextExample() {
-		currentExample = (currentExample + 1) % examples.length;
+	const testSections = [
+		{
+			section: 'Section 1',
+			description: 'Conversation in everyday social context',
+			questions: '1-10',
+			speakers: '2 speakers'
+		},
+		{
+			section: 'Section 2',
+			description: 'Monologue in everyday social context',
+			questions: '11-20',
+			speakers: '1 speaker'
+		},
+		{
+			section: 'Section 3',
+			description: 'Conversation in educational/training context',
+			questions: '21-30',
+			speakers: '2-4 speakers'
+		},
+		{
+			section: 'Section 4',
+			description: 'Monologue on academic subject',
+			questions: '31-40',
+			speakers: '1 speaker'
+		}
+	];
+
+	const sampleQuestions = [
+		'/listening-images/LT1 (1).png',
+		'/listening-images/LT1 (2).png',
+		'/listening-images/LT1 (3).png',
+		'/listening-images/LT1 (4).png',
+		'/listening-images/LT1 (5).png',
+		'/listening-images/LT1 (6).png',
+		'/listening-images/LT1 (7).png',
+		'/listening-images/LT1 (8).png'
+	];
+
+	function togglePlayPause() {
+		if (!audioElement) return;
+
+		if (isPlaying) {
+			audioElement.pause();
+		} else {
+			audioElement.play();
+		}
+		isPlaying = !isPlaying;
 	}
 
-	function prevExample() {
-		currentExample = (currentExample - 1 + examples.length) % examples.length;
+	function updateTime() {
+		if (audioElement) {
+			currentTime = audioElement.currentTime;
+			duration = audioElement.duration || 0;
+		}
+	}
+
+	function formatTime(seconds: number): string {
+		const mins = Math.floor(seconds / 60);
+		const secs = Math.floor(seconds % 60);
+		return `${mins}:${secs.toString().padStart(2, '0')}`;
+	}
+
+	function nextQuestion() {
+		if (currentQuestionIndex < sampleQuestions.length - 1) {
+			currentQuestionIndex++;
+		}
+	}
+
+	function prevQuestion() {
+		if (currentQuestionIndex > 0) {
+			currentQuestionIndex--;
+		}
 	}
 
 	onMount(() => {
-		const interval = setInterval(() => {
-			nextExample();
-		}, 5000);
-
-		return () => clearInterval(interval);
+		if (audioElement) {
+			audioElement.addEventListener('timeupdate', updateTime);
+			audioElement.addEventListener('loadedmetadata', updateTime);
+			audioElement.addEventListener('ended', () => {
+				isPlaying = false;
+			});
+		}
 	});
 </script>
 
 <svelte:head>
 	<title>IELTS Listening Practice - InsideIELTS</title>
-	<meta name="description" content="Complete IELTS Listening practice materials, test formats, and preparation tips. Master all 4 sections with expert guidance." />
+	<meta name="description" content="Practice IELTS Listening with our comprehensive test materials. Improve your listening skills with authentic test questions and detailed feedback." />
 </svelte:head>
 
-<div class="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50 py-8 dark:from-gray-900 dark:to-gray-800">
-	<div class="max-w-4xl mx-auto px-4">
-		<!-- Header -->
-		<div class="text-center mb-8">
-			<h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">IELTS Listening Practice</h1>
-			<p class="text-lg mb-6 text-gray-700 dark:text-gray-300">Master the IELTS Listening test with comprehensive practice materials and expert tips</p>
-			
-			<!-- CTA Button -->
-			<div class="mb-8">
-				<a href="/listening/practice" class="inline-block bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-teal-700 transition-colors shadow-lg">
-					Start Practice Test
-				</a>
-			</div>
+<div class="min-h-screen bg-gray-50 dark:bg-gray-900">
+	<div class="container mx-auto px-6 py-8">
+		<!-- Header Section -->
+		<div class="text-center mb-12">
+			<h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+				IELTS Listening Practice
+			</h1>
+			<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+				Master the IELTS Listening test with our comprehensive practice materials and realistic test conditions.
+			</p>
 		</div>
 
-		<!-- Test Overview Section -->
-		<div class="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6 rounded shadow-md dark:bg-blue-900/20">
-			<div class="flex justify-center mb-4">
-				<div class="flex items-center gap-2 text-blue-700 dark:text-blue-400">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-					</svg>
-					<h2 class="text-2xl font-bold">Test Overview</h2>
-				</div>
-			</div>
-			<div class="grid md:grid-cols-2 gap-6 text-gray-700 dark:text-gray-300">
-				<div>
-					<h3 class="font-semibold mb-2 text-blue-700 dark:text-blue-400">Test Structure</h3>
-					<ul class="space-y-1">
-						<li>• 4 sections, 40 questions total</li>
-						<li>• 30 minutes listening + 10 minutes transfer time</li>
-						<li>• Each section played only once</li>
-						<li>• Increasing difficulty from Section 1 to 4</li>
-					</ul>
-				</div>
-				<div>
-					<h3 class="font-semibold mb-2 text-blue-700 dark:text-blue-400">Question Types</h3>
-					<ul class="space-y-1">
-						<li>• Multiple choice</li>
-						<li>• Form completion</li>
-						<li>• Note completion</li>
-						<li>• Table completion</li>
-						<li>• Diagram labeling</li>
-						<li>• Sentence completion</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<!-- Assessment Section -->
-		<div class="bg-teal-50 border-l-4 border-teal-400 p-6 mb-6 rounded shadow-md dark:bg-teal-900/20">
-			<div class="flex justify-center mb-4">
-				<div class="flex items-center gap-2 text-teal-600 dark:text-teal-400">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-					</svg>
-					<h2 class="text-2xl font-bold">Assessment Criteria</h2>
-				</div>
-			</div>
-			<div class="grid md:grid-cols-2 gap-6 text-gray-700 dark:text-gray-300">
-				<div>
-					<h3 class="font-semibold mb-2 text-teal-600 dark:text-teal-400">Band Score Range</h3>
-					<ul class="space-y-1">
-						<li>• Band 9: 39-40 correct answers</li>
-						<li>• Band 8: 37-38 correct answers</li>
-						<li>• Band 7: 32-36 correct answers</li>
-						<li>• Band 6: 26-31 correct answers</li>
-						<li>• Band 5: 18-25 correct answers</li>
-					</ul>
-				</div>
-				<div>
-					<h3 class="font-semibold mb-2 text-teal-600 dark:text-teal-400">Key Skills Tested</h3>
-					<ul class="space-y-1">
-						<li>• Understanding main ideas</li>
-						<li>• Identifying specific details</li>
-						<li>• Following instructions</li>
-						<li>• Recognizing attitudes and opinions</li>
-						<li>• Understanding purpose and function</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<!-- Instructions Section -->
-		<div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-6 rounded shadow-md dark:bg-yellow-900/20">
-			<div class="flex justify-center mb-4">
-				<div class="flex items-center gap-2 text-yellow-700 dark:text-yellow-400">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-					</svg>
-					<h2 class="text-2xl font-bold">Test Instructions</h2>
-				</div>
-			</div>
-			<div class="text-gray-700 dark:text-gray-300">
-				<h3 class="font-semibold mb-3 text-yellow-700 dark:text-yellow-400">Important Guidelines:</h3>
-				<ul class="space-y-2">
-					<li>• Read all instructions carefully before each section</li>
-					<li>• Check word limits for each question type (e.g., "NO MORE THAN TWO WORDS")</li>
-					<li>• Use the preparation time to read questions ahead</li>
-					<li>• Write your answers clearly on the answer sheet</li>
-					<li>• Spelling and grammar must be correct</li>
-					<li>• Use capital letters where appropriate</li>
-					<li>• Don't leave any answers blank - guess if necessary</li>
-				</ul>
-			</div>
-		</div>
-
-		<!-- Question Types Section -->
-		<div class="bg-purple-50 border-l-4 border-purple-400 p-6 mb-6 rounded shadow-md dark:bg-purple-900/20">
-			<div class="flex justify-center mb-4">
-				<div class="flex items-center gap-2 text-purple-700 dark:text-purple-400">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-					</svg>
-					<h2 class="text-2xl font-bold">Question Types Overview</h2>
-				</div>
-			</div>
-			<div class="grid md:grid-cols-2 gap-6 text-gray-700 dark:text-gray-300">
-				<div>
-					<h3 class="font-semibold mb-2 text-purple-700 dark:text-purple-400">Sections 1 & 2 (Social Context)</h3>
-					<ul class="space-y-1">
-						<li>• Form completion</li>
-						<li>• Note completion</li>
-						<li>• Table completion</li>
-						<li>• Summary completion</li>
-						<li>• Multiple choice</li>
-						<li>• Plan/map labeling</li>
-					</ul>
-				</div>
-				<div>
-					<h3 class="font-semibold mb-2 text-purple-700 dark:text-purple-400">Sections 3 & 4 (Academic Context)</h3>
-					<ul class="space-y-1">
-						<li>• Multiple choice</li>
-						<li>• Matching information</li>
-						<li>• Sentence completion</li>
-						<li>• Summary completion</li>
-						<li>• Note completion</li>
-						<li>• Table completion</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<!-- Question Examples Carousel -->
-		<div class="bg-indigo-50 border-l-4 border-indigo-400 p-6 mb-6 rounded shadow-md dark:bg-indigo-900/20">
-			<div class="flex justify-center mb-4">
-				<div class="flex items-center gap-2 text-indigo-700 dark:text-indigo-400">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-					</svg>
-					<h2 class="text-2xl font-bold">Question Examples</h2>
-				</div>
-			</div>
-			
-			<div class="relative">
-				<div class="text-center mb-4">
-					<h3 class="text-xl font-semibold mb-2 text-indigo-700 dark:text-indigo-400">{examples[currentExample].title}</h3>
-					<p class="text-gray-600 dark:text-gray-400">{examples[currentExample].description}</p>
-				</div>
-				
-				<div class="flex justify-center mb-6">
-					<img 
-						src={examples[currentExample].image} 
-						alt={examples[currentExample].title}
-						class="max-w-full h-auto border border-gray-300 rounded shadow-lg"
-					>
-				</div>
-				
-				<div class="flex justify-between items-center">
-					<button 
-						on:click={prevExample}
-						class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition-colors"
-					>
-						Previous
-					</button>
-					
-					<div class="flex space-x-2">
-						{#each examples as _, index}
-							<button
-								on:click={() => currentExample = index}
-								class="w-3 h-3 rounded-full {currentExample === index ? 'bg-indigo-600' : 'bg-gray-300'} transition-colors"
-							></button>
-						{/each}
+		<!-- Test Overview -->
+		<Card variant="teal">
+			<div class="text-center">
+				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+					📻 IELTS Listening Test Overview
+				</h2>
+				<div class="grid md:grid-cols-3 gap-6 text-center">
+					<div>
+						<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">40 min</div>
+						<div class="text-sm text-gray-600 dark:text-gray-300">Total Duration</div>
 					</div>
-					
-					<button 
-						on:click={nextExample}
-						class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition-colors"
-					>
-						Next
-					</button>
+					<div>
+						<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">4</div>
+						<div class="text-sm text-gray-600 dark:text-gray-300">Sections</div>
+					</div>
+					<div>
+						<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">40</div>
+						<div class="text-sm text-gray-600 dark:text-gray-300">Questions</div>
+					</div>
 				</div>
+			</div>
+		</Card>
+
+		<!-- Test Sections -->
+		<div class="mt-12">
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
+				Test Structure
+			</h2>
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+				{#each testSections as section}
+					<Card variant="greyscale">
+						<div class="text-center">
+							<h3 class="font-semibold text-gray-900 dark:text-white mb-2">{section.section}</h3>
+							<p class="text-sm text-gray-600 dark:text-gray-300 mb-3">{section.description}</p>
+							<div class="space-y-1 text-xs text-gray-500 dark:text-gray-400">
+								<div>Questions: {section.questions}</div>
+								<div>Speakers: {section.speakers}</div>
+							</div>
+						</div>
+					</Card>
+				{/each}
 			</div>
 		</div>
 
-		<!-- Materials Section -->
-		<div class="bg-green-50 border-l-4 border-green-400 p-6 mb-6 rounded shadow-md dark:bg-green-900/20">
-			<div class="flex justify-center mb-4">
-				<div class="flex items-center gap-2 text-green-700 dark:text-green-400">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-					</svg>
-					<h2 class="text-2xl font-bold">Study Materials</h2>
-				</div>
+		<!-- Question Types -->
+		<div class="mt-12">
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
+				Question Types You'll Encounter
+			</h2>
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{#each questionTypes as type}
+					<Card variant="notebook">
+						<div class="text-center">
+							<div class="text-2xl mb-3">{type.icon}</div>
+							<h3 class="font-semibold text-gray-900 dark:text-white mb-2">{type.title}</h3>
+							<p class="text-sm text-gray-600 dark:text-gray-300 mb-3">{type.description}</p>
+							<div class="mt-4">
+								<img 
+									src={type.image} 
+									alt="{type.title} example"
+									class="w-full h-auto max-h-48 object-contain mx-auto rounded-lg border border-gray-200 dark:border-gray-700"
+									loading="lazy"
+								/>
+							</div>
+						</div>
+					</Card>
+				{/each}
 			</div>
-			<div class="grid md:grid-cols-2 gap-6 text-gray-700 dark:text-gray-300">
-				<div>
-					<h3 class="font-semibold mb-3 text-green-700 dark:text-green-400">Practice Resources</h3>
-					<ul class="space-y-2">
-						<li>• <a href="/listening/practice" class="text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300">Complete Practice Tests</a></li>
-						<li>• Section-specific exercises</li>
-						<li>• Audio materials with transcripts</li>
-						<li>• Vocabulary building exercises</li>
-						<li>• Note-taking practice</li>
-					</ul>
+		</div>
+
+		<!-- Assessment Guide -->
+		<div class="mt-12">
+			<Card variant="teal">
+				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
+					🎯 Scoring Guide
+				</h2>
+				<div class="grid md:grid-cols-2 gap-8">
+					<div>
+						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Band Score Targets</h3>
+						<div class="space-y-2 text-sm">
+							<div class="flex justify-between">
+								<span class="text-gray-600 dark:text-gray-300">Band 6.0:</span>
+								<span class="font-medium text-gray-900 dark:text-white">23/40 correct</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-gray-600 dark:text-gray-300">Band 7.0:</span>
+								<span class="font-medium text-gray-900 dark:text-white">30/40 correct</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-gray-600 dark:text-gray-300">Band 8.0:</span>
+								<span class="font-medium text-gray-900 dark:text-white">35/40 correct</span>
+							</div>
+						</div>
+					</div>
+					<div>
+						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Key Skills</h3>
+						<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+							<li>• Understanding main ideas and details</li>
+							<li>• Following conversations and monologues</li>
+							<li>• Identifying specific information</li>
+							<li>• Recognizing speaker attitudes and opinions</li>
+						</ul>
+					</div>
 				</div>
-				<div>
-					<h3 class="font-semibold mb-3 text-green-700 dark:text-green-400">Study Tips</h3>
-					<ul class="space-y-2">
-						<li>• Practice active listening daily</li>
-						<li>• Improve prediction skills</li>
-						<li>• Master different accents</li>
-						<li>• Learn common IELTS vocabulary</li>
-						<li>• Time management strategies</li>
-					</ul>
+			</Card>
+		</div>
+
+		<!-- Practice Materials -->
+		<div class="mt-12">
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
+				🎧 Practice Materials
+			</h2>
+
+			<Card variant="default">
+				<div class="space-y-6">
+					<!-- Audio Player -->
+					<div class="text-center">
+						<h3 class="font-semibold text-gray-900 dark:text-white mb-4">Listening Test Audio</h3>
+						<audio 
+							bind:this={audioElement}
+							src="/audio/ielts-listening_test1.mp3"
+							class="hidden"
+						></audio>
+
+						<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6">
+							<div class="flex items-center justify-center space-x-4 mb-4">
+								<button
+									onclick={togglePlayPause}
+									class="bg-teal-600 hover:bg-teal-700 text-white rounded-full p-3 transition-colors"
+								>
+									{#if isPlaying}
+										<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+										</svg>
+									{:else}
+										<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+										</svg>
+									{/if}
+								</button>
+							</div>
+
+							<div class="text-sm text-gray-600 dark:text-gray-400">
+								{formatTime(currentTime)} / {formatTime(duration)}
+							</div>
+
+							<div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2 mt-2">
+								<div 
+									class="bg-teal-600 h-2 rounded-full transition-all"
+									style="width: {duration > 0 ? (currentTime / duration) * 100 : 0}%"
+								></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Question Images Carousel -->
+					<div>
+						<h3 class="font-semibold text-gray-900 dark:text-white mb-4 text-center">Sample Questions</h3>
+						<div class="relative">
+							<div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-inner">
+								<img 
+									src={sampleQuestions[currentQuestionIndex]} 
+									alt="Listening test question {currentQuestionIndex + 1}"
+									class="w-full h-auto max-h-96 object-contain mx-auto"
+									loading="lazy"
+								/>
+							</div>
+
+							<div class="flex justify-between items-center mt-4">
+								<button
+									onclick={prevQuestion}
+									disabled={currentQuestionIndex === 0}
+									class="bg-gray-200 hover:bg-gray-300 disabled:opacity-50 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors"
+								>
+									← Previous
+								</button>
+
+								<span class="text-sm text-gray-600 dark:text-gray-400">
+									{currentQuestionIndex + 1} of {sampleQuestions.length}
+								</span>
+
+								<button
+									onclick={nextQuestion}
+									disabled={currentQuestionIndex === sampleQuestions.length - 1}
+									class="bg-gray-200 hover:bg-gray-300 disabled:opacity-50 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors"
+								>
+									Next →
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Sample Answer Sheet and Actions -->
+					<div class="grid md:grid-cols-2 gap-6">
+						<div class="text-center">
+							<h4 class="font-medium text-gray-900 dark:text-white mb-3">Practice Answer Sheet</h4>
+							<a 
+								href="/listening-images/ielts-listening-answer-sheet.jpg"
+								download="ielts-listening-answer-sheet.jpg"
+								class="inline-block bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg transition-colors"
+							>
+								Download Answer Sheet
+							</a>
+						</div>
+
+						<div class="text-center">
+							<h4 class="font-medium text-gray-900 dark:text-white mb-3">Check Your Answers</h4>
+							<button 
+								onclick={() => showAnswers = !showAnswers}
+								class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg transition-colors"
+							>
+								{showAnswers ? 'Hide' : 'Show'} Answers
+							</button>
+						</div>
+					</div>
+
+					{#if showAnswers}
+						<div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+							<h4 class="font-medium text-amber-900 dark:text-amber-100 mb-4">Answer Key</h4>
+							<div class="text-center mb-4">
+								<img 
+									src="/listening-images/ielts-listening-test-1-answers.png" 
+									alt="IELTS Listening Test 1 Answer Key"
+									class="w-full h-auto max-h-96 object-contain mx-auto rounded-lg"
+									loading="lazy"
+								/>
+							</div>
+							<p class="text-sm text-amber-800 dark:text-amber-200">
+								Review your answers carefully and identify areas for improvement. Each section tests different listening skills and question types.
+							</p>
+						</div>
+					{/if}
 				</div>
-			</div>
+			</Card>
 		</div>
 
 		<!-- Call to Action -->
-		<div class="text-center">
-			<a href="/listening/practice" class="inline-block bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-teal-700 transition-colors shadow-lg">
-				Start Your Practice Test Now
-			</a>
-			<p class="mt-4 text-sm text-gray-600 dark:text-gray-400">
-				Complete practice test with instant feedback and detailed explanations
-			</p>
+		<div class="mt-12 text-center">
+			<Card variant="teal">
+				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+					Ready for Personalized Feedback?
+				</h2>
+				<p class="text-gray-600 dark:text-gray-300 mb-6">
+					Take our free speaking test to get detailed AI analysis and personalized improvement recommendations.
+				</p>
+				<a 
+					href="/freetest"
+					class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-medium px-8 py-3 rounded-lg transition-colors"
+				>
+					Try Free Speaking Test
+				</a>
+			</Card>
 		</div>
 	</div>
 </div>
-
-<style>
-	/* Smooth transitions for carousel */
-	.relative img {
-		transition: opacity 0.3s ease-in-out;
-	}
-</style>
