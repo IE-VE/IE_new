@@ -341,23 +341,7 @@
 						</ol>
 					</div>
 
-					<!-- Action Buttons for Section 4 -->
-					<div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-						<a 
-							href="/listening-images/ielts-listening-answer-sheet.jpg"
-							download="IELTS-Listening-Answer-Sheet.jpg"
-							class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
-						>
-							📄 Download Answer Sheet
-						</a>
-						<button
-							type="button"
-							onclick={openAnswersModal}
-							class="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors"
-						>
-							✅ View Answers
-						</button>
-					</div>
+					
 				</section>
 			{/if}
 		</div>
@@ -380,6 +364,32 @@
 				</p></center>	
 			{/if}
 		</div>
+
+		<!-- Action Buttons - only show on Section 4 -->
+		{#if currentSection === 4}
+			<div class="mt-6 flex flex-col gap-4 items-center">
+				<button
+					type="button"
+					onclick={openAnswersModal}
+					class="inline-flex items-center justify-center px-8 py-4 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors text-lg"
+				>
+					✅ View Answers
+				</button>
+				<button
+					type="button"
+					class="inline-flex items-center justify-center px-8 py-4 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition-colors text-lg"
+				>
+					📝 MARK my TEST
+				</button>
+				<a 
+					href="/listening-images/ielts-listening-answer-sheet.jpg"
+					download="IELTS-Listening-Answer-Sheet.jpg"
+					class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+				>
+					📄 Download Answer Sheet
+				</a>
+			</div>
+		{/if}
 	</div>
 </div>
 
