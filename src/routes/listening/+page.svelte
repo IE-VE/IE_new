@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Card from '$lib/components/Card.svelte';
+	import Lightbox from '$lib/components/Lightbox.svelte';
 	import { onMount } from 'svelte';
 
 	let currentQuestionIndex = $state(0);
@@ -239,11 +240,10 @@
 							<h3 class="font-semibold text-gray-900 dark:text-white mb-2">{type.title}</h3>
 							<p class="text-sm text-gray-600 dark:text-gray-300 mb-3">{type.description}</p>
 							<div class="mt-4">
-								<img 
+								<Lightbox 
 									src={type.image} 
 									alt="{type.title} example"
-									class="w-full h-auto max-h-48 object-contain mx-auto rounded-lg border border-gray-200 dark:border-gray-700"
-									loading="lazy"
+									className="w-full h-auto max-h-48 object-contain mx-auto rounded-lg border border-gray-200 dark:border-gray-700"
 								/>
 							</div>
 						</div>

@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import Lightbox from '$lib/components/Lightbox.svelte';
 
 	let currentSection = 1;
 	let totalSections = 4;
@@ -184,7 +185,11 @@
 						Write NO MORE THAN TWO WORDS for each answer.</p>
 
 						<div class="text-center my-6">
-							<img src="/listening-images/ielts_section2_plan.png" alt="Plan Diagram showing Riverside Village layout with River, Engine Room, Grinding Shop, and other numbered locations" class="max-w-full h-auto border border-gray-300 mx-auto">
+							<Lightbox 
+								src="/listening-images/ielts_section2_plan.png" 
+								alt="Plan Diagram showing Riverside Village layout with River, Engine Room, Grinding Shop, and other numbered locations" 
+								className="max-w-full h-auto border border-gray-300 mx-auto"
+							/>
 						</div>
 
 						<ol start="14" class="space-y-2 ml-4">
@@ -267,7 +272,11 @@
 						Choose your answers from the box below the chart and write the letters A–H next to the numbers.</p>
 
 						<div class="text-center my-6">
-							<img src="/listening-images/ielts_section3_chart.png" alt="Population studies chart showing reasons for changing accommodation with bars labeled C, E, G and numbers 28, 29, 30" class="max-w-full h-auto border border-gray-300 mx-auto">
+							<Lightbox 
+								src="/listening-images/ielts_section3_chart.png" 
+								alt="Population studies chart showing reasons for changing accommodation with bars labeled C, E, G and numbers 28, 29, 30" 
+								className="max-w-full h-auto border border-gray-300 mx-auto"
+							/>
 						</div>
 
 						<ul class="space-y-3 ml-4">
