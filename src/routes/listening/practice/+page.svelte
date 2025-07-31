@@ -536,14 +536,7 @@
 					onclick={openAnswersModal}
 					class="inline-flex items-center justify-center px-8 py-4 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors text-lg"
 				>
-					✅ View Answers
-				</button>
-				<button
-					type="button"
-					onclick={markAnswers}
-					class="inline-flex items-center justify-center px-8 py-4 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition-colors text-lg"
-				>
-					📝 MARK my TEST
+					✅ View Answers & Mark my Test
 				</button>
 			</div>
 		{/if}
@@ -625,7 +618,14 @@
 			</div>
 
 			<!-- Modal Footer -->
-			<div class="flex justify-end p-6 border-t border-gray-200 dark:border-gray-700">
+			<div class="flex justify-between p-6 border-t border-gray-200 dark:border-gray-700">
+				<button
+					type="button"
+					onclick={markAnswers}
+					class="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+				>
+					📝 MARK my TEST
+				</button>
 				<button 
 					class="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
 					onclick={closeAnswersModal}
