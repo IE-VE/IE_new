@@ -53,8 +53,8 @@
 	// Value props data
 	const valueProps = [
 		{
-			title: 'AI-Powered Assessment',
-			description: 'Get instant feedback trained on 1000+ real IELTS responses',
+			title: 'Professional Assessment',
+			description: 'Get instant accurate feedback',
 			icon: Clock
 		},
 		{
@@ -63,7 +63,7 @@
 			icon: Clipboard
 		},
 		{
-			title: 'Personalised Tips',
+			title: 'Personalised Study',
 			description: 'Get customised practice exercises',
 			icon: Zap
 		}
@@ -112,7 +112,7 @@
 	</h1>
 
 	<p class="mb-10 text-center text-lg">
-		Comprehensive training for all IELTS skills with AI-powered feedback.
+		Comprehensive training for all IELTS skills.
 	</p>
 
 	<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -123,7 +123,7 @@
 		>
 			<h2 class="mb-2 text-xl font-bold text-teal-600 dark:text-teal-400">Speaking</h2>
 			<p class="text-gray-600 dark:text-gray-300">
-				Take our free AI-powered test and get instant feedback on your speaking skills.
+				Take our free 3 minute assessment and get instant feedback on your speaking skills.
 			</p>
 			<div class="mt-4 text-sm font-medium text-teal-600 dark:text-teal-400">Try Free Test →</div>
 		</a>
@@ -147,7 +147,7 @@
 		>
 			<h2 class="mb-2 text-xl font-bold text-teal-600 dark:text-teal-400">Reading</h2>
 			<p class="text-gray-600 dark:text-gray-300">
-				Boost your comprehension with authentic IELTS-style texts and questions.
+				Boost your comprehension with authentic IELTS texts and questions.
 			</p>
 			<div class="mt-4 text-sm font-medium text-teal-600 dark:text-teal-400">Start Reading →</div>
 		</a>
@@ -159,7 +159,7 @@
 		>
 			<h2 class="mb-2 text-xl font-bold text-teal-600 dark:text-teal-400">Listening</h2>
 			<p class="text-gray-600 dark:text-gray-300">
-				Train your ear with real audio samples and interactive tasks.
+				Improve your listening test technique with real IELTS materials.
 			</p>
 			<div class="mt-4 text-sm font-medium text-teal-600 dark:text-teal-400">Listen & Learn →</div>
 		</a>
@@ -335,8 +335,8 @@
 					InsideIELTS FreeTest a trusted resource for IELTS preparation.
 				</P>
 				<blockquote class="border-l-4 border-teal-500 pl-4 italic">
-					"My mission is to help every student understand exactly where they stand and what they
-					need to improve. No guesswork, just clear, actionable feedback."
+					"My mission is to help every test-taker understand exactly what their weaknesses are and what they
+					need to do to improve. No guesswork: just clear, actionable feedback."
 				</blockquote>
 			</div>
 			<div class="flex justify-center">

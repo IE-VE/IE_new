@@ -225,7 +225,7 @@
 					<source src="/audio/ielts-listening_test1.mp3?v=2" type="audio/mpeg">
 					Your browser does not support the audio element.
 				</audio>
-				<p class="text-sm mt-2 text-gray-500 dark:text-gray-400">Allow yourself <strong>33 minutes</strong> to complete this test.</p>
+				<p class="text-sm mt-2 text-gray-500 dark:text-gray-400">Allow yourself <strong>35 minutes</strong> to complete this test.</p>
 			</div>
 		</div>
 

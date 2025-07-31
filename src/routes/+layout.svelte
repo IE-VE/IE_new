@@ -25,10 +25,10 @@
 	// Updated navigation links for main menu (no "Practice" repetition)
 	const navLinks = [
 		{ href: '/freetest', text: 'Free Speaking Test' },
-		{ href: '/speaking/practice', text: 'Speaking' },
-		{ href: '/writing/practice', text: 'Writing' },
-		{ href: '/reading/practice', text: 'Reading' },
-		{ href: '/listening/practice', text: 'Listening' }
+		// { href: '/speaking/practice', text: 'Speaking' },
+		{ href: '/writing/practice', text: 'Writing Test' },
+		{ href: '/reading/practice', text: 'Reading Test' },
+		{ href: '/listening/practice', text: 'Listening Test' }
 	];
 </script>
 
