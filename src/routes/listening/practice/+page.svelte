@@ -56,7 +56,7 @@
 	function collectUserAnswers() {
 		// Use the userAnswers state that's already being populated by handleInputChange
 		const answers = { ...userAnswers };
-		
+
 		// Handle question 11 special case - combine q11a and q11b into q11 array
 		if (answers.q11a || answers.q11b) {
 			const q11Array = [];
@@ -618,7 +618,7 @@
 			</div>
 
 			<!-- Modal Footer -->
-			<div class="flex justify-between p-6 pb-16 border-t border-gray-200 dark:border-gray-700">
+			<div class="flex justify-between p-6 pb-8 border-t border-gray-200 dark:border-gray-700">
 				<button
 					type="button"
 					onclick={markAnswers}
@@ -831,7 +831,7 @@
 			</div>
 
 			<!-- Modal Footer -->
-			<div class="flex justify-between p-6 pb-16 border-t border-gray-200 dark:border-gray-700">
+			<div class="flex justify-between p-6 pb-8 border-t border-gray-200 dark:border-gray-700">
 				<button 
 					class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
 					onclick={openAnswersModal}
