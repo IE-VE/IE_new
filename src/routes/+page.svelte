@@ -119,7 +119,8 @@
 		<!-- Speaking -->
 		<a
 			href="/freetest"
-			class="rounded-lg border border-gray-200 bg-white p-6 shadow-md transition hover:shadow-lg dark:border-gray-700 dark:bg-gray-800"
+			class="rounded-lg border border-[var(--color-border)] p-6 shadow-md transition hover:shadow-lg"
+			style="background-color: var(--color-surface);"
 		>
 			<h2 class="mb-2 text-xl font-bold text-teal-600 dark:text-teal-400">Speaking</h2>
 			<p class="text-gray-600 dark:text-gray-300">
@@ -131,7 +132,8 @@
 		<!-- Writing -->
 		<a
 			href="/writing/practice"
-			class="rounded-lg border border-gray-200 bg-white p-6 shadow-md transition hover:shadow-lg dark:border-gray-700 dark:bg-gray-800"
+			class="rounded-lg border border-[var(--color-border)] p-6 shadow-md transition hover:shadow-lg"
+			style="background-color: var(--color-surface);"
 		>
 			<h2 class="mb-2 text-xl font-bold text-teal-600 dark:text-teal-400">Writing</h2>
 			<p class="text-gray-600 dark:text-gray-300">
@@ -143,7 +145,8 @@
 		<!-- Reading -->
 		<a
 			href="/reading/practice"
-			class="rounded-lg border border-gray-200 bg-white p-6 shadow-md transition hover:shadow-lg dark:border-gray-700 dark:bg-gray-800"
+			class="rounded-lg border border-[var(--color-border)] p-6 shadow-md transition hover:shadow-lg"
+			style="background-color: var(--color-surface);"
 		>
 			<h2 class="mb-2 text-xl font-bold text-teal-600 dark:text-teal-400">Reading</h2>
 			<p class="text-gray-600 dark:text-gray-300">
@@ -155,7 +158,8 @@
 		<!-- Listening -->
 		<a
 			href="/listening"
-			class="rounded-lg border border-gray-200 bg-white p-6 shadow-md transition hover:shadow-lg dark:border-gray-700 dark:bg-gray-800"
+			class="rounded-lg border border-[var(--color-border)] p-6 shadow-md transition hover:shadow-lg"
+			style="background-color: var(--color-surface);"
 		>
 			<h2 class="mb-2 text-xl font-bold text-teal-600 dark:text-teal-400">Listening</h2>
 			<p class="text-gray-600 dark:text-gray-300">
