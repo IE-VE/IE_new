@@ -256,7 +256,7 @@
 
 			<!-- Call to Action -->
 		<div class="text-center">
-			<div class="bg-gray-900 border-t-8 border-teal-400 rounded-lg p-8 shadow-lg">
+			<div class="bg-gray-900 border border-gray-600 border-t-8 border-t-teal-400 rounded-lg p-8 shadow-lg">
 				<h2 class="text-2xl font-semibold text-white mb-6 text-center">
 					Ready to Start Practicing?
 				</h2>
