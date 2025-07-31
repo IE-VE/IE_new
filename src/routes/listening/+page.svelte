@@ -76,16 +76,16 @@
 		}
 	];
 
-	const sampleQuestions = [
-		'/static/listening-images/LT1 (1).png',
-		'/static/listening-images/LT1 (2).png',
-		'/static/listening-images/LT1 (3).png',
-		'/static/listening-images/LT1 (4).png',
-		'/static/listening-images/LT1 (5).png',
-		'/static/listening-images/LT1 (6).png',
-		'/static/listening-images/LT1 (7).png',
-		'/static/listening-images/LT1 (8).png'
-	];
+	// const sampleQuestions = [
+	// 	'/static/listening-images/LT1 (1).png',
+	// 	'/static/listening-images/LT1 (2).png',
+	// 	'/static/listening-images/LT1 (3).png',
+	// 	'/static/listening-images/LT1 (4).png',
+	// 	'/static/listening-images/LT1 (5).png',
+	// 	'/static/listening-images/LT1 (6).png',
+	// 	'/static/listening-images/LT1 (7).png',
+	// 	'/static/listening-images/LT1 (8).png'
+	// ];
 
 	function togglePlayPause() {
 		if (!audioElement) return;
@@ -150,12 +150,7 @@
 				The <b>IELTS</b> Listening Test is the first test that you will complete on test
 				day. </p>
 			<br>
-			<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-				You have 30 minutes to
-				listen to the recording and write your answers directly on the test
-				booklet; then a further 10 minutes at the end of the test to
-				transfer your answers onto the answer sheet provided.
-			</p>
+
 		</div>
 
 		<!-- Test Overview -->
@@ -166,6 +161,12 @@
 						<!-- <span class="mr-3 text-3xl">📻</span> -->
 						Format
 					</h2>
+					<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+						You have 30 minutes to
+						listen to the recording and write your answers directly on the test
+						booklet; then a further 10 minutes at the end of the test to
+						transfer your answers onto the answer sheet provided.
+					</p>
 					<div class="grid md:grid-cols-3 gap-6 text-center">
 						<div>
 							<div class="text-3xl font-bold text-blue-600 dark:text-blue-400">40 min</div>
