@@ -552,7 +552,7 @@
 		aria-modal="true"
 		aria-labelledby="answers-modal-title"
 	>
-		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden mb-8">
 			<!-- Modal Header -->
 			<div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
 				<h2 id="answers-modal-title" class="text-2xl font-bold text-gray-900 dark:text-white">
@@ -647,7 +647,7 @@
 		aria-modal="true"
 		aria-labelledby="marking-modal-title"
 	>
-		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-hidden">
+		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-hidden mb-8">
 			<!-- Modal Header -->
 			<div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
 				<div>
