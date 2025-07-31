@@ -147,8 +147,8 @@
 				IELTS LISTENING
 			</h1>
 			<div class="max-w-6xl mx-auto px-6">
-				<p class="text-xl text-gray-600 dark:text-gray-300 text-left py-4 mb-8">
-					The <b>IELTS</b> Listening Test is the first test that you will complete on test
+				<p class="text-xl text-gray-600 dark:text-gray-300 text-center py-4 mb-8">
+					The Listening Test is the first test that you will complete on test
 					day.
 				</p>
 			</div>
@@ -163,9 +163,8 @@
 						<!-- <span class="mr-3 text-3xl">📻</span> -->
 						Format
 					</h2>
-					<p>You have 30 minutes to listen to the recording and write your answers directly on the test
-						booklet; then a further 10 minutes at the end of the test to
-						transfer your answers onto the answer sheet provided.
+					<p class="text-left mb-4 text-xl">You have 30 minutes to listen to the recording and write your answers directly on the test
+						booklet; then a further 10 minutes at the end of the test to check and transfer your answers onto the answer sheet provided.
 					</p>
 					<div class="grid md:grid-cols-3 gap-6 text-center">
 						<div>
@@ -182,6 +181,7 @@
 						</div>
 					</div>
 				</div>
+				
 			</Card>
 		</div>
 
@@ -192,6 +192,10 @@
 
 					Assessment Criteria
 				</h2>
+				<p class="text-left mb-4 text-xl">The <b>Listening Test</b> is scored using a system that may slightly vary with 
+					each <b>IELTS</b> test. Band cut-offs are set after global results are analysed. Approximate scores are:
+					
+				</p>
 				<div class="grid md:grid-cols-2 gap-8">
 					<div>
 						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Band Score Targets</h3>
@@ -234,6 +238,7 @@
 					<!-- <span class="mr-3 text-3xl">🎧</span> -->
 					Question Types
 				</h2>
+				<p class="text-left mb-4 text-xl">There are <b>6</b> main types of question and the questions increase in difficulty as the test progresses. All                 questions are worth <b>1 mark</b>. The questions will usually be formatted in one of the following ways:</p>
 				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 					{#each questionTypes as type}
 						<div class="text-center">
@@ -250,6 +255,8 @@
 						</div>
 					{/each}
 				</div>
+				<p class="mt-6 mb-2 text-xl">It's very important that you accurately follow the instructions for each set of questions.
+					If the format of your answer differs from instructed, even if the correct information is included, your answer will be marked <u>WRONG</u>.</p>
 			</Card>
 		</div>
 
