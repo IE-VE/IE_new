@@ -146,7 +146,7 @@
 			<h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
 				IELTS LISTENING
 			</h1>
-			<p class="text-xl text-gray-600 dark:text-gray-300 w-full mx-auto px-12 py-6">
+			<p class="text-xl text-gray-600 dark:text-gray-300 max-w-6xl mx-auto px-6 py-4">
 				The <b>IELTS</b> Listening Test is the first test that you will complete on test
 				day. </p>
 			<br>
