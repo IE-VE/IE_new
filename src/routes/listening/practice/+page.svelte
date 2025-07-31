@@ -618,7 +618,7 @@
 			</div>
 
 			<!-- Modal Footer -->
-			<div class="flex justify-between p-6 pb-8 border-t border-gray-200 dark:border-gray-700">
+			<div class="flex justify-between p-6 pb-12 border-t border-gray-200 dark:border-gray-700">
 				<button
 					type="button"
 					onclick={markAnswers}
@@ -831,7 +831,7 @@
 			</div>
 
 			<!-- Modal Footer -->
-			<div class="flex justify-between p-6 pb-8 border-t border-gray-200 dark:border-gray-700">
+			<div class="flex justify-between p-6 pb-12 border-t border-gray-200 dark:border-gray-700">
 				<button 
 					class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
 					onclick={openAnswersModal}
