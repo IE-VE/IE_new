@@ -854,6 +854,7 @@
 		accent-color: rgb(13 148 136); /* teal-600 */
 		color: rgb(17 24 39); /* gray-900 - dark text */
 		background-color: #ddd; /* medium gray */
+		line-height: 1.2; /* Reduce line height for less padding */
 	}
 
 	input[type="text"]:focus {
@@ -861,6 +862,7 @@
 		outline: none;
 		color: rgb(17 24 39); /* gray-900 - dark text */
 		background-color: #ccc; /* slightly darker gray on focus */
+		line-height: 1.2; /* Reduce line height for less padding */
 	}
 
 	table {
