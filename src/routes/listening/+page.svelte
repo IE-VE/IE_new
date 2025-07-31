@@ -256,20 +256,20 @@
 
 			<!-- Call to Action -->
 		<div class="text-center">
-			<Card variant="primary">
-				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
+			<div class="bg-gray-900 border-t-4 border-teal-400 rounded-lg p-8 shadow-lg">
+				<h2 class="text-2xl font-semibold text-white mb-6 text-center">
 					Ready to Start Practicing?
 				</h2>
-				<p class="text-gray-600 dark:text-gray-300 mb-6 text-xl">
+				<p class="text-gray-300 mb-6 text-xl">
 					Take our complete IELTS Listening practice test with authentic questions and audio.
 				</p>
 				<a 
 					href="/listening/practice"
-					class="inline-block bg-green-600 hover:bg-green-700 text-white font-medium px-8 py-3 rounded-lg transition-colors"
+					class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-medium px-8 py-3 rounded-lg transition-colors"
 				>
 					Start Practice Test Now
 				</a>
-			</Card>
+			</div>
 		</div>
 	</div>
 </div>
