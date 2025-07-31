@@ -853,14 +853,14 @@
 	input[type="text"], input[type="radio"] {
 		accent-color: rgb(13 148 136); /* teal-600 */
 		color: rgb(17 24 39); /* gray-900 - dark text */
-		background-color: rgb(249 250 251); /* gray-50 - slightly darker than white */
+		background-color: #ddd; /* medium gray */
 	}
 
 	input[type="text"]:focus {
 		border-color: rgb(13 148 136); /* teal-600 */
 		outline: none;
 		color: rgb(17 24 39); /* gray-900 - dark text */
-		background-color: rgb(243 244 246); /* gray-100 - slightly darker on focus */
+		background-color: #ccc; /* slightly darker gray on focus */
 	}
 
 	table {
