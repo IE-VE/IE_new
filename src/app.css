@@ -8,17 +8,17 @@
 
 /* Light theme variables */
 @theme {
-	/* Primary teal colors - Light theme */
-	--color-primary-50: oklch(0.97 0.03 180);
-	--color-primary-100: oklch(0.93 0.05 180);
-	--color-primary-200: oklch(0.88 0.07 180);
-	--color-primary-300: oklch(0.8 0.1 180);
-	--color-primary-400: oklch(0.73 0.13 180);
-	--color-primary-500: oklch(0.65 0.16 180);
-	--color-primary-600: oklch(0.58 0.14 180);
-	--color-primary-700: oklch(0.5 0.12 180);
-	--color-primary-800: oklch(0.4 0.09 180);
-	--color-primary-900: oklch(0.25 0.06 180);
+	/* Primary dark green/blue colors - Light theme */
+	--color-primary-50: oklch(0.92 0.02 190);
+	--color-primary-100: oklch(0.85 0.04 195);
+	--color-primary-200: oklch(0.75 0.06 200);
+	--color-primary-300: oklch(0.65 0.08 205);
+	--color-primary-400: oklch(0.55 0.1 210);
+	--color-primary-500: oklch(0.45 0.12 215);
+	--color-primary-600: oklch(0.38 0.11 220);
+	--color-primary-700: oklch(0.32 0.09 225);
+	--color-primary-800: oklch(0.26 0.07 230);
+	--color-primary-900: oklch(0.18 0.05 235);
 
 	/* Neutral colors - Light theme */
 	--color-neutral-50: oklch(0.98 0.01 180);
@@ -60,17 +60,17 @@
 
 /* Dark theme variables */
 @theme dark {
-	/* Primary colors - Dark theme */
-	--color-primary-50: oklch(0.15 0.05 180);
-	--color-primary-100: oklch(0.2 0.07 180);
-	--color-primary-200: oklch(0.25 0.09 180);
-	--color-primary-300: oklch(0.3 0.11 180);
-	--color-primary-400: oklch(0.37 0.13 180);
-	--color-primary-500: oklch(0.45 0.16 180);
-	--color-primary-600: oklch(0.53 0.14 180);
-	--color-primary-700: oklch(0.6 0.12 180);
-	--color-primary-800: oklch(0.68 0.09 180);
-	--color-primary-900: oklch(0.75 0.06 180);
+	/* Primary dark green/blue colors - Dark theme */
+	--color-primary-50: oklch(0.22 0.06 235);
+	--color-primary-100: oklch(0.28 0.08 230);
+	--color-primary-200: oklch(0.35 0.1 225);
+	--color-primary-300: oklch(0.42 0.12 220);
+	--color-primary-400: oklch(0.48 0.13 215);
+	--color-primary-500: oklch(0.55 0.14 210);
+	--color-primary-600: oklch(0.62 0.12 205);
+	--color-primary-700: oklch(0.68 0.1 200);
+	--color-primary-800: oklch(0.75 0.08 195);
+	--color-primary-900: oklch(0.82 0.06 190);
 
 	/* Neutral colors - Dark theme */
 	--color-neutral-50: oklch(0.1 0.01 180);

@@ -19,20 +19,20 @@
 			accent: 'from-gray-200 to-slate-300 dark:from-gray-600 dark:to-slate-700'
 		},
 		teal: {
-			card: 'border-teal-200 from-teal-50 to-emerald-50 dark:border-teal-800 dark:from-teal-950/50 dark:to-emerald-950/50',
-			accent: 'from-teal-300 to-emerald-300 dark:from-teal-400 dark:to-emerald-400'
+			card: 'border-primary-200 from-primary-50 to-primary-100 dark:border-primary-700 dark:from-primary-900/50 dark:to-primary-800/50',
+			accent: 'from-primary-400 to-primary-500 dark:from-primary-500 dark:to-primary-400'
 		},
 		greyscale: {
 			card: 'border-gray-200 from-white to-white dark:border-gray-700 dark:from-gray-800 dark:to-gray-800',
 			accent: 'from-gray-200 to-slate-300 dark:from-gray-600 dark:to-slate-700'
 		},
 		primary: {
-			card: 'border-teal-300 from-teal-100 to-teal-50 dark:border-teal-600 dark:from-teal-800/40 dark:to-teal-900/40',
-			accent: 'from-teal-400 to-teal-300 dark:from-teal-500 dark:to-teal-400'
+			card: 'border-primary-300 from-primary-100 to-primary-50 dark:border-primary-600 dark:from-primary-800/40 dark:to-primary-900/40',
+			accent: 'from-primary-500 to-primary-400 dark:from-primary-400 dark:to-primary-500'
 		},
 		secondary: {
-			card: 'border-teal-200 from-teal-50 to-emerald-50 dark:border-teal-700 dark:from-teal-900/20 dark:to-emerald-900/20',
-			accent: 'from-teal-300 to-emerald-200 dark:from-teal-400 dark:to-emerald-300'
+			card: 'border-primary-200 from-primary-50 to-primary-100 dark:border-primary-700 dark:from-primary-900/20 dark:to-primary-800/20',
+			accent: 'from-primary-400 to-primary-300 dark:from-primary-500 dark:to-primary-400'
 		}
 	};
 
