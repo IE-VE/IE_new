@@ -10,13 +10,13 @@
 		accent2: string;
 	};
 
-	type VariantType = 'default' | 'teal' | 'greyscale' | 'notebook' | 'red';
+	type VariantType = 'default' | 'teal' | 'greyscale' | 'primary' | 'secondary';
 
 	// Color scheme presets with classes for each variant
 	const colorVariants = {
 		default: {
-			card: 'border-indigo-200 from-indigo-50 to-purple-50 dark:border-indigo-800 dark:from-indigo-950/50 dark:to-purple-950/50',
-			accent: 'from-indigo-500 to-purple-500 dark:from-indigo-400 dark:to-purple-400'
+			card: 'border-gray-200 from-white to-white dark:border-gray-700 dark:from-gray-800 dark:to-gray-800',
+			accent: 'from-gray-200 to-slate-300 dark:from-gray-600 dark:to-slate-700'
 		},
 		teal: {
 			card: 'border-teal-200 from-teal-50 to-emerald-50 dark:border-teal-800 dark:from-teal-950/50 dark:to-emerald-950/50',
@@ -26,13 +26,13 @@
 			card: 'border-gray-200 from-white to-white dark:border-gray-700 dark:from-gray-800 dark:to-gray-800',
 			accent: 'from-gray-200 to-slate-300 dark:from-gray-600 dark:to-slate-700'
 		},
-		notebook: {
-			card: 'border-amber-200 from-[#fff5e9] to-[#fffdf7] dark:border-amber-800 dark:from-amber-950/30 dark:to-amber-900/20',
-			accent: 'from-amber-300 to-yellow-200 dark:from-amber-500 dark:to-yellow-400'
+		primary: {
+			card: 'border-teal-300 from-teal-100 to-teal-50 dark:border-teal-600 dark:from-teal-800/40 dark:to-teal-900/40',
+			accent: 'from-teal-400 to-teal-300 dark:from-teal-500 dark:to-teal-400'
 		},
-		red: {
-			card: 'border-red-200 from-red-50 to-pink-50 dark:border-red-800 dark:from-red-950/50 dark:to-pink-950/50',
-			accent: 'from-red-400 to-pink-400 dark:from-red-400 dark:to-pink-400'
+		secondary: {
+			card: 'border-teal-200 from-teal-50 to-emerald-50 dark:border-teal-700 dark:from-teal-900/20 dark:to-emerald-900/20',
+			accent: 'from-teal-300 to-emerald-200 dark:from-teal-400 dark:to-emerald-300'
 		}
 	};
 

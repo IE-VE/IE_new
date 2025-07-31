@@ -157,7 +157,7 @@
 
 		<!-- Test Overview -->
 		<div class="mb-12">
-			<Card variant="blue">
+			<Card variant="teal">
 				<div class="text-center">
 					<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-center">
 						<!-- <span class="mr-3 text-3xl">📻</span> -->
@@ -168,15 +168,15 @@
 					</p>
 					<div class="grid md:grid-cols-3 gap-6 text-center">
 						<div>
-							<div class="text-3xl font-bold text-blue-600 dark:text-blue-400">40 min</div>
+							<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">40 min</div>
 							<div class="text-sm text-gray-600 dark:text-gray-300">Total Duration</div>
 						</div>
 						<div>
-							<div class="text-3xl font-bold text-blue-600 dark:text-blue-400">4</div>
+							<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">4</div>
 							<div class="text-sm text-gray-600 dark:text-gray-300">Sections</div>
 						</div>
 						<div>
-							<div class="text-3xl font-bold text-blue-600 dark:text-blue-400">40</div>
+							<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">40</div>
 							<div class="text-sm text-gray-600 dark:text-gray-300">Questions</div>
 						</div>
 					</div>
@@ -187,7 +187,7 @@
 
 		<!-- Assessment Criteria -->
 		<div class="mb-12">
-			<Card variant="red">
+			<Card variant="primary">
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
 
 					Assessment Criteria
@@ -233,7 +233,7 @@
 
 		<!-- Question Examples Carousel -->
 		<div class="mb-12">
-			<Card variant="notebook">
+			<Card variant="secondary">
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
 					<!-- <span class="mr-3 text-3xl">🎧</span> -->
 					Question Types
