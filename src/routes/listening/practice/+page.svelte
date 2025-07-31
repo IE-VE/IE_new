@@ -546,16 +546,16 @@
 <!-- Answers Modal -->
 {#if showAnswersModal}
 	<div 
-		class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4 pb-8"
+		class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-2 sm:p-4 pb-4 sm:pb-8"
 		onclick={handleBackdropClick}
 		role="dialog"
 		aria-modal="true"
 		aria-labelledby="answers-modal-title"
 	>
-		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[85vh] overflow-hidden">
+		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[75vh] sm:max-h-[85vh] overflow-hidden">
 			<!-- Modal Header -->
-			<div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
-				<h2 id="answers-modal-title" class="text-2xl font-bold text-gray-900 dark:text-white">
+			<div class="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200 dark:border-gray-700">
+				<h2 id="answers-modal-title" class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
 					IELTS Listening Test 1 – Answer Key
 				</h2>
 				<button 
@@ -568,7 +568,7 @@
 			</div>
 
 			<!-- Modal Content -->
-			<div class="p-6 overflow-y-auto max-h-[calc(85vh-140px)]">
+			<div class="p-4 sm:p-6 overflow-y-auto max-h-[calc(75vh-180px)] sm:max-h-[calc(85vh-140px)]">
 				<div class="grid md:grid-cols-2 gap-4 text-sm">
 					<div class="space-y-2">
 						<p><strong>1.</strong> shopping / variety of shopping</p>
@@ -618,16 +618,16 @@
 			</div>
 
 			<!-- Modal Footer -->
-			<div class="flex justify-between p-6 pb-8 border-t border-gray-200 dark:border-gray-700">
+			<div class="flex flex-col sm:flex-row justify-between gap-3 p-4 sm:p-6 border-t border-gray-200 dark:border-gray-700">
 				<button
 					type="button"
 					onclick={markAnswers}
-					class="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+					class="px-4 sm:px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm sm:text-base"
 				>
 					📝 MARK my TEST
 				</button>
 				<button 
-					class="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+					class="px-4 sm:px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors text-sm sm:text-base"
 					onclick={closeAnswersModal}
 				>
 					Close
@@ -640,21 +640,21 @@
 <!-- Marking Results Modal -->
 {#if showMarkingModal}
 	<div 
-		class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4 pb-8"
+		class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-2 sm:p-4 pb-4 sm:pb-8"
 		onclick={handleMarkingBackdropClick}
 		onkeydown={handleMarkingKeydown}
 		role="dialog"
 		aria-modal="true"
 		aria-labelledby="marking-modal-title"
 	>
-		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-6xl w-full max-h-[85vh] overflow-hidden">
+		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-6xl w-full max-h-[75vh] sm:max-h-[85vh] overflow-hidden">
 			<!-- Modal Header -->
-			<div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+			<div class="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200 dark:border-gray-700">
 				<div>
-					<h2 id="marking-modal-title" class="text-2xl font-bold text-gray-900 dark:text-white">
+					<h2 id="marking-modal-title" class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
 						Your Test Results
 					</h2>
-					<p class="text-lg mt-2">
+					<p class="text-sm sm:text-lg mt-2">
 						Score: <span class="font-bold text-green-600">{markingResults.totalCorrect || 0}</span>/<span class="font-bold">{markingResults.totalQuestions || 40}</span> 
 						| Band Score: <span class="font-bold text-blue-600">{getBandScore(markingResults.totalCorrect || 0)}</span>
 					</p>
@@ -669,7 +669,7 @@
 			</div>
 
 			<!-- Modal Content -->
-			<div class="p-6 overflow-y-auto max-h-[calc(85vh-200px)]">
+			<div class="p-4 sm:p-6 overflow-y-auto max-h-[calc(75vh-240px)] sm:max-h-[calc(85vh-200px)]">
 				<div class="grid md:grid-cols-2 gap-6 text-sm">
 					<!-- Left Column: Sections 1 & 2 -->
 					<div class="space-y-6">
@@ -831,15 +831,15 @@
 			</div>
 
 			<!-- Modal Footer -->
-			<div class="flex justify-between p-6 pb-8 border-t border-gray-200 dark:border-gray-700">
+			<div class="flex flex-col sm:flex-row justify-between gap-3 p-4 sm:p-6 border-t border-gray-200 dark:border-gray-700">
 				<button 
-					class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+					class="px-4 sm:px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm sm:text-base"
 					onclick={openAnswersModal}
 				>
 					Query my Results
 				</button>
 				<button 
-					class="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+					class="px-4 sm:px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors text-sm sm:text-base"
 					onclick={closeMarkingModal}
 				>
 					Close
