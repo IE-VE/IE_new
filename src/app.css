@@ -53,6 +53,9 @@
 	--font-mono:
 		'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono',
 		'Courier New', 'monospace';
+
+	/* Override Tailwind spacing for p-6 class */
+	--spacing-6: calc(var(--spacing) * 5);
 }
 
 /* Dark theme variables */
@@ -107,4 +110,9 @@
 	/* Configure Card component */
 	--card-border-color: var(--color-border);
 	--card-bg-color: var(--color-surface);
+}
+
+/* Custom padding override */
+.p-6 {
+	padding: 1.25rem; /* 20px instead of 24px (equivalent to p-5) */
 }
