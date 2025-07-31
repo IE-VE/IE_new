@@ -157,44 +157,38 @@
 
 		<!-- Test Overview -->
 		<div class="mb-12">
-			<Card variant="teal">
-				<div class="text-center">
-					<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-center">
-						<!-- <span class="mr-3 text-3xl">📻</span> -->
-						Format
-					</h2>
-					<p class="text-left mb-4 text-xl">You have 30 minutes to listen to the recording and write your answers directly on the test
-						booklet; then a further 10 minutes at the end of the test to check and transfer your answers onto the answer sheet provided.
-					</p>
-					<div class="grid md:grid-cols-3 gap-6 text-center">
-						<div>
-							<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">40 min</div>
-							<div class="text-sm text-gray-600 dark:text-gray-300">Total Duration</div>
-						</div>
-						<div>
-							<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">4</div>
-							<div class="text-sm text-gray-600 dark:text-gray-300">Sections</div>
-						</div>
-						<div>
-							<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">40</div>
-							<div class="text-sm text-gray-600 dark:text-gray-300">Questions</div>
-						</div>
+			<Card variant="secondary">
+				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
+					Format
+				</h2>
+				<p class="text-left mb-4 text-xl">You have 30 minutes to listen to the recording and write your answers directly on the test
+					booklet; then a further 10 minutes at the end of the test to check and transfer your answers onto the answer sheet provided.
+				</p>
+				<div class="grid md:grid-cols-3 gap-6 text-center">
+					<div>
+						<div class="text-3xl font-bold text-primary-600 dark:text-primary-400">40 min</div>
+						<div class="text-sm text-gray-600 dark:text-gray-300">Total Duration</div>
+					</div>
+					<div>
+						<div class="text-3xl font-bold text-primary-600 dark:text-primary-400">4</div>
+						<div class="text-sm text-gray-600 dark:text-gray-300">Sections</div>
+					</div>
+					<div>
+						<div class="text-3xl font-bold text-primary-600 dark:text-primary-400">40</div>
+						<div class="text-sm text-gray-600 dark:text-gray-300">Questions</div>
 					</div>
 				</div>
-				
 			</Card>
 		</div>
 
 		<!-- Assessment Criteria -->
 		<div class="mb-12">
-			<Card variant="primary">
-				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
-
+			<Card variant="secondary">
+				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
 					Assessment Criteria
 				</h2>
 				<p class="text-left mb-4 text-xl">The <b>Listening Test</b> is scored using a system that may slightly vary with 
 					each <b>IELTS</b> test. Band cut-offs are set after global results are analysed. Approximate scores are:
-					
 				</p>
 				<div class="grid md:grid-cols-2 gap-8">
 					<div>
@@ -262,8 +256,8 @@
 
 			<!-- Call to Action -->
 		<div class="text-center">
-			<Card variant="teal">
-				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+			<Card variant="secondary">
+				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
 					Ready to Start Practicing?
 				</h2>
 				<p class="text-gray-600 dark:text-gray-300 mb-6 text-xl">
@@ -271,7 +265,7 @@
 				</p>
 				<a 
 					href="/listening/practice"
-					class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-medium px-8 py-3 rounded-lg transition-colors"
+					class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-medium px-8 py-3 rounded-lg transition-colors"
 				>
 					Start Practice Test Now
 				</a>
