@@ -256,7 +256,7 @@
 
 			<!-- Call to Action -->
 		<div class="text-center">
-			<Card variant="secondary">
+			<Card variant="teal">
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
 					Ready to Start Practicing?
 				</h2>
@@ -265,7 +265,7 @@
 				</p>
 				<a 
 					href="/listening/practice"
-					class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-medium px-8 py-3 rounded-lg transition-colors"
+					class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-medium px-8 py-3 rounded-lg transition-colors"
 				>
 					Start Practice Test Now
 				</a>
