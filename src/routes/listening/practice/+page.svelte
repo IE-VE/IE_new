@@ -54,41 +54,25 @@
 	};
 
 	function collectUserAnswers() {
-		// Get all input elements, not just from form
-		const inputs = document.querySelectorAll('input[name^="q"]');
-		const answers = {};
-
-		console.log('All inputs found:', inputs.length);
-		console.log('Input names found:', Array.from(inputs).map(input => input.name));
-
-		inputs.forEach(input => {
-			const inputName = input.name;
-			console.log(`Processing input: ${inputName}, type: ${input.type}, value: "${input.value}"`);
-
-			if (input.type === 'radio') {
-				if (input.checked) {
-					answers[inputName] = input.value;
-					console.log(`Radio answer collected: ${inputName} = ${input.value}`);
-				}
-			} else if (input.type === 'text') {
-				const value = input.value.trim();
-				if (value) { // Only collect non-empty values
-					if (inputName === 'q11a' || inputName === 'q11b') {
-						// Handle multiple inputs for question 11
-						if (!answers['q11']) {
-							answers['q11'] = [];
-						}
-						answers['q11'].push(value);
-						console.log(`Q11 answer collected: ${inputName} = ${value}`);
-					} else {
-						answers[inputName] = value;
-						console.log(`Text answer collected: ${inputName} = ${value}`);
-					}
-				} else {
-					console.log(`Empty text input skipped: ${inputName}`);
-				}
+		// Use the userAnswers state that's already being populated by handleInputChange
+		const answers = { ...userAnswers };
+		
+		// Handle question 11 special case - combine q11a and q11b into q11 array
+		if (answers.q11a || answers.q11b) {
+			const q11Array = [];
+			if (answers.q11a && answers.q11a.trim()) {
+				q11Array.push(answers.q11a.trim());
 			}
-		});
+			if (answers.q11b && answers.q11b.trim()) {
+				q11Array.push(answers.q11b.trim());
+			}
+			if (q11Array.length > 0) {
+				answers.q11 = q11Array;
+			}
+			// Remove the individual q11a and q11b entries
+			delete answers.q11a;
+			delete answers.q11b;
+		}
 
 		console.log('Final collected answers:', answers);
 		return answers;
