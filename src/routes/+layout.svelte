@@ -4,9 +4,10 @@
 
 	let isMenuOpen = $state(false);
 
-	// Set dark mode by default
+	// Force dark mode always
 	if (typeof document !== 'undefined') {
 		document.documentElement.classList.add('dark');
+		localStorage.setItem('theme', 'dark');
 	}
 
 	// Handle font loading
@@ -138,13 +139,11 @@
 						{link.text}
 					</a>
 				{/each}
-				<DarkModeToggle />
 			</div>
 
 			<!-- Mobile Navigation Toggle -->
 			<div class="flex items-center md:hidden">
-				<DarkModeToggle />
-				<button class="ml-2 cursor-pointer" onclick={toggleMenu} aria-label="Toggle mobile menu">
+				<button class="cursor-pointer" onclick={toggleMenu} aria-label="Toggle mobile menu">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-6 w-6 text-gray-600 dark:text-gray-300"
