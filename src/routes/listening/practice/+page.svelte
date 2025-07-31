@@ -222,7 +222,7 @@
 			<div class="p-6 rounded-lg shadow-md mb-6 bg-white dark:bg-gray-800">
 				<p class="text-sm mb-4 text-gray-600 dark:text-gray-400">Click to listen and answer the questions below.</p>
 				<audio controls class="w-full max-w-md mx-auto">
-					<source src="/audio/ielts-listening_test1.mp3" type="audio/mpeg">
+					<source src="/audio/ielts-listening_test1.mp3?v=2" type="audio/mpeg">
 					Your browser does not support the audio element.
 				</audio>
 				<p class="text-sm mt-2 text-gray-500 dark:text-gray-400">Allow yourself <strong>33 minutes</strong> to complete this test.</p>
