@@ -552,7 +552,7 @@
 		aria-modal="true"
 		aria-labelledby="answers-modal-title"
 	>
-		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full overflow-hidden mb-8">
+		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[85vh] overflow-hidden">
 			<!-- Modal Header -->
 			<div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
 				<h2 id="answers-modal-title" class="text-2xl font-bold text-gray-900 dark:text-white">
@@ -568,7 +568,7 @@
 			</div>
 
 			<!-- Modal Content -->
-			<div class="p-6 overflow-y-auto">
+			<div class="p-6 overflow-y-auto max-h-[calc(85vh-140px)]">
 				<div class="grid md:grid-cols-2 gap-4 text-sm">
 					<div class="space-y-2">
 						<p><strong>1.</strong> shopping / variety of shopping</p>
@@ -647,7 +647,7 @@
 		aria-modal="true"
 		aria-labelledby="marking-modal-title"
 	>
-		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-6xl w-full overflow-hidden mb-8">
+		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-6xl w-full max-h-[85vh] overflow-hidden">
 			<!-- Modal Header -->
 			<div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
 				<div>
@@ -669,7 +669,7 @@
 			</div>
 
 			<!-- Modal Content -->
-			<div class="p-6 overflow-y-auto">
+			<div class="p-6 overflow-y-auto max-h-[calc(85vh-200px)]">
 				<div class="grid md:grid-cols-2 gap-6 text-sm">
 					<!-- Left Column: Sections 1 & 2 -->
 					<div class="space-y-6">
