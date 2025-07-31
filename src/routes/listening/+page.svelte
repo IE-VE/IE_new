@@ -266,7 +266,7 @@
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
 					Ready to Start Practicing?
 				</h2>
-				<p class="text-gray-600 dark:text-gray-300 mb-6">
+				<p class="text-gray-600 dark:text-gray-300 mb-6 text-xl">
 					Take our complete IELTS Listening practice test with authentic questions and audio.
 				</p>
 				<a 
