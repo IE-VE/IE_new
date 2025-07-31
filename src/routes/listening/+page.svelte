@@ -161,9 +161,7 @@
 						<!-- <span class="mr-3 text-3xl">📻</span> -->
 						Format
 					</h2>
-					<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-						You have 30 minutes to
-						listen to the recording and write your answers directly on the test
+					<p>You have 30 minutes to listen to the recording and write your answers directly on the test
 						booklet; then a further 10 minutes at the end of the test to
 						transfer your answers onto the answer sheet provided.
 					</p>
