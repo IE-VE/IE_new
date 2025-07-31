@@ -107,9 +107,8 @@
 </svelte:head>
 
 <div
-		class="min-h-screen font-['Montserrat'] transition-colors duration-200 dark:text-gray-100"
-		style="background-color: var(--color-background);"
-	>
+	class="min-h-screen bg-white font-['Montserrat'] transition-colors duration-200 dark:bg-gray-900 dark:text-gray-100"
+>
 	<!-- Enhanced Navigation with all skill areas -->
 	<nav class="container mx-auto px-6 py-4">
 		<div class="flex items-center justify-between">
