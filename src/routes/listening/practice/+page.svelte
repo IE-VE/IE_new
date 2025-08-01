@@ -445,9 +445,9 @@
 						<ul class="space-y-3 ml-4">
 							<li><strong>23.</strong> Jackson: <input type="text" name="q23" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}></li>
 							<li><strong>24.</strong> Roberts: <input type="text" name="q24" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}></li>
-							<li><strong>25.</strong> Morris: <input type="text" name="q25" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}></li>
-							<li><strong>26.</strong> Cooper: <input type="text" name="q26" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}></li>
-							<li><strong>27.</strong> Forster: <input type="text" name="q27" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}></li>
+							<li><strong>25.</strong> Morris:&nbsp &nbsp <input type="text" name="q25" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}></li>
+							<li><strong>26.</strong> Cooper:&nbsp <input type="text" name="q26" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}></li>
+							<li><strong>27.</strong> Forster:&nbsp <input type="text" name="q27" class="border-b border-gray-400 px-2 py-1 w-16 focus:border-blue-500 focus:outline-none" oninput={handleInputChange}></li>
 						</ul>
 					</div>
 
@@ -654,7 +654,7 @@
 					<h2 id="marking-modal-title" class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
 						Your Test Results
 					</h2>
-					<p class="text-sm sm:text-lg mt-2">
+					<p class="text-xl sm:text-lg mt-2">
 						Score: <span class="font-bold text-green-600">{markingResults.totalCorrect || 0}</span>/<span class="font-bold">{markingResults.totalQuestions || 40}</span> 
 						| Band Score: <span class="font-bold text-blue-600">{getBandScore(markingResults.totalCorrect || 0)}</span>
 					</p>
