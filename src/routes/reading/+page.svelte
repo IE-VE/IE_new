@@ -5,34 +5,16 @@
 
 	const questionTypes = [
 		{
-			title: 'Multiple Choice',
-			description: 'Choose the correct answer from several options',
-			icon: '✅',
-			image: '/reading-images/ielts-reading-multiple-choice.png'
-		},
-		{
-			title: 'Identifying Information',
-			description: 'True/False/Not Given questions about statements',
-			icon: '🔍',
-			image: '/reading-images/ielts-reading-true-false.png'
-		},
-		{
-			title: 'Identifying Views/Claims',
-			description: 'Yes/No/Not Given questions about writer\'s views',
-			icon: '💭',
-			image: '/reading-images/ielts-reading-yes-no.png'
-		},
-		{
-			title: 'Matching Information',
-			description: 'Match information to paragraphs or sections',
-			icon: '🔗',
-			image: '/reading-images/ielts-reading-matching.png'
-		},
-		{
 			title: 'Matching Headings',
 			description: 'Match headings to paragraphs or sections',
 			icon: '📋',
 			image: '/reading-images/ielts-reading-headings.png'
+		},
+		{
+			title: 'Matching Paragraph Information',
+			description: 'Match information to specific paragraphs',
+			icon: '🔗',
+			image: '/reading-images/ielts-reading-matching.png'
 		},
 		{
 			title: 'Matching Features',
@@ -47,22 +29,52 @@
 			image: '/reading-images/ielts-reading-endings.png'
 		},
 		{
-			title: 'Sentence Completion',
-			description: 'Complete sentences with words from the text',
+			title: 'True False Not Given or Yes No Not Given',
+			description: 'Identify if statements are true, false, or not given',
+			icon: '🔍',
+			image: '/reading-images/ielts-reading-true-false.png'
+		},
+		{
+			title: 'Multiple Choice',
+			description: 'Choose the correct answer from several options',
+			icon: '✅',
+			image: '/reading-images/ielts-reading-multiple-choice.png'
+		},
+		{
+			title: 'List of Options',
+			description: 'Select multiple correct answers from a list',
 			icon: '📝',
-			image: '/reading-images/ielts-reading-completion.png'
+			image: '/reading-images/ielts-reading-list-options.png'
 		},
 		{
-			title: 'Summary/Note/Table/Flow-chart Completion',
-			description: 'Fill in gaps in summaries, notes, tables, or flow-charts',
-			icon: '📊',
-			image: '/reading-images/ielts-reading-summary.png'
+			title: 'Choose a Title',
+			description: 'Select the most appropriate title for the passage',
+			icon: '🏷️',
+			image: '/reading-images/ielts-reading-title.png'
 		},
 		{
-			title: 'Short Answer Questions',
+			title: 'Short Answers',
 			description: 'Answer questions with words from the text',
 			icon: '❓',
 			image: '/reading-images/ielts-reading-short-answer.png'
+		},
+		{
+			title: 'Sentence/Summary Completion',
+			description: 'Complete sentences or summaries with words from the text',
+			icon: '📄',
+			image: '/reading-images/ielts-reading-completion.png'
+		},
+		{
+			title: 'Table Completion',
+			description: 'Fill in missing information in tables',
+			icon: '📊',
+			image: '/reading-images/ielts-reading-table.png'
+		},
+		{
+			title: 'Flow Chart/Diagram Completion',
+			description: 'Complete flow charts or diagrams with information from the text',
+			icon: '🗺️',
+			image: '/reading-images/ielts-reading-diagram.png'
 		}
 	];
 
@@ -205,7 +217,7 @@
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
 					Question Types
 				</h2>
-				<p class="text-left mb-4 text-xl">There are <b>10</b> main types of reading questions. All questions are worth <b>1 mark</b> and you may encounter several different types within each passage:</p>
+				<p class="text-left mb-4 text-xl">There are <b>12</b> main types of reading questions. All questions are worth <b>1 mark</b> and you may encounter several different types within each passage:</p>
 				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 					{#each questionTypes as type}
 						<div class="text-center">
