@@ -1,4 +1,3 @@
-
 <script lang="ts">
 	import Card from '$lib/components/Card.svelte';
 	import Lightbox from '$lib/components/Lightbox.svelte';
