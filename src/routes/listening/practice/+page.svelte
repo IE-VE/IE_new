@@ -654,9 +654,9 @@
 					<h2 id="marking-modal-title" class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
 						Your Test Results
 					</h2>
-					<p class="text-xl sm:text-lg mt-2">
-						Score: <span class="font-bold text-green-600">{markingResults.totalCorrect || 0}</span>/<span class="font-bold">{markingResults.totalQuestions || 40}</span> 
-						| Band Score: <span class="font-bold text-blue-600">{getBandScore(markingResults.totalCorrect || 0)}</span>
+					<p class="text-xl sm:text-lg mt-2 space-x-2">
+						Score: <span class="font-bold text-green-600 text-2xl">{markingResults.totalCorrect || 0}</span>/<span class="font-bold text-2xl">{markingResults.totalQuestions || 40}</span> 
+						| Band Score: <span class="font-bold text-blue-600 text-2xl">{getBandScore(markingResults.totalCorrect || 0)}</span>
 					</p>
 				</div>
 				<button 
