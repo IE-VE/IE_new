@@ -113,7 +113,7 @@
 			</h1>
 			<div class="max-w-6xl mx-auto px-6">
 				<p class="text-xl text-gray-600 dark:text-gray-300 text-center py-4 mb-8">
-					The Reading Test consists of three passages with increasing difficulty and a variety of question types.
+					The Reading Test consists of three passages of increasing difficulty with a total of 14 question types.
 				</p>
 			</div>
 		</div>
@@ -216,7 +216,7 @@
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
 					Question Types
 				</h2>
-				<p class="text-left mb-4 text-xl">There are <b>12</b> main types of reading questions. All questions are worth <b>1 mark</b> and you may encounter several different types within each passage:</p>
+				<p class="text-left mb-4 text-xl">There are <b>14</b> types of reading questions. All questions are worth <b>1 mark</b> and there will usually be three to four different question types within each section:</p>
 				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 					{#each questionTypes as type}
 						<div class="text-center">
