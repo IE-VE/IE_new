@@ -5,7 +5,7 @@
 	const questionTypes = [
 		{
 			title: 'Matching Headings',
-			description: 'Match headings to paragraphs or sections',
+			description: 'Match headings to paragraphs or section',
 			icon: '📋',
 			image: '/reading-images/ielts-reading-headings.png'
 		},
