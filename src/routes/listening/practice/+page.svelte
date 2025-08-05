@@ -8,6 +8,7 @@
 	let showMarkingModal = $state(false);
 	let userAnswers = $state({});
 	let markingResults = $state({});
+	let isMarking = $state(false);
 
 	// Correct answers for the test
 	const correctAnswers = {
@@ -78,7 +79,12 @@
 		return answers;
 	}
 
-	function markAnswers() {
+	async function markAnswers() {
+		isMarking = true;
+		
+		// Show loading for 3 seconds
+		await new Promise(resolve => setTimeout(resolve, 3000));
+		
 		const answers = collectUserAnswers();
 		console.log('Collected answers:', answers); // Debug log
 		userAnswers = answers;
@@ -117,7 +123,11 @@
 		});
 
 		markingResults = { ...results, totalCorrect, totalQuestions: Object.keys(correctAnswers).length };
+		
+		// Close answers modal if it's open and show marking modal directly
+		showAnswersModal = false;
 		showMarkingModal = true;
+		isMarking = false;
 		document.body.style.overflow = 'hidden';
 	}
 
@@ -533,10 +543,19 @@
 			<div class="mt-6 flex flex-col gap-4 items-center">
 				<button
 					type="button"
-					onclick={openAnswersModal}
-					class="inline-flex items-center justify-center px-8 py-4 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors text-lg"
+					onclick={markAnswers}
+					disabled={isMarking}
+					class="inline-flex items-center justify-center px-8 py-4 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors text-lg disabled:opacity-50 disabled:cursor-not-allowed"
 				>
-					✅ View Answers & Mark my Test
+					{#if isMarking}
+						<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+							<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+							<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+						</svg>
+						Processing Test...
+					{:else}
+						✅ Mark my Test
+					{/if}
 				</button>
 			</div>
 		{/if}
@@ -622,9 +641,18 @@
 				<button
 					type="button"
 					onclick={markAnswers}
-					class="px-4 sm:px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm sm:text-base"
+					disabled={isMarking}
+					class="px-4 sm:px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
 				>
-					📝 MARK my TEST
+					{#if isMarking}
+						<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+							<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+							<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+						</svg>
+						Processing Test...
+					{:else}
+						📝 MARK my TEST
+					{/if}
 				</button>
 				<button 
 					class="px-4 sm:px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors text-sm sm:text-base"
@@ -836,7 +864,7 @@
 					class="px-4 sm:px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm sm:text-base"
 					onclick={openAnswersModal}
 				>
-					Query my Results
+					View Answer Key
 				</button>
 				<button 
 					class="px-4 sm:px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors text-sm sm:text-base"
