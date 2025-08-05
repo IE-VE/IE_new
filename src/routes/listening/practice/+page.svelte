@@ -853,15 +853,15 @@
 			</div>
 
 			<!-- Modal Footer -->
-			<div class="flex flex-col sm:flex-row justify-between gap-2 sm:gap-3 p-2 sm:p-3 md:p-6 border-t border-gray-200 dark:border-gray-700">
+			<div class="flex flex-col sm:flex-row justify-between gap-1 sm:gap-3 p-1 sm:p-3 md:p-6 border-t border-gray-200 dark:border-gray-700">
 				<button 
-					class="px-3 sm:px-6 py-1.5 sm:py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-xs sm:text-base font-medium"
+					class="px-2 sm:px-6 py-1 sm:py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-xs sm:text-base font-medium"
 					onclick={openAnswersModal}
 				>
 					View Answer Key
 				</button>
 				<button 
-					class="px-3 sm:px-6 py-1.5 sm:py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors text-xs sm:text-base font-medium"
+					class="px-2 sm:px-6 py-1 sm:py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors text-xs sm:text-base font-medium"
 					onclick={closeMarkingModal}
 				>
 					Close
