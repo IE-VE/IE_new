@@ -677,13 +677,17 @@
 						| Band Score: <span class="font-bold text-blue-600 text-2xl">{getBandScore(markingResults.totalCorrect || 0)}</span>
 					</p>
 				</div>
-				<button 
-					class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-2xl font-bold"
-					onclick={closeMarkingModal}
-					aria-label="Close marking results modal"
-				>
-					×
-				</button>
+				<div class="text-center">
+					<button 
+						class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium"
+						onclick={() => {/* TODO: Add query functionality */}}
+					>
+						Query my Results
+					</button>
+					<p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+						If you are unclear about any answers - just ask!
+					</p>
+				</div>
 			</div>
 
 			<!-- Modal Content -->
