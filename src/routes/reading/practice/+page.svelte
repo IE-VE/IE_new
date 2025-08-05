@@ -649,7 +649,7 @@
 									{/each}
 								</div>
 							</div>
-						</div>
+						
 					{:else if currentSection === 3}
 						<!-- Reading Passage 3 -->
 						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
@@ -750,7 +750,7 @@
 									{/each}
 								</div>
 							</div>
-						</div>
+					
 					{/if}
 				</div>
 			</div>
