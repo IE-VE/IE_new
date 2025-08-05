@@ -658,14 +658,14 @@
 <!-- Marking Results Modal -->
 {#if showMarkingModal}
 	<div 
-		class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-2 sm:p-4 pb-4 sm:pb-8"
+		class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-1 sm:p-4 pb-2 sm:pb-8"
 		onclick={handleMarkingBackdropClick}
 		onkeydown={handleMarkingKeydown}
 		role="dialog"
 		aria-modal="true"
 		aria-labelledby="marking-modal-title"
 	>
-		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-hidden">
+		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-6xl w-full max-h-[98vh] sm:max-h-[92vh] overflow-hidden">
 			<!-- Modal Header -->
 			<div class="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200 dark:border-gray-700">
 				<div>
@@ -691,7 +691,7 @@
 			</div>
 
 			<!-- Modal Content -->
-			<div class="p-4 sm:p-6 overflow-y-auto max-h-[calc(90vh-200px)] sm:max-h-[calc(85vh-200px)]">
+			<div class="p-4 sm:p-6 overflow-y-auto max-h-[calc(98vh-200px)] sm:max-h-[calc(92vh-200px)]">
 				<div class="grid md:grid-cols-2 gap-6 text-sm">
 					<!-- Left Column: Sections 1 & 2 -->
 					<div class="space-y-6">
