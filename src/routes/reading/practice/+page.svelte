@@ -820,6 +820,11 @@
 		color: white !important;
 	}
 
+	/* Disabled input text color (after marking) should be black */
+	input[type="text"]:disabled, select:disabled {
+		color: black !important;
+	}
+
 	input[type="text"]:focus, select:focus {
 		box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
 	}
