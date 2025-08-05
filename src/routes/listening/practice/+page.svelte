@@ -177,6 +177,10 @@
 	}
 
 	function openAnswersModal() {
+		// Close marking modal first if it's open
+		if (showMarkingModal) {
+			showMarkingModal = false;
+		}
 		showAnswersModal = true;
 		document.body.style.overflow = 'hidden';
 	}
