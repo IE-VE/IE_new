@@ -365,7 +365,7 @@
 							onclick={pauseTimer}
 							class="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg"
 						>
-							STOP
+							PAUSE TIMER
 						</button>
 					{:else}
 						<button 
@@ -831,7 +831,7 @@
 	.text-green-600 { color: #047857; } /* green-600 */
 	.dark .text-green-400 { color: #84cc13; } /* dark green-400 */
 	.text-red-600 { color: #b91c1c; } /* red-600 */
-	.dark .text-gray-400 { color: #9ca3af; } /* dark gray-400 */
+	.dark .text-gray-400 { color: #d1d5db; } /* dark gray-300 for better visibility */
 	.text-gray-600 { color: #4b5563; } /* gray-600 */
 
 	/* Tailwind Button Classes (for clarity, assuming these are available or defined elsewhere) */
