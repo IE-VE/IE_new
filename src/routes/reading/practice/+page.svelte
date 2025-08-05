@@ -12,6 +12,90 @@
 	// Timer functionality
 	let timer: number;
 	
+	// Question data based on the HTML file
+	const passage1Questions = {
+		trueFalse: [
+			{ num: 1, text: "The destruction of rainforests is equivalent to one thousand football fields every forty minutes." },
+			{ num: 2, text: "Children only learn about rainforests through formal tuition at school." },
+			{ num: 3, text: "Children's misconceptions about science remain isolated and do not affect other ideas." },
+			{ num: 4, text: "Popular media sometimes provides erroneous information about rainforests." },
+			{ num: 5, text: "Schools always provide opportunities for children to test and refine their ideas." },
+			{ num: 6, text: "The study involved children from different social backgrounds." },
+			{ num: 7, text: "All children in the study were interviewed individually." },
+			{ num: 8, text: "The study was designed to promote conceptual change in children's thinking." }
+		],
+		completion: [
+			{ num: 9, text: "The rate of rainforest destruction is compared to __________ football fields every forty minutes." },
+			{ num: 10, text: "Children may form ideas about rainforests independent of any formal __________." },
+			{ num: 11, text: "Misconceptions become part of an organised __________ framework." },
+			{ num: 12, text: "The study aimed to examine children's __________ thinking about rainforests." },
+			{ num: 13, text: "A secondary aim was to investigate the possibility of promoting __________ change." }
+		],
+		multipleChoice: {
+			num: 14,
+			text: "Which of the following is the most suitable title for Reading Passage 1?",
+			options: [
+				"A. The development of a programme in environmental studies within a science curriculum",
+				"B. Children's ideas about the rainforests and the implications for course design", 
+				"C. The extent to which children have been misled by the media concerning the rainforests",
+				"D. How to collect, collate and describe the ideas of secondary school children",
+				"E. The importance of the rainforests and the reasons for their destruction"
+			]
+		}
+	};
+
+	const passage2Questions = {
+		tableCompletion: [
+			{ num: 15, text: "Taste - some types have poor nerves linked to their __________ are underdeveloped" },
+			{ num: 16, text: "Vision - __________ probably do not have stereoscopic vision" },
+			{ num: 17, text: "Hearing - __________ can hear more of frequency spectrum" },
+			{ num: 18, text: "Hearing - all cetaceans have __________ repertoire than other marine mammals" },
+			{ num: 19, text: "Hearing - baleen whales can communicate over __________ distances" },
+			{ num: 20, text: "Hearing - toothed whales have __________ directional hearing" },
+			{ num: 21, text: "Hearing - dolphins and porpoises can locate objects using __________" }
+		],
+		shortAnswer: [
+			{ num: 22, text: "Which of the senses is described as being involved in mating?" },
+			{ num: 23, text: "Which species swims upside down while eating?" },
+			{ num: 24, text: "What can bottlenose dolphins follow from under the water?" },
+			{ num: 25, text: "Which type of habitat is related to good visual ability?" },
+			{ num: 26, text: "Which of the senses is best developed in cetaceans?" }
+		]
+	};
+
+	const passage3Questions = {
+		matchingHeadings: [
+			{ num: 27, text: "Paragraph A" },
+			{ num: 28, text: "Paragraph B" }, 
+			{ num: 29, text: "Paragraph C" },
+			{ num: 30, text: "Paragraph D" },
+			{ num: 31, text: "Paragraph E" },
+			{ num: 32, text: "Paragraph F" }
+		],
+		completion: [
+			{ num: 33, text: "Monocultures are described as __________ disasters." },
+			{ num: 34, text: "The spread of pests and diseases is __________ in monocultures." },
+			{ num: 35, text: "Genetic uniformity increases the __________ of crop failure." },
+			{ num: 36, text: "Traditional farming maintains __________ diversity." },
+			{ num: 37, text: "Crop rotation helps to maintain soil __________." },
+			{ num: 38, text: "Industrial agriculture focuses on __________ yields." },
+			{ num: 39, text: "Sustainable farming considers __________ impact." },
+			{ num: 40, text: "Biodiversity is essential for __________ security." }
+		]
+	};
+
+	const headingOptions = [
+		"i. The problems with monoculture farming",
+		"ii. Traditional farming methods", 
+		"iii. The benefits of crop rotation",
+		"iv. Environmental concerns in agriculture",
+		"v. The future of sustainable farming",
+		"vi. Economic factors in food production",
+		"vii. The role of technology in farming",
+		"viii. Government policies on agriculture",
+		"ix. International trade in agricultural products"
+	];
+	
 	function startTest() {
 		isTestStarted = true;
 		showInstructions = false;
@@ -88,12 +172,12 @@
 							<div class="grid md:grid-cols-3 gap-4">
 								<div class="text-center">
 									<div class="font-semibold">Passage 1</div>
-									<div class="text-sm">Questions 1-13</div>
+									<div class="text-sm">Questions 1-14</div>
 									<div class="text-sm text-gray-600 dark:text-gray-400">20 minutes recommended</div>
 								</div>
 								<div class="text-center">
 									<div class="font-semibold">Passage 2</div>
-									<div class="text-sm">Questions 14-26</div>
+									<div class="text-sm">Questions 15-26</div>
 									<div class="text-sm text-gray-600 dark:text-gray-400">20 minutes recommended</div>
 								</div>
 								<div class="text-center">
@@ -161,7 +245,7 @@
 							>
 								<div class="font-medium">Passage {section}</div>
 								<div class="text-sm text-gray-600 dark:text-gray-400">
-									{section === 1 ? 'Questions 1-13' : section === 2 ? 'Questions 14-26' : 'Questions 27-40'}
+									{section === 1 ? 'Questions 1-14' : section === 2 ? 'Questions 15-26' : 'Questions 27-40'}
 								</div>
 							</button>
 						{/each}
@@ -185,7 +269,7 @@
 							<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
 								<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Reading Passage 1</h2>
 								<p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
-									You should spend about 20 minutes on Questions 1-13, which are based on Reading Passage 1 below.
+									You should spend about 20 minutes on Questions 1-14, which are based on Reading Passage 1 below.
 								</p>
 								
 								<div class="prose dark:prose-invert max-w-none mb-8">
@@ -202,39 +286,17 @@
 								
 								<div class="space-y-6">
 									<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 1-8</h3>
-									<p class="text-gray-700 dark:text-gray-300">Complete the sentences below. Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p>
+									<p class="text-gray-700 dark:text-gray-300">Do the following statements agree with the information given in Reading Passage 1? Write <strong>TRUE</strong> if the statement agrees with the information, <strong>FALSE</strong> if the statement contradicts the information, or <strong>NOT GIVEN</strong> if there is no information on this.</p>
 									
-									{#each Array(8) as _, i}
+									{#each passage1Questions.trueFalse as question}
 										<div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-											<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-												{i + 1}. Rainforests are being destroyed at the same rate as __________ football fields every forty minutes.
-											</label>
-											<input 
-												type="text" 
-												bind:value={answers[i + 1]}
-												onchange={(e) => updateAnswer(i + 1, e.target.value)}
-												class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-800 dark:text-white"
-												placeholder="Your answer"
-											/>
-										</div>
-									{/each}
-									
-									<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 9-13</h3>
-									<p class="text-gray-700 dark:text-gray-300">Do the following statements agree with the information given in Reading Passage 1? Write:</p>
-									<ul class="list-disc list-inside text-gray-700 dark:text-gray-300 ml-4">
-										<li><strong>TRUE</strong> if the statement agrees with the information</li>
-										<li><strong>FALSE</strong> if the statement contradicts the information</li>
-										<li><strong>NOT GIVEN</strong> if there is no information on this</li>
-									</ul>
-									
-									{#each Array(5) as _, i}
-										<div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-											<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-												{i + 9}. Children only learn about rainforests at school.
+											<label for="q{question.num}" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+												{question.num}. {question.text}
 											</label>
 											<select 
-												bind:value={answers[i + 9]}
-												onchange={(e) => updateAnswer(i + 9, e.target.value)}
+												id="q{question.num}"
+												bind:value={answers[question.num]}
+												onchange={(e) => updateAnswer(question.num, e.target.value)}
 												class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-800 dark:text-white"
 											>
 												<option value="">Select an answer</option>
@@ -244,6 +306,48 @@
 											</select>
 										</div>
 									{/each}
+									
+									<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 9-13</h3>
+									<p class="text-gray-700 dark:text-gray-300">Complete the sentences below. Choose <strong>NO MORE THAN THREE WORDS</strong> from the passage for each answer.</p>
+									
+									{#each passage1Questions.completion as question}
+										<div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+											<label for="q{question.num}" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+												{question.num}. {question.text}
+											</label>
+											<input 
+												id="q{question.num}"
+												type="text" 
+												bind:value={answers[question.num]}
+												onchange={(e) => updateAnswer(question.num, e.target.value)}
+												class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-800 dark:text-white"
+												placeholder="Your answer"
+											/>
+										</div>
+									{/each}
+
+									<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Question 14</h3>
+									<p class="text-gray-700 dark:text-gray-300">Choose the correct letter, <strong>A-E</strong>.</p>
+									
+									<div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+										<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+											{passage1Questions.multipleChoice.num}. {passage1Questions.multipleChoice.text}
+										</label>
+										<div class="space-y-2">
+											{#each passage1Questions.multipleChoice.options as option}
+												<label class="flex items-center">
+													<input 
+														type="radio" 
+														name="q{passage1Questions.multipleChoice.num}" 
+														value={option.charAt(0)}
+														onchange={(e) => updateAnswer(passage1Questions.multipleChoice.num, e.target.value)}
+														class="mr-2"
+													/>
+													<span class="text-gray-700 dark:text-gray-300">{option}</span>
+												</label>
+											{/each}
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -253,57 +357,54 @@
 							<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
 								<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Reading Passage 2</h2>
 								<p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
-									You should spend about 20 minutes on Questions 14-26, which are based on Reading Passage 2 below.
+									You should spend about 20 minutes on Questions 15-26, which are based on Reading Passage 2 below.
 								</p>
 								
 								<div class="prose dark:prose-invert max-w-none mb-8">
-									<h3 class="text-xl font-semibold mb-4">The Development of Museums</h3>
+									<h3 class="text-xl font-semibold mb-4">Whale Senses</h3>
 									
-									<p>The word 'museum' comes from the Greek word 'mouseion', meaning a shrine to the nine Muses, the ancient Greek goddesses of the arts and sciences. Museums have existed in some form since ancient times, but the modern concept of the museum developed during the Renaissance when wealthy individuals began collecting objects of art, natural history, and scientific interest.</p>
+									<p>Whales and dolphins, collectively known as cetaceans, have evolved remarkable sensory adaptations for life in the ocean. Their sensory capabilities differ significantly from those of terrestrial mammals, reflecting their aquatic environment.</p>
 									
-									<p>In the 18th and 19th centuries, museums began to take on their modern form as public institutions dedicated to education and research. The British Museum, founded in 1753, was one of the first national museums open to the public. The Industrial Revolution and colonial expansion led to an explosion in museum collections as explorers and collectors brought back artifacts from around the world.</p>
+									<p>The sense of smell in toothed whales appears to be absent, with no evidence from brain structure to support its existence. In baleen whales, the situation is not certain, although related brain structures are present. Taste capabilities vary among species, with some types having poor development of the nerves linked to taste sensations.</p>
 									
-									<p>Today's museums serve multiple functions: they preserve cultural heritage, conduct research, and educate the public. Modern museum practice emphasizes accessibility and community engagement, with many institutions developing interactive exhibits and digital resources to reach broader audiences.</p>
+									<p>Touch is well-developed in all cetaceans, with the region around the blowhole being particularly sensitive. Vision varies considerably among species. Most baleen whales probably do not have stereoscopic vision, while dolphins and porpoises likely possess this ability. Bottlenose dolphins can even follow objects from underwater.</p>
+									
+									<p>Hearing is by far the best-developed sense in cetaceans. Toothed whales can hear a much wider range of the frequency spectrum than other marine mammals and have a more extensive vocal repertoire. They use echolocation for navigation and hunting. Baleen whales can communicate over vast distances using low-frequency calls.</p>
 								</div>
 								
 								<div class="space-y-6">
-									<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 14-20</h3>
-									<p class="text-gray-700 dark:text-gray-300">Choose the correct letter, <strong>A, B, C or D</strong>.</p>
+									<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 15-21</h3>
+									<p class="text-gray-700 dark:text-gray-300">Complete the table below. Choose <strong>NO MORE THAN THREE WORDS</strong> from Reading Passage 2 for each answer.</p>
 									
-									{#each Array(7) as _, i}
+									{#each passage2Questions.tableCompletion as question}
 										<div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-											<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
-												{i + 14}. The word 'museum' originally meant:
+											<label for="q{question.num}" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+												{question.num}. {question.text}
 											</label>
-											<div class="space-y-2">
-												{#each ['A. a collection of objects', 'B. a shrine to the Muses', 'C. a place of learning', 'D. a public building'] as option}
-													<label class="flex items-center">
-														<input 
-															type="radio" 
-															name="q{i + 14}" 
-															value={option.charAt(0)}
-															onchange={(e) => updateAnswer(i + 14, e.target.value)}
-															class="mr-2"
-														/>
-														<span class="text-gray-700 dark:text-gray-300">{option}</span>
-													</label>
-												{/each}
-											</div>
+											<input 
+												id="q{question.num}"
+												type="text" 
+												bind:value={answers[question.num]}
+												onchange={(e) => updateAnswer(question.num, e.target.value)}
+												class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-800 dark:text-white"
+												placeholder="Your answer"
+											/>
 										</div>
 									{/each}
 									
-									<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 21-26</h3>
-									<p class="text-gray-700 dark:text-gray-300">Complete the summary below. Choose <strong>NO MORE THAN THREE WORDS</strong> from the passage for each answer.</p>
+									<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 22-26</h3>
+									<p class="text-gray-700 dark:text-gray-300">Answer the questions below using <strong>NO MORE THAN THREE WORDS</strong> from the passage for each answer.</p>
 									
-									{#each Array(6) as _, i}
+									{#each passage2Questions.shortAnswer as question}
 										<div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-											<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-												{i + 21}. Museums began as private collections during the __________. 
+											<label for="q{question.num}" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+												{question.num}. {question.text}
 											</label>
 											<input 
+												id="q{question.num}"
 												type="text" 
-												bind:value={answers[i + 21]}
-												onchange={(e) => updateAnswer(i + 21, e.target.value)}
+												bind:value={answers[question.num]}
+												onchange={(e) => updateAnswer(question.num, e.target.value)}
 												class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-800 dark:text-white"
 												placeholder="Your answer"
 											/>
@@ -322,62 +423,66 @@
 								</p>
 								
 								<div class="prose dark:prose-invert max-w-none mb-8">
-									<h3 class="text-xl font-semibold mb-4">The Impact of Artificial Intelligence</h3>
+									<h3 class="text-xl font-semibold mb-4">Sustainable Agriculture and Food Security</h3>
 									
-									<p>Artificial Intelligence (AI) has emerged as one of the most transformative technologies of the 21st century. From its humble beginnings in academic research laboratories, AI has rapidly evolved to become an integral part of many aspects of modern life, revolutionizing industries and changing the way we work, communicate, and solve problems.</p>
+									<div class="mb-4"><strong>A</strong> Modern agriculture faces unprecedented challenges in feeding a growing global population while maintaining environmental sustainability. The industrial approach to farming, characterized by monocultures and heavy chemical inputs, has increased yields but created new problems.</div>
 									
-									<p>The current surge in AI development can be attributed to several factors: the exponential growth in computing power, the availability of vast amounts of data, and significant advances in machine learning algorithms. These developments have enabled AI systems to achieve remarkable performance in tasks that were once thought to be the exclusive domain of human intelligence.</p>
+									<div class="mb-4"><strong>B</strong> Monoculture farming, where large areas are planted with a single crop variety, presents significant risks. These agricultural disasters make crops vulnerable to pests and diseases, which can spread rapidly through genetically uniform populations.</div>
 									
-									<p>However, the rapid advancement of AI technology also raises important questions about its societal impact. While AI has the potential to solve many global challenges, it also presents risks that need to be carefully managed through appropriate governance and ethical frameworks.</p>
+									<div class="mb-4"><strong>C</strong> Traditional farming methods maintained crop diversity through practices like crop rotation and intercropping. These techniques not only preserved genetic diversity but also helped maintain soil fertility and reduce pest problems naturally.</div>
+									
+									<div class="mb-4"><strong>D</strong> The environmental impact of industrial agriculture extends beyond the farm. Excessive use of fertilizers and pesticides contaminates water sources and destroys beneficial insects and soil organisms essential for ecosystem health.</div>
+									
+									<div class="mb-4"><strong>E</strong> Sustainable farming practices offer solutions that balance productivity with environmental protection. These approaches focus on long-term soil health, biodiversity conservation, and reduced chemical inputs while maintaining economic viability.</div>
+									
+									<div class="mb-4"><strong>F</strong> Food security depends not only on quantity but also on the resilience of agricultural systems. Biodiversity is essential for developing crops that can withstand climate change, diseases, and changing environmental conditions.</div>
 								</div>
 								
 								<div class="space-y-6">
-									<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 27-33</h3>
-									<p class="text-gray-700 dark:text-gray-300">Match each heading with the correct paragraph. There are more headings than paragraphs.</p>
+									<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 27-32</h3>
+									<p class="text-gray-700 dark:text-gray-300">Match each paragraph with the correct heading. There are more headings than paragraphs.</p>
 									
 									<div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg mb-4">
 										<h4 class="font-semibold mb-2">List of Headings:</h4>
-										<ol class="list-[upper-roman] list-inside space-y-1 text-sm">
-											<li>The origins of AI technology</li>
-											<li>Factors driving AI development</li>
-											<li>Challenges and concerns</li>
-											<li>Future predictions</li>
-											<li>Economic implications</li>
-											<li>Educational applications</li>
-											<li>Healthcare innovations</li>
+										<ol class="list-none space-y-1 text-sm">
+											{#each headingOptions as heading}
+												<li>{heading}</li>
+											{/each}
 										</ol>
 									</div>
 									
-									{#each Array(3) as _, i}
+									{#each passage3Questions.matchingHeadings as question}
 										<div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-											<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-												{i + 27}. Paragraph {i + 1}
+											<label for="q{question.num}" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+												{question.num}. {question.text}
 											</label>
 											<select 
-												bind:value={answers[i + 27]}
-												onchange={(e) => updateAnswer(i + 27, e.target.value)}
+												id="q{question.num}"
+												bind:value={answers[question.num]}
+												onchange={(e) => updateAnswer(question.num, e.target.value)}
 												class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-800 dark:text-white"
 											>
 												<option value="">Select a heading</option>
-												{#each ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'] as heading}
+												{#each ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix'] as heading}
 													<option value={heading}>{heading}</option>
 												{/each}
 											</select>
 										</div>
 									{/each}
 									
-									<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 34-40</h3>
-									<p class="text-gray-700 dark:text-gray-300">Answer the questions below. Choose <strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong> from the passage for each answer.</p>
+									<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 33-40</h3>
+									<p class="text-gray-700 dark:text-gray-300">Complete the sentences below. Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p>
 									
-									{#each Array(7) as _, i}
+									{#each passage3Questions.completion as question}
 										<div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-											<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-												{i + 34}. In which century has AI become most transformative?
+											<label for="q{question.num}" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+												{question.num}. {question.text}
 											</label>
 											<input 
+												id="q{question.num}"
 												type="text" 
-												bind:value={answers[i + 34]}
-												onchange={(e) => updateAnswer(i + 34, e.target.value)}
+												bind:value={answers[question.num]}
+												onchange={(e) => updateAnswer(question.num, e.target.value)}
 												class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-800 dark:text-white"
 												placeholder="Your answer"
 											/>
@@ -399,7 +504,7 @@
 		line-height: 1.7;
 	}
 	
-	.prose p {
+	.prose p, .prose div {
 		margin-bottom: 1rem;
 	}
 	
