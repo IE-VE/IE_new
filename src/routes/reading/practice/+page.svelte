@@ -815,6 +815,11 @@
 		color: black !important;
 	}
 
+	/* Dark mode input text color */
+	:global(.dark) input[type="text"], :global(.dark) select {
+		color: white !important;
+	}
+
 	input[type="text"]:focus, select:focus {
 		box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
 	}
