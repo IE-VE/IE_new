@@ -709,18 +709,18 @@
 							<!-- End of Test Section -->
 							<div class="mt-8 border-l-4 border-teal-400 bg-teal-50 p-4 rounded-r-lg dark:bg-teal-900/20 dark:border-teal-500">
 								<center>
-									<p class="text-sm text-gray-900 dark:text-gray-100">
+									<p class="text-sm text-gray-900 dark:text-gray-100 mb-2">
 										<strong>END OF TEST</strong>
 									</p>
 								</center>
 								<p class="text-sm text-gray-900 dark:text-gray-100">
-									That is the end of the Reading test. You have completed all 40 questions.
+									Use any remaining time to check your answers and then click the button below to view your results.
 								</p>
 								<p class="text-sm text-gray-900 dark:text-gray-100 mt-2">
 									<a
 										href="/reading-images/ielts-reading-answer-sheet.jpg"
 										download="IELTS-Reading-Answer-Sheet.jpg"
-										class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline"
+										class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline mt-2"
 									>
 										Download official answer sheet
 									</a>
