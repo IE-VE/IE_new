@@ -750,7 +750,7 @@
 											</svg>
 											Processing Test...
 										{:else}
-											✅ View Answers & Mark my Test
+											✅ Mark my Test
 										{/if}
 									</button>
 								</div>
