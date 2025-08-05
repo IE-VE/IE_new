@@ -665,7 +665,7 @@
 		aria-modal="true"
 		aria-labelledby="marking-modal-title"
 	>
-		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-hidden"></div>
+		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-hidden">
 			<!-- Modal Header -->
 			<div class="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200 dark:border-gray-700">
 				<div>
@@ -691,7 +691,7 @@
 			</div>
 
 			<!-- Modal Content -->
-			<div class="p-4 sm:p-6 overflow-y-auto max-h-[calc(90vh-200px)] sm:max-h-[calc(85vh-200px)]"></div>
+			<div class="p-4 sm:p-6 overflow-y-auto max-h-[calc(90vh-200px)] sm:max-h-[calc(85vh-200px)]">
 				<div class="grid md:grid-cols-2 gap-6 text-sm">
 					<!-- Left Column: Sections 1 & 2 -->
 					<div class="space-y-6">
