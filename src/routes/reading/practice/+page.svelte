@@ -347,104 +347,101 @@
 		</div>
 	{:else}
 		<!-- Test Interface -->
-		<div class="flex h-screen">
-			<!-- Timer and Navigation Sidebar -->
-			<div class="w-64 bg-white dark:bg-gray-800 shadow-lg p-4">
-				<div class="text-center mb-6">
+		<div class="max-w-4xl mx-auto px-4">
+			<!-- Timer and Navigation Header -->
+			<div class="rounded-lg shadow-md p-4 mb-6 bg-white dark:bg-gray-800">
+				<!-- Timer Display -->
+				<div class="text-center mb-4">
 					<div class="text-2xl font-bold text-teal-600 dark:text-teal-400">
 						{formatTime(timeRemaining)}
 					</div>
 					<div class="text-sm text-gray-600 dark:text-gray-400">Time Remaining</div>
 				</div>
 
-				<div class="space-y-4">
-					<h3 class="font-semibold text-gray-900 dark:text-white">Sections</h3>
-					<div class="space-y-2">
-						{#each [1, 2, 3] as section}
-							<button 
-								onclick={() => goToSection(section)}
-								class="w-full text-left p-3 rounded-lg transition-colors {currentSection === section ? 'bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-300' : 'hover:bg-gray-100 dark:hover:bg-gray-700'}"
-							>
-								<div class="font-medium">Passage {section}</div>
-								<div class="text-sm text-gray-600 dark:text-gray-400">
-									{section === 1 ? 'Questions 1-14' : section === 2 ? 'Questions 15-26' : 'Questions 27-40'}
-								</div>
-							</button>
-						{/each}
-					</div>
+				<!-- Navigation Buttons -->
+				<div class="flex flex-wrap justify-center gap-2 mb-4">
+					{#each [1, 2, 3] as section}
+						<button 
+							onclick={() => goToSection(section)}
+							class="px-4 py-2 rounded-md font-medium transition-colors {currentSection === section ? 'bg-teal-600 text-white' : 'bg-teal-50 text-gray-700 hover:bg-teal-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'}"
+						>
+							Passage {section}
+						</button>
+					{/each}
 				</div>
 
-				<button 
-					onclick={completeTest}
-					class="w-full mt-8 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg"
-				>
-					Submit Test
-				</button>
+				<!-- Submit and Action Buttons -->
+				<div class="flex flex-col gap-3 items-center">
+					<button 
+						onclick={completeTest}
+						class="px-6 py-2 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg"
+					>
+						Submit Test
+					</button>
 
-				<!-- Test Actions -->
-				<div class="mt-6 space-y-3">
-					{#if !hasMarked}
-						<button onclick={markTest} class="w-full bg-primary hover:bg-primary-700 text-white font-bold py-2 px-4 rounded-lg">
-							Mark My Test
-						</button>
-					{/if}
-
-					{#if hasMarked}
-						{#if showAnswers}
-							<button onclick={hideAnswers} class="w-full bg-light hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-lg">
-								Hide Answers
+					<div class="flex flex-wrap gap-2 justify-center">
+						{#if !hasMarked}
+							<button onclick={markTest} class="px-4 py-2 bg-primary hover:bg-primary-700 text-white font-bold rounded-lg">
+								Mark My Test
 							</button>
+						{/if}
+
+						{#if hasMarked}
+							{#if showAnswers}
+								<button onclick={hideAnswers} class="px-4 py-2 bg-light hover:bg-gray-200 text-gray-800 font-bold rounded-lg">
+									Hide Answers
+								</button>
+							{:else}
+								<button onclick={viewAnswers} class="px-4 py-2 bg-alternative hover:bg-blue-700 text-white font-bold rounded-lg">
+									View Answers
+								</button>
+							{/if}
 						{:else}
-							<button onclick={viewAnswers} class="w-full bg-alternative hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
+							<button onclick={viewAnswers} class="px-4 py-2 bg-alternative hover:bg-blue-700 text-white font-bold rounded-lg">
 								View Answers
 							</button>
 						{/if}
-					{:else}
-						<button onclick={viewAnswers} class="w-full bg-alternative hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
-							View Answers
-						</button>
+					</div>
+
+					<!-- Results Display -->
+					{#if results && showAnswers}
+						<div class="mt-4 rounded-lg bg-gray-50 p-4 dark:bg-gray-700 w-full max-w-md">
+							<h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white text-center">Test Results</h3>
+							<div class="mb-4 text-center">
+								<div class="text-2xl font-bold text-teal-600 dark:text-teal-400">
+									{results.score}/40
+								</div>
+								<div class="text-sm text-gray-600 dark:text-gray-300">
+									{results.percentage}% Correct
+								</div>
+							</div>
+
+							<!-- Band Score Estimate -->
+							<div class="text-center">
+								<div class="text-lg font-semibold text-gray-900 dark:text-white">
+									Estimated Band Score: 
+									<span class="text-teal-600 dark:text-teal-400">
+										{#if results.score >= 37}7.5-9.0
+										{:else if results.score >= 33}7.0
+										{:else if results.score >= 30}6.5
+										{:else if results.score >= 27}6.0
+										{:else if results.score >= 23}5.5
+										{:else if results.score >= 19}5.0
+										{:else if results.score >= 15}4.5
+										{:else if results.score >= 11}4.0
+										{:else if results.score >= 8}3.5
+										{:else if results.score >= 5}3.0
+										{:else}2.5-3.5{/if}
+									</span>
+								</div>
+							</div>
+						</div>
 					{/if}
 				</div>
-
-				<!-- Results Display -->
-				{#if results && showAnswers}
-					<div class="mt-6 rounded-lg bg-gray-50 p-4 dark:bg-gray-700">
-						<h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">Test Results</h3>
-						<div class="mb-4 text-center">
-							<div class="text-2xl font-bold text-teal-600 dark:text-teal-400">
-								{results.score}/40
-							</div>
-							<div class="text-sm text-gray-600 dark:text-gray-300">
-								{results.percentage}% Correct
-							</div>
-						</div>
-
-						<!-- Band Score Estimate -->
-						<div class="mb-4 text-center">
-							<div class="text-lg font-semibold text-gray-900 dark:text-white">
-								Estimated Band Score: 
-								<span class="text-teal-600 dark:text-teal-400">
-									{#if results.score >= 37}7.5-9.0
-									{:else if results.score >= 33}7.0
-									{:else if results.score >= 30}6.5
-									{:else if results.score >= 27}6.0
-									{:else if results.score >= 23}5.5
-									{:else if results.score >= 19}5.0
-									{:else if results.score >= 15}4.5
-									{:else if results.score >= 11}4.0
-									{:else if results.score >= 8}3.5
-									{:else if results.score >= 5}3.0
-									{:else}2.5-3.5{/if}
-								</span>
-							</div>
-						</div>
-					</div>
-				{/if}
 			</div>
 
 			<!-- Main Content Area -->
-			<div class="flex-1 overflow-y-auto">
-				<div class="container mx-auto px-6 py-8">
+			<div class="pb-8"
 					{#if currentSection === 1}
 						<!-- Reading Passage 1 -->
 						<div class="max-w-4xl mx-auto">
@@ -572,8 +569,7 @@
 						</div>
 					{:else if currentSection === 2}
 						<!-- Reading Passage 2 -->
-						<div class="max-w-4xl mx-auto">
-							<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
 								<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Reading Passage 2</h2>
 								<div class="mb-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
 									<p class="mb-4 text-gray-700 dark:text-gray-300">
@@ -656,8 +652,7 @@
 						</div>
 					{:else if currentSection === 3}
 						<!-- Reading Passage 3 -->
-						<div class="max-w-4xl mx-auto">
-							<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
 								<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Reading Passage 3</h2>
 								<div class="mb-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
 									<p class="mb-4 text-gray-700 dark:text-gray-300">
@@ -759,7 +754,6 @@
 					{/if}
 				</div>
 			</div>
-		</div>
 	{/if}
 </div>
 
