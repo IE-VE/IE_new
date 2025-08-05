@@ -358,8 +358,27 @@
 					<div class="text-sm text-gray-600 dark:text-gray-400">Time Remaining</div>
 				</div>
 
+				<!-- Timer Control Buttons -->
+				<div class="flex justify-center gap-3 mb-4">
+					{#if isActive}
+						<button 
+							onclick={pauseTimer}
+							class="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg"
+						>
+							STOP
+						</button>
+					{:else}
+						<button 
+							onclick={startTimer}
+							class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg"
+						>
+							START
+						</button>
+					{/if}
+				</div>
+
 				<!-- Navigation Buttons -->
-				<div class="flex flex-wrap justify-center gap-2 mb-4">
+				<div class="flex flex-wrap justify-center gap-2">
 					{#each [1, 2, 3] as section}
 						<button 
 							onclick={() => goToSection(section)}
@@ -368,75 +387,6 @@
 							Passage {section}
 						</button>
 					{/each}
-				</div>
-
-				<!-- Submit and Action Buttons -->
-				<div class="flex flex-col gap-3 items-center">
-					<button 
-						onclick={completeTest}
-						class="px-6 py-2 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg"
-					>
-						Submit Test
-					</button>
-
-					<div class="flex flex-wrap gap-2 justify-center">
-						{#if !hasMarked}
-							<button onclick={markTest} class="px-4 py-2 bg-primary hover:bg-primary-700 text-white font-bold rounded-lg">
-								Mark My Test
-							</button>
-						{/if}
-
-						{#if hasMarked}
-							{#if showAnswers}
-								<button onclick={hideAnswers} class="px-4 py-2 bg-light hover:bg-gray-200 text-gray-800 font-bold rounded-lg">
-									Hide Answers
-								</button>
-							{:else}
-								<button onclick={viewAnswers} class="px-4 py-2 bg-alternative hover:bg-blue-700 text-white font-bold rounded-lg">
-									View Answers
-								</button>
-							{/if}
-						{:else}
-							<button onclick={viewAnswers} class="px-4 py-2 bg-alternative hover:bg-blue-700 text-white font-bold rounded-lg">
-								View Answers
-							</button>
-						{/if}
-					</div>
-
-					<!-- Results Display -->
-					{#if results && showAnswers}
-						<div class="mt-4 rounded-lg bg-gray-50 p-4 dark:bg-gray-700 w-full max-w-md">
-							<h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white text-center">Test Results</h3>
-							<div class="mb-4 text-center">
-								<div class="text-2xl font-bold text-teal-600 dark:text-teal-400">
-									{results.score}/40
-								</div>
-								<div class="text-sm text-gray-600 dark:text-gray-300">
-									{results.percentage}% Correct
-								</div>
-							</div>
-
-							<!-- Band Score Estimate -->
-							<div class="text-center">
-								<div class="text-lg font-semibold text-gray-900 dark:text-white">
-									Estimated Band Score: 
-									<span class="text-teal-600 dark:text-teal-400">
-										{#if results.score >= 37}7.5-9.0
-										{:else if results.score >= 33}7.0
-										{:else if results.score >= 30}6.5
-										{:else if results.score >= 27}6.0
-										{:else if results.score >= 23}5.5
-										{:else if results.score >= 19}5.0
-										{:else if results.score >= 15}4.5
-										{:else if results.score >= 11}4.0
-										{:else if results.score >= 8}3.5
-										{:else if results.score >= 5}3.0
-										{:else}2.5-3.5{/if}
-									</span>
-								</div>
-							</div>
-						</div>
-					{/if}
 				</div>
 			</div>
 
@@ -748,6 +698,84 @@
 											{/if}
 										</div>
 									{/each}
+
+									<!-- End of Test Section -->
+									<div class="mt-12 border-t-2 border-gray-300 dark:border-gray-600 pt-8">
+										<div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg text-center">
+											<h3 class="text-2xl font-bold text-red-700 dark:text-red-300 mb-4">
+												END OF TEST
+											</h3>
+											<p class="text-gray-700 dark:text-gray-300 mb-6">
+												That is the end of the Reading test. You have completed all 40 questions.
+											</p>
+											
+											<!-- Answer Sheet Download -->
+											<div class="mb-6">
+												<a 
+													href="/reading-images/ielts-reading-answer-sheet.jpg"
+													download="IELTS-Reading-Answer-Sheet.jpg"
+													class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+												>
+													<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+														<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+													</svg>
+													Download Answer Sheet
+												</a>
+											</div>
+
+											<!-- View Answers & Mark Test Button -->
+											<button 
+												onclick={() => { if (!hasMarked) markTest(); showAnswers = true; }}
+												class="w-full max-w-md px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-lg text-lg transition-colors"
+											>
+												View Answers & Mark My Test
+											</button>
+
+											<!-- Results Display -->
+											{#if results && showAnswers}
+												<div class="mt-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700 max-w-md mx-auto">
+													<h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white text-center">Test Results</h3>
+													<div class="mb-4 text-center">
+														<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">
+															{results.score}/40
+														</div>
+														<div class="text-sm text-gray-600 dark:text-gray-300">
+															{results.percentage}% Correct
+														</div>
+													</div>
+
+													<!-- Band Score Estimate -->
+													<div class="text-center">
+														<div class="text-lg font-semibold text-gray-900 dark:text-white">
+															Estimated Band Score: 
+															<span class="text-teal-600 dark:text-teal-400">
+																{#if results.score >= 37}7.5-9.0
+																{:else if results.score >= 33}7.0
+																{:else if results.score >= 30}6.5
+																{:else if results.score >= 27}6.0
+																{:else if results.score >= 23}5.5
+																{:else if results.score >= 19}5.0
+																{:else if results.score >= 15}4.5
+																{:else if results.score >= 11}4.0
+																{:else if results.score >= 8}3.5
+																{:else if results.score >= 5}3.0
+																{:else}2.5-3.5{/if}
+															</span>
+														</div>
+													</div>
+
+													<div class="mt-4 text-center">
+														<button 
+															onclick={() => window.location.reload()}
+															class="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg"
+														>
+															Retake Test
+														</button>
+													</div>
+												</div>
+											{/if}
+										</div>
+									</div>
 								</div>
 							</div>
 					
