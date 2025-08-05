@@ -426,7 +426,7 @@
 											</label>
 											<select
 												bind:value={answers[question.num]}
-												class="w-full rounded-lg border p-2 dark:bg-gray-700 {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
+												class="w-full rounded-lg border p-2 text-black dark:bg-gray-700 dark:text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
 											>
 												<option value="">Select answer</option>
 												<option value="TRUE">TRUE</option>
@@ -439,7 +439,7 @@
 														<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
 													{:else}
 														<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-														<span class="text-gray-600 dark:text-gray-400">
+														<span class="text-gray-600 dark:text-white">
 															Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
 														</span>
 													{/if}
@@ -458,7 +458,7 @@
 											</label>
 											<select
 												bind:value={answers[question.num]}
-												class="w-full rounded-lg border p-2 dark:bg-gray-700 {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
+												class="w-full rounded-lg border p-2 text-black dark:bg-gray-700 dark:text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
 											>
 												<option value="">Select answer</option>
 												{#each ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P'] as option}
@@ -471,7 +471,7 @@
 														<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
 													{:else}
 														<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-														<span class="text-gray-600 dark:text-gray-400">
+														<span class="text-gray-600 dark:text-white">
 															Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
 														</span>
 													{/if}
@@ -507,7 +507,7 @@
 													<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
 												{:else}
 													<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-													<span class="text-gray-600 dark:text-gray-400">
+													<span class="text-gray-600 dark:text-white">
 														Correct answer: {results.questions[passage1Questions.multipleChoice.num].correctAnswers.join(' or ')}
 													</span>
 												{/if}
@@ -552,7 +552,7 @@
 												type="text"
 												bind:value={answers[question.num]}
 												placeholder="Your answer..."
-												class="w-full rounded-lg border p-2 dark:bg-gray-700 {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
+												class="w-full rounded-lg border p-2 text-black dark:bg-gray-700 dark:text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
 											/>
 											{#if showAnswers && results?.questions[question.num]}
 												<div class="mt-2 text-sm">
@@ -560,7 +560,7 @@
 														<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
 													{:else}
 														<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-														<span class="text-gray-600 dark:text-gray-400">
+														<span class="text-gray-600 dark:text-white">
 															Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
 														</span>
 													{/if}
@@ -581,7 +581,7 @@
 												type="text"
 												bind:value={answers[question.num]}
 												placeholder="Your answer..."
-												class="w-full rounded-lg border p-2 dark:bg-gray-700 {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
+												class="w-full rounded-lg border p-2 text-black dark:bg-gray-700 dark:text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
 											/>
 											{#if showAnswers && results?.questions[question.num]}
 												<div class="mt-2 text-sm">
@@ -589,7 +589,7 @@
 														<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
 													{:else}
 														<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-														<span class="text-gray-600 dark:text-gray-400">
+														<span class="text-gray-600 dark:text-white">
 															Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
 														</span>
 													{/if}
@@ -599,7 +599,7 @@
 									{/each}
 								</div>
 							</div>
-						
+
 					{:else if currentSection === 3}
 						<!-- Reading Passage 3 -->
 						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
@@ -647,7 +647,7 @@
 											<select 
 												id="q{question.num}"
 												bind:value={answers[question.num]}
-												class="w-full rounded-lg border p-2 dark:bg-gray-700 {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
+												class="w-full rounded-lg border p-2 text-black dark:bg-gray-700 dark:text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
 											>
 												<option value="">Select a heading</option>
 												{#each ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix'] as heading}
@@ -660,7 +660,7 @@
 														<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
 													{:else}
 														<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-														<span class="text-gray-600 dark:text-gray-400">
+														<span class="text-gray-600 dark:text-white">
 															Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
 														</span>
 													{/if}
@@ -682,7 +682,7 @@
 												type="text" 
 												bind:value={answers[question.num]}
 												placeholder="Your answer"
-												class="w-full rounded-lg border p-2 dark:bg-gray-700 {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
+												class="w-full rounded-lg border p-2 text-black dark:bg-gray-700 dark:text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
 											/>
 											{#if showAnswers && results?.questions[question.num]}
 												<div class="mt-2 text-sm">
@@ -690,7 +690,7 @@
 														<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
 													{:else}
 														<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-														<span class="text-gray-600 dark:text-gray-400">
+														<span class="text-gray-600 dark:text-white">
 															Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
 														</span>
 													{/if}
@@ -785,7 +785,7 @@
 									{/if}
 								</div>
 							</div>
-					
+
 					{/if}
 				</div>
 			</div>
@@ -823,7 +823,7 @@
 	.border-green-500 { border-color: #10b981; } /* green-500 */
 	.bg-green-50 { background-color: #f0fdf4; } /* green-50 */
 	.dark .bg-green-900\/20 { background-color: rgba(16, 185, 129, 0.2); } /* dark green-900/20 */
-	
+
 	.border-red-500 { border-color: #ef4444; } /* red-500 */
 	.bg-red-50 { background-color: #fef2f2; } /* red-50 */
 	.dark .bg-red-900\/20 { background-color: rgba(239, 68, 68, 0.2); } /* dark red-900/20 */
