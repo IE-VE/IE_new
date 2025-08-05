@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount } from '？';
 
 	let currentSection = $state(1);
 	let timeRemaining = $state(60 * 60); // 60 minutes in seconds
@@ -87,7 +87,7 @@
 			text: "Which of the following is the most suitable title for Reading Passage 1?",
 			options: [
 				"A. The development of a programme in environmental studies within a science curriculum",
-				"B. Children's ideas about the rainforests and the implications for course design", 
+				"B. Children's ideas about the rainforests and the implications for course design",
 				"C. The extent to which children have been misled by the media concerning the rainforests",
 				"D. How to collect, collate and describe the ideas of secondary school children",
 				"E. The importance of the rainforests and the reasons for their destruction"
@@ -117,7 +117,7 @@
 	const passage3Questions = {
 		matchingHeadings: [
 			{ num: 27, text: "Paragraph A" },
-			{ num: 28, text: "Paragraph B" }, 
+			{ num: 28, text: "Paragraph B" },
 			{ num: 29, text: "Paragraph C" },
 			{ num: 30, text: "Paragraph D" },
 			{ num: 31, text: "Paragraph E" },
@@ -137,7 +137,7 @@
 
 	const headingOptions = [
 		"i. The problems with monoculture farming",
-		"ii. Traditional farming methods", 
+		"ii. Traditional farming methods",
 		"iii. The benefits of crop rotation",
 		"iv. Environmental concerns in agriculture",
 		"v. The future of sustainable farming",
@@ -226,7 +226,7 @@
 		isTestCompleted = true;
 		clearInterval(timer);
 		// Optionally call markTest() here if you want results immediately upon completion
-		// markTest(); 
+		// markTest();
 	}
 
 	function formatTime(seconds: number): string {
@@ -312,7 +312,7 @@
 					</div>
 
 					<div class="text-center mt-8">
-						<button 
+						<button
 							onclick={startTest}
 							class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors"
 						>
@@ -335,7 +335,7 @@
 						<p class="text-gray-600 dark:text-gray-400">
 							Answers submitted: {Object.keys(answers).length} out of 40
 						</p>
-						<button 
+						<button
 							onclick={() => window.location.reload()}
 							class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded-lg"
 						>
@@ -361,14 +361,14 @@
 				<!-- Timer Control Buttons -->
 				<div class="flex justify-center gap-3 mb-4">
 					{#if isActive}
-						<button 
+						<button
 							onclick={pauseTimer}
 							class="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg"
 						>
 							PAUSE TIMER
 						</button>
 					{:else}
-						<button 
+						<button
 							onclick={startTimer}
 							class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg"
 						>
@@ -380,7 +380,7 @@
 				<!-- Navigation Buttons -->
 				<div class="flex flex-wrap justify-center gap-2">
 					{#each [1, 2, 3] as section}
-						<button 
+						<button
 							onclick={() => goToSection(section)}
 							class="px-4 py-2 rounded-md font-medium transition-colors {currentSection === section ? 'bg-teal-600 text-white' : 'bg-teal-50 text-gray-700 hover:bg-teal-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'}"
 						>
@@ -394,401 +394,401 @@
 			<div class="pb-8">
 				{#if currentSection === 1}
 					<!-- Reading Passage 1 -->
-						<div class="max-w-4xl mx-auto">
-							<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-								<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Reading Passage 1</h2>
-								<div class="mb-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
-									<p class="mb-4 text-gray-700 dark:text-gray-300">
-										You should spend about 20 minutes on Questions 1–14, which are based on Reading Passage 1 below.
-									</p>
-								</div>
+					<div class="max-w-4xl mx-auto">
+						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+							<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Reading Passage 1</h2>
+							<div class="mb-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
+								<p class="mb-4 text-gray-700 dark:text-gray-300">
+									You should spend about 20 minutes on Questions 1–14, which are based on Reading Passage 1 below.
+								</p>
+							</div>
 
-								<div class="prose dark:prose-invert max-w-none mb-8">
-									<h3 class="text-xl font-semibold mb-4">Children's Ideas About Rainforests</h3>
+							<div class="prose dark:prose-invert max-w-none mb-8">
+								<h3 class="text-xl font-semibold mb-4">Children's Ideas About Rainforests</h3>
 
-									<p>Adults and children are frequently confronted with statements about the alarming rate of loss of tropical rainforests. For example, one graphic illustration to which children might readily relate is the estimate that rainforests are being destroyed at a rate equivalent to one thousand football fields every forty minutes – about the duration of a normal classroom period. In the face of the frequent and often vivid media coverage, it is likely that children will have formed ideas about rainforests – what and where they are, why they are important, what endangers them – independent of any formal tuition. It is also possible that some of these ideas will be mistaken.</p>
+								<p>Adults and children are frequently confronted with statements about the alarming rate of loss of tropical rainforests. For example, one graphic illustration to which children might readily relate is the estimate that rainforests are being destroyed at a rate equivalent to one thousand football fields every forty minutes – about the duration of a normal classroom period. In the face of the frequent and often vivid media coverage, it is likely that children will have formed ideas about rainforests – what and where they are, why they are important, what endangers them – independent of any formal tuition. It is also possible that some of these ideas will be mistaken.</p>
 
-									<p>Many studies have shown that children harbour misconceptions about 'pure', curriculum science. These misconceptions do not remain isolated but become incorporated into a multifaceted, but organised, conceptual framework, making it and the component ideas, some of which are erroneous, more robust but also accessible to modification. These ideas may be developed by children absorbing ideas through the popular media. Sometimes this information may be erroneous. It seems schools may not be providing an opportunity for children to re-express their ideas and so have them tested and refined by teachers and their peers.</p>
+								<p>Many studies have shown that children harbour misconceptions about 'pure', curriculum science. These misconceptions do not remain isolated but become incorporated into a multifaceted, but organised, conceptual framework, making it and the component ideas, some of which are erroneous, more robust but also accessible to modification. These ideas may be developed by children absorbing ideas through the popular media. Sometimes this information may be erroneous. It seems schools may not be providing an opportunity for children to re-express their ideas and so have them tested and refined by teachers and their peers.</p>
 
-									<p>Despite the extensive coverage in the popular media of the destruction of rainforests, little formal information is available about children's ideas in this area. The aim of the research was to elicit children's scientific thinking about rainforests and to examine the ideas they have about them. A secondary aim was to investigate the possibility of promoting conceptual change.</p>
+								<p>Despite the extensive coverage in the popular media of the destruction of rainforests, little formal information is available about children's ideas in this area. The aim of the research was to elicit children's scientific thinking about rainforests and to examine the ideas they have about them. A secondary aim was to investigate the possibility of promoting conceptual change.</p>
 
-									<p>The study involved 96 children aged 9 to 16 from a middle-class suburban primary school. Children were grouped according to their age: 9-10 years (n=32), 11-12 years (n=32), and 13-16 years (n=32). All children were individually interviewed about their ideas about rainforests. The interviews were tape-recorded and transcribed.</p>
-								</div>
+								<p>The study involved 96 children aged 9 to 16 from a middle-class suburban primary school. Children were grouped according to their age: 9-10 years (n=32), 11-12 years (n=32), and 13-16 years (n=32). All children were individually interviewed about their ideas about rainforests. The interviews were tape-recorded and transcribed.</p>
+							</div>
 
-								<div class="space-y-6">
-									<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 1-8</h3>
-									<p class="text-gray-700 dark:text-gray-300">Do the following statements agree with the information given in Reading Passage 1? Write <strong>TRUE</strong> if the statement agrees with the information, <strong>FALSE</strong> if the statement contradicts the information, or <strong>NOT GIVEN</strong> if there is no information on this.</p>
+							<div class="space-y-6">
+								<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 1-8</h3>
+								<p class="text-gray-700 dark:text-gray-300">Do the following statements agree with the information given in Reading Passage 1? Write <strong>TRUE</strong> if the statement agrees with the information, <strong>FALSE</strong> if the statement contradicts the information, or <strong>NOT GIVEN</strong> if there is no information on this.</p>
 
-									{#each passage1Questions.trueFalse as question}
-										<div class="question mb-4">
-											<label class="mb-2 block font-medium text-gray-900 dark:text-white">
-												{question.num}. {question.text}
-											</label>
-											<select
-												bind:value={answers[question.num]}
-												class="w-full rounded-lg border p-2 text-black dark:bg-gray-700 dark:text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
-											>
-												<option value="">Select answer</option>
-												<option value="TRUE">TRUE</option>
-												<option value="FALSE">FALSE</option>
-												<option value="NOT GIVEN">NOT GIVEN</option>
-											</select>
-											{#if showAnswers && results?.questions[question.num]}
-												<div class="mt-2 text-sm">
-													{#if results.questions[question.num].isCorrect}
-														<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
-													{:else}
-														<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-														<span class="text-gray-600 dark:text-white">
-															Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
-														</span>
-													{/if}
-												</div>
-											{/if}
-										</div>
-									{/each}
-
-									<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 9-14</h3>
-									<p class="text-gray-700 dark:text-gray-300">Complete the sentences below. Choose <strong>NO MORE THAN THREE WORDS</strong> from the passage for each answer.</p>
-
-									{#each passage1Questions.completion as question}
-										<div class="question mb-4">
-											<label class="mb-2 block font-medium text-gray-900 dark:text-white">
-												{question.num}. {question.text}
-											</label>
-											<select
-												bind:value={answers[question.num]}
-												class="w-full rounded-lg border p-2 text-black dark:bg-gray-700 dark:text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
-											>
-												<option value="">Select answer</option>
-												{#each ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P'] as option}
-													<option value={option}>{option}</option>
-												{/each}
-											</select>
-											{#if showAnswers && results?.questions[question.num]}
-												<div class="mt-2 text-sm">
-													{#if results.questions[question.num].isCorrect}
-														<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
-													{:else}
-														<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-														<span class="text-gray-600 dark:text-white">
-															Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
-														</span>
-													{/if}
-												</div>
-											{/if}
-										</div>
-									{/each}
-
-									<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Question 14</h3>
-									<p class="text-gray-700 dark:text-gray-300">Choose the correct letter, <strong>A-E</strong>.</p>
-
+								{#each passage1Questions.trueFalse as question}
 									<div class="question mb-4">
 										<label class="mb-2 block font-medium text-gray-900 dark:text-white">
-											{passage1Questions.multipleChoice.num}. {passage1Questions.multipleChoice.text}
+											{question.num}. {question.text}
 										</label>
-										<div class="space-y-2">
-											{#each passage1Questions.multipleChoice.options as option}
-												<label class="flex items-center">
-													<input 
-														type="radio" 
-														name="q{passage1Questions.multipleChoice.num}" 
-														value={option.charAt(0)}
-														onchange={(e) => updateAnswer(passage1Questions.multipleChoice.num, e.target.value)}
-														class="mr-2 {showAnswers && results ? (results.questions[passage1Questions.multipleChoice.num]?.userAnswer === option.charAt(0) ? (results.questions[passage1Questions.multipleChoice.num]?.isCorrect ? 'accent-green-500' : 'accent-red-500') : '') : ''}"
-													/>
-													<span class="text-gray-700 dark:text-gray-300">{option}</span>
-												</label>
-											{/each}
-										</div>
-										{#if showAnswers && results?.questions[passage1Questions.multipleChoice.num]}
+										<select
+											bind:value={answers[question.num]}
+											class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+										>
+											<option value="">Select answer</option>
+											<option value="TRUE">TRUE</option>
+											<option value="FALSE">FALSE</option>
+											<option value="NOT GIVEN">NOT GIVEN</option>
+										</select>
+										{#if showAnswers && results?.questions[question.num]}
 											<div class="mt-2 text-sm">
-												{#if results.questions[passage1Questions.multipleChoice.num].isCorrect}
+												{#if results.questions[question.num].isCorrect}
 													<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
 												{:else}
 													<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-													<span class="text-gray-600 dark:text-white">
-														Correct answer: {results.questions[passage1Questions.multipleChoice.num].correctAnswers.join(' or ')}
+													<span class="text-gray-600 dark:text-gray-300">
+														Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
 													</span>
 												{/if}
 											</div>
 										{/if}
 									</div>
+								{/each}
+
+								<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 9-14</h3>
+								<p class="text-gray-700 dark:text-gray-300">Complete the sentences below. Choose <strong>NO MORE THAN THREE WORDS</strong> from the passage for each answer.</p>
+
+								{#each passage1Questions.completion as question}
+									<div class="question mb-4">
+										<label class="mb-2 block font-medium text-gray-900 dark:text-white">
+											{question.num}. {question.text}
+										</label>
+										<select
+											bind:value={answers[question.num]}
+											class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+										>
+											<option value="">Select answer</option>
+											{#each ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P'] as option}
+												<option value={option}>{option}</option>
+											{/each}
+										</select>
+										{#if showAnswers && results?.questions[question.num]}
+											<div class="mt-2 text-sm">
+												{#if results.questions[question.num].isCorrect}
+													<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
+												{:else}
+													<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
+													<span class="text-gray-600 dark:text-gray-300">
+														Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
+													</span>
+												{/if}
+											</div>
+										{/if}
+									</div>
+								{/each}
+
+								<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Question 14</h3>
+								<p class="text-gray-700 dark:text-gray-300">Choose the correct letter, <strong>A-E</strong>.</p>
+
+								<div class="question mb-4">
+									<label class="mb-2 block font-medium text-gray-900 dark:text-white">
+										{passage1Questions.multipleChoice.num}. {passage1Questions.multipleChoice.text}
+									</label>
+									<div class="space-y-2">
+										{#each passage1Questions.multipleChoice.options as option}
+											<label class="flex items-center">
+												<input
+													type="radio"
+													name="q{passage1Questions.multipleChoice.num}"
+													value={option.charAt(0)}
+													onchange={(e) => updateAnswer(passage1Questions.multipleChoice.num, e.target.value)}
+													class="mr-2 {showAnswers && results ? (results.questions[passage1Questions.multipleChoice.num]?.userAnswer === option.charAt(0) ? (results.questions[passage1Questions.multipleChoice.num]?.isCorrect ? 'accent-green-500' : 'accent-red-500') : '') : ''}"
+												/>
+												<span class="text-gray-700 dark:text-gray-300">{option}</span>
+											</label>
+										{/each}
+									</div>
+									{#if showAnswers && results?.questions[passage1Questions.multipleChoice.num]}
+										<div class="mt-2 text-sm">
+											{#if results.questions[passage1Questions.multipleChoice.num].isCorrect}
+												<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
+											{:else}
+												<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
+												<span class="text-gray-600 dark:text-gray-300">
+													Correct answer: {results.questions[passage1Questions.multipleChoice.num].correctAnswers.join(' or ')}
+												</span>
+											{/if}
+										</div>
+									{/if}
 								</div>
 							</div>
 						</div>
-					{:else if currentSection === 2}
-						<!-- Reading Passage 2 -->
-						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-								<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Reading Passage 2</h2>
-								<div class="mb-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
-									<p class="mb-4 text-gray-700 dark:text-gray-300">
-										You should spend about 20 minutes on Questions 15-26, which are based on Reading Passage 2 below.
-									</p>
-								</div>
+					</div>
+				{:else if currentSection === 2}
+					<!-- Reading Passage 2 -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+						<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Reading Passage 2</h2>
+						<div class="mb-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
+							<p class="mb-4 text-gray-700 dark:text-gray-300">
+								You should spend about 20 minutes on Questions 15-26, which are based on Reading Passage 2 below.
+							</p>
+						</div>
 
-								<div class="prose dark:prose-invert max-w-none mb-8">
-									<h3 class="text-xl font-semibold mb-4">Whale Senses</h3>
+						<div class="prose dark:prose-invert max-w-none mb-8">
+							<h3 class="text-xl font-semibold mb-4">Whale Senses</h3>
 
-									<p>Whales and dolphins, collectively known as cetaceans, have evolved remarkable sensory adaptations for life in the ocean. Their sensory capabilities differ significantly from those of terrestrial mammals, reflecting their aquatic environment.</p>
+							<p>Whales and dolphins, collectively known as cetaceans, have evolved remarkable sensory adaptations for life in the ocean. Their sensory capabilities differ significantly from those of terrestrial mammals, reflecting their aquatic environment.</p>
 
-									<p>The sense of smell in toothed whales appears to be absent, with no evidence from brain structure to support its existence. In baleen whales, the situation is not certain, although related brain structures are present. Taste capabilities vary among species, with some types having poor development of the nerves linked to taste sensations.</p>
+							<p>The sense of smell in toothed whales appears to be absent, with no evidence from brain structure to support its existence. In baleen whales, the situation is not certain, although related brain structures are present. Taste capabilities vary among species, with some types having poor development of the nerves linked to taste sensations.</p>
 
-									<p>Touch is well-developed in all cetaceans, with the region around the blowhole being particularly sensitive. Vision varies considerably among species. Most baleen whales probably do not have stereoscopic vision, while dolphins and porpoises likely possess this ability. Bottlenose dolphins can even follow objects from underwater.</p>
+							<p>Touch is well-developed in all cetaceans, with the region around the blowhole being particularly sensitive. Vision varies considerably among species. Most baleen whales probably do not have stereoscopic vision, while dolphins and porpoises likely possess this ability. Bottlenose dolphins can even follow objects from underwater.</p>
 
-									<p>Hearing is by far the best-developed sense in cetaceans. Toothed whales can hear a much wider range of the frequency spectrum than other marine mammals and have a more extensive vocal repertoire. They use echolocation for navigation and hunting. Baleen whales can communicate over vast distances using low-frequency calls.</p>
-								</div>
+							<p>Hearing is by far the best-developed sense in cetaceans. Toothed whales can hear a much wider range of the frequency spectrum than other marine mammals and have a more extensive vocal repertoire. They use echolocation for navigation and hunting. Baleen whales can communicate over vast distances using low-frequency calls.</p>
+						</div>
 
-								<div class="space-y-6">
-									<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 15-21</h3>
-									<p class="text-gray-700 dark:text-gray-300">Complete the table below. Choose <strong>NO MORE THAN THREE WORDS</strong> from Reading Passage 2 for each answer.</p>
+						<div class="space-y-6">
+							<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 15-21</h3>
+							<p class="text-gray-700 dark:text-gray-300">Complete the table below. Choose <strong>NO MORE THAN THREE WORDS</strong> from Reading Passage 2 for each answer.</p>
 
-									{#each passage2Questions.tableCompletion as question}
-										<div class="question mb-4">
-											<label class="mb-2 block font-medium text-gray-900 dark:text-white">
-												{question.num}. {question.text}
-											</label>
-											<input
-												type="text"
-												bind:value={answers[question.num]}
-												placeholder="Your answer..."
-												class="w-full rounded-lg border p-2 text-black dark:bg-gray-700 dark:text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
-											/>
-											{#if showAnswers && results?.questions[question.num]}
-												<div class="mt-2 text-sm">
-													{#if results.questions[question.num].isCorrect}
-														<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
-													{:else}
-														<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-														<span class="text-gray-600 dark:text-white">
-															Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
-														</span>
-													{/if}
-												</div>
+							{#each passage2Questions.tableCompletion as question}
+								<div class="question mb-4">
+									<label class="mb-2 block font-medium text-gray-900 dark:text-white">
+										{question.num}. {question.text}
+									</label>
+									<input
+										type="text"
+										bind:value={answers[question.num]}
+										placeholder="Your answer..."
+										class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+									/>
+									{#if showAnswers && results?.questions[question.num]}
+										<div class="mt-2 text-sm">
+											{#if results.questions[question.num].isCorrect}
+												<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
+											{:else}
+												<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
+												<span class="text-gray-600 dark:text-gray-300">
+													Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
+												</span>
 											{/if}
-										</div>
-									{/each}
-
-									<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 22-26</h3>
-									<p class="text-gray-700 dark:text-gray-300">Answer the questions below using <strong>NO MORE THAN THREE WORDS</strong> from the passage for each answer.</p>
-
-									{#each passage2Questions.shortAnswer as question}
-										<div class="question mb-4">
-											<label class="mb-2 block font-medium text-gray-900 dark:text-white">
-												{question.num}. {question.text}
-											</label>
-											<input
-												type="text"
-												bind:value={answers[question.num]}
-												placeholder="Your answer..."
-												class="w-full rounded-lg border p-2 text-black dark:bg-gray-700 dark:text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
-											/>
-											{#if showAnswers && results?.questions[question.num]}
-												<div class="mt-2 text-sm">
-													{#if results.questions[question.num].isCorrect}
-														<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
-													{:else}
-														<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-														<span class="text-gray-600 dark:text-white">
-															Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
-														</span>
-													{/if}
-												</div>
-											{/if}
-										</div>
-									{/each}
-								</div>
-							</div>
-
-					{:else if currentSection === 3}
-						<!-- Reading Passage 3 -->
-						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-								<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Reading Passage 3</h2>
-								<div class="mb-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
-									<p class="mb-4 text-gray-700 dark:text-gray-300">
-										You should spend about 20 minutes on Questions 27-40, which are based on Reading Passage 3 below.
-									</p>
-								</div>
-
-								<div class="prose dark:prose-invert max-w-none mb-8">
-									<h3 class="text-xl font-semibold mb-4">Sustainable Agriculture and Food Security</h3>
-
-									<div class="mb-4"><strong>A</strong> Modern agriculture faces unprecedented challenges in feeding a growing global population while maintaining environmental sustainability. The industrial approach to farming, characterized by monocultures and heavy chemical inputs, has increased yields but created new problems.</div>
-
-									<div class="mb-4"><strong>B</strong> Monoculture farming, where large areas are planted with a single crop variety, presents significant risks. These agricultural disasters make crops vulnerable to pests and diseases, which can spread rapidly through genetically uniform populations.</div>
-
-									<div class="mb-4"><strong>C</strong> Traditional farming methods maintained crop diversity through practices like crop rotation and intercropping. These techniques not only preserved genetic diversity but also helped maintain soil fertility and reduce pest problems naturally.</div>
-
-									<div class="mb-4"><strong>D</strong> The environmental impact of industrial agriculture extends beyond the farm. Excessive use of fertilizers and pesticides contaminates water sources and destroys beneficial insects and soil organisms essential for ecosystem health.</div>
-
-									<div class="mb-4"><strong>E</strong> Sustainable farming practices offer solutions that balance productivity with environmental protection. These approaches focus on long-term soil health, biodiversity conservation, and reduced chemical inputs while maintaining economic viability.</div>
-
-									<div class="mb-4"><strong>F</strong> Food security depends not only on quantity but also on the resilience of agricultural systems. Biodiversity is essential for developing crops that can withstand climate change, diseases, and changing environmental conditions.</div>
-								</div>
-
-								<div class="space-y-6">
-									<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 27-32</h3>
-									<p class="text-gray-700 dark:text-gray-300">Match each paragraph with the correct heading. There are more headings than paragraphs.</p>
-
-									<div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg mb-4">
-										<h4 class="font-semibold mb-2">List of Headings:</h4>
-										<ol class="list-none space-y-1 text-sm">
-											{#each headingOptions as heading}
-												<li>{heading}</li>
-											{/each}
-										</ol>
-									</div>
-
-									{#each passage3Questions.matchingHeadings as question}
-										<div class="question mb-4">
-											<label class="mb-2 block font-medium text-gray-900 dark:text-white">
-												{question.num}. {question.text}
-											</label>
-											<select 
-												id="q{question.num}"
-												bind:value={answers[question.num]}
-												class="w-full rounded-lg border p-2 text-black dark:bg-gray-700 dark:text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
-											>
-												<option value="">Select a heading</option>
-												{#each ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix'] as heading}
-													<option value={heading}>{heading}</option>
-												{/each}
-											</select>
-											{#if showAnswers && results?.questions[question.num]}
-												<div class="mt-2 text-sm">
-													{#if results.questions[question.num].isCorrect}
-														<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
-													{:else}
-														<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-														<span class="text-gray-600 dark:text-white">
-															Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
-														</span>
-													{/if}
-												</div>
-											{/if}
-										</div>
-									{/each}
-
-									<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 33-40</h3>
-									<p class="text-gray-700 dark:text-gray-300">Complete the sentences below. Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p>
-
-									{#each passage3Questions.completion as question}
-										<div class="question mb-4">
-											<label class="mb-2 block font-medium text-gray-900 dark:text-white">
-												{question.num}. {question.text}
-											</label>
-											<input 
-												id="q{question.num}"
-												type="text" 
-												bind:value={answers[question.num]}
-												placeholder="Your answer"
-												class="w-full rounded-lg border p-2 text-black dark:bg-gray-700 dark:text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600'}"
-											/>
-											{#if showAnswers && results?.questions[question.num]}
-												<div class="mt-2 text-sm">
-													{#if results.questions[question.num].isCorrect}
-														<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
-													{:else}
-														<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-														<span class="text-gray-600 dark:text-white">
-															Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
-														</span>
-													{/if}
-												</div>
-											{/if}
-										</div>
-									{/each}
-
-									<!-- End of Test Section -->
-									<div class="mt-8 border-l-4 border-teal-400 bg-teal-50 p-4 rounded-r-lg dark:bg-teal-900/20 dark:border-teal-500">
-										<center>
-											<p class="text-sm text-gray-900 dark:text-gray-100">
-												<strong>END OF TEST</strong> 
-											</p>
-										</center>	
-										<p class="text-sm text-gray-900 dark:text-gray-100">
-											That is the end of the Reading test. You have completed all 40 questions.
-										</p>
-										<p class="text-sm text-gray-900 dark:text-gray-100 mt-2">
-											<a 
-												href="/reading-images/ielts-reading-answer-sheet.jpg"
-												download="IELTS-Reading-Answer-Sheet.jpg"
-												class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline"
-											>
-												Download official answer sheet
-											</a>
-										</p>
-									</div>
-
-									<!-- Action Button - only show if not marked yet -->
-									{#if !hasMarked}
-										<div class="mt-6 flex flex-col gap-4 items-center">
-											<button
-												type="button"
-												onclick={() => { if (!hasMarked) markTest(); showAnswers = true; }}
-												class="inline-flex items-center justify-center px-8 py-4 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors text-lg"
-											>
-												✅ View Answers & Mark my Test
-											</button>
-										</div>
-									{/if}
-
-									<!-- Results Display -->
-									{#if results && showAnswers}
-										<div class="mt-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700 max-w-md mx-auto">
-											<h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white text-center">Test Results</h3>
-											<div class="mb-4 text-center">
-												<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">
-													{results.score}/40
-												</div>
-												<div class="text-sm text-gray-600 dark:text-gray-300">
-													{results.percentage}% Correct
-												</div>
-											</div>
-
-											<!-- Band Score Estimate -->
-											<div class="text-center">
-												<div class="text-lg font-semibold text-gray-900 dark:text-white">
-													Estimated Band Score: 
-													<span class="text-teal-600 dark:text-teal-400">
-														{#if results.score >= 37}7.5-9.0
-														{:else if results.score >= 33}7.0
-														{:else if results.score >= 30}6.5
-														{:else if results.score >= 27}6.0
-														{:else if results.score >= 23}5.5
-														{:else if results.score >= 19}5.0
-														{:else if results.score >= 15}4.5
-														{:else if results.score >= 11}4.0
-														{:else if results.score >= 8}3.5
-														{:else if results.score >= 5}3.0
-														{:else}2.5-3.5{/if}
-													</span>
-												</div>
-											</div>
-
-											<!-- Action buttons matching listening test format -->
-											<div class="mt-6 flex flex-col sm:flex-row justify-between gap-3">
-												<button 
-													onclick={() => window.open('#', '_blank')}
-													class="px-4 sm:px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm sm:text-base"
-												>
-													Query my Results
-												</button>
-												<button 
-													onclick={() => window.location.reload()}
-													class="px-4 sm:px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors text-sm sm:text-base"
-												>
-													Close
-												</button>
-											</div>
 										</div>
 									{/if}
 								</div>
+							{/each}
+
+							<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 22-26</h3>
+							<p class="text-gray-700 dark:text-gray-300">Answer the questions below using <strong>NO MORE THAN THREE WORDS</strong> from the passage for each answer.</p>
+
+							{#each passage2Questions.shortAnswer as question}
+								<div class="question mb-4">
+									<label class="mb-2 block font-medium text-gray-900 dark:text-white">
+										{question.num}. {question.text}
+									</label>
+									<input
+										type="text"
+										bind:value={answers[question.num]}
+										placeholder="Your answer..."
+										class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+									/>
+									{#if showAnswers && results?.questions[question.num]}
+										<div class="mt-2 text-sm">
+											{#if results.questions[question.num].isCorrect}
+												<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
+											{:else}
+												<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
+												<span class="text-gray-600 dark:text-gray-300">
+													Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
+												</span>
+											{/if}
+										</div>
+									{/if}
+								</div>
+							{/each}
+						</div>
+					</div>
+
+				{:else if currentSection === 3}
+					<!-- Reading Passage 3 -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+						<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Reading Passage 3</h2>
+						<div class="mb-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
+							<p class="mb-4 text-gray-700 dark:text-gray-300">
+								You should spend about 20 minutes on Questions 27-40, which are based on Reading Passage 3 below.
+							</p>
+						</div>
+
+						<div class="prose dark:prose-invert max-w-none mb-8">
+							<h3 class="text-xl font-semibold mb-4">Sustainable Agriculture and Food Security</h3>
+
+							<div class="mb-4"><strong>A</strong> Modern agriculture faces unprecedented challenges in feeding a growing global population while maintaining environmental sustainability. The industrial approach to farming, characterized by monocultures and heavy chemical inputs, has increased yields but created new problems.</div>
+
+							<div class="mb-4"><strong>B</strong> Monoculture farming, where large areas are planted with a single crop variety, presents significant risks. These agricultural disasters make crops vulnerable to pests and diseases, which can spread rapidly through genetically uniform populations.</div>
+
+							<div class="mb-4"><strong>C</strong> Traditional farming methods maintained crop diversity through practices like crop rotation and intercropping. These techniques not only preserved genetic diversity but also helped maintain soil fertility and reduce pest problems naturally.</div>
+
+							<div class="mb-4"><strong>D</strong> The environmental impact of industrial agriculture extends beyond the farm. Excessive use of fertilizers and pesticides contaminates water sources and destroys beneficial insects and soil organisms essential for ecosystem health.</div>
+
+							<div class="mb-4"><strong>E</strong> Sustainable farming practices offer solutions that balance productivity with environmental protection. These approaches focus on long-term soil health, biodiversity conservation, and reduced chemical inputs while maintaining economic viability.</div>
+
+							<div class="mb-4"><strong>F</strong> Food security depends not only on quantity but also on the resilience of agricultural systems. Biodiversity is essential for developing crops that can withstand climate change, diseases, and changing environmental conditions.</div>
+						</div>
+
+						<div class="space-y-6">
+							<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 27-32</h3>
+							<p class="text-gray-700 dark:text-gray-300">Match each paragraph with the correct heading. There are more headings than paragraphs.</p>
+
+							<div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg mb-4">
+								<h4 class="font-semibold mb-2">List of Headings:</h4>
+								<ol class="list-none space-y-1 text-sm">
+									{#each headingOptions as heading}
+										<li>{heading}</li>
+									{/each}
+								</ol>
 							</div>
 
-					{/if}
-				</div>
+							{#each passage3Questions.matchingHeadings as question}
+								<div class="question mb-4">
+									<label class="mb-2 block font-medium text-gray-900 dark:text-white">
+										{question.num}. {question.text}
+									</label>
+									<select
+										id="q{question.num}"
+										bind:value={answers[question.num]}
+										class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+									>
+										<option value="">Select a heading</option>
+										{#each ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix'] as heading}
+											<option value={heading}>{heading}</option>
+										{/each}
+									</select>
+									{#if showAnswers && results?.questions[question.num]}
+										<div class="mt-2 text-sm">
+											{#if results.questions[question.num].isCorrect}
+												<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
+											{:else}
+												<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
+												<span class="text-gray-600 dark:text-gray-300">
+													Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
+												</span>
+											{/if}
+										</div>
+									{/if}
+								</div>
+							{/each}
+
+							<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 33-40</h3>
+							<p class="text-gray-700 dark:text-gray-300">Complete the sentences below. Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p>
+
+							{#each passage3Questions.completion as question}
+								<div class="question mb-4">
+									<label class="mb-2 block font-medium text-gray-900 dark:text-white">
+										{question.num}. {question.text}
+									</label>
+									<input
+										id="q{question.num}"
+										type="text"
+										bind:value={answers[question.num]}
+										placeholder="Your answer"
+										class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+									/>
+									{#if showAnswers && results?.questions[question.num]}
+										<div class="mt-2 text-sm">
+											{#if results.questions[question.num].isCorrect}
+												<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
+											{:else}
+												<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
+												<span class="text-gray-600 dark:text-gray-300">
+													Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
+												</span>
+											{/if}
+										</div>
+									{/if}
+								</div>
+							{/each}
+
+							<!-- End of Test Section -->
+							<div class="mt-8 border-l-4 border-teal-400 bg-teal-50 p-4 rounded-r-lg dark:bg-teal-900/20 dark:border-teal-500">
+								<center>
+									<p class="text-sm text-gray-900 dark:text-gray-100">
+										<strong>END OF TEST</strong>
+									</p>
+								</center>
+								<p class="text-sm text-gray-900 dark:text-gray-100">
+									That is the end of the Reading test. You have completed all 40 questions.
+								</p>
+								<p class="text-sm text-gray-900 dark:text-gray-100 mt-2">
+									<a
+										href="/reading-images/ielts-reading-answer-sheet.jpg"
+										download="IELTS-Reading-Answer-Sheet.jpg"
+										class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline"
+									>
+										Download official answer sheet
+									</a>
+								</p>
+							</div>
+
+							<!-- Action Button - only show if not marked yet -->
+							{#if !hasMarked}
+								<div class="mt-6 flex flex-col gap-4 items-center">
+									<button
+										type="button"
+										onclick={() => { if (!hasMarked) markTest(); showAnswers = true; }}
+										class="inline-flex items-center justify-center px-8 py-4 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors text-lg"
+									>
+										✅ View Answers & Mark my Test
+									</button>
+								</div>
+							{/if}
+
+							<!-- Results Display -->
+							{#if results && showAnswers}
+								<div class="mt-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700 max-w-md mx-auto">
+									<h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white text-center">Test Results</h3>
+									<div class="mb-4 text-center">
+										<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">
+											{results.score}/40
+										</div>
+										<div class="text-sm text-gray-600 dark:text-gray-300">
+											{results.percentage}% Correct
+										</div>
+									</div>
+
+									<!-- Band Score Estimate -->
+									<div class="text-center">
+										<div class="text-lg font-semibold text-gray-900 dark:text-white">
+											Estimated Band Score:
+											<span class="text-teal-600 dark:text-teal-400">
+												{#if results.score >= 37}7.5-9.0
+												{:else if results.score >= 33}7.0
+												{:else if results.score >= 30}6.5
+												{:else if results.score >= 27}6.0
+												{:else if results.score >= 23}5.5
+												{:else if results.score >= 19}5.0
+												{:else if results.score >= 15}4.5
+												{:else if results.score >= 11}4.0
+												{:else if results.score >= 8}3.5
+												{:else if results.score >= 5}3.0
+												{:else}2.5-3.5{/if}
+											</span>
+										</div>
+									</div>
+
+									<!-- Action buttons matching listening test format -->
+									<div class="mt-6 flex flex-col sm:flex-row justify-between gap-3">
+										<button
+											onclick={() => window.open('#', '_blank')}
+											class="px-4 sm:px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm sm:text-base"
+										>
+											Query my Results
+										</button>
+										<button
+											onclick={() => window.location.reload()}
+											class="px-4 sm:px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors text-sm sm:text-base"
+										>
+											Close
+										</button>
+									</div>
+								</div>
+							{/if}
+						</div>
+					</div>
+
+				{/if}
 			</div>
+		</div>
 	{/if}
 </div>
 
@@ -833,6 +833,7 @@
 	.text-red-600 { color: #b91c1c; } /* red-600 */
 	.dark .text-gray-400 { color: #d1d5db; } /* dark gray-300 for better visibility */
 	.text-gray-600 { color: #4b5563; } /* gray-600 */
+	.dark .text-gray-300 { color: #d1d5db; } /* dark gray-300 for better visibility */
 
 	/* Tailwind Button Classes (for clarity, assuming these are available or defined elsewhere) */
 	.bg-primary { background-color: #0d9488; } /* teal-600 */
