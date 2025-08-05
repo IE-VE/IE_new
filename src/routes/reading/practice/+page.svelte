@@ -426,6 +426,7 @@
 										</label>
 										<select
 											bind:value={answers[question.num]}
+											disabled={showAnswers}
 											class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
 										>
 											<option value="">Select answer</option>
@@ -458,6 +459,7 @@
 										</label>
 										<select
 											bind:value={answers[question.num]}
+											disabled={showAnswers}
 											class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
 										>
 											<option value="">Select answer</option>
@@ -495,6 +497,7 @@
 													name="q{passage1Questions.multipleChoice.num}"
 													value={option.charAt(0)}
 													onchange={(e) => updateAnswer(passage1Questions.multipleChoice.num, e.target.value)}
+													disabled={showAnswers}
 													class="mr-2 {showAnswers && results ? (results.questions[passage1Questions.multipleChoice.num]?.userAnswer === option.charAt(0) ? (results.questions[passage1Questions.multipleChoice.num]?.isCorrect ? 'accent-green-500' : 'accent-red-500') : '') : ''}"
 												/>
 												<span class="text-gray-700 dark:text-gray-300">{option}</span>
@@ -551,6 +554,7 @@
 									<input
 										type="text"
 										bind:value={answers[question.num]}
+										disabled={showAnswers}
 										placeholder="Your answer..."
 										class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
 									/>
@@ -580,6 +584,7 @@
 									<input
 										type="text"
 										bind:value={answers[question.num]}
+										disabled={showAnswers}
 										placeholder="Your answer..."
 										class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
 									/>
@@ -647,6 +652,7 @@
 									<select
 										id="q{question.num}"
 										bind:value={answers[question.num]}
+										disabled={showAnswers}
 										class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
 									>
 										<option value="">Select a heading</option>
@@ -681,6 +687,7 @@
 										id="q{question.num}"
 										type="text"
 										bind:value={answers[question.num]}
+										disabled={showAnswers}
 										placeholder="Your answer"
 										class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
 									/>
