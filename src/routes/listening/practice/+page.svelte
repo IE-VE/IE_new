@@ -667,12 +667,12 @@
 	>
 		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-6xl w-full max-h-[98vh] sm:max-h-[92vh] overflow-hidden">
 			<!-- Modal Header -->
-			<div class="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200 dark:border-gray-700">
-				<div class="pb-0 xs:pb-2 sm:pb-0">
+			<div class="flex items-center justify-between p-3 sm:p-4 border-b border-gray-200 dark:border-gray-700">
+				<div>
 					<h2 id="marking-modal-title" class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
 						Your Test Results
 					</h2>
-					<p class="text-sm sm:text-lg md:text-xl mt-1 sm:mt-2 space-x-1 sm:space-x-2">
+					<p class="text-sm sm:text-lg md:text-xl mt-0 sm:mt-1 space-x-1 sm:space-x-2">
 						Score: <span class="font-bold text-green-600 text-lg sm:text-xl md:text-2xl">{markingResults.totalCorrect || 0}</span>/<span class="font-bold text-lg sm:text-xl md:text-2xl">{markingResults.totalQuestions || 40}</span> 
 						| Band Score: <span class="font-bold text-blue-600 text-lg sm:text-xl md:text-2xl">{getBandScore(markingResults.totalCorrect || 0)}</span>
 					</p>
