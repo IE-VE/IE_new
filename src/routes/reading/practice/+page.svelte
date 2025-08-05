@@ -384,23 +384,23 @@
 				<!-- Test Actions -->
 				<div class="mt-6 space-y-3">
 					{#if !hasMarked}
-						<button on:click={markTest} class="w-full bg-primary hover:bg-primary-700 text-white font-bold py-2 px-4 rounded-lg">
+						<button onclick={markTest} class="w-full bg-primary hover:bg-primary-700 text-white font-bold py-2 px-4 rounded-lg">
 							Mark My Test
 						</button>
 					{/if}
 
 					{#if hasMarked}
 						{#if showAnswers}
-							<button on:click={hideAnswers} class="w-full bg-light hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-lg">
+							<button onclick={hideAnswers} class="w-full bg-light hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-lg">
 								Hide Answers
 							</button>
 						{:else}
-							<button on:click={viewAnswers} class="w-full bg-alternative hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
+							<button onclick={viewAnswers} class="w-full bg-alternative hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
 								View Answers
 							</button>
 						{/if}
 					{:else}
-						<button on:click={viewAnswers} class="w-full bg-alternative hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
+						<button onclick={viewAnswers} class="w-full bg-alternative hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
 							View Answers
 						</button>
 					{/if}
