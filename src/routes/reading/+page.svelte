@@ -136,7 +136,7 @@
 						<div class="text-sm text-gray-600 dark:text-gray-300">Passages</div>
 					</div>
 					<div>
-						<div class="text-3xl font-bold text-primary-600 dark:text-gray-300">40</div>
+						<div class="text-3xl font-bold text-primary-600 dark:text-primary-400">40</div>
 						<div class="text-sm text-gray-600 dark:text-gray-300">Questions</div>
 					</div>
 				</div>
