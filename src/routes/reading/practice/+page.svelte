@@ -805,7 +805,7 @@
 	/* Ensure proper spacing for questions */
 	input[type="text"], select {
 		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-		color: white !important;
+		color: black !important;
 	}
 
 	input[type="text"]:focus, select:focus {
