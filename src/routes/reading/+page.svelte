@@ -105,7 +105,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50 py-8 dark:from-gray-900 dark:to-gray-800">
-	<div class="container mx-auto px-6 py-8">
+	<div class="container mx-auto max-w-6xl px-6 py-8">
 		<!-- Header Section -->
 		<div class="text-center mb-12">
 			<h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
