@@ -187,7 +187,9 @@
 
 	function closeAnswersModal() {
 		showAnswersModal = false;
-		document.body.style.overflow = 'auto';
+		// Return to the marking results modal instead of closing completely
+		showMarkingModal = true;
+		// Keep body overflow hidden since we're still in a modal
 	}
 
 	function handleKeydown(event) {
