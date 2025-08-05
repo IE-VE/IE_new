@@ -720,16 +720,18 @@
 										</p>
 									</div>
 
-									<!-- Action Button -->
-									<div class="mt-6 flex flex-col gap-4 items-center">
-										<button
-											type="button"
-											onclick={() => { if (!hasMarked) markTest(); showAnswers = true; }}
-											class="inline-flex items-center justify-center px-8 py-4 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors text-lg"
-										>
-											✅ View Answers & Mark my Test
-										</button>
-									</div>
+									<!-- Action Button - only show if not marked yet -->
+									{#if !hasMarked}
+										<div class="mt-6 flex flex-col gap-4 items-center">
+											<button
+												type="button"
+												onclick={() => { if (!hasMarked) markTest(); showAnswers = true; }}
+												class="inline-flex items-center justify-center px-8 py-4 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors text-lg"
+											>
+												✅ View Answers & Mark my Test
+											</button>
+										</div>
+									{/if}
 
 									<!-- Results Display -->
 									{#if results && showAnswers}
@@ -764,12 +766,19 @@
 												</div>
 											</div>
 
-											<div class="mt-4 text-center">
+											<!-- Action buttons matching listening test format -->
+											<div class="mt-6 flex flex-col sm:flex-row justify-between gap-3">
+												<button 
+													onclick={() => window.open('#', '_blank')}
+													class="px-4 sm:px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm sm:text-base"
+												>
+													Query my Results
+												</button>
 												<button 
 													onclick={() => window.location.reload()}
-													class="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg"
+													class="px-4 sm:px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors text-sm sm:text-base"
 												>
-													Retake Test
+													Close
 												</button>
 											</div>
 										</div>
