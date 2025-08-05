@@ -442,7 +442,7 @@
 
 			<!-- Main Content Area -->
 			<div class="pb-8"
-					{#if currentSection === 1}
+					{#if currentSection === 1
 						<!-- Reading Passage 1 -->
 						<div class="max-w-4xl mx-auto">
 							<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
