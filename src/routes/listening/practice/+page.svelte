@@ -81,10 +81,10 @@
 
 	async function markAnswers() {
 		isMarking = true;
-		
+
 		// Show loading for 3 seconds
 		await new Promise(resolve => setTimeout(resolve, 3000));
-		
+
 		const answers = collectUserAnswers();
 		console.log('Collected answers:', answers); // Debug log
 		userAnswers = answers;
@@ -123,7 +123,7 @@
 		});
 
 		markingResults = { ...results, totalCorrect, totalQuestions: Object.keys(correctAnswers).length };
-		
+
 		// Close answers modal if it's open and show marking modal directly
 		showAnswersModal = false;
 		showMarkingModal = true;
@@ -579,7 +579,7 @@
 	>
 		<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[75vh] sm:max-h-[85vh] overflow-hidden">
 			<!-- Modal Header -->
-			<div class="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200 dark:border-gray-700">
+			<div class="flex items-center justify-between p-3 pb-2 sm:p-6 border-b border-gray-200 dark:border-gray-700">
 				<h2 id="answers-modal-title" class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
 					IELTS Listening Test 1 – Answer Key
 				</h2>
