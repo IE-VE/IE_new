@@ -669,12 +669,12 @@
 			<!-- Modal Header -->
 			<div class="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200 dark:border-gray-700">
 				<div>
-					<h2 id="marking-modal-title" class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
+					<h2 id="marking-modal-title" class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
 						Your Test Results
 					</h2>
-					<p class="text-xl sm:text-lg mt-2 space-x-2">
-						Score: <span class="font-bold text-green-600 text-2xl">{markingResults.totalCorrect || 0}</span>/<span class="font-bold text-2xl">{markingResults.totalQuestions || 40}</span> 
-						| Band Score: <span class="font-bold text-blue-600 text-2xl">{getBandScore(markingResults.totalCorrect || 0)}</span>
+					<p class="text-sm sm:text-lg md:text-xl mt-2 space-x-1 sm:space-x-2">
+						Score: <span class="font-bold text-green-600 text-lg sm:text-xl md:text-2xl">{markingResults.totalCorrect || 0}</span>/<span class="font-bold text-lg sm:text-xl md:text-2xl">{markingResults.totalQuestions || 40}</span> 
+						| Band Score: <span class="font-bold text-blue-600 text-lg sm:text-xl md:text-2xl">{getBandScore(markingResults.totalCorrect || 0)}</span>
 					</p>
 				</div>
 				<div class="text-center">
