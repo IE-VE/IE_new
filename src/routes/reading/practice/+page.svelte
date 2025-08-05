@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from '？';
+	import { onMount } from 'svelte';
 
 	let currentSection = $state(1);
 	let timeRemaining = $state(60 * 60); // 60 minutes in seconds
