@@ -134,6 +134,8 @@
 	function closeMarkingModal() {
 		showMarkingModal = false;
 		document.body.style.overflow = 'auto';
+		// Navigate to home page
+		window.location.href = '/';
 	}
 
 	function handleMarkingKeydown(event) {
