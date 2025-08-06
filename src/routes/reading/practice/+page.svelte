@@ -889,13 +889,13 @@
 							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
 						</button>
 					</div>
-					<div class="prose dark:prose-invert max-w-none overflow-y-auto max-h-[70vh]">
+					<div class="max-w-none overflow-y-auto max-h-[70vh]">
 						<h3 class="text-lg font-semibold mb-3 text-gray-900 dark:text-white">Reading Test 1 - Answer Key</h3>
-						<div class="grid grid-cols-3 gap-4 text-sm">
+						<div class="grid grid-cols-3 gap-4 text-sm text-gray-900 dark:text-white">
 							{#each Object.entries(answerKey) as [questionNum, answersArray]}
 								<div class="mb-2">
-									<span class="font-medium text-gray-700 dark:text-white">{questionNum}.</span>
-									<span class="text-gray-600 dark:text-white">{answersArray.join(' / ')}</span>
+									<span class="font-medium">{questionNum}.</span>
+									<span>{answersArray.join(' / ')}</span>
 								</div>
 							{/each}
 						</div>
