@@ -823,7 +823,7 @@
 										<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">
 											{results.score}/40
 										</div>
-										<div class="text-sm text-gray-600 dark:text-gray-300">
+										<div class="text-sm text-white dark:text-gray-300">
 											{results.percentage}% Correct
 										</div>
 									</div>
@@ -849,9 +849,8 @@
 									</div>
 
 									<!-- Text below Query button -->
-									<div class="text-right text-xs text-gray-600 dark:text-gray-400 mb-6 pr-4">
-										Get personalized feedback and tips<br>
-										If you are unclear about any answers - just ask!
+									<div class="text-right text-xs text-white dark:text-gray-400 mb-6 pr-4">
+												If you are unclear about any answers - just ask!
 									</div>
 
 									<!-- Bottom buttons -->
