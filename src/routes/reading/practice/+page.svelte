@@ -809,7 +809,7 @@
 
 							<!-- Results Display -->
 							{#if results && showAnswers}
-								<div class="mt-6 rounded-lg bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-700 p-6 max-w-md mx-auto">
+								<div class="mt-12 rounded-lg bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-700 p-6 max-w-md mx-auto">
 									<!-- Centered Test Results title -->
 									<h3 class="mb-6 text-xl font-semibold text-gray-900 dark:text-white text-center"><u>Test Results</u></h3>
 									
@@ -891,16 +891,16 @@
 			<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-3xl w-full mx-4 my-8">
 				<div class="p-6">
 					<div class="flex justify-between items-center mb-5">
-						<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Answer Key</h2>
-						<button
+					
+						<!-- <button
 							onclick={closeAnswersModal}
 							class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 focus:outline-none"
 						>
 							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-						</button>
+						</button> -->
 					</div>
 					<div class="max-w-none overflow-y-auto max-h-[70vh]">
-						<h3 class="text-lg font-semibold mb-3 text-gray-900 dark:text-white">Reading Test 1 - Answer Key</h3>
+						<h3 class="text-xl font-semibold mb-10 text-gray-900 dark:text-white">Reading Test 1 - Answer Key</h3>
 						<div class="grid grid-cols-3 gap-4 text-sm text-gray-900 dark:text-white">
 							{#each Object.entries(answerKey) as [questionNum, answersArray]}
 								<div class="mb-2">
