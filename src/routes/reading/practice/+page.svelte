@@ -900,14 +900,40 @@
 						</button> -->
 					</div>
 					<div class="max-w-none overflow-y-auto max-h-[70vh]">
-						<h3 class="text-xl font-semibold mb-10 text-gray-900 dark:text-white">Reading Test 1 - Answer Key</h3>
-						<div class="grid grid-cols-3 gap-4 text-sm text-gray-900 dark:text-white">
-							{#each Object.entries(answerKey) as [questionNum, answersArray]}
-								<div class="mb-2">
-									<span class="font-medium">{questionNum}.</span>
-									<span>{answersArray.join(' / ')}</span>
-								</div>
-							{/each}
+						<h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white text-center">Reading Test 1 - Answer Key</h3>
+						<div class="grid grid-cols-3 gap-6 text-sm text-gray-900 dark:text-white">
+							<!-- Section 1: Questions 1-14 -->
+							<div>
+								<h4 class="font-semibold mb-3 text-teal-600 dark:text-teal-400 text-center">Section 1 (Q1-14)</h4>
+								{#each Object.entries(answerKey).slice(0, 14) as [questionNum, answersArray]}
+									<div class="mb-2">
+										<span class="font-medium">{questionNum}.</span>
+										<span>{answersArray.join(' / ')}</span>
+									</div>
+								{/each}
+							</div>
+							
+							<!-- Section 2: Questions 15-26 -->
+							<div>
+								<h4 class="font-semibold mb-3 text-teal-600 dark:text-teal-400 text-center">Section 2 (Q15-26)</h4>
+								{#each Object.entries(answerKey).slice(14, 26) as [questionNum, answersArray]}
+									<div class="mb-2">
+										<span class="font-medium">{questionNum}.</span>
+										<span>{answersArray.join(' / ')}</span>
+									</div>
+								{/each}
+							</div>
+							
+							<!-- Section 3: Questions 27-40 -->
+							<div>
+								<h4 class="font-semibold mb-3 text-teal-600 dark:text-teal-400 text-center">Section 3 (Q27-40)</h4>
+								{#each Object.entries(answerKey).slice(26, 40) as [questionNum, answersArray]}
+									<div class="mb-2">
+										<span class="font-medium">{questionNum}.</span>
+										<span>{answersArray.join(' / ')}</span>
+									</div>
+								{/each}
+							</div>
 						</div>
 					</div>
 
