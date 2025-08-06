@@ -321,7 +321,7 @@
 			<div class="max-w-4xl mx-auto">
 				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
 					<h1 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8">
-						IELTS Reading Test
+						IELTS Reading Practice Test 1
 					</h1>
 
 					<div class="space-y-6 text-gray-700 dark:text-gray-300">
@@ -411,7 +411,7 @@
 						<div class="text-2xl font-bold text-teal-600 dark:text-teal-400">
 							{formatTime(timeRemaining)}
 						</div>
-						<div class="text-sm text-gray-600 dark:text-gray-400">Time Remaining</div>
+						<div class="text-sm text-gray-300 dark:text-gray-200">Time Remaining</div>
 					</div>
 
 					<!-- Timer Control Buttons -->
