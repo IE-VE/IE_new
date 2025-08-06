@@ -780,7 +780,7 @@
 									</div>
 
 									<!-- Band Score Estimate -->
-									<div class="text-center mb-6">
+									<div class="text-center mb-4">
 										<div class="text-lg font-semibold text-gray-900 dark:text-white">
 											Estimated Band Score:
 											<span class="text-teal-600 dark:text-teal-400">
@@ -800,23 +800,27 @@
 									</div>
 
 									<!-- Text below Query button -->
-									<div class="text-right text-xs text-gray-600 dark:text-gray-400 mb-4 pr-4">
-										Get personalized feedback and tips
+									<div class="text-right text-xs text-gray-600 dark:text-gray-400 mb-6 pr-4">
+										Get personalized feedback and tips<br>
+										If you are unclear about any answers - just ask!
 									</div>
 
-									<!-- Bottom left button -->
-									<div class="absolute bottom-4 left-4">
+									<!-- Bottom buttons -->
+									<div class="flex justify-between items-center">
 										<a
 											href="/reading-images/ielts-reading-answer-sheet.jpg"
 											download="IELTS-Reading-Answer-Sheet.jpg"
-											class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm font-medium"
+											class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm font-medium"
 										>
 											View Answer Key
 										</a>
+										<button
+											onclick={() => window.location.href = '/'}
+											class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm font-medium"
+										>
+											Close
+										</button>
 									</div>
-
-									<!-- Spacer for bottom button -->
-									<div class="h-12"></div>
 								</div>
 							{/if}
 						</div>
