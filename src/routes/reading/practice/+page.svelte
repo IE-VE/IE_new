@@ -415,18 +415,18 @@
 					</div>
 
 					<!-- Timer Control Buttons -->
-					<div class="flex justify-center gap-3 mb-4">
+					<div class="flex justify-center gap-2 mb-4">
 						{#if isActive}
 							<button
 								onclick={pauseTimer}
-								class="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg"
+								class="px-3 py-1 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded text-sm"
 							>
 								PAUSE TIMER
 							</button>
 						{:else}
 							<button
 								onclick={startTimer}
-								class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg"
+								class="px-3 py-1 bg-green-600 hover:bg-green-700 text-white font-medium rounded text-sm"
 							>
 								START
 							</button>
