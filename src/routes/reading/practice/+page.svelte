@@ -809,7 +809,7 @@
 									<div class="flex justify-between items-center">
 										<a
 											href="/reading-images/ielts-reading-answer-sheet.jpg"
-											download="IELTS-Reading-Answer-Sheet.jpg"
+											target="_blank"
 											class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm font-medium"
 										>
 											View Answer Key
