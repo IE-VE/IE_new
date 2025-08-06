@@ -754,7 +754,7 @@
 												<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
 											{:else}
 												<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-												<span class="text-gray-600 dark:text-gray-300">
+												<span class="text-white dark:text-white">
 													Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
 												</span>
 											{/if}
@@ -854,7 +854,7 @@
 									</div>
 
 									<!-- Bottom buttons -->
-									<div class="flex justify-between items-center">
+									<div class="flex justify-between items-center gap-1">
 										<button
 											onclick={openAnswersModal}
 											class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm font-medium"
