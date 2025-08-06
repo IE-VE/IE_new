@@ -62,6 +62,43 @@
 	let hasMarked = $state(false);
 	let isMarking = $state(false);
 
+	// Modal state for answers
+	let showAnswersModal = $state(false);
+
+	// Modal functions for answers
+	function openAnswersModal() {
+		showAnswersModal = true;
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeAnswersModal() {
+		showAnswersModal = false;
+		document.body.style.overflow = 'auto';
+	}
+
+	// Existing modal functions (assuming these are for a different modal and not directly used here)
+	function closeMarkingModal() {
+		showMarkingModal = false;
+		document.body.style.overflow = 'auto';
+		// Navigate to home page
+		window.location.href = '/';
+	}
+
+	function handleAnswersKeydown(event) {
+		if (event.key === 'Escape' && showAnswersModal) {
+			closeAnswersModal();
+		}
+	}
+
+	function handleAnswersBackdropClick(event) {
+		if (event.target === event.currentTarget) {
+			closeAnswersModal();
+		}
+	}
+
+	function handleMarkingKeydown(event) {
+		// Assuming this was intended for another modal, keeping it for now
+	}
 
 	// Question data based on the HTML file
 	const passage1Questions = {
@@ -176,10 +213,10 @@
 	// Marking functions
 	async function markTest() {
 		isMarking = true;
-		
+
 		// Show loading for 3 seconds
 		await new Promise(resolve => setTimeout(resolve, 3000));
-		
+
 		let correct = 0;
 		let questionResults = {};
 
@@ -262,8 +299,12 @@
 			}
 		}, 1000);
 
+		// Add event listener for Escape key when answer modal is open
+		document.addEventListener('keydown', handleAnswersKeydown);
+
 		return () => {
 			if (timer) clearInterval(timer);
+			document.removeEventListener('keydown', handleAnswersKeydown);
 		};
 	});
 </script>
@@ -724,13 +765,12 @@
 									Use any remaining time to check your answers and then click the button below to view your results.
 								</p>
 								<p class="text-sm text-gray-900 dark:text-gray-100 mt-2">
-									<a
-										href="/reading-images/ielts-reading-answer-sheet.jpg"
-										download="IELTS-Reading-Answer-Sheet.jpg"
+									<button
+										onclick={openAnswersModal}
 										class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline mt-2"
 									>
-										Download official answer sheet
-									</a>
+										View Answer Key
+									</button>
 								</p>
 							</div>
 
@@ -807,13 +847,12 @@
 
 									<!-- Bottom buttons -->
 									<div class="flex justify-between items-center">
-										<a
-											href="/reading-images/ielts-reading-answer-sheet.jpg"
-											target="_blank"
+										<button
+											onclick={openAnswersModal}
 											class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm font-medium"
 										>
 											View Answer Key
-										</a>
+										</button>
 										<button
 											onclick={() => window.location.href = '/'}
 											class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm font-medium"
@@ -827,6 +866,41 @@
 					</div>
 
 				{/if}
+			</div>
+		</div>
+	{/if}
+
+	<!-- Answer Key Modal -->
+	{#if showAnswersModal}
+		<div
+			class="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-black bg-opacity-50 dark:bg-opacity-80"
+			on:click={handleAnswersBackdropClick}
+			role="dialog"
+			aria-modal="true"
+		>
+			<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-3xl w-full mx-4 my-8">
+				<div class="p-6">
+					<div class="flex justify-between items-center mb-5">
+						<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Answer Key</h2>
+						<button
+							onclick={closeAnswersModal}
+							class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 focus:outline-none"
+						>
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+						</button>
+					</div>
+					<div class="prose dark:prose-invert max-w-none overflow-y-auto max-h-[70vh]">
+						<h3 class="text-lg font-semibold mb-3">Reading Test 1 - Answer Key</h3>
+						<div class="grid grid-cols-3 gap-4 text-sm">
+							{#each Object.entries(answerKey) as [questionNum, answersArray]}
+								<div class="mb-2">
+									<span class="font-medium text-gray-700 dark:text-gray-300">{questionNum}.</span>
+									<span class="text-gray-600 dark:text-gray-400">{answersArray.join(' / ')}</span>
+								</div>
+							{/each}
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	{/if}
