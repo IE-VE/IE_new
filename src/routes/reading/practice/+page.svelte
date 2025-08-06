@@ -763,25 +763,27 @@
 								</div>
 							{/each}
 
-							<!-- End of Test Section -->
-							<div class="mt-8 border-l-4 border-teal-400 bg-teal-50 p-4 rounded-r-lg dark:bg-teal-900/20 dark:border-teal-500">
-								<center>
-									<p class="text-sm text-gray-900 dark:text-gray-100 mb-2">
-										<strong>END OF TEST</strong>
+							<!-- End of Test Section - only show when not viewing answers -->
+							{#if !showAnswers}
+								<div class="mt-8 border-l-4 border-teal-400 bg-teal-50 p-4 rounded-r-lg dark:bg-teal-900/20 dark:border-teal-500">
+									<center>
+										<p class="text-sm text-gray-900 dark:text-gray-100 mb-2">
+											<strong>END OF TEST</strong>
+										</p>
+									</center>
+									<p class="text-sm text-gray-900 dark:text-gray-100">
+										Use any remaining time to check your answers and then click the button below to view your results.
 									</p>
-								</center>
-								<p class="text-sm text-gray-900 dark:text-gray-100">
-									Use any remaining time to check your answers and then click the button below to view your results.
-								</p>
-								<p class="text-sm text-gray-900 dark:text-gray-100 mt-2">
-									<button
-										onclick={openAnswersModal}
-										class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline mt-2"
-									>
-										View Answer Key
-									</button>
-								</p>
-							</div>
+									<p class="text-sm text-gray-900 dark:text-gray-100 mt-2">
+										<button
+											onclick={openAnswersModal}
+											class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline mt-2"
+										>
+											View Answer Key
+										</button>
+									</p>
+								</div>
+							{/if}
 
 							<!-- Action Button - only show if not marked yet -->
 							{#if !hasMarked}
