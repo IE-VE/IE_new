@@ -758,8 +758,18 @@
 
 							<!-- Results Display -->
 							{#if results && showAnswers}
-								<div class="mt-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700 max-w-md mx-auto">
-									<h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white text-center">Test Results</h3>
+								<div class="mt-6 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 max-w-md mx-auto relative">
+									<!-- Top right button -->
+									<div class="absolute top-4 right-4">
+										<button
+											onclick={() => window.open('#', '_blank')}
+											class="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors text-sm font-medium"
+										>
+											Query my Results
+										</button>
+									</div>
+
+									<h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white text-center pr-32">Test Results</h3>
 									<div class="mb-4 text-center">
 										<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">
 											{results.score}/40
@@ -770,7 +780,7 @@
 									</div>
 
 									<!-- Band Score Estimate -->
-									<div class="text-center">
+									<div class="text-center mb-6">
 										<div class="text-lg font-semibold text-gray-900 dark:text-white">
 											Estimated Band Score:
 											<span class="text-teal-600 dark:text-teal-400">
@@ -789,21 +799,24 @@
 										</div>
 									</div>
 
-									<!-- Action buttons matching listening test format -->
-									<div class="mt-6 flex flex-col sm:flex-row justify-between gap-3">
-										<button
-											onclick={() => window.open('#', '_blank')}
-											class="px-4 sm:px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm sm:text-base"
-										>
-											Query my Results
-										</button>
-										<button
-											onclick={() => window.location.reload()}
-											class="px-4 sm:px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors text-sm sm:text-base"
-										>
-											Close
-										</button>
+									<!-- Text below Query button -->
+									<div class="text-right text-xs text-gray-600 dark:text-gray-400 mb-4 pr-4">
+										Get personalized feedback and tips
 									</div>
+
+									<!-- Bottom left button -->
+									<div class="absolute bottom-4 left-4">
+										<a
+											href="/reading-images/ielts-reading-answer-sheet.jpg"
+											download="IELTS-Reading-Answer-Sheet.jpg"
+											class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm font-medium"
+										>
+											View Answer Key
+										</a>
+									</div>
+
+									<!-- Spacer for bottom button -->
+									<div class="h-12"></div>
 								</div>
 							{/if}
 						</div>
