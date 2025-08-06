@@ -874,7 +874,7 @@
 	{#if showAnswersModal}
 		<div
 			class="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-black bg-opacity-50 dark:bg-opacity-80"
-			on:click={handleAnswersBackdropClick}
+			onclick={handleAnswersBackdropClick}
 			role="dialog"
 			aria-modal="true"
 		>
