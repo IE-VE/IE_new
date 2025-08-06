@@ -890,12 +890,12 @@
 						</button>
 					</div>
 					<div class="prose dark:prose-invert max-w-none overflow-y-auto max-h-[70vh]">
-						<h3 class="text-lg font-semibold mb-3">Reading Test 1 - Answer Key</h3>
+						<h3 class="text-lg font-semibold mb-3 text-gray-900 dark:text-white">Reading Test 1 - Answer Key</h3>
 						<div class="grid grid-cols-3 gap-4 text-sm">
 							{#each Object.entries(answerKey) as [questionNum, answersArray]}
 								<div class="mb-2">
-									<span class="font-medium text-gray-700 dark:text-gray-300">{questionNum}.</span>
-									<span class="text-gray-600 dark:text-gray-400">{answersArray.join(' / ')}</span>
+									<span class="font-medium text-gray-700 dark:text-white">{questionNum}.</span>
+									<span class="text-gray-600 dark:text-white">{answersArray.join(' / ')}</span>
 								</div>
 							{/each}
 						</div>
