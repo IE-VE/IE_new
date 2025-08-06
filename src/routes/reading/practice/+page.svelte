@@ -398,32 +398,41 @@
 		<div class="max-w-4xl mx-auto px-4">
 			<!-- Timer and Navigation Header -->
 			<div class="rounded-lg shadow-md p-4 mb-6 bg-white dark:bg-gray-800">
-				<!-- Timer Display -->
-				<div class="text-center mb-4">
-					<div class="text-2xl font-bold text-teal-600 dark:text-teal-400">
-						{formatTime(timeRemaining)}
+				{#if showAnswers}
+					<!-- Title Display when showing answers -->
+					<div class="text-center mb-4">
+						<h1 class="text-2xl font-bold text-teal-600 dark:text-teal-400">
+							Reading Test Answers & Score
+						</h1>
 					</div>
-					<div class="text-sm text-gray-600 dark:text-gray-400">Time Remaining</div>
-				</div>
+				{:else}
+					<!-- Timer Display -->
+					<div class="text-center mb-4">
+						<div class="text-2xl font-bold text-teal-600 dark:text-teal-400">
+							{formatTime(timeRemaining)}
+						</div>
+						<div class="text-sm text-gray-600 dark:text-gray-400">Time Remaining</div>
+					</div>
 
-				<!-- Timer Control Buttons -->
-				<div class="flex justify-center gap-3 mb-4">
-					{#if isActive}
-						<button
-							onclick={pauseTimer}
-							class="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg"
-						>
-							PAUSE TIMER
-						</button>
-					{:else}
-						<button
-							onclick={startTimer}
-							class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg"
-						>
-							START
-						</button>
-					{/if}
-				</div>
+					<!-- Timer Control Buttons -->
+					<div class="flex justify-center gap-3 mb-4">
+						{#if isActive}
+							<button
+								onclick={pauseTimer}
+								class="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg"
+							>
+								PAUSE TIMER
+							</button>
+						{:else}
+							<button
+								onclick={startTimer}
+								class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg"
+							>
+								START
+							</button>
+						{/if}
+					</div>
+				{/if}
 
 				<!-- Navigation Buttons -->
 				<div class="flex flex-wrap justify-center gap-2">
