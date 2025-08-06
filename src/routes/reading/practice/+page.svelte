@@ -816,6 +816,10 @@
 										>
 											Query my Results
 										</button>
+										<!-- Text below Query button -->
+										<div class="text-right text-xs text-white dark:text-gray-400 mt-1">
+											If you are unclear about any answers - just ask!
+										</div>
 									</div>
 
 									<h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white text-center pr-32">Test Results</h3>
@@ -829,7 +833,7 @@
 									</div>
 
 									<!-- Band Score Estimate -->
-									<div class="text-center mb-4">
+									<div class="text-center mb-6">
 										<div class="text-lg font-semibold text-gray-900 dark:text-white">
 											Estimated Band Score:
 											<span class="text-teal-600 dark:text-teal-400">
@@ -846,11 +850,6 @@
 												{:else}2.5-3.5{/if}
 											</span>
 										</div>
-									</div>
-
-									<!-- Text below Query button -->
-									<div class="text-right text-xs text-white dark:text-gray-400 mb-6 pr-4">
-												If you are unclear about any answers - just ask!
 									</div>
 
 									<!-- Bottom buttons -->
