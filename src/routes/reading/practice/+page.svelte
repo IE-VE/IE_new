@@ -927,9 +927,13 @@
 		color: white !important;
 	}
 
-	/* Disabled input text color (after marking) should be black */
+	/* Disabled input text color (after marking) should be black in light mode, white in dark mode */
 	input[type="text"]:disabled, select:disabled {
 		color: black !important;
+	}
+	
+	:global(.dark) input[type="text"]:disabled, :global(.dark) select:disabled {
+		color: white !important;
 	}
 
 	input[type="text"]:focus, select:focus {
