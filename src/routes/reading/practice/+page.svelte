@@ -822,7 +822,7 @@
 										</div>
 									</div>
 
-									<h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white text-center pr-32">Test Results</h3>
+									<h3 class="mb-6 text-lg font-semibold text-gray-900 dark:text-white text-center pr-40">Test Results</h3>
 									<div class="mb-4 text-center">
 										<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">
 											{results.score}/40
