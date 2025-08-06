@@ -807,27 +807,28 @@
 
 							<!-- Results Display -->
 							{#if results && showAnswers}
-								<div class="mt-6 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 max-w-md mx-auto relative">
-									<!-- Top right button -->
-									<div class="absolute top-4 right-4">
+								<div class="mt-6 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 max-w-md mx-auto">
+									<!-- Centered Test Results title -->
+									<h3 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white text-center">Test Results</h3>
+									
+									<!-- Centered Query button and help text -->
+									<div class="text-center mb-6">
 										<button
 											onclick={() => window.open('#', '_blank')}
 											class="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors text-sm font-medium"
 										>
 											Query my Results
 										</button>
-										<!-- Text below Query button -->
-										<div class="text-right text-xs text-white dark:text-gray-400 mt-1">
+										<div class="text-xs text-gray-600 dark:text-gray-400 mt-1">
 											If you are unclear about any answers - just ask!
 										</div>
 									</div>
 
-									<h3 class="mb-6 text-lg font-semibold text-gray-900 dark:text-white text-center pr-40">Test Results</h3>
 									<div class="mb-4 text-center">
 										<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">
 											{results.score}/40
 										</div>
-										<div class="text-sm text-white dark:text-gray-300">
+										<div class="text-sm text-gray-600 dark:text-gray-300">
 											{results.percentage}% Correct
 										</div>
 									</div>
