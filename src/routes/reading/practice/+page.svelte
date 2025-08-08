@@ -986,7 +986,7 @@
 										bind:value={answers[question.num]}
 										disabled={showAnswers}
 										placeholder="Your answer..."
-										class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+										class="w-full rounded-lg border p-0.5 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
 									/>
 									{#if showAnswers && results?.questions[question.num]}
 										<div class="mt-2 text-sm">
@@ -1033,17 +1033,14 @@ I decided to test whether various lines of motion were apt ways of showing movem
 
 							<p>To search out these answers, I created raised-line drawings of five different wheels,	depicting spokes with lines that curved, bent, waved, dashed and extended beyond the perimeter of the wheel. I then asked eighteen blind volunteers to feel the wheels	and assign one of the following motions to each wheel: wobbling, spinning fast, spinning steadily, jerking or braking. My control group consisted of eighteen sighted	undergraduates from the University of Toronto.</p>
 
-							<p>All but one of the blind subjects assigned distinctive motions to each wheel. Most guessed that the curved spokes indicated that the wheel was spinning steadily; the wavy spokes, they thought, suggested that the wheel was wobbling; and the bent spokes were taken as a sign that the wheel was jerking. Subjects assumed that spokes extending beyond the wheel's perimeter signified that the wheel had its brakes on and
-dashed spokes indicated the wheel was spinning quickly.</p>
+							<p>All but one of the blind subjects assigned distinctive motions to each wheel. Most guessed that the curved spokes indicated that the wheel was spinning steadily; the wavy spokes, they thought, suggested that the wheel was wobbling; and the bent spokes were taken as a sign that the wheel was jerking. Subjects assumed that spokes extending beyond the wheel's perimeter signified that the wheel had its brakes on and dashed spokes indicated the wheel was spinning quickly.</p>
 
-							<p>In addition, the favoured description for the sighted was the favoured description for the blind in every instance. What is more, the consensus among the sighted was barely higher than that among the blind. Because motion devices are unfamiliar to the blind, the task I gave them involved some problem solving. Evidently, however, the blind not only figured out meanings for each line of motion, but as a group they generally came
-up with the same meaning at least as frequently as did sighted subjects.</p>
+							<p>In addition, the favoured description for the sighted was the favoured description for the blind in every instance. What is more, the consensus among the sighted was barely higher than that among the blind. Because motion devices are unfamiliar to the blind, the task I gave them involved some problem solving. Evidently, however, the blind not only figured out meanings for each line of motion, but as a group they generally came up with the same meaning at least as frequently as did sighted subjects.</p>
 
 							<p><strong>Part 2</strong></p>
 							<p>We have found that the blind understand other kinds of visual metaphors as well. One blind woman drew a picture of a child inside a heart – choosing that symbol, she said, to show that love surrounded the child. With Chang Hong Liu, a doctoral student from China, I have begun exploring how well blind people understand the symbolism behind shapes such as hearts that do not directly represent their meaning.</p>
 
-							<p>We gave a list of twenty pairs of words to sighted subjects and asked them to pick from each pair the term that best related to a circle
-and the term that best related to a square. For example, we asked: What goes with soft? A circle or a square? Which shape goes with hard?</p>
+							<p>We gave a list of twenty pairs of words to sighted subjects and asked them to pick from each pair the term that best related to a circle and the term that best related to a square. For example, we asked: What goes with soft? A circle or a square? Which shape goes with hard?</p>
 
 							<div class="flex flex-col md:flex-row gap-6 items-start mb-6">
 								<div class="flex-1">
@@ -1175,7 +1172,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[33]}
 										disabled={showAnswers}
 										placeholder="33"
-										class="w-16 mx-1 rounded border p-1 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[33]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
+										class="w-16 mx-1 rounded border p-0.5 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[33]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									/>
 									was used to investigate whether blind and sighted people perceived the symbolism in abstract
 									<input
@@ -1183,7 +1180,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[34]}
 										disabled={showAnswers}
 										placeholder="34"
-										class="w-16 mx-1 rounded border p-1 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[34]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
+										class="w-16 mx-1 rounded border p-0.5 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[34]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									/>
 									in the same way.
 								</p>
@@ -1195,7 +1192,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[35]}
 										disabled={showAnswers}
 										placeholder="35"
-										class="w-16 mx-1 rounded border p-1 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[35]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
+										class="w-16 mx-1 rounded border p-0.5 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[35]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									/>
 									volunteers, everyone thought a circle fitted 'soft' while a square fitted 'hard'. However, only 51% of the
 									<input
@@ -1203,7 +1200,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[36]}
 										disabled={showAnswers}
 										placeholder="36"
-										class="w-16 mx-1 rounded border p-1 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[36]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
+										class="w-16 mx-1 rounded border p-0.5 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[36]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									/>
 									volunteers assigned a circle to
 									<input
@@ -1211,7 +1208,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[37]}
 										disabled={showAnswers}
 										placeholder="37"
-										class="w-16 mx-1 rounded border p-1 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[37]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
+										class="w-16 mx-1 rounded border p-0.5 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[37]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									/>
 									. When the test was later repeated with
 									<input
@@ -1219,7 +1216,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[38]}
 										disabled={showAnswers}
 										placeholder="38"
-										class="w-16 mx-1 rounded border p-1 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[38]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
+										class="w-16 mx-1 rounded border p-0.5 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[38]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									/>
 									volunteers, it was found that they made
 									<input
@@ -1227,7 +1224,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[39]}
 										disabled={showAnswers}
 										placeholder="39"
-										class="w-16 mx-1 rounded border p-1 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[39]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
+										class="w-16 mx-1 rounded border p-0.5 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[39]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									/>
 									choices.
 								</p>
