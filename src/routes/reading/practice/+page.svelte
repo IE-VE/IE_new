@@ -1047,10 +1047,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 							<div class="flex flex-col md:flex-row gap-6 items-start mb-6">
 								<div class="flex-1">
 									<p>All our subjects deemed the circle soft and the square hard. A full 94% ascribed happy to the circle, instead of sad. But other pairs revealed less agreement: 79% matched fast to slow and weak to strong, respectively. And only 51% linked deep to circle and shallow to square. When we tested four totally blind volunteers using the same list, we found that their choices closely resembled those made by the sighted subjects. One man, who had been blind since birth, scored extremely well. He made only one match differing from the consensus, assigning 'far' to square and 'near' to circle. In fact, only a small majority of sighted subjects – 53% – had paired far and near to the opposite partners. Thus, we concluded that the blind interpret abstract shapes as sighted people do.</p>
-								</div>
-								<div class="md:w-1/3 flex-shrink-0">
-									<img src="/reading-images/Fig.2.png" alt="Fig. 2 - Table showing word associations with circle/square and agreement percentages among subjects" class="w-full rounded-lg shadow-lg" />
-								</div>
+								</div>			
 							</div>
 						</div>			
 
@@ -1098,7 +1095,11 @@ and the term that best related to a square. For example, we asked: What goes wit
 							<p class="text-gray-700 dark:text-gray-300">Look at the following diagrams (Questions 30–32), and the list of types of movement below.</p>
 							<p class="text-gray-700 dark:text-gray-300">Match each diagram to the type of movement <strong>A–E</strong> generally assigned to it in the experiment.</p>
 							<p class="text-gray-700 dark:text-gray-300">Choose the correct letter <strong>A–E</strong> and write them in boxes 30–32 on your answer sheet.</p>
-
+							
+							<div class="md:w-3/4 flex-shrink-0">
+								<img src="/reading-images/Fig.2.png" alt="Fig. 2 - Table showing word associations with circle/square and agreement percentages among subjects" class="w-full rounded-lg shadow-lg" />
+							</div>
+							
 							<div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg mb-6">
 								<h4 class="font-semibold mb-3">Movement Types:</h4>
 								<div class="grid grid-cols-1 gap-2 text-sm">
