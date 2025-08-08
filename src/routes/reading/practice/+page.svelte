@@ -26,8 +26,8 @@
 		10: ['E'],
 		11: ['G'],
 		12: ['P'],
-		13: ['J'],
-		14: ['B'],
+		13: ['B'],
+		14: ['C'],
 		15: ['tastebuds'],
 		16: ['baleen', 'the baleen whales'],
 		17: ['forward, downward'],
@@ -44,15 +44,15 @@
 		27: ['C'],
 		28: ['C'],
 		29: ['A'],
-		30: ['E'],
-		31: ['C'],
-		32: ['A'],
-		33: ['pairs'],
-		34: ['shapes'],
+		30: ['C'],
+		31: ['A'],
+		32: ['pairs'],
+		33: ['shapes'],
+		34: ['sighted'],
 		35: ['sighted'],
-		36: ['sighted'],
-		37: ['deep'],
-		38: ['blind'],
+		36: ['blind'],
+		37: ['similar'],
+		38: ['sighted'],
 		39: ['similar'],
 		40: ['B']
 	};
@@ -729,13 +729,14 @@
 							</div>
 						</div>
 					</div>
+
 				{:else if currentSection === 2}
 					<!-- Reading Passage 2 -->
 					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
 						<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Reading Passage 2</h2>
 						<div class="mb-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
 							<p class="mb-4 text-gray-700 dark:text-gray-300">
-								You should spend about 20 minutes on Questions 15-26, which are based on Reading Passage 2 below.
+								You should spend about 20 minutes on Questions 15–26, which are based on Reading Passage 2 below.
 							</p>
 						</div>
 
@@ -1010,7 +1011,7 @@
 						<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Reading Passage 3</h2>
 						<div class="mb-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
 							<p class="mb-4 text-gray-700 dark:text-gray-300">
-								You should spend about 20 minutes on Questions 27-40, which are based on Reading Passage 3 below.
+								You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below.
 							</p>
 						</div>
 
@@ -1036,7 +1037,7 @@ dashed spokes indicated the wheel was spinning quickly.</p>
 
 <p>In addition, the favoured description for the sighted was the favoured description for the blind in every instance. What is more, the consensus among the sighted was barely higher than that among the blind. Because motion devices are unfamiliar to the blind, the task I gave them involved some problem solving. Evidently, however, the blind not only figured out meanings for each line of motion, but as a group they generally came
 up with the same meaning at least as frequently as did sighted subjects.</p>
-								
+
 								<p><strong>Part 2</strong></p>
 <p>We have found that the blind understand other kinds of visual metaphors as well. One blind woman drew a picture of a child inside a heart – choosing that symbol, she said, to show that love surrounded the child. With Chang Hong Liu, a doctoral student from China, I have begun exploring how well blind people understand the symbolism behind shapes such as hearts that do not directly represent their meaning.</p>
 
