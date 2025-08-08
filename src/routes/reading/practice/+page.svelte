@@ -1097,7 +1097,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 							<p class="text-gray-700 dark:text-gray-300">Choose the correct letter <strong>A–E</strong> and write them in boxes 30–32 on your answer sheet.</p>
 
 							<div class="flex justify-center mb-6">
-								<div class="md:w-1/2">
+								<div class="md:w-3/4">
 									<img src="/reading-images/Fig.2.png" alt="Fig. 2 - Table showing word associations with circle/square and agreement percentages among subjects" class="w-full rounded-lg shadow-lg" />
 								</div>
 							</div>
@@ -1155,6 +1155,14 @@ and the term that best related to a square. For example, we asked: What goes wit
 									<div>shapes</div>
 									<div>sighted</div>
 									<div>similar</div>
+									<div>soft</div>
+									<div>words</div>
+									<div>associations</div>
+									<div>hard</div>	
+									<div>identical</div>
+									<div>hundred</div>
+									<div>shallow</div>
+									
 								</div>
 							</div>
 
@@ -1166,7 +1174,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[33]}
 										disabled={showAnswers}
 										placeholder="33"
-										class="w-16 mx-1 rounded border p-1 text-black {showAnswers && results ? (results.questions[33]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+										class="w-16 mx-1 rounded border p-1 text-black{showAnswers && results ? (results.questions[33]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
 									/>
 									was used to investigate whether blind and sighted people perceived the symbolism in abstract
 									<input
