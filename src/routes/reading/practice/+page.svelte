@@ -1096,7 +1096,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 							<p class="text-gray-700 dark:text-gray-300">Match each diagram to the type of movement <strong>A–E</strong> generally assigned to it in the experiment.</p>
 							<p class="text-gray-700 dark:text-gray-300">Choose the correct letter <strong>A–E</strong> and write them in boxes 30–32 on your answer sheet.</p>
 
-							<div class="md:w-1/3 flex-shrink-0 flex justify-center">
+							<div class="md:w-3/4 flex-shrink-0 flex justify-center">
 									<img src="/reading-images/Fig.2.png" alt="Fig. 2 - Table showing word associations with circle/square and agreement percentages among subjects" class="w-full rounded-lg shadow-lg" />
 								</div>
 							</div>
@@ -1300,7 +1300,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 								</div>
 							{/if}
 						</div>
-					</div>
+					
 				{/if}
 
 				<!-- Action Button - only show if not marked yet -->
