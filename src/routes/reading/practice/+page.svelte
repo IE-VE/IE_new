@@ -887,7 +887,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[21]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[21]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+														class="w-20 rounded border p-1 text-xs text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[21]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 													/>
 													<span>whales and</span>
 													<input
@@ -895,7 +895,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[21]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[21]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+														class="w-20 rounded border p-1 text-xs text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[21]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 													/>
 													<span>whales</span>
 												</div>
