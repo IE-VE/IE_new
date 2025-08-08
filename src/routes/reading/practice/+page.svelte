@@ -1379,9 +1379,10 @@ and the term that best related to a square. For example, we asked: What goes wit
 							{/if}
 						</div>
 					</div>
-
+				{/if}
 			</div>
 		</div>
+	{/if}
 
 
 	<!-- Answer Key Modal -->
