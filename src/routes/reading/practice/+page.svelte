@@ -1301,7 +1301,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 								</div>
 							{/if}
 						</div>
-					
+					</div>
 				{/if}
 		
 				<!-- Action Button - only show if not marked yet -->
