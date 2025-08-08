@@ -1104,7 +1104,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 							{#each passage3Questions.matching as question}
 								<div class="question mb-4">
 									<label class="mb-2 block font-medium text-gray-900 dark:text-white">
-										{question.num}. {question.text}
+										{question.num}.
 									</label>
 									<select
 										bind:value={answers[question.num]}
