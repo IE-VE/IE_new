@@ -1310,8 +1310,8 @@ I decided to test whether various lines of motion were apt ways of showing movem
 					</div>
 				{/if}
 
-				<!-- Action Button - only show if not marked yet -->
-				{#if !hasMarked}
+				<!-- Action Button - only show if not marked yet and on section 3 -->
+				{#if !hasMarked && currentSection === 3}
 					<div class="mt-6 flex flex-col gap-4 items-center">
 						<button
 							type="button"
