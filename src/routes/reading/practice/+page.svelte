@@ -209,7 +209,7 @@
 		],
 		matchingOptions: [
 			"A. steady spinning",
-			"B. jerky movement", 
+			"B. jerky movement",
 			"C. rapid spinning",
 			"D. wobbling movement",
 			"E. use of brakes"
@@ -761,7 +761,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[15]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="flex-1 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[15]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+														class="flex-1 rounded border p-1 text-xs text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[15]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 													/>
 													<span>are underdeveloped</span>
 												</div>
@@ -783,7 +783,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[16]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="flex-1 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[16]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+														class="flex-1 rounded border p-1 text-xs text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[16]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 													/>
 												</div>
 											</td>
@@ -803,7 +803,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[17]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[17]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+														class="w-20 rounded border p-1 text-xs text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[17]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 													/>
 													<span>and</span>
 													<span>18.</span>
@@ -812,7 +812,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[18]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[18]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+														class="w-20 rounded border p-1 text-xs text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[18]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 													/>
 												</div>
 											</td>
@@ -840,7 +840,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[19]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[19]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+														class="w-20 rounded border p-1 text-xs text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[19]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 													/>
 													<span>and good in air–water interface</span>
 												</div>
@@ -871,7 +871,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[20]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="w-24 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[20]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+														class="w-24 rounded border p-1 text-xs text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[20]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 													/>
 													<span>; repertoire limited</span>
 												</div>
@@ -1387,7 +1387,7 @@ social, economic and political factors which drive the activities which are dest
 
 					<!-- Modal Footer -->
 					<div class="flex justify-end p-4 border-t border-gray-200 dark:border-gray-700 mt-6">
-						<button 
+						<button
 							onclick={closeAnswersModal}
 							class="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors font-medium"
 						>
