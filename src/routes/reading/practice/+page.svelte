@@ -524,37 +524,37 @@
 									as damp, wet or hot. The second question concerned the geographical location of rainforests. The commonest responses were continents or countries: Africa (given by 43%
 									of children), South America (30%), Brazil (25%). Some children also gave more
 									general locations, such as being near the Equator.</p>
-								
+
 								<p>Responses to question three concerned the importance of rainforests. The dominant idea, raised by 64% of the pupils, was that rainforests provide animals with habitats. Fewer students responded that rainforests provide plant habitats, and even fewer
 								mentioned the indigenous populations of rainforests.</p>
-								
+
 								<p>Similarly, but at a lower level, more girls (13%) than boys (5%) said that rainforests	provided human habitats. These observations are generally consistent with our previous studies of pupils’ views about the use and conservation of rainforests, in which
 								girls were shown to be more sympathetic to animals and expressed views which seem
 								to place an intrinsic value on non-human animal life.</p>
-								
+
 								<p>The fourth question concerned the causes of the destruction of rainforests. Perhaps
 								encouragingly, more than half of the pupils (59%) identified that it is human activities which are destroying rainforests, some personalising the responsibility by the use of
 terms such as ‘we are’. About 18% of the pupils referred specifically to logging activity</p>
-								
+
 								<p>One misconception, expressed by some 10% of the pupils, was that acid rain is
 								responsible for rainforest destruction; a similar proportion said that pollution is
 								destroying rainforests. Here, children are confusing rainforest destruction with
 								damage to the forests of Western Europe by these factors. While two fifths of the students provided the information that the rainforests provide oxygen, in some cases this
 								response also embraced the misconception that rainforest destruction would reduce
 								atmospheric oxygen, making the atmosphere incompatible with human life on Earth.</p>
-								
+
 								<p>In answer to the final question about the importance of rainforest conservation, the
 								majority of children simply said that we need rainforests to survive. Only a few of the
 								pupils (6%) mentioned that rainforest destruction may contribute to global warming.
 								This is surprising considering the high level of media coverage on this issue. Some
 								children expressed the idea that the conservation of rainforests is not important.</p>
-								
+
 						<p>The results of this study suggest that certain ideas predominate in the thinking of
 						children about rainforests. Pupils’ responses indicate some misconceptions in basic
 						scientific knowledge of rainforests’ ecosystems such as their ideas about rainforests as
 						habitats for animals, plants and humans and the relationship between climatic change
 						and destruction of rainforests.</p>
-								
+
 							<p>Pupils did not volunteer ideas that suggested that they appreciated the complexity of
 							causes of rainforest destruction. In other words, they gave no indication of an appreciation of either the range of ways in which rainforests are important or the complex
 social, economic and political factors which drive the activities which are destroying
@@ -562,7 +562,7 @@ social, economic and political factors which drive the activities which are dest
 							environmental issues suggest that older children seem to acquire the ability to appreciate, value and evaluate conflicting views. Environmental education offers an arena in
 							which these skills can be developed, which is essential for these children as future decision-makers.</p>							
 							</div>
-							
+
 							<div class="space-y-6">
 								<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 1-8</h3>
 								<p class="text-gray-700 dark:text-gray-300">Do the following statements agree with the information given in Reading Passage 1?</p>
@@ -974,6 +974,10 @@ social, economic and political factors which drive the activities which are dest
 							<div class="mb-4"><strong>E</strong> Sustainable farming practices offer solutions that balance productivity with environmental protection. These approaches focus on long-term soil health, biodiversity conservation, and reduced chemical inputs while maintaining economic viability.</div>
 
 							<div class="mb-4"><strong>F</strong> Food security depends not only on quantity but also on the resilience of agricultural systems. Biodiversity is essential for developing crops that can withstand climate change, diseases, and changing environmental conditions.</div>
+							
+							<div class="mb-4">
+								<img src="/reading-images/rainforest-destruction.png" alt="Rainforest destruction" class="w-full max-w-md mx-auto rounded-lg shadow-lg" />
+							</div>
 						</div>
 
 						<div class="space-y-6">
@@ -1247,7 +1251,7 @@ social, economic and political factors which drive the activities which are dest
 								<div class="mt-12 rounded-lg bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-700 p-6 max-w-md mx-auto">
 									<!-- Centered Test Results title -->
 									<h3 class="mb-6 text-xl font-semibold text-gray-900 dark:text-white text-center"><u>Test Results</u></h3>
-									
+
 									<!-- Centered Query button and help text -->
 									<div class="text-center mb-8">
 										<button
@@ -1326,7 +1330,7 @@ social, economic and political factors which drive the activities which are dest
 			<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-3xl w-full mx-4 my-8">
 				<div class="p-6">
 					<div class="flex justify-between items-center mb-5">
-					
+
 						<!-- <button
 							onclick={closeAnswersModal}
 							class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 focus:outline-none"
@@ -1347,7 +1351,7 @@ social, economic and political factors which drive the activities which are dest
 									</div>
 								{/each}
 							</div>
-							
+
 							<!-- Section 2: Questions 15-26 -->
 							<div>
 								<h4 class="font-semibold mb-3 text-teal-600 dark:text-teal-400 text-center">Section 2 (Q15-26)</h4>
@@ -1358,7 +1362,7 @@ social, economic and political factors which drive the activities which are dest
 									</div>
 								{/each}
 							</div>
-							
+
 							<!-- Section 3: Questions 27-40 -->
 							<div>
 								<h4 class="font-semibold mb-3 text-teal-600 dark:text-teal-400 text-center">Section 3 (Q27-40)</h4>
@@ -1412,7 +1416,7 @@ social, economic and political factors which drive the activities which are dest
 	input[type="text"]:disabled, select:disabled {
 		color: black !important;
 	}
-	
+
 	:global(.dark) input[type="text"]:disabled, :global(.dark) select:disabled {
 		color: white !important;
 	}
