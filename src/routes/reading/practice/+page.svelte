@@ -1018,7 +1018,14 @@
 							<h3 class="text-xl font-semibold mb-4">Visual Symbols and the Blind</h3>
 
 							<p><strong>Part 1</strong></p>
-							<p>From a number of recent studies, it has become clear that blind people can appreciate	the use of outlines and perspectives to describe the arrangement of objects and other	surfaces in space. But pictures are more than literal representations.	This fact was drawn to my attention dramatically when a blind	woman in one of my investigations decided on her own initiative to draw a wheel as it was spinning. To show this motion, she traced a	curve inside the circle (Fig. 1). I was taken aback. Lines of motion,	such as the one she used, are a very recent invention in the history of illustration. Indeed, as art scholar David Kunzle notes, Wilhelm	Busch, a trend-setting nineteenth-century cartoonist, used virtually no motion lines in his popular figures until about 1877.</p>
+							<div class="flex flex-col md:flex-row gap-6 items-start mb-6">
+								<div class="flex-1">
+									<p>From a number of recent studies, it has become clear that blind people can appreciate	the use of outlines and perspectives to describe the arrangement of objects and other	surfaces in space. But pictures are more than literal representations.	This fact was drawn to my attention dramatically when a blind	woman in one of my investigations decided on her own initiative to draw a wheel as it was spinning. To show this motion, she traced a	curve inside the circle (Fig. 1). I was taken aback. Lines of motion,	such as the one she used, are a very recent invention in the history of illustration. Indeed, as art scholar David Kunzle notes, Wilhelm	Busch, a trend-setting nineteenth-century cartoonist, used virtually no motion lines in his popular figures until about 1877.</p>
+								</div>
+								<div class="md:w-1/3 flex-shrink-0">
+									<img src="/reading-images/Fig.1.png" alt="Fig. 1 - Drawing showing a spinning wheel with motion lines" class="w-full rounded-lg shadow-lg" />
+								</div>
+							</div>
 			
 
 				
