@@ -6,7 +6,7 @@
 	let isTestStarted = $state(false);
 	let isTestCompleted = $state(false);
 	let showInstructions = $state(true);
-	let answers: Record<number, string> = $state({});
+	let answers: Record<number | string, string> = $state({}); // Allow string keys for '21b'
 
 	// Timer functionality
 	let timer: number;
@@ -34,7 +34,8 @@
 		18: ['freshwater dolphin(s)', 'freshwater dolphins'],
 		19: ['water', 'the water'],
 		20: ['lower frequencies', 'the lower frequencies'],
-		21: ['bowhead, humpback'],
+		21: ['bowhead', 'humpback'], // Updated for separate inputs
+		21b: ['bowhead', 'humpback'], // Added separate key for the second input
 		22: ['touch', 'sense of touch'],
 		23: ['fresh water dolphin(s)', 'fresh water dolphins'],
 		24: ['airborne flying fish'],
@@ -267,33 +268,98 @@
 		let correct = 0;
 		let questionResults = {};
 
-		for (let i = 1; i <= 40; i++) {
-			const userAnswer = answers[i]?.toString().trim().toLowerCase() || '';
-			const correctAnswers = answerKey[i] || [];
+		// Iterate through all possible question numbers, including '21b'
+		const allQuestionNumbers = new Set([
+			...Object.keys(answerKey).map(Number).filter(n => !isNaN(n)),
+			'21b'
+		]);
+
+		for (const questionKey of allQuestionNumbers) {
+			// Handle the case where a question might not have a corresponding answerKey entry
+			const correctAnswers = Array.isArray(answerKey[questionKey]) ? answerKey[questionKey] : [];
+			const userAnswer = answers[questionKey]?.toString().trim().toLowerCase() || '';
 
 			let isCorrect = false;
-			for (const correctAnswer of correctAnswers) {
-				if (userAnswer === correctAnswer.toLowerCase().trim()) {
-					isCorrect = true;
-					break;
+			if (correctAnswers.length > 0) {
+				for (const correctAnswer of correctAnswers) {
+					if (userAnswer === correctAnswer.toLowerCase().trim()) {
+						isCorrect = true;
+						break;
+					}
+				}
+			} else if (questionKey === 21) { // Special handling for Q21 table entry which combines two inputs
+				const userAnswerPart1 = answers[21]?.toString().trim().toLowerCase() || '';
+				const userAnswerPart2 = answers['21b']?.toString().trim().toLowerCase() || '';
+				const correctAnswersQ21 = answerKey[21];
+
+				if (correctAnswersQ21) {
+					const correctSetQ21 = new Set(correctAnswersQ21.map(ans => ans.toLowerCase().trim()));
+					if (correctSetQ21.has(userAnswerPart1) && correctSetQ21.has(userAnswerPart2)) {
+						isCorrect = true;
+					}
 				}
 			}
 
-			if (isCorrect) {
-				correct++;
-			}
 
-			questionResults[i] = {
-				userAnswer: answers[i] || '',
+			questionResults[questionKey] = {
+				userAnswer: answers[questionKey] || '',
 				correctAnswers: correctAnswers,
 				isCorrect: isCorrect
 			};
 		}
 
+		// Special handling for Q21 if it was not covered in the loop
+		if (allQuestionNumbers.has(21) && !questionResults[21]) {
+			const userAnswerPart1 = answers[21]?.toString().trim().toLowerCase() || '';
+			const userAnswerPart2 = answers['21b']?.toString().trim().toLowerCase() || '';
+			const correctAnswersQ21 = answerKey[21];
+			let isCorrectQ21 = false;
+			if (correctAnswersQ21) {
+				const correctSetQ21 = new Set(correctAnswersQ21.map(ans => ans.toLowerCase().trim()));
+				if (correctSetQ21.has(userAnswerPart1) && correctSetQ21.has(userAnswerPart2)) {
+					isCorrectQ21 = true;
+				}
+			}
+			questionResults[21] = {
+				userAnswer: answers[21] || '', // This might need adjustment to reflect both inputs if needed
+				correctAnswers: correctAnswersQ21 || [],
+				isCorrect: isCorrectQ21
+			};
+			if (isCorrectQ21) {
+				correct++;
+			}
+		} else if (allQuestionNumbers.has(21) && questionResults[21] && questionResults[21].isCorrect) {
+			correct++;
+		}
+
+		// Ensure count for '21b' is consistent if it's a separate check
+		if (allQuestionNumbers.has('21b') && !questionResults['21b']) {
+			const userAnswerPart2 = answers['21b']?.toString().trim().toLowerCase() || '';
+			const correctAnswersQ21b = answerKey['21b'];
+			let isCorrectQ21b = false;
+			if (correctAnswersQ21b) {
+				const correctSetQ21b = new Set(correctAnswersQ21b.map(ans => ans.toLowerCase().trim()));
+				if (correctSetQ21b.has(userAnswerPart2)) {
+					isCorrectQ21b = true;
+				}
+			}
+			questionResults['21b'] = {
+				userAnswer: answers['21b'] || '',
+				correctAnswers: correctAnswersQ21b || [],
+				isCorrect: isCorrectQ21b
+			};
+			// Note: We don't increment 'correct' here for '21b' as it's part of Q21.
+		} else if (allQuestionNumbers.has('21b') && questionResults['21b'] && questionResults['21b'].isCorrect) {
+			// This branch might be redundant if '21b' is handled within Q21 logic.
+		}
+
+
+		// Recalculate total based on the number of unique question keys processed
+		const actualTotalQuestions = Object.keys(questionResults).length;
 		results = {
 			score: correct,
-			total: 40,
-			percentage: Math.round((correct / 40) * 100),
+			total: actualTotalQuestions, // Use the count of processed questions for total
+			percentage: actualTotalQuestions > 0 ? Math.round((correct / actualTotalQuestions) * 100) : 0,
 			questions: questionResults
 		};
 
@@ -331,7 +397,7 @@
 		currentSection = section;
 	}
 
-	function updateAnswer(questionNumber: number, value: string) {
+	function updateAnswer(questionNumber: number | string, value: string) {
 		answers[questionNumber] = value;
 	}
 
@@ -892,10 +958,10 @@ social, economic and political factors which drive the activities which are dest
 													<span>whales and</span>
 													<input
 														type="text"
-														bind:value={answers[21]}
+														bind:value={answers['21b']}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="w-20 rounded border p-1 text-xs text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[21]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
+														class="w-20 rounded border p-1 text-xs text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions['21b']?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 													/>
 													<span>whales</span>
 												</div>
@@ -914,7 +980,7 @@ social, economic and political factors which drive the activities which are dest
 							</div>
 
 							{#if showAnswers}
-								{#each [15, 16, 17, 18, 19, 20, 21] as qNum}
+								{#each [15, 16, 17, 18, 19, 20, '21b'] as qNum}
 									{#if results?.questions[qNum]}
 										<div class="mt-2 text-sm">
 											<strong>Q{qNum}:</strong>
