@@ -35,7 +35,7 @@
 		19: ['water', 'the water'],
 		20: ['lower frequencies', 'the lower frequencies'],
 		21: ['bowhead', 'humpback'], // Updated for separate inputs
-		21b: ['bowhead', 'humpback'], // Added separate key for the second input
+		'21b': ['bowhead', 'humpback'], // Added separate key for the second input
 		22: ['touch', 'sense of touch'],
 		23: ['fresh water dolphin(s)', 'fresh water dolphins'],
 		24: ['airborne flying fish'],
