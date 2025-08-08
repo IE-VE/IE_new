@@ -601,7 +601,6 @@
 								<p>One misconception, expressed by some 10% of the pupils, was that acid rain is	responsible for rainforest destruction; a similar proportion said that pollution is	destroying rainforests. Here, children are confusing rainforest destruction with	damage to the forests of Western Europe by these factors. While two fifths of the students provided the information that the rainforests provide oxygen, in some cases this				response also embraced the misconception that rainforest destruction would reduce atmospheric oxygen, making the atmosphere incompatible with human life on Earth.</p>
 
 								<p>In answer to the final question about the importance of rainforest conservation, the	majority of children simply said that we need rainforests to survive. Only a few of the	pupils (6%) mentioned that rainforest destruction may contribute to global warming. This is surprising considering the high level of media coverage on this issue. Some	children expressed the idea that the conservation of rainforests is not important.</p>
-
 						<p>The results of this study suggest that certain ideas predominate in the thinking of	children about rainforests. Pupils’ responses indicate some misconceptions in basic	scientific knowledge of rainforests’ ecosystems such as their ideas about rainforests as					habitats for animals, plants and humans and the relationship between climatic change	and destruction of rainforests.</p>
 
 							<p>Pupils did not volunteer ideas that suggested that they appreciated the complexity of	causes of rainforest destruction. In other words, they gave no indication of an appreciation of either the range of ways in which rainforests are important or the complex social, economic and political factors which drive the activities which are destroying			the rainforests. One encouragement is that the results of similar studies about other	environmental issues suggest that older children seem to acquire the ability to appreciate, value and evaluate conflicting views. Environmental education offers an arena in	which these skills can be developed, which is essential for these children as future decision-makers.</p>							
@@ -1380,7 +1379,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 							{/if}
 						</div>
 					</div>
-			
+
 			</div>
 		</div>
 
