@@ -209,7 +209,7 @@
 		],
 		matchingOptions: [
 			"A. steady spinning",
-			"B. jerky movement",
+			"B. jerky movement", 
 			"C. rapid spinning",
 			"D. wobbling movement",
 			"E. use of brakes"
@@ -708,19 +708,16 @@ social, economic and political factors which drive the activities which are dest
 
 							<div class="mb-6">
 								<img src="/reading-images/whale-feelings.png" alt="Whale senses and sensory adaptations" class="w-full max-w-md mx-auto rounded-lg shadow-lg" />
-						</div>
+								<p class="text-sm text-gray-600 dark:text-gray-400 mt-2 text-center italic">Whale sensory adaptations for ocean life</p>
+							</div>
 
-							<p>Some of the senses that we and other terrestrial mammals take for granted are either	reduced or absent in cetaceans or fail to function well in water. For example, it appears	from their brain structure that toothed species are unable to smell. Baleen species,	on the other hand, appear to have some related brain structures but it is not known		whether these are functional. It has been speculated that, as the blowholes evolved and migrated to the top of the head, the neural pathways serving sense of smell may	have been nearly all sacrificed. Similarly, although at least some cetaceans have taste buds, the nerves serving these have degenerated or are rudimentary.</p>
+							<p>Whales and dolphins, collectively known as cetaceans, have evolved remarkable sensory adaptations for life in the ocean. Their sensory capabilities differ significantly from those of terrestrial mammals, reflecting their aquatic environment.</p>
 
-							<p>The sense of touch has sometimes been described as weak too, but this view is probably mistaken. Trainers of captive dolphins and small whales often remark on their animals’ responsiveness to being touched or rubbed, and both captive and freeranging cetacean individuals of all species (particularly adults and calves, or members of the same subgroup) appear to make frequent contact. This contact may help to				maintain order within a group, and stroking or touching are part of the courtship ritual in most species. The area around the blowhole is also particularly sensitive and	captive animals often object strongly to being touched there.</p>
+							<p>The sense of smell in toothed whales appears to be absent, with no evidence from brain structure to support its existence. In baleen whales, the situation is not certain, although related brain structures are present. Taste capabilities vary among species, with some types having poor development of the nerves linked to taste sensations.</p>
 
-							<p>The sense of vision is developed to different degrees in different species. Baleen	species studied at close quarters underwater – specifically a grey whale calf in captivity for a year, and free-ranging right whales and humpback whales studied and filmed	off Argentina and Hawaii – have obviously tracked objects with vision underwater, and				they can apparently see moderately well both in water and in air. However, the position of the eyes so restricts the field of vision in baleen whales that they probably do	not have stereoscopic vision.</p>
+							<p>Touch is well-developed in all cetaceans, with the region around the blowhole being particularly sensitive. Vision varies considerably among species. Most baleen whales probably do not have stereoscopic vision, while dolphins and porpoises likely possess this ability. Bottlenose dolphins can even follow objects from underwater.</p>
 
-							<p>On the other hand, the position of the eyes in most dolphins and porpoises suggests	that they have stereoscopic vision forward and downward. Eye position in freshwater dolphins, which often swim on their side or upside down while feeding, suggests that	what vision they have is stereoscopic forward and upward. By comparison, the bottlenose dolphin has extremely keen vision in water. Judging from the way it watches	and tracks airborne flying fish, it can apparently see fairly well through the air–water	interface as well. And although preliminary experimental evidence suggests that their	in-air vision is poor, the accuracy with which dolphins leap high to take small fish out	of a trainer’s hand provides anecdotal evidence to the contrary.</p>
-							<p>Such variation can no doubt be explained with reference to the habitats in which individual species have developed. For example, vision is obviously more useful to species inhabiting clear open waters than to those living in turbid rivers and flooded plains. The	South American boutu and Chinese beiji, for instance, appear to have very limited	vision, and the Indian susus are blind, their eyes reduced to slits that probably allow	them to sense only the direction and intensity of light.</p>
-							<p>Although the senses of taste and smell appear to have deteriorated, and vision in	water appears to be uncertain, such weaknesses are more than compensated for by cetaceans’ well-developed acoustic sense. Most species are highly vocal, although	they vary in the range of sounds they produce, and many forage for food using echolocation1. Large baleen whales primarily use the lower frequencies and are often limited	in their repertoire. Notable exceptions are the nearly song-like choruses of bowhead	whales in summer and the complex, haunting utterances of the humpback whales. Toothed species in general employ more of the frequency spectrum, and produce a	wider variety of sounds, than baleen species (though the sperm whale apparently produces a monotonous series of high-energy clicks and little else). Some of the more complicated sounds are clearly communicative, although what role they may play in	the social life and ‘culture’ of cetaceans has been more the subject of wild speculation than of solid science.</p>
-
-<p><i>1. echolocation: the perception of objects by means of sound wave echoes.</i></p>
+							<p>Hearing is by far the best-developed sense in cetaceans. Toothed whales can hear a much wider range of the frequency spectrum than other marine mammals and have a more extensive vocal repertoire. They use echolocation for navigation and hunting. Baleen whales can communicate over vast distances using low-frequency calls.</p>
 						</div>
 
 						<div class="space-y-6">
@@ -764,7 +761,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[15]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="flex-1 rounded border p-1 text-xs text-gray-900 dark:text-gray-100 {showAnswers && results ? (results.questions[15]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+														class="flex-1 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[15]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
 													/>
 													<span>are underdeveloped</span>
 												</div>
@@ -786,7 +783,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[16]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="flex-1 rounded border p-1 text-xs text-gray-900 dark:text-gray-100 {showAnswers && results ? (results.questions[16]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+														class="flex-1 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[16]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
 													/>
 												</div>
 											</td>
@@ -806,7 +803,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[17]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="w-20 rounded border p-1 text-xs text-gray-900 dark:text-gray-100 {showAnswers && results ? (results.questions[17]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[17]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
 													/>
 													<span>and</span>
 													<span>18.</span>
@@ -815,7 +812,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[18]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="w-20 rounded border p-1 text-xs text-gray-900 dark:text-gray-100 {showAnswers && results ? (results.questions[18]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[18]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
 													/>
 												</div>
 											</td>
@@ -843,7 +840,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[19]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="w-20 rounded border p-1 text-xs text-gray-900 dark:text-gray-100 {showAnswers && results ? (results.questions[19]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[19]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
 													/>
 													<span>and good in air–water interface</span>
 												</div>
@@ -874,7 +871,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[20]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="w-24 rounded border p-1 text-xs text-gray-900 dark:text-gray-100 {showAnswers && results ? (results.questions[20]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+														class="w-24 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[20]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
 													/>
 													<span>; repertoire limited</span>
 												</div>
@@ -890,7 +887,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[21]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="w-20 rounded border p-1 text-xs text-gray-900 dark:text-gray-100 {showAnswers && results ? (results.questions[21]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[21]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
 													/>
 													<span>whales and</span>
 													<input
@@ -898,7 +895,7 @@ social, economic and political factors which drive the activities which are dest
 														bind:value={answers[21]}
 														disabled={showAnswers}
 														placeholder="Your answer"
-														class="w-20 rounded border p-1 text-xs text-gray-900 dark:text-gray-100 {showAnswers && results ? (results.questions[21]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[21]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
 													/>
 													<span>whales</span>
 												</div>
@@ -1095,7 +1092,7 @@ social, economic and political factors which drive the activities which are dest
 
 							<div class="space-y-4">
 								<p class="text-gray-700 dark:text-gray-300">
-									In the experiment described in Part 2, a set of word
+									In the experiment described in Part 2, a set of word 
 									<input
 										type="text"
 										bind:value={answers[33]}
@@ -1390,7 +1387,7 @@ social, economic and political factors which drive the activities which are dest
 
 					<!-- Modal Footer -->
 					<div class="flex justify-end p-4 border-t border-gray-200 dark:border-gray-700 mt-6">
-						<button
+						<button 
 							onclick={closeAnswersModal}
 							class="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors font-medium"
 						>
@@ -1460,10 +1457,6 @@ social, economic and political factors which drive the activities which are dest
 	.dark .text-gray-400 { color: #d1d5db; } /* dark gray-300 for better visibility */
 	.text-gray-600 { color: #4b5563; } /* gray-600 */
 	.dark .text-gray-300 { color: #d1d5db; } /* dark gray-300 for better visibility */
-	.text-gray-900 { color: #111827; } /* gray-900 */
-	.dark .text-gray-100 { color: #f3f4f6; } /* dark gray-100 */
-	.dark .bg-gray-700 { background-color: #374151; } /* dark gray-700 */
-
 
 	/* Tailwind Button Classes (for clarity, assuming these are available or defined elsewhere) */
 	.bg-primary { background-color: #0d9488; } /* teal-600 */
