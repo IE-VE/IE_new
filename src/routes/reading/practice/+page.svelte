@@ -624,7 +624,7 @@
 										<select
 											bind:value={answers[question.num]}
 											disabled={showAnswers}
-											class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+											class="w-full rounded-lg border px-2 py-0.5 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 										>
 											<option value="">Select answer</option>
 											<option value="TRUE">TRUE</option>
@@ -668,7 +668,7 @@
 										<select
 											bind:value={answers[question.num]}
 											disabled={showAnswers}
-											class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+											class="w-full rounded-lg border px-2 py-0.5 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 										>
 											<option value="">Select answer</option>
 											{#each ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P'] as option}
@@ -742,6 +742,7 @@
 						<div class="prose dark:prose-invert max-w-none mb-8">
 							<h3 class="text-xl font-semibold mb-4">Whale Senses</h3>
 
+							<p><strong>Part 1</strong></p>
 							<div class="mb-6">
 								<img src="/reading-images/whale-feelings.png" alt="Whale senses and sensory adaptations" class="w-full max-w-md mx-auto rounded-lg shadow-lg" />
 										</div>
@@ -1119,7 +1120,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 									<select
 										bind:value={answers[question.num]}
 										disabled={showAnswers}
-										class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+										class="w-full rounded-lg border px-2 py-0.5 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									>
 										<option value="">Select movement type</option>
 										{#each ['A', 'B', 'C', 'D', 'E'] as option}
@@ -1162,7 +1163,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 									<div>identical</div>
 									<div>hundred</div>
 									<div>shallow</div>
-									
+
 								</div>
 							</div>
 
@@ -1311,7 +1312,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 						</div>
 					</div>
 				{/if}
-		
+
 				<!-- Action Button - only show if not marked yet -->
 				{#if !hasMarked}
 					<div class="mt-6 flex flex-col gap-4 items-center">
