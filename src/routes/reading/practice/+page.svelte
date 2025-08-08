@@ -1174,7 +1174,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[33]}
 										disabled={showAnswers}
 										placeholder="33"
-										class="w-16 mx-1 rounded border p-1 text-black{showAnswers && results ? (results.questions[33]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+										class="w-16 mx-1 rounded border p-1 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[33]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									/>
 									was used to investigate whether blind and sighted people perceived the symbolism in abstract
 									<input
@@ -1182,7 +1182,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[34]}
 										disabled={showAnswers}
 										placeholder="34"
-										class="w-16 mx-1 rounded border p-1 text-black {showAnswers && results ? (results.questions[34]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+										class="w-16 mx-1 rounded border p-1 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[34]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									/>
 									in the same way.
 								</p>
@@ -1194,7 +1194,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[35]}
 										disabled={showAnswers}
 										placeholder="35"
-										class="w-16 mx-1 rounded border p-1 text-black {showAnswers && results ? (results.questions[35]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+										class="w-16 mx-1 rounded border p-1 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[35]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									/>
 									volunteers, everyone thought a circle fitted 'soft' while a square fitted 'hard'. However, only 51% of the
 									<input
@@ -1202,7 +1202,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[36]}
 										disabled={showAnswers}
 										placeholder="36"
-										class="w-16 mx-1 rounded border p-1 text-black {showAnswers && results ? (results.questions[36]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+										class="w-16 mx-1 rounded border p-1 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[36]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									/>
 									volunteers assigned a circle to
 									<input
@@ -1210,7 +1210,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[37]}
 										disabled={showAnswers}
 										placeholder="37"
-										class="w-16 mx-1 rounded border p-1 text-black {showAnswers && results ? (results.questions[37]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+										class="w-16 mx-1 rounded border p-1 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[37]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									/>
 									. When the test was later repeated with
 									<input
@@ -1218,7 +1218,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[38]}
 										disabled={showAnswers}
 										placeholder="38"
-										class="w-16 mx-1 rounded border p-1 text-black {showAnswers && results ? (results.questions[38]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+										class="w-16 mx-1 rounded border p-1 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[38]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									/>
 									volunteers, it was found that they made
 									<input
@@ -1226,7 +1226,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 										bind:value={answers[39]}
 										disabled={showAnswers}
 										placeholder="39"
-										class="w-16 mx-1 rounded border p-1 text-black {showAnswers && results ? (results.questions[39]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+										class="w-16 mx-1 rounded border p-1 text-black dark:text-white dark:bg-gray-700 {showAnswers && results ? (results.questions[39]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 bg-white'}"
 									/>
 									choices.
 								</p>
