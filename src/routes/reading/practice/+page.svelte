@@ -510,7 +510,15 @@
 							<div class="prose dark:prose-invert max-w-none mb-8">
 								<h3 class="text-xl font-semibold mb-4">Children's Ideas About Rainforests</h3>
 
-								<p>Adults and children are frequently confronted with statements about the alarming rate of loss of tropical rainforests. For example, one graphic illustration to which children might readily relate is the estimate that rainforests are being destroyed at a rate equivalent to one thousand football fields every forty minutes – about the duration of a normal classroom period. In the face of the frequent and often vivid media coverage, it is likely that children will have formed ideas about rainforests – what and where they are, why they are important, what endangers them – independent of any formal tuition. It is also possible that some of these ideas will be mistaken.</p>
+								<div class="flex flex-col md:flex-row gap-6 items-start mb-6">
+									<div class="flex-1">
+										<p>Adults and children are frequently confronted with statements about the alarming rate of loss of tropical rainforests. For example, one graphic illustration to which children might readily relate is the estimate that rainforests are being destroyed at a rate equivalent to one thousand football fields every forty minutes – about the duration of a normal classroom period. In the face of the frequent and often vivid media coverage, it is likely that children will have formed ideas about rainforests – what and where they are, why they are important, what endangers them – independent of any formal tuition. It is also possible that some of these ideas will be mistaken.</p>
+									</div>
+									<div class="md:w-1/3 flex-shrink-0">
+										<img src="/reading-images/rainforest-destruction.png" alt="Rainforest destruction showing environmental impact" class="w-full rounded-lg shadow-lg" />
+										<p class="text-sm text-gray-600 dark:text-gray-400 mt-2 text-center italic">Rainforest destruction - a critical environmental issue</p>
+									</div>
+								</div>
 
 								<p>Many studies have shown that children harbour misconceptions about 'pure', curriculum science. These misconceptions do not remain isolated but become incorporated into a multifaceted, but organised, conceptual framework, making it and the component ideas, some of which are erroneous, more robust but also accessible to modification. These ideas may be developed by children absorbing ideas through the popular media. Sometimes this information may be erroneous. It seems schools may not be providing an opportunity for children to re-express their ideas and so have them tested and refined by teachers and their peers.</p>
 
@@ -974,10 +982,6 @@ social, economic and political factors which drive the activities which are dest
 							<div class="mb-4"><strong>E</strong> Sustainable farming practices offer solutions that balance productivity with environmental protection. These approaches focus on long-term soil health, biodiversity conservation, and reduced chemical inputs while maintaining economic viability.</div>
 
 							<div class="mb-4"><strong>F</strong> Food security depends not only on quantity but also on the resilience of agricultural systems. Biodiversity is essential for developing crops that can withstand climate change, diseases, and changing environmental conditions.</div>
-							
-							<div class="mb-4">
-								<img src="/reading-images/rainforest-destruction.png" alt="Rainforest destruction" class="w-full max-w-md mx-auto rounded-lg shadow-lg" />
-							</div>
 						</div>
 
 						<div class="space-y-6">
