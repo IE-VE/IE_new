@@ -1025,27 +1025,28 @@
 								<div class="md:w-1/3 flex-shrink-0">
 									<img src="/reading-images/Fig.1.png" alt="Fig. 1 - Drawing showing a spinning wheel with motion lines" class="w-full rounded-lg shadow-lg" />
 								</div>
+							</div>
 
-<p>When I asked several other blind study subjects to draw a spinning wheel, one particularly clever rendition appeared repeatedly: several subjects showed the wheel’s spokes as curved lines. When asked about these curves, they all described them as metaphorical ways of suggesting motion. Majority rule would argue that this device somehow indicated motion very well. But was it a better indicator than, say, broken or wavy lines – or any other kind of line, for that matter? The answer was not clear. So
+							<p>When I asked several other blind study subjects to draw a spinning wheel, one particularly clever rendition appeared repeatedly: several subjects showed the wheel's spokes as curved lines. When asked about these curves, they all described them as metaphorical ways of suggesting motion. Majority rule would argue that this device somehow indicated motion very well. But was it a better indicator than, say, broken or wavy lines – or any other kind of line, for that matter? The answer was not clear. So
 I decided to test whether various lines of motion were apt ways of showing movement or if they were merely idiosyncratic marks. Moreover, I wanted to discover whether there were differences in how the blind and the sighted interpreted lines of motion.</p>
 
-<p>To search out these answers, I created raised-line drawings of five different wheels,	depicting spokes with lines that curved, bent, waved, dashed and extended beyond the perimeter of the wheel. I then asked eighteen blind volunteers to feel the wheels	and assign one of the following motions to each wheel: wobbling, spinning fast, spinning steadily, jerking or braking. My control group consisted of eighteen sighted	undergraduates from the University of Toronto.</p>
+							<p>To search out these answers, I created raised-line drawings of five different wheels,	depicting spokes with lines that curved, bent, waved, dashed and extended beyond the perimeter of the wheel. I then asked eighteen blind volunteers to feel the wheels	and assign one of the following motions to each wheel: wobbling, spinning fast, spinning steadily, jerking or braking. My control group consisted of eighteen sighted	undergraduates from the University of Toronto.</p>
 
-<p>All but one of the blind subjects assigned distinctive motions to each wheel. Most guessed that the curved spokes indicated that the wheel was spinning steadily; the wavy spokes, they thought, suggested that the wheel was wobbling; and the bent spokes were taken as a sign that the wheel was jerking. Subjects assumed that spokes extending beyond the wheel’s perimeter signified that the wheel had its brakes on and
+							<p>All but one of the blind subjects assigned distinctive motions to each wheel. Most guessed that the curved spokes indicated that the wheel was spinning steadily; the wavy spokes, they thought, suggested that the wheel was wobbling; and the bent spokes were taken as a sign that the wheel was jerking. Subjects assumed that spokes extending beyond the wheel's perimeter signified that the wheel had its brakes on and
 dashed spokes indicated the wheel was spinning quickly.</p>
 
-<p>In addition, the favoured description for the sighted was the favoured description for the blind in every instance. What is more, the consensus among the sighted was barely higher than that among the blind. Because motion devices are unfamiliar to the blind, the task I gave them involved some problem solving. Evidently, however, the blind not only figured out meanings for each line of motion, but as a group they generally came
+							<p>In addition, the favoured description for the sighted was the favoured description for the blind in every instance. What is more, the consensus among the sighted was barely higher than that among the blind. Because motion devices are unfamiliar to the blind, the task I gave them involved some problem solving. Evidently, however, the blind not only figured out meanings for each line of motion, but as a group they generally came
 up with the same meaning at least as frequently as did sighted subjects.</p>
 
-								<p><strong>Part 2</strong></p>
-<p>We have found that the blind understand other kinds of visual metaphors as well. One blind woman drew a picture of a child inside a heart – choosing that symbol, she said, to show that love surrounded the child. With Chang Hong Liu, a doctoral student from China, I have begun exploring how well blind people understand the symbolism behind shapes such as hearts that do not directly represent their meaning.</p>
+							<p><strong>Part 2</strong></p>
+							<p>We have found that the blind understand other kinds of visual metaphors as well. One blind woman drew a picture of a child inside a heart – choosing that symbol, she said, to show that love surrounded the child. With Chang Hong Liu, a doctoral student from China, I have begun exploring how well blind people understand the symbolism behind shapes such as hearts that do not directly represent their meaning.</p>
 
-<p>We gave a list of twenty pairs of words to sighted subjects and asked them to pick from each pair the term that best related to a circle
+							<p>We gave a list of twenty pairs of words to sighted subjects and asked them to pick from each pair the term that best related to a circle
 and the term that best related to a square. For example, we asked: What goes with soft? A circle or a square? Which shape goes with hard?</p>
 
-<p>All our subjects deemed the circle soft and the square hard. A full 94% ascribed happy to the circle, instead of sad. But other pairs revealed less agreement: 79% matched fast to slow and weak to strong, respectively. And only 51% linked deep to circle and shallow to square. When we tested four totally blind volunteers using the same list, we found that their choices closely resembled those made by the sighted subjects. One man, who had been blind since birth, scored extremely well. He made only one match differing from the consensus, assigning ‘far’ to square and ‘near’ to circle. In fact, only a small majority of sighted subjects – 53% – had paired far and near to the opposite partners. Thus, we concluded that the blind interpret abstract shapes as sighted people do.</p>
-							</div>			
-					
+							<p>All our subjects deemed the circle soft and the square hard. A full 94% ascribed happy to the circle, instead of sad. But other pairs revealed less agreement: 79% matched fast to slow and weak to strong, respectively. And only 51% linked deep to circle and shallow to square. When we tested four totally blind volunteers using the same list, we found that their choices closely resembled those made by the sighted subjects. One man, who had been blind since birth, scored extremely well. He made only one match differing from the consensus, assigning 'far' to square and 'near' to circle. In fact, only a small majority of sighted subjects – 53% – had paired far and near to the opposite partners. Thus, we concluded that the blind interpret abstract shapes as sighted people do.</p>
+						</div>			
+
 						<div class="space-y-6">
 							<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 27-29</h3>
 							<p class="text-gray-700 dark:text-gray-300">Choose the correct letter, <strong>A</strong>, <strong>B</strong>, <strong>C</strong> or <strong>D</strong>.</p>
@@ -1293,95 +1294,96 @@ and the term that best related to a square. For example, we asked: What goes wit
 					</div>
 				{/if}
 
-							<!-- Action Button - only show if not marked yet -->
-							{#if !hasMarked}
-								<div class="mt-6 flex flex-col gap-4 items-center">
-									<button
-										type="button"
-										onclick={() => { if (!hasMarked && !isMarking) markTest(); }}
-										disabled={isMarking}
-										class="inline-flex items-center justify-center px-8 py-4 bg-green-800 text-white font-medium rounded-lg hover:bg-green-700 transition-colors text-lg disabled:opacity-50 disabled:cursor-not-allowed"
-									>
-										{#if isMarking}
-											<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-												<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-												<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-											</svg>
-											Processing Test...
-										{:else}
-											✅ Mark my Test
-										{/if}
-									</button>
-								</div>
+				<!-- Action Button - only show if not marked yet -->
+				{#if !hasMarked}
+					<div class="mt-6 flex flex-col gap-4 items-center">
+						<button
+							type="button"
+							onclick={() => { if (!hasMarked && !isMarking) markTest(); }}
+							disabled={isMarking}
+							class="inline-flex items-center justify-center px-8 py-4 bg-green-800 text-white font-medium rounded-lg hover:bg-green-700 transition-colors text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+						>
+							{#if isMarking}
+								<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+									<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+									<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+								</svg>
+								Processing Test...
+							{:else}
+								✅ Mark my Test
 							{/if}
+						</button>
+					</div>
+				{/if}
 
-							<!-- Results Display -->
-							{#if results && showAnswers}
-								<div class="mt-12 rounded-lg bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-700 p-6 max-w-md mx-auto">
-									<!-- Centered Test Results title -->
-									<h3 class="mb-6 text-xl font-semibold text-gray-900 dark:text-white text-center"><u>Test Results</u></h3>
+				<!-- Results Display -->
+				{#if results && showAnswers}
+					<div class="mt-12 rounded-lg bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-700 p-6 max-w-md mx-auto">
+						<!-- Centered Test Results title -->
+						<h3 class="mb-6 text-xl font-semibold text-gray-900 dark:text-white text-center"><u>Test Results</u></h3>
 
-									<!-- Centered Query button and help text -->
-									<div class="text-center mb-8">
-										<button
-											onclick={() => window.open('#', '_blank')}
-											class="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors text-sm font-medium"
-										>
-											Query my Results
-										</button>
-										<div class="text-sm text-white dark:text-gray-400 mt-1">
-											If you are unclear about any answers - just ask!
-										</div>
-									</div>
+						<!-- Centered Query button and help text -->
+						<div class="text-center mb-8">
+							<button
+								onclick={() => window.open('#', '_blank')}
+								class="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors text-sm font-medium"
+							>
+								Query my Results
+							</button>
+							<div class="text-sm text-white dark:text-gray-400 mt-1">
+								If you are unclear about any answers - just ask!
+							</div>
+						</div>
 
-									<div class="mb-6 text-center">
-										<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">
-											{results.score}/40
-										</div>
-										<div class="text-sm text-white dark:text-gray-300">
-											{results.percentage}% Correct
-										</div>
-									</div>
+						<div class="mb-6 text-center">
+							<div class="text-3xl font-bold text-teal-600 dark:text-teal-400">
+								{results.score}/40
+							</div>
+							<div class="text-sm text-white dark:text-gray-300">
+								{results.percentage}% Correct
+							</div>
+						</div>
 
-									<!-- Band Score Estimate -->
-									<div class="text-center mb-8">
-										<div class="text-lg font-semibold text-gray-900 dark:text-white">
-											Estimated Band Score:
-											<span class="text-teal-600 dark:text-teal-400">
-												{#if results.score >= 37}7.5-9.0
-												{:else if results.score >= 33}7.0
-												{:else if results.score >= 30}6.5
-												{:else if results.score >= 27}6.0
-												{:else if results.score >= 23}5.5
-												{:else if results.score >= 19}5.0
-												{:else if results.score >= 15}4.5
-												{:else if results.score >= 11}4.0
-												{:else if results.score >= 8}3.5
-												{:else if results.score >= 5}3.0
-												{:else}2.5-3.5{/if}
-											</span>
-										</div>
-									</div>
+						<!-- Band Score Estimate -->
+						<div class="text-center mb-8">
+							<div class="text-lg font-semibold text-gray-900 dark:text-white">
+								Estimated Band Score:
+								<span class="text-teal-600 dark:text-teal-400">
+									{#if results.score >= 37}7.5-9.0
+									{:else if results.score >= 33}7.0
+									{:else if results.score >= 30}6.5
+									{:else if results.score >= 27}6.0
+									{:else if results.score >= 23}5.5
+									{:else if results.score >= 19}5.0
+									{:else if results.score >= 15}4.5
+									{:else if results.score >= 11}4.0
+									{:else if results.score >= 8}3.5
+									{:else if results.score >= 5}3.0
+									{:else}2.5-3.5{/if}
+								</span>
+							</div>
+						</div>
 
-									<!-- Bottom buttons -->
-									<div class="flex justify-between items-center gap-1">
-										<button
-											onclick={openAnswersModal}
-											class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm font-medium"
-										>
-											View Answer Key
-										</button>
-										<button
-											onclick={() => window.location.href = '/'}
-											class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm font-medium"
-										>
-											Close
-										</button>
-									</div>
-								</div>
-							{/if}
-			
-
+						<!-- Bottom buttons -->
+						<div class="flex justify-between items-center gap-1">
+							<button
+								onclick={openAnswersModal}
+								class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm font-medium"
+							>
+								View Answer Key
+							</button>
+							<button
+								onclick={() => window.location.href = '/'}
+								class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm font-medium"
+							>
+								Close
+							</button>
+						</div>
+					</div>
+				{/if}
+			</div>
+		</div>
+	{/if}
 
 	<!-- Answer Key Modal -->
 	{#if showAnswersModal}
@@ -1395,12 +1397,14 @@ and the term that best related to a square. For example, we asked: What goes wit
 				<div class="p-6">
 					<div class="flex justify-between items-center mb-5">
 
-						<!-- <button
+						<!--
+						<button
 							onclick={closeAnswersModal}
 							class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 focus:outline-none"
 						>
 							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-						</button> -->
+						</button>
+						-->
 					</div>
 					<div class="max-w-none overflow-y-auto max-h-[70vh]">
 						<h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white text-center">Reading Test 1 - Answer Key</h3>
@@ -1454,7 +1458,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 		</div>
 	{/if}
 </div>
-					
+
 <style>
 	/* Custom styles for the reading test interface */
 	.prose {
