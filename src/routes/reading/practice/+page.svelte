@@ -582,59 +582,29 @@
 									</div>
 									<div class="md:w-1/3 flex-shrink-0">
 										<img src="/reading-images/rainforest-destruction.png" alt="Rainforest destruction showing environmental impact" class="w-full rounded-lg shadow-lg" />
-										<p class="text-sm text-gray-600 dark:text-gray-400 mt-2 text-center italic">Rainforest destruction - a critical environmental issue</p>
+						
 									</div>
 								</div>
 
 								<p>Many studies have shown that children harbour misconceptions about 'pure', curriculum science. These misconceptions do not remain isolated but become incorporated into a multifaceted, but organised, conceptual framework, making it and the component ideas, some of which are erroneous, more robust but also accessible to modification. These ideas may be developed by children absorbing ideas through the popular media. Sometimes this information may be erroneous. It seems schools may not be providing an opportunity for children to re-express their ideas and so have them tested and refined by teachers and their peers.</p>
 
-								<p>Despite the extensive coverage in the popular media of the destruction of rainforests, little formal information is available about children’s ideas in this area. The aim of the
-									present study is to start to provide such information, to help teachers design their educational strategies to build upon correct ideas and to displace misconceptions and to
-									plan programmes in environmental studies in their schools.</p>
+								<p>Despite the extensive coverage in the popular media of the destruction of rainforests, little formal information is available about children’s ideas in this area. The aim of the	present study is to start to provide such information, to help teachers design their educational strategies to build upon correct ideas and to displace misconceptions and to	plan programmes in environmental studies in their schools.</p>
 
-								<p>The study surveys children’s scientific knowledge and attitudes to rainforests.
-									Secondary school children were asked to complete a questionnaire containing five
-									open-form questions. The most frequent responses to the first question were descriptions which are self-evident from the term ‘rainforest’. Some children described them
-									as damp, wet or hot. The second question concerned the geographical location of rainforests. The commonest responses were continents or countries: Africa (given by 43%
-									of children), South America (30%), Brazil (25%). Some children also gave more
-									general locations, such as being near the Equator.</p>
+								<p>The study surveys children’s scientific knowledge and attitudes to rainforests.	Secondary school children were asked to complete a questionnaire containing five	open-form questions. The most frequent responses to the first question were descriptions which are self-evident from the term ‘rainforest’. Some children described them	as damp, wet or hot. The second question concerned the geographical location of rainforests. The commonest responses were continents or countries: Africa (given by 43%	of children), South America (30%), Brazil (25%). Some children also gave more	general locations, such as being near the Equator.</p>
 
-								<p>Responses to question three concerned the importance of rainforests. The dominant idea, raised by 64% of the pupils, was that rainforests provide animals with habitats. Fewer students responded that rainforests provide plant habitats, and even fewer
-								mentioned the indigenous populations of rainforests.</p>
+								<p>Responses to question three concerned the importance of rainforests. The dominant idea, raised by 64% of the pupils, was that rainforests provide animals with habitats. Fewer students responded that rainforests provide plant habitats, and even fewer	mentioned the indigenous populations of rainforests.</p>
 
-								<p>Similarly, but at a lower level, more girls (13%) than boys (5%) said that rainforests	provided human habitats. These observations are generally consistent with our previous studies of pupils’ views about the use and conservation of rainforests, in which
-								girls were shown to be more sympathetic to animals and expressed views which seem
-								to place an intrinsic value on non-human animal life.</p>
+								<p>Similarly, but at a lower level, more girls (13%) than boys (5%) said that rainforests	provided human habitats. These observations are generally consistent with our previous studies of pupils’ views about the use and conservation of rainforests, in which							girls were shown to be more sympathetic to animals and expressed views which seem	to place an intrinsic value on non-human animal life.</p>
 
-								<p>The fourth question concerned the causes of the destruction of rainforests. Perhaps
-								encouragingly, more than half of the pupils (59%) identified that it is human activities which are destroying rainforests, some personalising the responsibility by the use of
-terms such as ‘we are’. About 18% of the pupils referred specifically to logging activity</p>
+								<p>The fourth question concerned the causes of the destruction of rainforests. Perhaps	encouragingly, more than half of the pupils (59%) identified that it is human activities which are destroying rainforests, some personalising the responsibility by the use of terms such as ‘we are’. About 18% of the pupils referred specifically to logging activity</p>
 
-								<p>One misconception, expressed by some 10% of the pupils, was that acid rain is
-								responsible for rainforest destruction; a similar proportion said that pollution is
-								destroying rainforests. Here, children are confusing rainforest destruction with
-								damage to the forests of Western Europe by these factors. While two fifths of the students provided the information that the rainforests provide oxygen, in some cases this
-								response also embraced the misconception that rainforest destruction would reduce
-								atmospheric oxygen, making the atmosphere incompatible with human life on Earth.</p>
+								<p>One misconception, expressed by some 10% of the pupils, was that acid rain is	responsible for rainforest destruction; a similar proportion said that pollution is	destroying rainforests. Here, children are confusing rainforest destruction with	damage to the forests of Western Europe by these factors. While two fifths of the students provided the information that the rainforests provide oxygen, in some cases this				response also embraced the misconception that rainforest destruction would reduce atmospheric oxygen, making the atmosphere incompatible with human life on Earth.</p>
 
-								<p>In answer to the final question about the importance of rainforest conservation, the
-								majority of children simply said that we need rainforests to survive. Only a few of the
-								pupils (6%) mentioned that rainforest destruction may contribute to global warming.
-								This is surprising considering the high level of media coverage on this issue. Some
-								children expressed the idea that the conservation of rainforests is not important.</p>
+								<p>In answer to the final question about the importance of rainforest conservation, the	majority of children simply said that we need rainforests to survive. Only a few of the	pupils (6%) mentioned that rainforest destruction may contribute to global warming. This is surprising considering the high level of media coverage on this issue. Some	children expressed the idea that the conservation of rainforests is not important.</p>
 
-						<p>The results of this study suggest that certain ideas predominate in the thinking of
-						children about rainforests. Pupils’ responses indicate some misconceptions in basic
-						scientific knowledge of rainforests’ ecosystems such as their ideas about rainforests as
-						habitats for animals, plants and humans and the relationship between climatic change
-						and destruction of rainforests.</p>
+						<p>The results of this study suggest that certain ideas predominate in the thinking of	children about rainforests. Pupils’ responses indicate some misconceptions in basic	scientific knowledge of rainforests’ ecosystems such as their ideas about rainforests as					habitats for animals, plants and humans and the relationship between climatic change	and destruction of rainforests.</p>
 
-							<p>Pupils did not volunteer ideas that suggested that they appreciated the complexity of
-							causes of rainforest destruction. In other words, they gave no indication of an appreciation of either the range of ways in which rainforests are important or the complex
-social, economic and political factors which drive the activities which are destroying
-							the rainforests. One encouragement is that the results of similar studies about other
-							environmental issues suggest that older children seem to acquire the ability to appreciate, value and evaluate conflicting views. Environmental education offers an arena in
-							which these skills can be developed, which is essential for these children as future decision-makers.</p>							
+							<p>Pupils did not volunteer ideas that suggested that they appreciated the complexity of	causes of rainforest destruction. In other words, they gave no indication of an appreciation of either the range of ways in which rainforests are important or the complex social, economic and political factors which drive the activities which are destroying			the rainforests. One encouragement is that the results of similar studies about other	environmental issues suggest that older children seem to acquire the ability to appreciate, value and evaluate conflicting views. Environmental education offers an arena in	which these skills can be developed, which is essential for these children as future decision-makers.</p>							
 							</div>
 
 							<div class="space-y-6">
@@ -774,16 +744,21 @@ social, economic and political factors which drive the activities which are dest
 
 							<div class="mb-6">
 								<img src="/reading-images/whale-feelings.png" alt="Whale senses and sensory adaptations" class="w-full max-w-md mx-auto rounded-lg shadow-lg" />
-								<p class="text-sm text-gray-600 dark:text-gray-400 mt-2 text-center italic">Whale sensory adaptations for ocean life</p>
-							</div>
+										</div>
 
-							<p>Whales and dolphins, collectively known as cetaceans, have evolved remarkable sensory adaptations for life in the ocean. Their sensory capabilities differ significantly from those of terrestrial mammals, reflecting their aquatic environment.</p>
+							<p>Some of the senses that we and other terrestrial mammals take for granted are either	reduced or absent in cetaceans or fail to function well in water. For example, it appears	from their brain structure that toothed species are unable to smell. Baleen species,	on the other hand, appear to have some related brain structures but it is not known		whether these are functional. It has been speculated that, as the blowholes evolved	and migrated to the top of the head, the neural pathways serving sense of smell may have been nearly all sacrificed. Similarly, although at least some cetaceans have taste buds, the nerves serving these have degenerated or are rudimentary.</p>
 
-							<p>The sense of smell in toothed whales appears to be absent, with no evidence from brain structure to support its existence. In baleen whales, the situation is not certain, although related brain structures are present. Taste capabilities vary among species, with some types having poor development of the nerves linked to taste sensations.</p>
+							<p>The sense of touch has sometimes been described as weak too, but this view is probably mistaken. Trainers of captive dolphins and small whales often remark on their animals’ responsiveness to being touched or rubbed, and both captive and freeranging cetacean individuals of all species (particularly adults and calves, or members of the same subgroup) appear to make frequent contact. This contact may help to				maintain order within a group, and stroking or touching are part of the courtship ritual in most species. The area around the blowhole is also particularly sensitive and	captive animals often object strongly to being touched there.</p>
 
-							<p>Touch is well-developed in all cetaceans, with the region around the blowhole being particularly sensitive. Vision varies considerably among species. Most baleen whales probably do not have stereoscopic vision, while dolphins and porpoises likely possess this ability. Bottlenose dolphins can even follow objects from underwater.</p>
+							<p>The sense of vision is developed to different degrees in different species. Baleen	species studied at close quarters underwater – specifically a grey whale calf in captivity for a year, and free-ranging right whales and humpback whales studied and filmed	off Argentina and Hawaii – have obviously tracked objects with vision underwater, and				they can apparently see moderately well both in water and in air. However, the position of the eyes so restricts the field of vision in baleen whales that they probably do	not have stereoscopic vision.</p>
 
-							<p>Hearing is by far the best-developed sense in cetaceans. Toothed whales can hear a much wider range of the frequency spectrum than other marine mammals and have a more extensive vocal repertoire. They use echolocation for navigation and hunting. Baleen whales can communicate over vast distances using low-frequency calls.</p>
+							<p>On the other hand, the position of the eyes in most dolphins and porpoises suggests	that they have stereoscopic vision forward and downward. Eye position in freshwater	dolphins, which often swim on their side or upside down while feeding, suggests that	what vision they have is stereoscopic forward and upward. By comparison, the bottlenose dolphin has extremely keen vision in water. Judging from the way it watches	and tracks airborne flying fish, it can apparently see fairly well through the air–water	interface as well. And although preliminary experimental evidence suggests that their	in-air vision is poor, the accuracy with which dolphins leap high to take small fish out	of a trainer’s hand provides anecdotal evidence to the contrary</p>
+							
+							<p>Such variation can no doubt be explained with reference to the habitats in which individual species have developed. For example, vision is obviously more useful to species	inhabiting clear open waters than to those living in turbid rivers and flooded plains. The					South American boutu and Chinese beiji, for instance, appear to have very limited	vision, and the Indian susus are blind, their eyes reduced to slits that probably allow	them to sense only the direction and intensity of light.</p>
+							
+							<p>Although the senses of taste and smell appear to have deteriorated, and vision in	water appears to be uncertain, such weaknesses are more than compensated for by cetaceans’ well-developed acoustic sense. Most species are highly vocal, although	they vary in the range of sounds they produce, and many forage for food using echolocation1. Large baleen whales primarily use the lower frequencies and are often limited	in their repertoire. Notable exceptions are the nearly song-like choruses of bowhead	whales in summer and the complex, haunting utterances of the humpback whales. Toothed species in general employ more of the frequency spectrum, and produce a	wider variety of sounds, than baleen species (though the sperm whale apparently produces a monotonous series of high-energy clicks and little else). Some of the more	complicated sounds are clearly communicative, although what role they may play in	the social life and ‘culture’ of cetaceans has been more the subject of wild speculation than of solid science.</p>
+
+							<p><i>1. echolocation: the perception of objects by means of sound wave echoes</i></p>
 						</div>
 
 						<div class="space-y-6">
@@ -1040,20 +1015,13 @@ social, economic and political factors which drive the activities which are dest
 						</div>
 
 						<div class="prose dark:prose-invert max-w-none mb-8">
-							<h3 class="text-xl font-semibold mb-4">Sustainable Agriculture and Food Security</h3>
+							<h3 class="text-xl font-semibold mb-4">Visual Symbols and the Blind</h3>
 
-							<div class="mb-4"><strong>A</strong> Modern agriculture faces unprecedented challenges in feeding a growing global population while maintaining environmental sustainability. The industrial approach to farming, characterized by monocultures and heavy chemical inputs, has increased yields but created new problems.</div>
+							<p><strong>Part 1</strong></p>
+							<p>From a number of recent studies, it has become clear that blind people can appreciate	the use of outlines and perspectives to describe the arrangement of objects and other	surfaces in space. But pictures are more than literal representations.	This fact was drawn to my attention dramatically when a blind	woman in one of my investigations decided on her own initiative to draw a wheel as it was spinning. To show this motion, she traced a	curve inside the circle (Fig. 1). I was taken aback. Lines of motion,	such as the one she used, are a very recent invention in the history of illustration. Indeed, as art scholar David Kunzle notes, Wilhelm	Busch, a trend-setting nineteenth-century cartoonist, used virtually no motion lines in his popular figures until about 1877.</p>
+			
 
-							<div class="mb-4"><strong>B</strong> Monoculture farming, where large areas are planted with a single crop variety, presents significant risks. These agricultural disasters make crops vulnerable to pests and diseases, which can spread rapidly through genetically uniform populations.</div>
-
-							<div class="mb-4"><strong>C</strong> Traditional farming methods maintained crop diversity through practices like crop rotation and intercropping. These techniques not only preserved genetic diversity but also helped maintain soil fertility and reduce pest problems naturally.</div>
-
-							<div class="mb-4"><strong>D</strong> The environmental impact of industrial agriculture extends beyond the farm. Excessive use of fertilizers and pesticides contaminates water sources and destroys beneficial insects and soil organisms essential for ecosystem health.</div>
-
-							<div class="mb-4"><strong>E</strong> Sustainable farming practices offer solutions that balance productivity with environmental protection. These approaches focus on long-term soil health, biodiversity conservation, and reduced chemical inputs while maintaining economic viability.</div>
-
-							<div class="mb-4"><strong>F</strong> Food security depends not only on quantity but also on the resilience of agricultural systems. Biodiversity is essential for developing crops that can withstand climate change, diseases, and changing environmental conditions.</div>
-						</div>
+				
 
 						<div class="space-y-6">
 							<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 27-29</h3>
