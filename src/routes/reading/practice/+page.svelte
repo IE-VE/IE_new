@@ -706,6 +706,11 @@ social, economic and political factors which drive the activities which are dest
 						<div class="prose dark:prose-invert max-w-none mb-8">
 							<h3 class="text-xl font-semibold mb-4">Whale Senses</h3>
 
+							<div class="mb-6">
+								<img src="/reading-images/whale-feelings.png" alt="Whale senses and sensory adaptations" class="w-full max-w-md mx-auto rounded-lg shadow-lg" />
+								<p class="text-sm text-gray-600 dark:text-gray-400 mt-2 text-center italic">Whale sensory adaptations for ocean life</p>
+							</div>
+
 							<p>Whales and dolphins, collectively known as cetaceans, have evolved remarkable sensory adaptations for life in the ocean. Their sensory capabilities differ significantly from those of terrestrial mammals, reflecting their aquatic environment.</p>
 
 							<p>The sense of smell in toothed whales appears to be absent, with no evidence from brain structure to support its existence. In baleen whales, the situation is not certain, although related brain structures are present. Taste capabilities vary among species, with some types having poor development of the nerves linked to taste sensations.</p>
