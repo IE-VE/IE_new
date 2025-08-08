@@ -1289,6 +1289,8 @@ and the term that best related to a square. For example, we asked: What goes wit
 									</p>
 								</div>
 							{/if}
+						</div>
+					</div>
 
 							<!-- Action Button - only show if not marked yet -->
 							{#if !hasMarked}
