@@ -100,25 +100,42 @@
 		// Assuming this was intended for another modal, keeping it for now
 	}
 
-	// Question data based on the HTML file
+	// Question data based on the original HTML file - exact wording
 	const passage1Questions = {
 		trueFalse: [
-			{ num: 1, text: "The research findings suggest that children hold mistaken views about rainforests' locations." },
-			{ num: 2, text: "The fact that children's ideas about rainforests do not match scientific findings is predictable." },
-			{ num: 3, text: "The study involved children from different countries." },
-			{ num: 4, text: "The children gave more information than was requested in the questionnaire." },
-			{ num: 5, text: "The children were asked to rate different methods of collecting information." },
-			{ num: 6, text: "The information collected from the first group was more detailed than that from the second." },
-			{ num: 7, text: "Primary school children were more likely than secondary school children to hold inaccurate views about rainforests." },
-			{ num: 8, text: "The study reported here follows on from a series of studies that has looked at children's understanding of rainforests." }
+			{ num: 1, text: "The plight of the rainforests has largely been ignored by the media." },
+			{ num: 2, text: "Children only accept opinions on rainforests that they encounter in their classrooms." },
+			{ num: 3, text: "It has been suggested that children hold mistaken views about the 'pure' science that they study at school." },
+			{ num: 4, text: "The fact that children's ideas about science form part of a larger framework of ideas means that it is easier to change them." },
+			{ num: 5, text: "The study involved asking children a number of yes/no questions such as 'Are there any rainforests in Africa?'" },
+			{ num: 6, text: "Girls are more likely than boys to hold mistaken views about the rainforests' destruction." },
+			{ num: 7, text: "The study reported here follows on from a series of studies that have looked at children's understanding of rainforests." },
+			{ num: 8, text: "A second study has been planned to investigate primary school children's ideas about rainforests." }
 		],
-		completion: [
-			{ num: 9, text: "Zoos have changed a lot since they were first established." },
-			{ num: 10, text: "It is easier for teachers to teach about animals through visits to zoos." },
-			{ num: 11, text: "It is difficult to establish what children actually know about zoos." },
-			{ num: 12, text: "Zoo staff are more involved in animal conservation now than they used to be." },
-			{ num: 13, text: "Zoos can teach children about the conservation of animals." },
-			{ num: 14, text: "It is easier for teachers to teach about animals through visits to zoos." }
+		responseOptions: [
+			{ label: "A", text: "There is a complicated combination of reasons for the loss of the rainforests." },
+			{ label: "B", text: "The rainforests are being destroyed by the same things that are destroying the forests of Western Europe." },
+			{ label: "C", text: "Rainforests are located near the Equator." },
+			{ label: "D", text: "Brazil is home to the rainforests." },
+			{ label: "E", text: "Without rainforests some animals would have nowhere to live." },
+			{ label: "F", text: "Rainforests are important habitats for a lot of plants." },
+			{ label: "G", text: "People are responsible for the loss of the rainforests." },
+			{ label: "H", text: "The rainforests are a source of oxygen." },
+			{ label: "I", text: "Rainforests are of consequence for a number of different reasons." },
+			{ label: "J", text: "As the rainforests are destroyed, the world gets warmer." },
+			{ label: "K", text: "Without rainforests there would not be enough oxygen in the air." },
+			{ label: "L", text: "There are people for whom the rainforests are home." },
+			{ label: "M", text: "Rainforests are found in Africa." },
+			{ label: "N", text: "Rainforests are not really important to human life." },
+			{ label: "O", text: "The destruction of the rainforests is the direct result of logging activity." },
+			{ label: "P", text: "Humans depend on the rainforests for their continuing existence." }
+		],
+		responseQuestions: [
+			{ num: 9, text: "What was the children's most frequent response when asked where the rainforests were?" },
+			{ num: 10, text: "What was the most common response to the question about the importance of the rainforests?" },
+			{ num: 11, text: "What did most children give as the reason for the loss of the rainforests?" },
+			{ num: 12, text: "Why did most children think it important for the rainforests to be protected?" },
+			{ num: 13, text: "Which of the responses is cited as unexpectedly uncommon, given the amount of time spent on the issue by the newspapers and television?" }
 		],
 		multipleChoice: {
 			num: 14,
@@ -135,16 +152,16 @@
 
 	const passage2Questions = {
 		tableCompletion: [
-			{ num: 15, text: "Whales have a sensory organ equivalent to human __________" },
-			{ num: 16, text: "The toothed whales are able to use __________ to find their food." },
-			{ num: 17, text: "The vision of __________ whales is not stereoscopic." },
-			{ num: 18, text: "Some species of whales have __________ directional hearing than dolphins." },
-			{ num: 19, text: "Baleen whales can communicate over __________ distances." },
-			{ num: 20, text: "Toothed whales have a broader __________ than other marine mammals." },
-			{ num: 21, text: "The hearing range of baleen whales includes __________." }
+			{ num: 15, text: "nerves linked to their __________ are underdeveloped" },
+			{ num: 16, text: "__________" },
+			{ num: 17, text: "__________ and __________" },
+			{ num: 18, text: "__________" },
+			{ num: 19, text: "exceptional in __________ and good in air–water interface" },
+			{ num: 20, text: "usually use __________; repertoire limited" },
+			{ num: 21, text: "__________ whales and __________ whales" }
 		],
 		shortAnswer: [
-			{ num: 22, text: "Which of the senses is described as being involved in mating?" },
+			{ num: 22, text: "Which of the senses is described here as being involved in mating?" },
 			{ num: 23, text: "Which species swims upside down while eating?" },
 			{ num: 24, text: "What can bottlenose dolphins follow from under the water?" },
 			{ num: 25, text: "Which type of habitat is related to good visual ability?" },
@@ -153,37 +170,67 @@
 	};
 
 	const passage3Questions = {
-		matchingHeadings: [
-			{ num: 27, text: "Paragraph A" },
-			{ num: 28, text: "Paragraph B" },
-			{ num: 29, text: "Paragraph C" },
-			{ num: 30, text: "Paragraph D" },
-			{ num: 31, text: "Paragraph E" },
-			{ num: 32, text: "Paragraph F" }
+		multipleChoice: [
+			{
+				num: 27,
+				text: "In the first paragraph the writer makes the point that blind people",
+				options: [
+					"A. may be interested in studying art.",
+					"B. can draw outlines of different objects and surfaces.",
+					"C. can recognise conventions such as perspective.",
+					"D. can draw accurately."
+				]
+			},
+			{
+				num: 28,
+				text: "The writer was surprised because the blind woman",
+				options: [
+					"A. drew a circle on her own initiative.",
+					"B. did not understand what a wheel looked like.",
+					"C. included a symbol representing movement.",
+					"D. was the first person to use lines of motion."
+				]
+			},
+			{
+				num: 29,
+				text: "From the experiment described in Part 1, the writer found that the blind subjects",
+				options: [
+					"A. had good understanding of symbols representing movement.",
+					"B. could control the movement of wheels very accurately.",
+					"C. worked together well as a group in solving problems.",
+					"D. got better results than the sighted undergraduates."
+				]
+			}
 		],
-		completion: [
-			{ num: 33, text: "Monocultures are described as __________ disasters." },
-			{ num: 34, text: "The spread of pests and diseases is __________ in monocultures." },
-			{ num: 35, text: "Genetic uniformity increases the __________ of crop failure." },
-			{ num: 36, text: "Traditional farming maintains __________ diversity." },
-			{ num: 37, text: "Crop rotation helps to maintain soil __________." },
-			{ num: 38, text: "Industrial agriculture focuses on __________ yields." },
-			{ num: 39, text: "Sustainable farming considers __________ impact." },
-			{ num: 40, text: "Biodiversity is essential for __________ security." }
-		]
+		matching: [
+			{ num: 30, text: "30" },
+			{ num: 31, text: "31" },
+			{ num: 32, text: "32" }
+		],
+		matchingOptions: [
+			"A. steady spinning",
+			"B. jerky movement", 
+			"C. rapid spinning",
+			"D. wobbling movement",
+			"E. use of brakes"
+		],
+		summaryCompletion: [
+			{ num: 33, text: "In the experiment described in Part 2, a set of word __________ was used to investigate whether blind and sighted people perceived the symbolism in abstract __________ in the same way." },
+			{ num: 34, text: "Subjects were asked which word fitted best with a circle and which with a square. From the __________ volunteers, everyone thought a circle fitted 'soft' while a square fitted 'hard'." },
+			{ num: 35, text: "However, only 51% of the __________ volunteers assigned a circle to __________." },
+			{ num: 36, text: "When the test was later repeated with __________ volunteers, it was found that they made __________ choices." }
+		],
+		finalMultipleChoice: {
+			num: 40,
+			text: "Which of the following statements best summarises the writer's general conclusion?",
+			options: [
+				"A. The blind represent some aspects of reality differently from sighted people.",
+				"B. The blind comprehend visual metaphors in similar ways to sighted people.",
+				"C. The blind may create unusual and effective symbols to represent reality.",
+				"D. The blind may be successful artists if given the right training."
+			]
+		}
 	};
-
-	const headingOptions = [
-		"i. The problems with monoculture farming",
-		"ii. Traditional farming methods",
-		"iii. The benefits of crop rotation",
-		"iv. Environmental concerns in agriculture",
-		"v. The future of sustainable farming",
-		"vi. Economic factors in food production",
-		"vii. The role of technology in farming",
-		"viii. Government policies on agriculture",
-		"ix. International trade in agricultural products"
-	];
 
 	function startTest() {
 		isTestStarted = true;
@@ -518,7 +565,13 @@ social, economic and political factors which drive the activities which are dest
 							
 							<div class="space-y-6">
 								<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 1-8</h3>
-								<p class="text-gray-700 dark:text-gray-300">Do the following statements agree with the information given in Reading Passage 1? Write <strong>TRUE</strong> if the statement agrees with the information, <strong>FALSE</strong> if the statement contradicts the information, or <strong>NOT GIVEN</strong> if there is no information on this.</p>
+								<p class="text-gray-700 dark:text-gray-300">Do the following statements agree with the information given in Reading Passage 1?</p>
+								<p class="text-gray-700 dark:text-gray-300">In boxes 1–8 on your answer sheet write</p>
+								<div class="ml-4 text-gray-700 dark:text-gray-300">
+									<p><strong>TRUE</strong> if the statement agrees with the information</p>
+									<p><strong>FALSE</strong> if the statement contradicts the information</p>
+									<p><strong>NOT GIVEN</strong> if there is no information on this</p>
+								</div>
 
 								{#each passage1Questions.trueFalse as question}
 									<div class="question mb-4">
@@ -550,10 +603,21 @@ social, economic and political factors which drive the activities which are dest
 									</div>
 								{/each}
 
-								<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 9-14</h3>
-								<p class="text-gray-700 dark:text-gray-300">Complete the sentences below. Choose <strong>NO MORE THAN THREE WORDS</strong> from the passage for each answer.</p>
+								<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 9-13</h3>
+								<p class="text-gray-700 dark:text-gray-300">The box below gives a list of responses <strong>A–P</strong> to the questionnaire discussed in Reading Passage 1.</p>
+								<p class="text-gray-700 dark:text-gray-300">Answer the following questions by choosing the correct responses <strong>A–P</strong>.</p>
+								<p class="text-gray-700 dark:text-gray-300">Write your answers in boxes 9–13 on your answer sheet.</p>
 
-								{#each passage1Questions.completion as question}
+								<div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg mb-6">
+									<h4 class="font-semibold mb-3">Response Options A–P:</h4>
+									<div class="grid grid-cols-1 gap-2 text-sm">
+										{#each passage1Questions.responseOptions as option}
+											<div><strong>{option.label}.</strong> {option.text}</div>
+										{/each}
+									</div>
+								</div>
+
+								{#each passage1Questions.responseQuestions as question}
 									<div class="question mb-4">
 										<label class="mb-2 block font-medium text-gray-900 dark:text-white">
 											{question.num}. {question.text}
@@ -645,34 +709,214 @@ social, economic and political factors which drive the activities which are dest
 
 						<div class="space-y-6">
 							<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 15-21</h3>
-							<p class="text-gray-700 dark:text-gray-300">Complete the table below. Choose <strong>NO MORE THAN THREE WORDS</strong> from Reading Passage 2 for each answer.</p>
+							<p class="text-gray-700 dark:text-gray-300">Complete the table below.</p>
+							<p class="text-gray-700 dark:text-gray-300">Choose <strong>NO MORE THAN THREE WORDS</strong> from Reading Passage 2 for each answer.</p>
+							<p class="text-gray-700 dark:text-gray-300">Write your answers in boxes 15–21 on your answer sheet.</p>
 
-							{#each passage2Questions.tableCompletion as question}
-								<div class="question mb-4">
-									<label class="mb-2 block font-medium text-gray-900 dark:text-white">
-										{question.num}. {question.text}
-									</label>
-									<input
-										type="text"
-										bind:value={answers[question.num]}
-										disabled={showAnswers}
-										placeholder="Your answer..."
-										class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
-									/>
-									{#if showAnswers && results?.questions[question.num]}
+							<div class="overflow-x-auto">
+								<table class="w-full border-collapse border border-gray-300 dark:border-gray-600 mb-6">
+									<thead>
+										<tr class="bg-gray-100 dark:bg-gray-700">
+											<th class="border border-gray-300 dark:border-gray-600 p-3 text-left">SENSE</th>
+											<th class="border border-gray-300 dark:border-gray-600 p-3 text-left">SPECIES</th>
+											<th class="border border-gray-300 dark:border-gray-600 p-3 text-left">ABILITY</th>
+											<th class="border border-gray-300 dark:border-gray-600 p-3 text-left">COMMENTS</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">Smell</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">toothed</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">no</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">evidence from brain structure</td>
+										</tr>
+										<tr>
+											<td class="border border-gray-300 dark:border-gray-600 p-3"></td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">baleen</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">not certain</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">related brain structures are present</td>
+										</tr>
+										<tr>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">Taste</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">some types</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">poor</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">
+												<div class="flex items-center gap-2">
+													<span>15.</span>
+													<input
+														type="text"
+														bind:value={answers[15]}
+														disabled={showAnswers}
+														placeholder="Your answer"
+														class="flex-1 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[15]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+													/>
+													<span>are underdeveloped</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">Touch</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">all</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">yes</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">region around the blowhole very sensitive</td>
+										</tr>
+										<tr>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">Vision</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">
+												<div class="flex items-center gap-2">
+													<span>16.</span>
+													<input
+														type="text"
+														bind:value={answers[16]}
+														disabled={showAnswers}
+														placeholder="Your answer"
+														class="flex-1 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[16]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+													/>
+												</div>
+											</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">yes</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">probably do not have stereoscopic vision</td>
+										</tr>
+										<tr>
+											<td class="border border-gray-300 dark:border-gray-600 p-3"></td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">dolphins, porpoises</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">yes</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">
+												<div class="flex items-center gap-2">
+													<span>probably have stereoscopic vision</span>
+													<span>17.</span>
+													<input
+														type="text"
+														bind:value={answers[17]}
+														disabled={showAnswers}
+														placeholder="Your answer"
+														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[17]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+													/>
+													<span>and</span>
+													<span>18.</span>
+													<input
+														type="text"
+														bind:value={answers[18]}
+														disabled={showAnswers}
+														placeholder="Your answer"
+														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[18]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+													/>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="border border-gray-300 dark:border-gray-600 p-3"></td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">
+												<div class="flex items-center gap-2">
+													<span>freshwater dolphins</span>
+												</div>
+											</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">yes</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">probably have stereoscopic vision forward and upward</td>
+										</tr>
+										<tr>
+											<td class="border border-gray-300 dark:border-gray-600 p-3"></td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">bottlenose dolphin</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">yes</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">
+												<div class="flex items-center gap-2">
+													<span>exceptional in</span>
+													<span>19.</span>
+													<input
+														type="text"
+														bind:value={answers[19]}
+														disabled={showAnswers}
+														placeholder="Your answer"
+														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[19]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+													/>
+													<span>and good in air–water interface</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="border border-gray-300 dark:border-gray-600 p-3"></td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">boutu and beiji</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">poor</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">have limited vision</td>
+										</tr>
+										<tr>
+											<td class="border border-gray-300 dark:border-gray-600 p-3"></td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">Indian susus</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">no</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">probably only sense direction and intensity of light</td>
+										</tr>
+										<tr>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">Hearing</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">most large baleen</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">yes</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">
+												<div class="flex items-center gap-2">
+													<span>usually use</span>
+													<span>20.</span>
+													<input
+														type="text"
+														bind:value={answers[20]}
+														disabled={showAnswers}
+														placeholder="Your answer"
+														class="w-24 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[20]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+													/>
+													<span>; repertoire limited</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="border border-gray-300 dark:border-gray-600 p-3"></td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">
+												<div class="flex items-center gap-2">
+													<span>21.</span>
+													<input
+														type="text"
+														bind:value={answers[21]}
+														disabled={showAnswers}
+														placeholder="Your answer"
+														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[21]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+													/>
+													<span>whales and</span>
+													<input
+														type="text"
+														bind:value={answers[21]}
+														disabled={showAnswers}
+														placeholder="Your answer"
+														class="w-20 rounded border p-1 text-xs text-black {showAnswers && results ? (results.questions[21]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+													/>
+													<span>whales</span>
+												</div>
+											</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">yes</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">song-like</td>
+										</tr>
+										<tr>
+											<td class="border border-gray-300 dark:border-gray-600 p-3"></td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">toothed</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">yes</td>
+											<td class="border border-gray-300 dark:border-gray-600 p-3">use more of frequency spectrum; have wider repertoire</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							{#if showAnswers}
+								{#each [15, 16, 17, 18, 19, 20, 21] as qNum}
+									{#if results?.questions[qNum]}
 										<div class="mt-2 text-sm">
-											{#if results.questions[question.num].isCorrect}
+											<strong>Q{qNum}:</strong>
+											{#if results.questions[qNum].isCorrect}
 												<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
 											{:else}
 												<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
 												<span class="text-gray-600 dark:text-gray-300">
-													Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
+													Correct answer: {results.questions[qNum].correctAnswers.join(' or ')}
 												</span>
 											{/if}
 										</div>
 									{/if}
-								</div>
-							{/each}
+								{/each}
+							{/if}
 
 							<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 22-26</h3>
 							<p class="text-gray-700 dark:text-gray-300">Answer the questions below using <strong>NO MORE THAN THREE WORDS</strong> from the passage for each answer.</p>
@@ -733,32 +977,72 @@ social, economic and political factors which drive the activities which are dest
 						</div>
 
 						<div class="space-y-6">
-							<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 27-32</h3>
-							<p class="text-gray-700 dark:text-gray-300">Match each paragraph with the correct heading. There are more headings than paragraphs.</p>
+							<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 27-29</h3>
+							<p class="text-gray-700 dark:text-gray-300">Choose the correct letter, <strong>A</strong>, <strong>B</strong>, <strong>C</strong> or <strong>D</strong>.</p>
+							<p class="text-gray-700 dark:text-gray-300">Write your answers in boxes 27–29 on your answer sheet.</p>
 
-							<div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg mb-4">
-								<h4 class="font-semibold mb-2">List of Headings:</h4>
-								<ol class="list-none space-y-1 text-sm">
-									{#each headingOptions as heading}
-										<li>{heading}</li>
+							{#each passage3Questions.multipleChoice as question}
+								<div class="question mb-6">
+									<label class="mb-3 block font-medium text-gray-900 dark:text-white">
+										{question.num}. {question.text}
+									</label>
+									<div class="space-y-2">
+										{#each question.options as option}
+											<label class="flex items-start">
+												<input
+													type="radio"
+													name="q{question.num}"
+													value={option.charAt(0)}
+													onchange={(e) => updateAnswer(question.num, e.target.value)}
+													disabled={showAnswers}
+													class="mr-2 mt-1 {showAnswers && results ? (results.questions[question.num]?.userAnswer === option.charAt(0) ? (results.questions[question.num]?.isCorrect ? 'accent-green-500' : 'accent-red-500') : '') : ''}"
+												/>
+												<span class="text-gray-700 dark:text-gray-300">{option}</span>
+											</label>
+										{/each}
+									</div>
+									{#if showAnswers && results?.questions[question.num]}
+										<div class="mt-2 text-sm">
+											{#if results.questions[question.num].isCorrect}
+												<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
+											{:else}
+												<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
+												<span class="text-gray-600 dark:text-gray-300">
+													Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
+												</span>
+											{/if}
+										</div>
+									{/if}
+								</div>
+							{/each}
+
+							<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 30-32</h3>
+							<p class="text-gray-700 dark:text-gray-300">Look at the following diagrams (Questions 30–32), and the list of types of movement below.</p>
+							<p class="text-gray-700 dark:text-gray-300">Match each diagram to the type of movement <strong>A–E</strong> generally assigned to it in the experiment.</p>
+							<p class="text-gray-700 dark:text-gray-300">Choose the correct letter <strong>A–E</strong> and write them in boxes 30–32 on your answer sheet.</p>
+
+							<div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg mb-6">
+								<h4 class="font-semibold mb-3">Movement Types:</h4>
+								<div class="grid grid-cols-1 gap-2 text-sm">
+									{#each passage3Questions.matchingOptions as option}
+										<div>{option}</div>
 									{/each}
-								</ol>
+								</div>
 							</div>
 
-							{#each passage3Questions.matchingHeadings as question}
+							{#each passage3Questions.matching as question}
 								<div class="question mb-4">
 									<label class="mb-2 block font-medium text-gray-900 dark:text-white">
 										{question.num}. {question.text}
 									</label>
 									<select
-										id="q{question.num}"
 										bind:value={answers[question.num]}
 										disabled={showAnswers}
 										class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
 									>
-										<option value="">Select a heading</option>
-										{#each ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix'] as heading}
-											<option value={heading}>{heading}</option>
+										<option value="">Select movement type</option>
+										{#each ['A', 'B', 'C', 'D', 'E'] as option}
+											<option value={option}>{option}</option>
 										{/each}
 									</select>
 									{#if showAnswers && results?.questions[question.num]}
@@ -776,36 +1060,143 @@ social, economic and political factors which drive the activities which are dest
 								</div>
 							{/each}
 
-							<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 33-40</h3>
-							<p class="text-gray-700 dark:text-gray-300">Complete the sentences below. Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p>
+							<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Questions 33-39</h3>
+							<p class="text-gray-700 dark:text-gray-300">Complete the summary below using words from the box.</p>
+							<p class="text-gray-700 dark:text-gray-300">Write your answers in boxes 33–39 on your answer sheet.</p>
+							<p class="text-gray-700 dark:text-gray-300"><strong>NB</strong> You may use any word more than once.</p>
 
-							{#each passage3Questions.completion as question}
-								<div class="question mb-4">
-									<label class="mb-2 block font-medium text-gray-900 dark:text-white">
-										{question.num}. {question.text}
-									</label>
+							<div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg mb-6">
+								<h4 class="font-semibold mb-3">Word Box:</h4>
+								<div class="grid grid-cols-4 gap-2 text-sm">
+									<div>blind</div>
+									<div>deep</div>
+									<div>pairs</div>
+									<div>shapes</div>
+									<div>sighted</div>
+									<div>similar</div>
+								</div>
+							</div>
+
+							<div class="space-y-4">
+								<p class="text-gray-700 dark:text-gray-300">
+									In the experiment described in Part 2, a set of word 
 									<input
-										id="q{question.num}"
 										type="text"
-										bind:value={answers[question.num]}
+										bind:value={answers[33]}
 										disabled={showAnswers}
-										placeholder="Your answer"
-										class="w-full rounded-lg border p-2 text-black {showAnswers && results ? (results.questions[question.num]?.isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:bg-red-900/20') : 'border-gray-300 dark:border-gray-600 dark:bg-gray-700'}"
+										placeholder="33"
+										class="w-16 mx-1 rounded border p-1 text-black {showAnswers && results ? (results.questions[33]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
 									/>
-									{#if showAnswers && results?.questions[question.num]}
+									was used to investigate whether blind and sighted people perceived the symbolism in abstract
+									<input
+										type="text"
+										bind:value={answers[34]}
+										disabled={showAnswers}
+										placeholder="34"
+										class="w-16 mx-1 rounded border p-1 text-black {showAnswers && results ? (results.questions[34]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+									/>
+									in the same way.
+								</p>
+
+								<p class="text-gray-700 dark:text-gray-300">
+									Subjects were asked which word fitted best with a circle and which with a square. From the
+									<input
+										type="text"
+										bind:value={answers[35]}
+										disabled={showAnswers}
+										placeholder="35"
+										class="w-16 mx-1 rounded border p-1 text-black {showAnswers && results ? (results.questions[35]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+									/>
+									volunteers, everyone thought a circle fitted 'soft' while a square fitted 'hard'. However, only 51% of the
+									<input
+										type="text"
+										bind:value={answers[36]}
+										disabled={showAnswers}
+										placeholder="36"
+										class="w-16 mx-1 rounded border p-1 text-black {showAnswers && results ? (results.questions[36]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+									/>
+									volunteers assigned a circle to
+									<input
+										type="text"
+										bind:value={answers[37]}
+										disabled={showAnswers}
+										placeholder="37"
+										class="w-16 mx-1 rounded border p-1 text-black {showAnswers && results ? (results.questions[37]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+									/>
+									. When the test was later repeated with
+									<input
+										type="text"
+										bind:value={answers[38]}
+										disabled={showAnswers}
+										placeholder="38"
+										class="w-16 mx-1 rounded border p-1 text-black {showAnswers && results ? (results.questions[38]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+									/>
+									volunteers, it was found that they made
+									<input
+										type="text"
+										bind:value={answers[39]}
+										disabled={showAnswers}
+										placeholder="39"
+										class="w-16 mx-1 rounded border p-1 text-black {showAnswers && results ? (results.questions[39]?.isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-gray-300'}"
+									/>
+									choices.
+								</p>
+							</div>
+
+							{#if showAnswers}
+								{#each [33, 34, 35, 36, 37, 38, 39] as qNum}
+									{#if results?.questions[qNum]}
 										<div class="mt-2 text-sm">
-											{#if results.questions[question.num].isCorrect}
+											<strong>Q{qNum}:</strong>
+											{#if results.questions[qNum].isCorrect}
 												<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
 											{:else}
 												<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
-												<span class="text-white dark:text-white">
-													Correct answer: {results.questions[question.num].correctAnswers.join(' or ')}
+												<span class="text-gray-600 dark:text-gray-300">
+													Correct answer: {results.questions[qNum].correctAnswers.join(' or ')}
 												</span>
 											{/if}
 										</div>
 									{/if}
+								{/each}
+							{/if}
+
+							<h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-8">Question 40</h3>
+							<p class="text-gray-700 dark:text-gray-300">Choose the correct letter, <strong>A</strong>, <strong>B</strong>, <strong>C</strong> or <strong>D</strong>.</p>
+							<p class="text-gray-700 dark:text-gray-300">Write your answer in box 40 on your answer sheet.</p>
+
+							<div class="question mb-6">
+								<label class="mb-3 block font-medium text-gray-900 dark:text-white">
+									{passage3Questions.finalMultipleChoice.num}. {passage3Questions.finalMultipleChoice.text}
+								</label>
+								<div class="space-y-2">
+									{#each passage3Questions.finalMultipleChoice.options as option}
+										<label class="flex items-start">
+											<input
+												type="radio"
+												name="q{passage3Questions.finalMultipleChoice.num}"
+												value={option.charAt(0)}
+												onchange={(e) => updateAnswer(passage3Questions.finalMultipleChoice.num, e.target.value)}
+												disabled={showAnswers}
+												class="mr-2 mt-1 {showAnswers && results ? (results.questions[passage3Questions.finalMultipleChoice.num]?.userAnswer === option.charAt(0) ? (results.questions[passage3Questions.finalMultipleChoice.num]?.isCorrect ? 'accent-green-500' : 'accent-red-500') : '') : ''}"
+											/>
+											<span class="text-gray-700 dark:text-gray-300">{option}</span>
+										</label>
+									{/each}
 								</div>
-							{/each}
+								{#if showAnswers && results?.questions[passage3Questions.finalMultipleChoice.num]}
+									<div class="mt-2 text-sm">
+										{#if results.questions[passage3Questions.finalMultipleChoice.num].isCorrect}
+											<span class="text-green-600 dark:text-green-400">✓ Correct!</span>
+										{:else}
+											<span class="text-red-600 dark:text-red-400">✗ Incorrect.</span>
+											<span class="text-gray-600 dark:text-gray-300">
+												Correct answer: {results.questions[passage3Questions.finalMultipleChoice.num].correctAnswers.join(' or ')}
+											</span>
+										{/if}
+									</div>
+								{/if}
+							</div>
 
 							<!-- End of Test Section - only show when not viewing answers -->
 							{#if !showAnswers}
