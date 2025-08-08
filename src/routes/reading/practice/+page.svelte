@@ -1303,7 +1303,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 						</div>
 					
 				{/if}
-
+		
 				<!-- Action Button - only show if not marked yet -->
 				{#if !hasMarked}
 					<div class="mt-6 flex flex-col gap-4 items-center">
