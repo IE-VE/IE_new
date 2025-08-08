@@ -1045,7 +1045,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 
 <p>All our subjects deemed the circle soft and the square hard. A full 94% ascribed happy to the circle, instead of sad. But other pairs revealed less agreement: 79% matched fast to slow and weak to strong, respectively. And only 51% linked deep to circle and shallow to square. When we tested four totally blind volunteers using the same list, we found that their choices closely resembled those made by the sighted subjects. One man, who had been blind since birth, scored extremely well. He made only one match differing from the consensus, assigning ‘far’ to square and ‘near’ to circle. In fact, only a small majority of sighted subjects – 53% – had paired far and near to the opposite partners. Thus, we concluded that the blind interpret abstract shapes as sighted people do.</p>
 							</div>			
-
+					
 						<div class="space-y-6">
 							<h3 class="text-xl font-semibold text-gray-900 dark:text-white">Questions 27-29</h3>
 							<p class="text-gray-700 dark:text-gray-300">Choose the correct letter, <strong>A</strong>, <strong>B</strong>, <strong>C</strong> or <strong>D</strong>.</p>
@@ -1377,12 +1377,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 									</div>
 								</div>
 							{/if}
-						</div>
-					</div>
-				{/if}
-			</div>
-		</div>
-	{/if}
+			
 
 
 	<!-- Answer Key Modal -->
@@ -1456,7 +1451,7 @@ and the term that best related to a square. For example, we asked: What goes wit
 		</div>
 	{/if}
 </div>
-
+					
 <style>
 	/* Custom styles for the reading test interface */
 	.prose {
