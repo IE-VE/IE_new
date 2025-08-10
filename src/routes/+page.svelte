@@ -130,7 +130,7 @@
 
 		<!-- Writing -->
 		<a
-			href="/writing/practice"
+			href="/writing"
 			class="rounded-lg border border-gray-200 bg-white p-6 shadow-md transition hover:shadow-lg dark:border-gray-700 dark:bg-gray-800"
 		>
 			<h2 class="mb-2 text-xl font-bold text-teal-600 dark:text-teal-400">Writing</h2>
