@@ -34,7 +34,7 @@
 		{
 			title: 'Bar Chart',
 			description: 'Analyse comparative data',
-			icon: '📈',
+			icon: '📊',
 			image: '/writing-images/ielts-writing-test-1-bar-chart-2.png'
 		},	
 		{
