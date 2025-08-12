@@ -259,7 +259,7 @@
 						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Four Assessment Criteria</h3>
 						<div class="space-y-3">
 							{#each assessmentCriteria as criterion}
-								<div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
+								<div class="bg-gray-200 dark:bg-gray-800 p-3 rounded-lg">
 									<div class="flex justify-between items-center mb-1">
 										<span class="font-medium text-gray-900 dark:text-white text-sm">{criterion.name}</span>
 										<span class="text-primary-600 dark:text-primary-400 font-medium text-sm">{criterion.weight}</span>
@@ -271,7 +271,7 @@
 					</div>
 					<div>
 						<h3 class="font-semibold text-gray-900 dark:text-white mb-3">Key Success Factors</h3>
-						<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+						<ul class="text-l text-gray-600 dark:text-gray-300 space-y-3">
 							<li>• Address all parts of the task completely</li>
 							<li>• Organize ideas logically with clear paragraphs</li>
 							<li>• Use a wide range of vocabulary accurately</li>
