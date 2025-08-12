@@ -353,7 +353,7 @@
 									</div>
 								</div>
 
-								<div>
+								<div class="flex flex-col items-center">
 									<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 										Your Answer:
 									</label>
@@ -393,7 +393,7 @@
 									<p class="text-gray-700 dark:text-gray-300 mb-6">{academicQuestions.task2.additionalInfo}</p>
 								</div>
 
-								<div>
+								<div class="flex flex-col items-center">
 									<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 										Your Answer:
 									</label>
@@ -440,7 +440,7 @@
 									<p class="text-gray-700 dark:text-gray-300 mb-6">{generalQuestions.task1.additionalInfo}</p>
 								</div>
 
-								<div>
+								<div class="flex flex-col items-center">
 									<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 										Your Answer:
 									</label>
@@ -480,7 +480,7 @@
 									<p class="text-gray-700 dark:text-gray-300 mb-6">{generalQuestions.task2.additionalInfo}</p>
 								</div>
 
-								<div>
+								<div class="flex flex-col items-center">
 									<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 										Your Answer:
 									</label>
