@@ -1,4 +1,3 @@
-
 <script lang="ts">
 	import Card from '$lib/components/Card.svelte';
 	import Lightbox from '$lib/components/Lightbox.svelte';
@@ -40,7 +39,7 @@
 		{
 			title: 'Table',
 			description: 'Analyse numerical information in tables',
-			icon: '📋',
+			icon: '▦',
 			image: '/writing-images/ielts-writing-test-1-table-2.png'
 		},	
 		{
