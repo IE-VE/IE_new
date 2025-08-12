@@ -340,7 +340,7 @@
 							</div>
 
 							<div class="space-y-6">
-								<div>
+								<div class="border border-white/20 rounded-lg p-6 bg-gray-50/50 dark:bg-gray-700/50">
 									<p class="text-lg text-gray-800 dark:text-gray-200 mb-4">{academicQuestions.task1.instruction}</p>
 									<p class="font-semibold text-gray-900 dark:text-white mb-4">{academicQuestions.task1.task}</p>
 									
@@ -387,7 +387,7 @@
 							</div>
 
 							<div class="space-y-6">
-								<div>
+								<div class="border border-white/20 rounded-lg p-6 bg-gray-50/50 dark:bg-gray-700/50">
 									<p class="text-lg text-gray-800 dark:text-gray-200 mb-4">{academicQuestions.task2.instruction}</p>
 									<p class="font-semibold text-gray-900 dark:text-white mb-4">{academicQuestions.task2.task}</p>
 									<p class="text-gray-700 dark:text-gray-300 mb-6">{academicQuestions.task2.additionalInfo}</p>
@@ -429,7 +429,7 @@
 							</div>
 
 							<div class="space-y-6">
-								<div>
+								<div class="border border-white/20 rounded-lg p-6 bg-gray-50/50 dark:bg-gray-700/50">
 									<p class="text-lg text-gray-800 dark:text-gray-200 mb-4">{generalQuestions.task1.instruction}</p>
 									<p class="font-semibold text-gray-900 dark:text-white mb-2">{generalQuestions.task1.task}</p>
 									<ul class="text-gray-700 dark:text-gray-300 mb-4 space-y-1">
@@ -474,7 +474,7 @@
 							</div>
 
 							<div class="space-y-6">
-								<div>
+								<div class="border border-white/20 rounded-lg p-6 bg-gray-50/50 dark:bg-gray-700/50">
 									<p class="text-lg text-gray-800 dark:text-gray-200 mb-4">{generalQuestions.task2.instruction}</p>
 									<p class="font-semibold text-gray-900 dark:text-white mb-4">{generalQuestions.task2.task}</p>
 									<p class="text-gray-700 dark:text-gray-300 mb-6">{generalQuestions.task2.additionalInfo}</p>
