@@ -153,7 +153,7 @@
 			<div class="max-w-4xl mx-auto">
 				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
 					<h1 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8">
-						IELTS Writing Practice Test
+						IELTS Writing Practice Test 1
 					</h1>
 
 					<div class="space-y-6 text-gray-700 dark:text-gray-300">
@@ -162,8 +162,8 @@
 							<ul class="space-y-2">
 								<li>• Time allowed: <strong>60 minutes</strong></li>
 								<li>• Number of tasks: <strong>2</strong></li>
-								<li>• Task 1: At least 150 words (20 minutes recommended)</li>
-								<li>• Task 2: At least 250 words (40 minutes recommended)</li>
+								<li>• <strong>Task 1</strong>: At least <strong>150 words</strong> (20 minutes recommended)</li>
+								<li>• <strong>Task 2</strong>: At least <strong>250 words</strong> (40 minutes recommended)</li>
 								<li>• Choose between Academic or General Training version</li>
 								<li>• Your progress will be saved automatically</li>
 							</ul>
@@ -185,11 +185,11 @@
 							</div>
 						</div>
 
-						<div class="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg">
+						<div class="bg-gray-200 dark:bg-gray-800 p-6 rounded-lg">
 							<h3 class="text-lg font-semibold text-orange-700 dark:text-orange-300 mb-3">Assessment Criteria</h3>
 							<ul class="space-y-1 text-sm">
 								<li>• <strong>Task Achievement/Response:</strong> How well you address the task requirements</li>
-								<li>• <strong>Coherence & Cohesion:</strong> Organization and flow of your writing</li>
+								<li>• <strong>Coherence & Cohesion:</strong> Organisation and flow of your writing</li>
 								<li>• <strong>Lexical Resource:</strong> Range and accuracy of vocabulary</li>
 								<li>• <strong>Grammatical Range & Accuracy:</strong> Grammar variety and correctness</li>
 							</ul>
@@ -233,7 +233,7 @@
 						</div>
 						
 						<p class="text-gray-600 dark:text-gray-400">
-							For detailed feedback on your writing, consider our personalized assessment service.
+							For detailed feedback on your writing, consider our personalised assessment service.
 						</p>
 					</div>
 					
@@ -367,7 +367,7 @@
 						</div>
 					{:else}
 						<!-- Academic Task 2 -->
-						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+						<div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8">
 							<div class="mb-6 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
 								<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">{academicQuestions.task2.title}</h2>
 								<div class="grid md:grid-cols-3 gap-4 text-sm text-gray-700 dark:text-gray-300">
