@@ -502,7 +502,7 @@
 							onclick={completeTest}
 							class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors"
 						>
-							Complete Writing Test
+							Submit my Responses
 						</button>
 					</div>
 				{/if}
