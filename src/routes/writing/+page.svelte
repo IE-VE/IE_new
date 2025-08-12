@@ -35,7 +35,7 @@
 			title: 'Bar Chart',
 			description: 'Analyse comparative data',
 			icon: '📊',
-			image: '/writing-images/ielts-writing-test-1-bar-chart-2.png'
+			image: '/writing-images/ielts-writing-test-1-bar-chart.png'
 		},	
 		{
 			title: 'Table',
@@ -46,7 +46,7 @@
 		{
 			title: 'Pie Chart',
 			description: 'Describe proportions and percentages',
-			icon: '📊',
+			icon: '◔',
 			image: '/writing-images/ielts-writing-test-1-pie-chart.png'
 		},
 		{
