@@ -360,7 +360,7 @@
 									<textarea
 										bind:value={answers['academic-task1']}
 										placeholder="Write your Task 1 response here..."
-										class="max-w-[700px] w-[700px] h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 dark:bg-gray-700 dark:text-white resize-none"
+										class="w-full max-w-[700px] h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 dark:bg-gray-700 dark:text-white resize-none"
 									></textarea>
 								</div>
 							</div>
@@ -400,7 +400,7 @@
 									<textarea
 										bind:value={answers['academic-task2']}
 										placeholder="Write your Task 2 essay here..."
-										class="max-w-[700px] w-[700px] h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 dark:bg-gray-700 dark:text-white resize-none"
+										class="w-full max-w-[700px] h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 dark:bg-gray-700 dark:text-white resize-none"
 									></textarea>
 								</div>
 							</div>
@@ -447,7 +447,7 @@
 									<textarea
 										bind:value={answers['general-task1']}
 										placeholder="Write your letter here..."
-										class="max-w-[700px] w-[700px] h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 dark:bg-gray-700 dark:text-white resize-none"
+										class="w-full max-w-[700px] h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 dark:bg-gray-700 dark:text-white resize-none"
 									></textarea>
 								</div>
 							</div>
@@ -487,7 +487,7 @@
 									<textarea
 										bind:value={answers['general-task2']}
 										placeholder="Write your essay here..."
-										class="max-w-[700px] w-[700px] h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 dark:bg-gray-700 dark:text-white resize-none"
+										class="w-full max-w-[700px] h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 dark:bg-gray-700 dark:text-white resize-none"
 									></textarea>
 								</div>
 							</div>
