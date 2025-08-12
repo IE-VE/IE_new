@@ -402,6 +402,11 @@
 										placeholder="Write your Task 2 essay here..."
 										class="w-full max-w-[700px] h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 dark:bg-gray-700 dark:text-white resize-none"
 									></textarea>
+									<div class="w-full max-w-[700px] mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
+										<p class="text-sm text-blue-800 dark:text-blue-200">
+											<strong>💡 Final Check:</strong> Use any remaining time to check through both tasks for any content and spelling errors. Then submit your responses for grading.
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -489,6 +494,11 @@
 										placeholder="Write your essay here..."
 										class="w-full max-w-[700px] h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 dark:bg-gray-700 dark:text-white resize-none"
 									></textarea>
+									<div class="w-full max-w-[700px] mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
+										<p class="text-sm text-blue-800 dark:text-blue-200">
+											<strong>💡 Final Check:</strong> Use any remaining time to check through both tasks for any content and spelling errors. Then submit your responses for grading.
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
