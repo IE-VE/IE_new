@@ -32,23 +32,17 @@
 			image: '/writing-images/ielts-writing-test-1-line-graph.png'
 		},
 		{
-			title: 'Table (i)',
-			description: 'Compare data presented in table format',
-			icon: '📊',
-			image: '/writing-images/ielts-writing-test-1-table.png'
-		},
+			title: 'Bar Chart',
+			description: 'Analyse comparative data',
+			icon: '📈',
+			image: '/writing-images/ielts-writing-test-1-bar-chart-2.png'
+		},	
 		{
-			title: 'Table (ii)',
-			description: 'Analyze numerical information in tables',
+			title: 'Table',
+			description: 'Analyse numerical information in tables',
 			icon: '📋',
 			image: '/writing-images/ielts-writing-test-1-table-2.png'
-		},
-		{
-			title: 'Table (iii)',
-			description: 'Report on statistical data',
-			icon: '📄',
-			image: '/writing-images/ielts-writing-test-1-table-3.png'
-		},
+		},	
 		{
 			title: 'Pie Chart',
 			description: 'Describe proportions and percentages',
@@ -56,28 +50,10 @@
 			image: '/writing-images/ielts-writing-test-1-pie-chart.png'
 		},
 		{
-			title: 'Bar Chart (i)',
-			description: 'Compare quantities across categories',
-			icon: '📊',
-			image: '/writing-images/ielts-writing-test-1-bar-chart.png'
-		},
-		{
-			title: 'Bar Chart (ii)',
-			description: 'Analyze comparative data',
-			icon: '📈',
-			image: '/writing-images/ielts-writing-test-1-bar-chart-2.png'
-		},
-		{
-			title: 'Combined Table & Line Graph',
-			description: 'Report on multiple data sources',
-			icon: '📊',
-			image: '/writing-images/ielts-writing-test-1-combined.png'
-		},
-		{
-			title: 'Combined Pie Chart & Table',
-			description: 'Synthesize information from different formats',
-			icon: '📋',
-			image: '/writing-images/ielts-writing-test-1-combined_2.png'
+			title: 'Map',
+			description: 'Describe changes in location over time',
+			icon: '🗺️',
+			image: '/writing-images/ielts-writing-test-1-map.png'
 		},
 		{
 			title: 'Process Diagram',
@@ -85,12 +61,6 @@
 			icon: '🔄',
 			image: '/writing-images/ielts-writing-test-1-process.png'
 		},
-		{
-			title: 'Map',
-			description: 'Describe changes in location over time',
-			icon: '🗺️',
-			image: '/writing-images/ielts-writing-test-1-map.png'
-		}
 	];
 
 	const taskTwoQuestions = [

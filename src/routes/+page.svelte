@@ -112,7 +112,7 @@
 	</h1>
 
 	<p class="mb-10 text-center text-lg">
-		Comprehensive training for all IELTS skills.
+		Comprehensive personalised training for all IELTS skills.
 	</p>
 
 	<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
